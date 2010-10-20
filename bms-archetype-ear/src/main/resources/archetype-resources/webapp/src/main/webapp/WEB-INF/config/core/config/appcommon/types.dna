@@ -1,0 +1,972 @@
+// 
+// ** Don't change this file unless you know what you are doing
+// **
+// ** Don't add types on a CVS branch without also adding them
+// ** to the trunk, to reserve the IDs.  Also, check that the
+// ** ID has not already been used in another config module.
+// ** Since types.dna has been split into other modules such as
+// ** b2b and mining.
+// **
+// ** ID numbers greater than 1000 are reserved for mining/types.dna
+// **
+// ** uniquenessType key:
+// **   S = System
+// **   P = Path
+// 
+DNA {
+    "OBJECT_TYPE_ARRAY" DNA {
+        "OBJECT" BO(OBJECT_TYPE) {
+            "sequenceName" String "SEQ_OBJ",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "OBJECT",
+            "obt_id" Integer "0",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_OBJECT",
+            "viewPrefix" String "OBJ"
+        },
+        "PRODUCT_FAMILY" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PRF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "PRODUCT_FAMILY",
+            "obt_id" Integer "1",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_PRODUCT_FAMILY",
+            "viewPrefix" String "PRF",
+            "indent" Integer "1"
+        },
+        "RELATIONSHIP" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "main",
+                "store"
+            ],
+            "sequenceName" String "SEQ_REL",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "RELATIONSHIP",
+            "obt_id" Integer "2",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_RELATIONSHIP",
+            "viewPrefix" String "REL",
+            "indent" Integer "1"
+        },
+        "PRODUCT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PRD",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "true",
+            "name" String "PRODUCT",
+            "obt_id" Integer "3",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewPrefix" String "PRD",
+            "indent" Integer "2"
+        },
+        "ASSORTMENT_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_ASF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "ASSORTMENT_FOLDER",
+            "obt_id" Integer "4",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_ASST_FOLDER",
+            "viewPrefix" String "ASF",
+            "indent" Integer "1"
+        },
+        "ASSORTMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_AST",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "ASSORTMENT",
+            "obt_id" Integer "5",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_ASSORTMENT",
+            "viewPrefix" String "AST",
+            "indent" Integer "2"
+        },
+        "SKU" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_SKU",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "SKU",
+            "obt_id" Integer "6",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewPrefix" String "SKU",
+            "indent" Integer "3"
+        },
+        "USER_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "store"
+            ],
+            "sequenceName" String "SEQ_USF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "USER_FOLDER",
+            "obt_id" Integer "7",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_USER_FOLDER",
+            "viewPrefix" String "USF",
+            "indent" Integer "1"
+        },
+        "USER_ACCOUNT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "store"
+            ],
+            "sequenceName" String "SEQ_USA",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "USER_ACCOUNT",
+            "obt_id" Integer "8",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_USER_ACCOUNT",
+            "viewPrefix" String "USA",
+            "indent" Integer "2"
+        },
+        "SUB_ASSORTMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_SBA",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "SUB_ASSORTMENT",
+            "obt_id" Integer "9",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_SUB_ASSORTMENT",
+            "viewPrefix" String "SBA",
+            "indent" Integer "3"
+        },
+        "PROMOTION_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PMF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "PROMOTION_FOLDER",
+            "obt_id" Integer "10",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_PROMO_FOLDER",
+            "viewPrefix" String "PMF",
+            "indent" Integer "1"
+        },
+        "PROMOTION" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PRM",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "PROMOTION",
+            "obt_id" Integer "11",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_PROMOTION",
+            "viewPrefix" String "PRM",
+            "indent" Integer "2"
+        },
+        "GARBAGE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "GARBAGE",
+            "obt_id" Integer "14",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "indent" Integer "1"
+        },
+        "USER_GROUP_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_UGF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "USER_GROUP_FOLDER",
+            "obt_id" Integer "15",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_USER_GROUP_FOLDER",
+            "viewPrefix" String "UGF",
+            "indent" Integer "1"
+        },
+        "USER_GROUP" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_USG",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "USER_GROUP",
+            "obt_id" Integer "16",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_USER_GROUP",
+            "viewPrefix" String "USG",
+            "indent" Integer "2"
+        },
+        "ROLE_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "store"
+            ],
+            "sequenceName" String "SEQ_RLF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "ROLE_FOLDER",
+            "obt_id" Integer "17",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_ROLE_FOLDER",
+            "viewPrefix" String "RLF",
+            "indent" Integer "1"
+        },
+        "ROLE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "store"
+            ],
+            "sequenceName" String "SEQ_ROL",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "ROLE",
+            "obt_id" Integer "18",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_ROLE",
+            "viewPrefix" String "ROL",
+            "indent" Integer "2"
+        },
+        "PRICE_LIST_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PLF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "PRICE_LIST_FOLDER",
+            "obt_id" Integer "19",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_PRICE_LIST_FOLDER",
+            "viewPrefix" String "PLF",
+            "indent" Integer "1"
+        },
+        "PRICE_LIST" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_PRL",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "PRICE_LIST",
+            "obt_id" Integer "20",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_PRICE_LIST",
+            "viewPrefix" String "PRL",
+            "indent" Integer "2"
+        },
+        "ATTRIBUTE_GROUP" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_ATG",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "ATTRIBUTE_GROUP",
+            "obt_id" Integer "21",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_ATTR_GRP",
+            "viewPrefix" String "ATG",
+            "indent" Integer "1"
+        },
+        "ATTRIBUTE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_ATR",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "ATTRIBUTE",
+            "obt_id" Integer "22",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewPrefix" String "ATR",
+            "indent" Integer "2"
+        },
+        "ORDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_ORH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "ORDER",
+            "obt_id" Integer "24",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_ORDER_HEADER",
+            "viewPrefix" String "ORH",
+            "indent" Integer "1",
+            "decode" String "ORDER_HEADER"
+        },
+        "ARC_ORDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "ARC_ORDER",
+            "obt_id" Integer "24",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_ORDER_HEADER",
+            "viewPrefix" String "ORH",
+            "indent" Integer "1",
+            "decode" String "ORDER_HEADER",
+            "domain" Boolean "false"
+        },
+        "SHIPMENT_METHOD" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_SHM",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "SHIPMENT_METHOD",
+            "obt_id" Integer "25",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_SHIPMENT_METHOD",
+            "viewPrefix" String "SHM",
+            "indent" Integer "2"
+        },
+        "SHIPMENT_CARRIER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_SHC",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "SHIPMENT_CARRIER",
+            "obt_id" Integer "26",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_SHIPMENT_CARRIER",
+            "viewPrefix" String "SHC",
+            "indent" Integer "1"
+        },
+        "WORK_TEMPLATE_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_WFF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "WORK_TEMPLATE_FOLDER",
+            "obt_id" Integer "27",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_WORK_TMPL_FOLDER",
+            "viewPrefix" String "WFF",
+            "indent" Integer "1"
+        },
+        "WORK_TEMPLATE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_WFT",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "WORK_TEMPLATE",
+            "obt_id" Integer "28",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_WORK_TEMPLATE",
+            "viewPrefix" String "WFT",
+            "indent" Integer "2"
+        },
+        "COLLECTION" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac",
+                "main",
+                "store"
+            ],
+            "sequenceName" String "SEQ_COL",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "COLLECTION",
+            "obt_id" Integer "29",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_COLLECTION",
+            "viewPrefix" String "COL",
+            "indent" Integer "2"
+        },
+        "GIFT_REGISTRY_HEADER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_GRH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "GIFT_REGISTRY_HEADER",
+            "obt_id" Integer "31",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_GIFT_REG_HEADER",
+            "viewPrefix" String "GRH",
+            "indent" Integer "1"
+        },
+        "INDIVIDUAL" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_IND",
+            "createView" Boolean "true",
+            "name" String "INDIVIDUAL",
+            "obt_id" Integer "121",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_INDIVIDUAL",
+            "viewPrefix" String "IND",
+            "removeDeleted" Boolean "true",
+            "indent" Integer "1"
+        },
+        "PLAN_SHIPMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_PSH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "PLAN_SHIPMENT",
+            "obt_id" Integer "32",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_PLAN_SHIP_HEADER",
+            "viewPrefix" String "PSH",
+            "indent" Integer "1",
+            "decode" String "PLAN_SHIP_HEADER"
+        },
+        "ARC_PLAN_SHIPMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "ARC_PLAN_SHIPMENT",
+            "obt_id" Integer "32",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_PLAN_SHIP_HEADER",
+            "viewPrefix" String "PSH",
+            "indent" Integer "1",
+            "decode" String "PLAN_SHIP_HEADER",
+            "domain" Boolean "false"
+        },
+        "SHIPMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_SHH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "SHIPMENT",
+            "obt_id" Integer "33",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_SHIPMENT_HEADER",
+            "viewPrefix" String "SHH",
+            "indent" Integer "1",
+            "decode" String "SHIPMENT_HEADER"
+        },
+        "ARC_SHIPMENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "ARC_SHIPMENT",
+            "obt_id" Integer "33",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_SHIPMENT_HEADER",
+            "viewPrefix" String "SHH",
+            "indent" Integer "1",
+            "decode" String "SHIPMENT_HEADER",
+            "domain" Boolean "false"
+        },
+        "CONTENT_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_CNF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "CONTENT_FOLDER",
+            "obt_id" Integer "35",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_CONTENT_FOLDER",
+            "viewPrefix" String "CNF",
+            "indent" Integer "1"
+        },
+        "CONTENT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_CNT",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "CONTENT",
+            "obt_id" Integer "36",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewPrefix" String "CNT",
+            "indent" Integer "2"
+        },
+        "RULE_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_RUF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "RULE_FOLDER",
+            "obt_id" Integer "37",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_RULE_FOLDER",
+            "viewPrefix" String "RUF",
+            "indent" Integer "1"
+        },
+        "RULE_BASE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_RUB",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "RULE_BASE",
+            "obt_id" Integer "38",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_RULE_BASE",
+            "viewPrefix" String "RUB",
+            "indent" Integer "2"
+        },
+        "RULE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_RUL",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "RULE",
+            "obt_id" Integer "39",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_RULE",
+            "viewPrefix" String "RUL",
+            "indent" Integer "3"
+        },
+        "MERCHANT_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_MRF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "MERCHANT_FOLDER",
+            "obt_id" Integer "40",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_MERCHANT_FOLDER",
+            "viewPrefix" String "MRF",
+            "indent" Integer "1"
+        },
+        "MERCHANT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_MRH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "MERCHANT",
+            "obt_id" Integer "41",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_MERCHANT",
+            "viewPrefix" String "MRH",
+            "indent" Integer "2"
+        },
+        "SHIP_CARRIER_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_SHF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "SHIP_CARRIER_FOLDER",
+            "obt_id" Integer "42",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_SHIP_CARRIER_FOLDER",
+            "viewPrefix" String "SHF",
+            "indent" Integer "1"
+        },
+        "CART_HEADER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_CTH",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "CART_HEADER",
+            "obt_id" Integer "45",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "viewName" String "V_CART_HEADER",
+            "viewPrefix" String "CTH",
+            "indent" Integer "1"
+        },
+        "REMOTE_DESKTOP" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_OBJ",
+            "createView" Boolean "false",
+            "descendantsByPath" Boolean "false",
+            "name" String "REMOTE_DESKTOP",
+            "obt_id" Integer "50",
+            "supportsOwner" Boolean "false",
+            "supportsPermissions" Boolean "false"
+        },
+        "WEB_AUTH_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_WTF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "WEB_AUTH_FOLDER",
+            "obt_id" Integer "63",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_WEB_AUTH_FOLDER",
+            "viewPrefix" String "WTF",
+            "indent" Integer "1"
+        },
+        "WEB_AUTH_TEMPLATE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_WAT",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "WEB_AUTH_TEMPLATE",
+            "obt_id" Integer "64",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_WEB_AUTH_TEMPLATE",
+            "viewPrefix" String "WAT",
+            "indent" Integer "2"
+        },
+        "WORKFLOW_PROJECT" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_WPJ",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "WORKFLOW_PROJECT",
+            "obt_id" Integer "65",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_WORKFLOW_PROJECT",
+            "viewPrefix" String "WPJ",
+            "indent" Integer "1"
+        },
+        "SET_DEFINITION_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_SDF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "SET_DEFINITION_FOLDER",
+            "obt_id" Integer "66",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_SET_DEFINITION_FOLDER",
+            "viewPrefix" String "SDF",
+            "indent" Integer "1"
+        },
+        "SET_DEFINITION" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "eac"
+            ],
+            "sequenceName" String "SEQ_SDE",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "SET_DEFINITION",
+            "obt_id" Integer "67",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_SET_DEFINITION",
+            "viewPrefix" String "SDE",
+            "indent" Integer "2"
+        },
+        "PROFILE" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "store"
+            ],
+            "sequenceName" String "SEQ_PRO",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "PROFILE",
+            "obt_id" Integer "68",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_PROFILE",
+            "viewPrefix" String "PRO",
+            "indent" Integer "1"
+        },
+        "ADDRESS" BO(OBJECT_TYPE) {
+            "obt_id" Integer "200",
+            "name" String "ADDRESS",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_UAD",
+            "objectBased" Boolean "false"
+        },
+        "CONTENT_MEDIA" BO(OBJECT_TYPE) {
+            "obt_id" Integer "201",
+            "name" String "CONTENT_MEDIA",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_CNM",
+            "objectBased" Boolean "false"
+        },
+        "ATTRIBUTE_DOMAIN" BO(OBJECT_TYPE) {
+            "obt_id" Integer "202",
+            "name" String "ATTRIBUTE_DOMAIN",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_DOM",
+            "viewPrefix" String "DOM",
+            "objectBased" Boolean "false"
+        },
+        "ATTRIBUTE_DOMAIN_VALUE" BO(OBJECT_TYPE) {
+            "obt_id" Integer "203",
+            "name" String "ATTRIBUTE_DOMAIN_VALUE",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_DMV",
+            "viewPrefix" String "DMV",
+            "objectBased" Boolean "false"
+        },
+        "PROMOTION_CONDITION" BO(OBJECT_TYPE) {
+            "obt_id" Integer "204",
+            "name" String "PROMOTION_CONDITION",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_PMC",
+            "viewPrefix" String "PMC",
+            "objectBased" Boolean "false"
+        },
+        "PROMOTION_DISCOUNT" BO(OBJECT_TYPE) {
+            "obt_id" Integer "205",
+            "name" String "PROMOTION_DISCOUNT",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_PMD",
+            "viewPrefix" String "PMD",
+            "objectBased" Boolean "false"
+        },
+        "SHIP_PRICE_LIST" BO(OBJECT_TYPE) {
+            "obt_id" Integer "206",
+            "name" String "SHIP_PRICE_LIST",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_SPL",
+            "viewPrefix" String "SPL",
+            "objectBased" Boolean "false"
+        },
+        "WEB_AUTH_FIELD" BO(OBJECT_TYPE) {
+            "obt_id" Integer "207",
+            "name" String "WEB_AUTH_FIELD",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_WAF",
+            "objectBased" Boolean "false"
+        },
+        "PROMOTION_DATE" BO(OBJECT_TYPE) {
+            "obt_id" Integer "208",
+            "name" String "PROMOTION_DATE",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "sequenceName" String "SEQ_ODT",
+            "viewPrefix" String "ODT",
+            "objectBased" Boolean "false"
+        },
+        "OBJECT_PRICE" BO(OBJECT_TYPE) {
+            "obt_id" Integer "209",
+            "name" String "OBJECT_PRICE",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "viewPrefix" String "OBP",
+            "objectBased" Boolean "false"
+        },
+        "SHIP_PRICE" BO(OBJECT_TYPE) {
+            "obt_id" Integer "210",
+            "name" String "SHIP_PRICE",
+            "supportsOwner" Boolean "false",
+            "createView" Boolean "false",
+            "supportsPermissions" Boolean "false",
+            "viewPrefix" String "SPP",
+            "objectBased" Boolean "false"
+        },
+        "TILES_DEFINITION_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_TDF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "TILES_DEFINITION_FOLDER",
+            "obt_id" Integer "69",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_TILES_DEFINITION_FOLDER",
+            "viewPrefix" String "TDF",
+            "indent" Integer "1"
+        },        
+        "TILES_DEFINITION" BO(OBJECT_TYPE) {
+            "databases" StringArray [
+                "main"
+            ],
+            "sequenceName" String "SEQ_TID",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "TILES_DEFINITION",
+            "obt_id" Integer "70",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "S",
+            "viewName" String "V_TILES_DEFINITION",
+            "viewPrefix" String "TID",
+            "indent" Integer "2"
+        }
+        // 
+        // ** DO NOT ADD another object type without first ensuring that the ID
+        // ** has not already been used by another object that has been defined
+        // ** in a different config module.  The types.dna file has been split into
+        // ** multiple modules such as b2b and mining.
+        // 
+    },
+    "RELATIONSHIP_TYPE_ARRAY" BOArray [
+        (RELATIONSHIP_TYPE) {
+            "name" String "Owns",
+            "ret_id" Integer "1"
+        },
+        (RELATIONSHIP_TYPE) {
+            "name" String "Contains",
+            "ret_id" Integer "2"
+        },
+        (RELATIONSHIP_TYPE) {
+            "name" String "Links",
+            "ret_id" Integer "3"
+        },
+        (RELATIONSHIP_TYPE) {
+            "name" String "Associates",
+            "ret_id" Integer "4"
+        }
+    ]
+}

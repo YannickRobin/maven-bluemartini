@@ -1,0 +1,3854 @@
+DNA {
+    "aca_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "aca_id"
+    },
+    "accAmt" DNA {
+        "dnaType" String "currency",
+        "label" String "accAmt",
+        "max" Currency "922337203685477.5807",
+        "min" Currency "0.0"
+    },
+    "selectStateList" DNA {
+        "dnaType" String "string",
+        "domain" String "selectStateList",
+        "format" String "domain",
+        "label" String "state_cd"
+    },
+    "accommodationReasonCode" DNA {
+        "dnaType" String "string",
+        "domain" String "accommodationReasonCode",
+        "format" String "domain",
+        "label" String "accommodationReasonCode"
+    },
+    "accommodationReasonCode_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "accommodationReasonCode",
+        "format" String "domain",
+        "label" String "accommodationReasonCode_cd"
+    },
+    "accommodationStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "accommodationStatusCode",
+        "format" String "domain",
+        "label" String "accommodationStatusCode"
+    },
+    "accommodationTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "accommodationTypeCode",
+        "format" String "domain",
+        "label" String "accommodationTypeCode"
+    },
+    "accountStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "accountStatusCode",
+        "format" String "domain",
+        "label" String "accountStatusCode"
+    },
+    "accountTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "accountTypeCode",
+        "format" String "domain",
+        "label" String "accountTypeCode"
+    },
+    "acctActivityTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "acctActivityTypeCode",
+        "format" String "domain",
+        "label" String "acctActivityTypeCode"
+    },
+    "acm_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "acm_id"
+    },
+    "act_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "act_id"
+    },
+    "acxiomLabel" DNA {
+        "dnaType" String "string",
+        "label" String "acxiomLabel"
+    },
+    "add2_button" DNA {
+        "dnaType" String "string",
+        "label" String "add2_button"
+    },
+    "add_button" DNA {
+        "dnaType" String "string",
+        "label" String "add_button"
+    },
+    "add_comment_button" DNA {
+        "dnaType" String "string",
+        "label" String "add_comment_button"
+    },
+    "add_from_folder_button" DNA {
+        "dnaType" String "string",
+        "label" String "addFromFolder"
+    },
+    "address" DNA {
+        "dnaType" String "string",
+        "label" String "address",
+        "max" Integer "80",
+        "min" Integer "0",
+        "pattern" String "^[^&<]*\$"
+    },
+    "addressStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "addressStatusCode",
+        "format" String "domain",
+        "label" String "addressStatusCode"
+    },
+    "addressTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "addressTypeCode",
+        "format" String "domain",
+        "label" String "addressTypeCode"
+    },
+    "addToItemChooser" DNA {
+        "dnaType" String "string",
+        "label" String "addToItemChooser"
+    },
+    "advanced" DNA {
+        "dnaType" String "string",
+        "label" String "advanced"
+    },
+    "affiliationFolderStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "affiliationFolderStatusCode",
+        "format" String "domain",
+        "label" String "affiliationFolderStatusCode"
+    },
+    "aggAtt" DNA {
+        "dnaType" String "string",
+        "max" Integer "8000"
+    },
+    "aggregationColumn" DNA {
+        "description" String "All the aggregation columns",
+        "dnaType" String "string",
+        "domain" String "aggregationColumn",
+        "format" String "domain",
+        "label" String "Column"
+    },
+    "aggregationLabel" DNA {
+        "dnaType" String "string",
+        "label" String "aggregationLabel"
+    },
+    "akamaiEnabled" DNA {
+        "dnaType" String "boolean",
+        "domain" String "akamaiEnabled",
+        "format" String "domain",
+        "label" String "akamaiEnabled"
+    },
+    "all_button" DNA {
+        "dnaType" String "string",
+        "label" String "all_button"
+    },
+    "analysisLabel" DNA {
+        "dnaType" String "string",
+        "label" String "analysisLabel"
+    },
+    "asf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "asf_id"
+    },
+    "assign_button" DNA {
+        "dnaType" String "string",
+        "label" String "assign_button"
+    },
+    "assignedTo" DNA {
+        "description" String "Used to set the origination of a call.",
+        "dnaType" String "long",
+        "domain" String "assignedTo",
+        "format" String "domain",
+        "label" String "assignedTo"
+    },
+    "assortmentLabel" DNA {
+        "dnaType" String "string",
+        "max" Integer "128",
+        "label" String "assortmentLabel"
+    },
+    "assortmentName" DNA {
+        "description" String "Assortment Name",
+        "dnaType" String "string",
+        "label" String "objectName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z0-9_-]*\$"
+    },
+    "ast_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ast_id"
+    },
+    "atg_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "atg_id"
+    },
+    "atg_parent_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "atg_parent_id"
+    },
+    "attributeAccessGroupCode" DNA {
+        "dnaType" String "string",
+        "domain" String "attributeAccessGroupCode",
+        "format" String "domain",
+        "label" String "attributeAccessGroupCode"
+    },
+    "attributeDomainDeleteUpdateLabel" DNA {
+        "label" String "attributeDomainDeleteUpdateLabel"
+    },
+    "attributeDomainName" DNA {
+        "dnaType" String "string",
+        "label" String "attributeDomainName"
+    },
+    "attributeDomainRBRemove" DNA {
+        "label" String "attributeDomainRBRemove"
+    },
+    "attributeDomainRBReplace" DNA {
+        "label" String "attributeDomainRBReplace"
+    },
+    "attributeDomainUpdateAll" DNA {
+        "label" String "attributeDomainUpdateAll"
+    },
+    "attributeDomainUpdateSelected" DNA {
+        "label" String "attributeDomainUpdateSelected"
+    },
+    "attributeEditMode" DNA {
+        "dnaType" String "integer",
+        "domain" String "attributeEditMode",
+        "format" String "domain",
+        "label" String "attributeEditMode"
+    },
+    "attributeGroupName" DNA {
+        "dnaType" String "string",
+        "label" String "attributeGroupName"
+    },
+    "attributeLabel" DNA {
+        "dnaType" String "variant",
+        "label" String "name"
+    },
+    "attributeLabelMulti" DNA {
+        "dnaType" String "string",
+        "label" String "attributeLabelMulti"
+    },
+    "attributeLabelNon" DNA {
+        "dnaType" String "string",
+        "label" String "attributeLabelNon"
+    },
+    "attributeName" DNA {
+        "dnaType" String "string",
+        "label" String "attributeName",
+        "max" Integer "26",
+        "pattern" String "^[A-Za-z]([A-Za-z0-9_]*[A-Za-z0-9])?\$"
+    },
+    "attributes" DNA {
+        "dnaType" String "string",
+        "label" String "attributes"
+    },
+    "attributes_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "attributes",
+        "format" String "domain",
+        "label" String "attributes_cd"
+    },
+    "attributeSourceObject" DNA {
+        "dnaType" String "variant",
+        "label" String "attributeSourceObject"
+    },
+    "attributeTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "attributeTypeCode",
+        "format" String "domain",
+        "label" String "attributeTypeCode"
+    },
+    "attributeValue" DNA {
+        "datetimeType" String "datetime",
+        "dnaType" String "variant",
+        "label" String "attributeValue"
+    },
+    "attributeValueLoc" DNA { 
+        "dnaType" String "string",
+        "label" String "attributeValue",
+        "max" Integer "40"
+    },
+    "attributeValueString" DNA {
+        "dnaType" String "string",
+        "label" String "attributeValueString"
+    },
+    "attrPrefix" DNA {
+        "dnaType" String "string",
+        "label" String "attrPrefix"
+    },
+    "auditChangeType" DNA {
+        "dnaType" String "string",
+        "domain" String "auditChangeType",
+        "format" String "domain",
+        "label" String "auditChangeType"
+    },
+     "backorderable" DNA {
+            "dnaType" String "boolean",
+            "label" String "backorderable"
+    },
+    "baseIndex" DNA {
+        "description" String "Base index of a paged array type",
+        "dnaType" String "integer",
+        "label" String "baseIndex"
+    },
+    "baseTemplate" DNA {
+        "description" String "Base template selected for the WAT",
+        "dnaType" String "string",
+        "domain" String "watBaseTemplates",
+        "format" String "domain",
+        "label" String "baseTemplateLabel"
+    },
+    "billToList" DNA {
+        "description" String "Dynamic list used for choosing creation/update of bill to addresses",
+        "dnaType" String "long",
+        "domain" String "updateAddressList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "billToList"
+    },
+    "birthdate" DNA {
+        "datetimeFormat" String "dates",
+        "dnaType" String "datetime",
+        "label" String "birthdate",
+        "min" DateTime "1970-01-01 00:00:00"
+    },
+    "bizobjDnaType" DNA {
+        "description" String "Optional type column for DNA blob in the database",
+        "dnaType" String "string",
+        "label" String "bizobjDnaType",
+        "max" Integer "3"
+    },
+    "bmvChooseButton" DNA {
+        "dnaType" String "string",
+        "label" String "bmvChooseButton"
+    },
+    "bmvPath" DNA {
+        "dnaType" String "string",
+        "label" String "bmvPath"
+    },
+    "boolean" DNA {
+        "dnaType" String "boolean",
+        "label" String "boolean"
+    },
+    "booleanDomainValue" DNA {
+        "dnaType" String "boolean",
+        "label" String "boolean"
+    },
+    "browsePath" DNA {
+        "description" String "Browse Assortment Path",
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "browsePath"
+    },
+    "businessActionName" DNA {
+        "dnaType" String "string",
+        "label" String "businessActionName",
+        "pattern" String "^[A-Za-z_]*\$"
+    },
+    "businessObjectName" DNA {
+        "dnaType" String "string",
+        "label" String "businessObjectName",
+        "pattern" String "^[A-Z_]*\$"
+    },
+    "businessObjectType" DNA {
+        "description" String "Bizact business object type",
+        "dnaType" String "string",
+        "domain" String "businessObjectName",
+        "format" String "domain",
+        "label" String "businessObjectType"
+    },
+    "cam_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "cam_id"
+    },
+    "cardBrand_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "cardBrand",
+        "format" String "domain",
+        "label" String "cardBrand_cd"
+    },
+    "cardMonth_cd" DNA {
+        "dnaType" String "integer",
+        "domain" String "cardMonth",
+        "format" String "domain",
+        "label" String "cardMonth_cd"
+    },
+    "cardYear_cd" DNA {
+        "dnaType" String "integer",
+        "domain" String "cardYear",
+        "format" String "domain",
+        "label" String "cardYear_cd"
+    },
+    "cartHeaderStatus_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "cartHeaderStatus",
+        "format" String "domain",
+        "label" String "cartHeaderStatus_cd"
+    },
+    "cartHeaderType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "cartHeaderType",
+        "format" String "domain",
+        "label" String "cartHeaderType_cd"
+    },
+    "caseNumber" DNA {
+        "dnaType" String "string",
+        "label" String "orderNum",
+        "max" Integer "80",
+        "min" Integer "0"
+    },
+    "casePriority_cd" DNA {
+        "dnaType" String "integer",
+        "domain" String "priority_cd",
+        "format" String "domain",
+        "label" String "Priority_cd"
+    },
+    "catalogCode" DNA {
+        "dnaType" String "string",
+        "label" String "catalogCode"
+    },
+    "ccd_id" DNA {
+        "description" String "Credit Card ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ccd_id"
+    },
+    "ccdate" DNA {
+        "datetimeFormat" String "ccdate",
+        "datetimeType" String "datetime",
+        "dnaType" String "datetime",
+        "label" String "ccdate"
+    },
+    "ccnum" DNA {
+        "dnaType" String "string",
+        "format" String "ccnum",
+        "label" String "ccnum",
+        "max" Integer "20",
+        "min" Integer "8",
+        "pattern" String "^[0-9][0-9\\- ]*[0-9]\$"
+    },
+    "cct_id" DNA {
+        "description" String "Credit Card Trx ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "cct_id"
+    },
+    "cel_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "cel_id"
+    },
+    "change_button" DNA {
+        "dnaType" String "string",
+        "label" String "change_button"
+    },
+    "change_now_button" DNA {
+        "dnaType" String "string",
+        "label" String "change_now_button"
+    },
+    "channel" DNA {
+        "description" String "Used to set the origination of a call.",
+        "dnaType" String "String",
+        "domain" String "channel",
+        "format" String "domain",
+        "label" String "channel"
+    },
+    "choicesArray" DNA {
+        "dnaType" String "StringArray",
+        "label" String "taskAction"
+    },
+    "city" DNA {
+        "dnaType" String "string",
+        "label" String "city",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[^&<]*\$"
+    },
+    "cki_id" DNA {
+        "description" String "Cookie Identifier ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "cki_id"
+    },
+    "class" DNA {
+        "description" String "Bizact class name",
+        "dnaType" String "string",
+        "label" String "class"
+    },
+    "clearButton" DNA {
+        "dnaType" String "string",
+        "label" String "clearButton"
+    },
+    "cls_id" DNA {
+        "dnaType" String "long",
+        "label" String "cls_id"
+    },
+    "cnt_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "cnt_id"
+    },
+    "code" DNA {
+        "dnaType" String "variant",
+        "label" String "code"
+    },
+    "coFlag" DNA {
+        "dnaType" String "boolean",
+        "domain" String "coFlag",
+        "format" String "domain",
+        "label" String "coFlag"
+    },
+    "columnDataType" DNA {
+        "description" String "Database column type",
+        "dnaType" String "string",
+        "label" String "columnDataType"
+    },
+    "columnInfo" DNA {
+        "description" String "Info about column in db table.",
+        "dnaType" String "string",
+        "domain" String "columnInfo",
+        "format" String "domain",
+        "label" String "columnInfo"
+    },
+    "comment" DNA {
+        "description" String "Comments",
+        "dnaType" String "string",
+        "label" String "comment",
+        "max" Integer "1024"
+    },
+    "commenter" DNA {
+        "description" String "Name of user who created the comment.",
+        "dnaType" String "string",
+        "label" String "comment"
+    },
+    "commit_button" DNA {
+        "dnaType" String "string",
+        "label" String "commit_button"
+    },
+    "companyName" DNA {
+        "dnaType" String "string",
+        "label" String "companyName"
+    },
+    "confirmPassword" DNA {
+        "dnaType" String "string",
+        "label" String "confirmPassword",
+        "max" Integer "40",
+        "min" Integer "6"
+    },
+    "contact_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "contact_id"
+    },
+    "contentName" DNA {
+        "description" String "content names",
+        "dnaType" String "string",
+        "label" String "contentName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z0-9_.-]*\$"
+    },
+    "contentType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "contentType",
+        "format" String "domain",
+        "label" String "contentType"
+    },
+    "contentTypeForWAT" DNA {
+        "dnaType" String "string",
+        "domain" String "contentTypeForWAT",
+        "format" String "domain",
+        "label" String "contentType"
+    },
+    "copy_button" DNA {
+        "dnaType" String "string",
+        "label" String "copy_button"
+    },
+    "country_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "country",
+        "format" String "domain",
+        "label" String "country_cd"
+    },
+    "coUserName" DNA {
+        "dnaType" String "string",
+        "label" String "coUserName"
+    },
+    "createdByUser" DNA {
+        "dnaType" String "string",
+        "label" String "createdByUser"
+    },
+    "createDt" DNA {
+        "dnaType" String "datetime",
+        "label" String "createDt"
+    },
+    "creditCardList" DNA {
+        "description" String "List of credit cards for a customer in customer details",
+        "dnaType" String "long",
+        "domain" String "creditCardList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "creditCardList"
+    },
+    "crh_id" DNA {
+        "dnaType" String "long",
+        "label" String "crh_id"
+    },
+    "crossSellProduct" DNA {
+        "description" String "Cross-Sell Product ID",
+        "dnaType" String "long",
+        "label" String "crossSellProduct"
+    },
+    "crt_id" DNA {
+        "dnaType" String "long",
+        "label" String "crt_id"
+    },
+    "cth_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "cth_id"
+    },
+    "ctk_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ctk_id"
+    },
+    "currency" DNA {
+        "dbtype" String "currency",
+        "dnaType" String "currency",
+        "label" String "currency",
+        "max" Currency "922337203685477.5807",
+        "min" Currency "0.0"
+    },
+    "currency_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "currency",
+        "format" String "domain",
+        "label" String "currency_cd"
+    },
+    "currentButton" DNA {
+        "dnaType" String "string",
+        "label" String "currentButton"
+    },
+    "customerLabel" DNA {
+        "dnaType" String "string",
+        "label" String "customerLabel"
+    },
+    "customerNum" DNA {
+        "dnaType" String "string",
+        "label" String "customerNum",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "database" DNA {
+        "description" String "Database used by a business action",
+        "dnaType" String "string",
+        "domain" String "databaseNames",
+        "format" String "domain",
+        "label" String "database"
+    },
+    "databaseColumnName" DNA {
+        "description" String "database column in bizobj panel of BMDev",
+        "dnaType" String "string",
+        "domain" String "databaseColumnName",
+        "format" String "domain",
+        "label" String "databaseColumnName",
+        "pattern" String "^([A-Z]{3}_[A-Z0-9_]*[A-Z0-9])|(=[A-Z_]*[A-Z])\$"
+    },
+    "databaseColumnNameX" DNA {
+        "description" String "database column in database panel of BMDev",
+        "dnaType" String "string",
+        "label" String "databaseColumnNameX",
+        "max" Integer "32",
+        "min" Integer "1",
+        "pattern" String "^([A-Z]{3}_[A-Z0-9_]*[A-Z0-9])|(=[A-Z_]*[A-Z])\$"
+    },
+    "databaseTableName" DNA {
+        "description" String "database table in bizobj panel of BMDev",
+        "dnaType" String "string",
+        "domain" String "databaseTableName",
+        "format" String "domain",
+        "label" String "databaseTableName",
+        "pattern" String "^[A-Z][A-Z0-9_]*[A-Z0-9]\$"
+    },
+    "databaseTableNameX" DNA {
+        "description" String "database table in database panel of BMDev",
+        "dnaType" String "string",
+        "label" String "databaseTableNameX",
+        "pattern" String "^[A-Z][A-Z0-9_]*[A-Z0-9]\$"
+    },
+    "dataElement" DNA {
+        "dnaType" String "string",
+        "domain" String "dataElement",
+        "format" String "domain",
+        "label" String "dataElement"
+    },
+    "dataElementName" DNA {
+        "dnaType" String "string",
+        "label" String "dataElementName",
+        "pattern" String "^[A-Za-z_0-9]*\$"
+    },
+    "date" DNA {
+        "datetimeFormat" String "dates",
+        "dbtype" String "date",
+        "dnaType" String "datetime",
+        "label" String "date"
+    },
+    "date_search" DNA {
+        "datetimeFormat" String "dates",
+        "dnaType" String "datetime",
+        "label" String "date_search"
+    },
+    "dateColumn" DNA {
+        "description" String "date element for date columns in RFM",
+        "dnaType" String "string",
+        "domain" String "dateColumn",
+        "format" String "domain",
+        "label" String "Date Column"
+    },
+    "dateOfBirth" DNA {
+        "datetimeFormat" String "dates",
+        "dnaType" String "datetime",
+        "label" String "dateOfBirth"
+    },
+    "datetime" DNA {
+        "datetimeFormat" String "timestamp",
+        "dbtype" String "datetime",
+        "dnaType" String "datetime",
+        "label" String "datetime"
+    },
+    "datetimeDomainValue" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "datetime"
+    },
+    "datetimeFormat" DNA {
+        "dnaType" String "string",
+        "domain" String "_dateTimeFormat",
+        "format" String "domain",
+        "label" String "datetimeFormat"
+    },
+    "day" DNA {
+        "description" String "Day of Week",
+        "dnaType" String "integer",
+        "domain" String "day",
+        "format" String "domain",
+        "label" String "day"
+    },
+    "daysNumber" DNA {
+        "description" String "A domain of 0-30 for a days counter",
+        "dnaType" String "integer",
+        "domain" String "daysNumber",
+        "format" String "domain",
+        "label" String "daysNumber"
+    },
+    "daysSinceLastModSearch" DNA {
+        "dnaType" String "integer",
+        "label" String "DaysSinceLastMod",
+        "max" Integer "2000",
+        "min" Integer "1"
+    },
+    "dbTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "dbTypeCode",
+        "format" String "domain",
+        "label" String "db_type_cd"
+    },
+    "decline_comment_button" DNA {
+        "dnaType" String "string",
+        "label" String "decline_comment_button"
+    },
+    "decode" DNA {
+        "dnaType" String "string",
+        "label" String "decode"
+    },
+    "decodeAttr" DNA {
+        "description" String "Decode for attribute domain tables",
+        "dnaType" String "string",
+        "label" String "decodeAttr"
+    },
+    "delete_button" DNA {
+        "dnaType" String "string",
+        "label" String "delete_button"
+    },
+    "definitionName" DNA {
+        "description" String "definition names",
+        "dnaType" String "string",
+        "label" String "definitionName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z0-9_.-]*\$"
+    },
+    "deletedByUser" DNA {
+        "dnaType" String "string",
+        "label" String "deletedByUser"
+    },
+    "deletedLineNumber" DNA {
+        "description" String "Line number of deleted lines in Shopping Cart",
+        "dnaType" String "integer",
+        "label" String "lineNumber",
+        "min" Integer "0"
+    },
+    "deleteDt" DNA {
+        "dnaType" String "datetime",
+        "label" String "deleteDt"
+    },
+    "description" DNA {
+        "dnaType" String "string",
+        "label" String "description"
+    },
+    "details_button" DNA {
+        "description" String "Used in error dialog (Details >>) ",
+        "dnaType" String "string",
+        "label" String "details_button"
+    },
+    "dirty" DNA {
+        "dnaType" String "boolean"
+    },
+    "displayAttributeMode" DNA {
+        "description" String "List of attributes searched on",
+        "dnaType" String "Integer",
+        "domain" String "displayAttributeMode",
+        "format" String "domain",
+        "label" String "displayAttributeModeLabel"
+    },
+    "dlabelAssignedRoles" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelAssignedRoles"
+    },
+    "dlabelCreditCardInformation" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelCreditCardInformation"
+    },
+    "dlabelCrossSellProduct" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelCrossSellProduct"
+    },
+    "dlabelCustomerAddresses" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelCustomerAddresses"
+    },
+    "dlabelCustomerInformation" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelCustomerInformation"
+    },
+    "dlabelGroupInformation" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelGroupInformation"
+    },
+    "dlabelGroupMembers" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelGroupMembers"
+    },
+    "dlabelGroupMembership" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelGroupMembership"
+    },
+    "dlabelLogin" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelLogin"
+    },
+    "dlabelPrivileges" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelPrivileges"
+    },
+    "dlabelSubstituteProduct" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelSubstituteProduct"
+    },
+    "dlabelUpSellProduct" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelUpSellProduct"
+    },
+    "dlabelUserInformation" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelUserInformation"
+    },
+    "dmv_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "dmv_id"
+    },
+    "dnablob" DNA {
+        "description" String "For DNA columns in the database",
+        "dnaType" String "list",
+        "label" String "dnablob"
+    },
+    "dnaclob" DNA {
+        "description" String "For DNA stored as TEXT in the database",
+        "dnaType" String "list",
+        "label" String "dnaclob"
+    },
+    "dnaList" DNA {
+        "dnaType" String "list",
+        "label" String "listLabel"
+    },
+    "dnaType" DNA {
+        "dnaType" String "string",
+        "domain" String "dnaType",
+        "format" String "domain",
+        "label" String "dnaType"
+    },
+    "dnaTypeAttr" DNA {
+        "dnaType" String "string",
+        "domain" String "dnaTypeAttr",
+        "format" String "domain",
+        "label" String "dnaTypeAttr"
+    },
+    "dnaTypeDomain" DNA {
+        "dnaType" String "string",
+        "domain" String "dnaTypeDomain",
+        "format" String "domain",
+        "label" String "dnaTypeDomain"
+    },
+    "domain" DNA {
+        "dnaType" String "string",
+        "domain" String "domain",
+        "format" String "domain",
+        "label" String "domain"
+    },
+    "domainElementName" DNA {
+        "dnaType" String "string",
+        "label" String "domainElementName",
+        "pattern" String "^[A-Za-z_0-9]*\$"
+    },
+    "domainValueStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "domainValueStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "done_button" DNA {
+        "dnaType" String "string",
+        "label" String "done_button"
+    },
+    "dotDotDotButton" DNA {
+        "dnaType" String "string",
+        "label" String "dotDotDotButton"
+    },
+    "double" DNA {
+        "dbtype" String "double",
+        "dnaType" String "double",
+        "label" String "double"
+    },
+    "doubleDomainValue" DNA {
+        "dnaType" String "double",
+        "label" String "double"
+    },
+    "down_button" DNA {
+        "dnaType" String "string",
+        "label" String "downButtonLabel"
+    },
+    "downloadButton" DNA {
+        "dnaType" String "string",
+        "label" String "downloadButton"
+    },
+    "dwObjectName" DNA {
+        "dnaType" String "string",
+        "max" Integer "50",
+        "min" Integer "0",
+        "pattern" String "^[a-zA-Z0-9][a-zA-Z0-9-_]*\$"
+    },
+    "dynamicTable" DNA {
+        "dnaType" String "boolean",
+        "label" String "dynamicTable"
+    },
+    "edit_button" DNA {
+        "dnaType" String "string",
+        "label" String "edit_button"
+    },
+    "edit_wat" DNA {
+        "dnaType" String "string",
+        "label" String "edit_wat"
+    },
+    "editableAttributeAccessGroupCode" DNA {
+        "dnaType" String "string",
+        "domain" String "_editableAttributeAccessGroupCode",
+        "format" String "domain",
+        "label" String "editableAttributeAccessGroupCode"
+    },
+    "email" DNA {
+        "dnaType" String "string",
+        "format" String "email",
+        "label" String "email",
+        "max" Integer "128"
+    },
+    "emailTo" DNA {
+        "dnaType" String "string",
+        "format" String "email",
+        "label" String "emailTo",
+        "max" Integer "128"
+    },
+    "employeeManager" DNA {
+        "dnaType" String "string",
+        "label" String "employeeManager",
+        "max" Integer "20",
+        "min" Integer "0"
+    },
+    "employeeNum" DNA {
+        "dnaType" String "string",
+        "label" String "employeeNum",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "enc_id" DNA {
+        "description" String "Environment Connection ID",
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "enc_id"
+    },
+    "encodingNamesDomain" DNA {
+        "dnaType" String "string",
+        "domain" String "encodingNamesDomain",
+        "format" String "domain",
+        "label" String "encodingNamesDomain"
+    },
+    "encType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "encType",
+        "format" String "domain"
+    },
+    "env_id" DNA {
+        "description" String "Environment ID",
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "env_id"
+    },
+    "environmentName" DNA {
+        "description" String "Environment Name",
+        "dnaType" String "string",
+        "label" String "environmentName",
+        "max" Integer "128",
+        "pattern" String "^[a-zA-Z0-9-_.]*\$"
+    },
+    "environmentStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "environmentStatusCode",
+        "format" String "domain",
+        "label" String "environmentStatusCode"
+    },
+    "envType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "envType",
+        "format" String "domain"
+    },
+    "errorCode" DNA {
+        "dnaType" String "string",
+        "label" String "errorCode"
+    },
+    "errorInfo" DNA {
+        "dnaType" String "string",
+        "label" String "errorInfo"
+    },
+    "errorTransformLabel" DNA {
+        "dnaType" String "string",
+        "label" String "errorTransformLabel"
+    },
+    "event_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "eventType",
+        "format" String "domain",
+        "label" String "event_cd"
+    },
+    "event_cd_cancel" DNA {
+        "dnaType" String "string",
+        "domain" String "eventTypeCancel",
+        "format" String "domain",
+        "label" String "event_cd"
+    },
+    "event_cd_return" DNA {
+        "dnaType" String "string",
+        "domain" String "eventTypeReturn",
+        "format" String "domain",
+        "label" String "event_cd"
+    },
+    "eventTime" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "eventTime"
+    },
+    "eventType_search" DNA {
+        "description" String "Optional type code on the registry",
+        "dnaType" String "string",
+        "domain" String "eventType_search",
+        "format" String "domain",
+        "label" String "eventType_search"
+    },
+    "exchangeDifferenceAmount" DNA {
+        "dnaType" String "currency",
+        "label" String "exchangeDifferenceAmount"
+    },
+    "exchangePaymentAmount" DNA {
+        "dnaType" String "currency",
+        "label" String "exchangePaymentAmount"
+    },
+    "exportStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "exportStatusCode",
+        "format" String "domain",
+        "label" String "exportStatusCode"
+    },
+    "external_org_types" DNA {
+        "dnaType" String "string",
+        "domain" String "external_org_types",
+        "format" String "domain",
+        "label" String "external_org_types"
+    },
+    "externalID" DNA {
+        "dnaType" String "long",
+        "label" String "External ID"
+    },
+    "familyHistory" DNA {
+        "dnaType" String "integer",
+        "label" String "familyHistory"
+    },
+    "fileChooser" DNA {
+        "dnaType" String "string",
+        "label" String "fileChooser"
+    },
+    "fileName" DNA {
+        "description" String "File name.",
+        "dnaType" String "string",
+        "label" String "file name"
+    },
+    "filePath" DNA {
+        "description" String "File system path.",
+        "dnaType" String "string",
+        "label" String "filePath"
+    },
+    "findButtonLabel" DNA {
+        "dnaType" String "string",
+        "label" String "findButtonLabel"
+    },
+    "flc_id" DNA {
+        "description" String "Fulfillment Center id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "flc_id"
+    },
+    "flcStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "flcStatusCode",
+        "format" String "domain",
+        "label" String "flcStatusCode"
+    },
+    "folderID" DNA {
+        "description" String "Effective folder ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "folderID"
+    },
+    "folderLabel" DNA {
+        "dnaType" String "string",
+        "label" String "folderLabel"
+    },
+    "format" DNA {
+        "dnaType" String "string",
+        "domain" String "format",
+        "format" String "domain",
+        "label" String "format"
+    },
+    "formatAttr" DNA {
+        "dnaType" String "string",
+        "domain" String "formatAttr",
+        "format" String "domain",
+        "label" String "formatAttr"
+    },
+    "formatClass" DNA {
+        "dnaType" String "string",
+        "label" String "formatClass"
+    },
+    "freeGift" DNA {
+        "dnaType" String "boolean",
+        "label" String "freeGift"
+    },
+    "fulfillmentCenterTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "fulfillmentCenterTypeCode",
+        "format" String "domain",
+        "label" String "fulfillmentCenterTypeCode"
+    },
+    "fullname" DNA {
+        "dnaType" String "string",
+        "label" String "fullname",
+        "max" Integer "80",
+        "min" Integer "0"
+    },
+    "gender" DNA {
+        "dnaType" String "string",
+        "domain" String "gender",
+        "format" String "domain",
+        "label" String "gender"
+    },
+    "get_button" DNA {
+        "dnaType" String "string",
+        "label" String "get_button"
+    },
+    "giftRegistrySearchStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "giftRegistrySearchStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "goButton" DNA {
+        "dnaType" String "string",
+        "label" String "goButton"
+    },
+    "grg_id" DNA {
+        "description" String "Gift Registry Line ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "grg_id"
+    },
+    "grh_id" DNA {
+        "description" String "Gift Registry Header ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "grh_id"
+    },
+    "hashCode" DNA {
+        "dnaType" String "integer",
+        "label" String "hashCode"
+    },
+    "headerAppliedDiscount" DNA {
+        "dnaType" String "Currency",
+        "label" String "headerAppliedDiscount",
+        "min" Currency "0.0"
+    },
+    "hostName" DNA {
+        "description" String "The domain name that the client is browsing from",
+        "dnaType" String "string",
+        "label" String "hostName",
+        "max" Integer "128",
+        "min" Integer "0"
+    },
+    "hoursNumber" DNA {
+        "description" String "A domain of 0-24 for an hours counter",
+        "dnaType" String "integer",
+        "domain" String "hoursNumber",
+        "format" String "domain",
+        "label" String "hoursNumber"
+    },
+    "identificationNum" DNA {
+        "dnaType" String "string",
+        "label" String "identificationNum",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "implicitFolder" DNA {
+        "dnaType" String "boolean",
+        "label" String "Is the containing folder implicitly specified?"
+    },
+    "inactiveParentStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "inactiveParentStatusCode",
+        "format" String "domain",
+        "label" String "productStatusCode"
+    },
+    "includeNoLabel" DNA {
+        "dnaType" String "string",
+        "label" String "includeNoLabel"
+    },
+    "includeOptLabel" DNA {
+        "dnaType" String "variant",
+        "label" String "includeLabel"
+    },
+    "includeYesLabel" DNA {
+        "dnaType" String "string",
+        "label" String "includeYesLabel"
+    },
+    "indDefaultBillTo" DNA {
+        "dnaType" String "boolean",
+        "label" String "indDefaultBillTo"
+    },
+    "indDefaultShipTo" DNA {
+        "dnaType" String "boolean",
+        "label" String "indDefaultShipTo"
+    },
+    "index" DNA {
+        "dnaType" String "integer",
+        "label" String "index"
+    },
+    "indexFieldName" DNA {
+          "dnaType" String "string",
+          "label" String "indexFieldName"
+    },
+    "indicator" DNA {
+        "dnaType" String "boolean",
+        "label" String "indicator"
+    },
+    "integer" DNA {
+        "dbtype" String "integer",
+        "dnaType" String "integer",
+        "label" String "integer"
+    },
+    "integerDomainValue" DNA {
+        "dnaType" String "integer",
+        "label" String "integer"
+    },
+    "integerID" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "objectID"
+    },
+    "invoiceType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "invoiceType",
+        "format" String "domain"
+    },
+    "ipAddress" DNA {
+        "description" String "The IP address that the client is browsing from",
+        "dnaType" String "string",
+        "label" String "ipAddress",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "issue" DNA {
+        "description" String "Used to set a specified customer issue.",
+        "dnaType" String "String",
+        "domain" String "issue",
+        "format" String "domain",
+        "label" String "issue"
+    },
+    "issueStatusCode" DNA {
+        "description" String "Used to keep track of the issue status",
+        "dnaType" String "String",
+        "domain" String "issueStatusCode",
+        "format" String "domain",
+        "label" String "issueStatusCode"
+    },
+    "ixh_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ixh_id"
+    },
+    "jobTitle" DNA {
+        "dnaType" String "string",
+        "label" String "jobTitle"
+    },
+    "keyCode" DNA {
+        "dnaType" String "string",
+        "label" String "keyCode"
+    },
+    "keyword" DNA {
+        "description" String "Used for product keyword searches",
+        "dnaType" String "string",
+        "label" String "keyword"
+    },
+    "label" DNA {
+        "description" String "Used to specify bizobj prop label key in BMDeveloper",
+        "dnaType" String "string",
+        "domain" String "labelKeyList",
+        "format" String "domain",
+        "label" String "label",
+        "pattern" String "^[A-Za-z_0-9]*\$"
+    },
+    "labelCategory" DNA {
+        "description" String "Used to specify label category in BMDeveloper",
+        "dnaType" String "string",
+        "label" String "labelCategory",
+        "pattern" String "^[A-Z_]*\$"
+    },
+    "labelKey" DNA {
+        "description" String "Used to specify label key in BMDeveloper Messages",
+        "dnaType" String "string",
+        "label" String "labelKey",
+        "pattern" String "^[A-Za-z_0-9]*\$"
+    },
+    "labelValue" DNA {
+        "description" String "Used to specify label value in BMDeveloper Messages",
+        "dnaType" String "string",
+        "label" String "labelValue"
+    },
+    "launchButton" DNA {
+        "dnaType" String "string",
+        "label" String "launchButton"
+    },
+    "length" DNA {
+        "dnaType" String "integer",
+        "label" String "length"
+    },
+    "level" DNA {
+        "dnaType" String "integer",
+        "label" String "level",
+        "min" Integer "1"
+    },
+    "lineNumber" DNA {
+        "description" String "Line number for Shopping Cart",
+        "dnaType" String "integer",
+        "label" String "lineNumber",
+        "min" Integer "0"
+    },
+    "localeArray" DNA {
+        "dnaType" String "IntegerArray",
+        "label" String "localesLabel"
+    },
+    "localeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "_localeCode",
+        "format" String "domain",
+        "label" String "localeCode"
+    },
+    "localeCodeValue" DNA {
+        "dnaType" String "string",
+        "label" String "localeCode",
+        "max" Integer "8"
+    },
+    "localeCodeWithNotSelected" DNA {
+        "dnaType" String "string",
+        "domain" String "_localeCodeWithNotSelected",
+        "format" String "domain",
+        "label" String "localeCode"
+    },
+    "localeID" DNA {
+        "dnaType" String "integer",
+        "domain" String "_localeID",
+        "format" String "domain",
+        "label" String "objectID"
+    },
+    "localeStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "localeStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "localizationActive" DNA {
+        "dnaType" String "boolean",
+        "label" String "localizationActive"
+    },
+    "localizationName" DNA {
+        "dnaType" String "string",
+        "label" String "localizationName"
+    },
+    "long" DNA {
+        "dbtype" String "long",
+        "dnaType" String "long",
+        "label" String "long"
+    },
+    "longDescription" DNA {
+        "dnaType" String "string",
+        "label" String "longDescription",
+        "max" Integer "2000"
+    },
+    "longDomainValue" DNA {
+        "dnaType" String "long",
+        "label" String "long"
+    },
+    "longID" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "objectID"
+    },
+    "max" DNA {
+        "dnaType" String "variant",
+        "label" String "max"
+    },
+    "maxDatetimeValue" DNA {
+        "description" String "Maximum value for datetime attributes.",
+        "dnaType" String "datetime",
+        "label" String "maxDatetimeValue"
+    },
+    "maxDoubleValue" DNA {
+        "description" String "Maximum value for double attributes.",
+        "dnaType" String "double",
+        "label" String "maxDoubleValue"
+    },
+    "maxIntegerValue" DNA {
+        "description" String "Maximum value for integer attributes.",
+        "dnaType" String "integer",
+        "label" String "maxIntegerValue"
+    },
+    "maxLength" DNA {
+        "description" String "Maximum length for string attributes.",
+        "dnaType" String "integer",
+        "label" String "maxLength"
+    },
+    "maxRanges" DNA {
+        "description" String "Maximum number of range links to display for paging",
+        "dnaType" String "integer",
+        "label" String "maxRanges"
+    },
+    "maxRows" DNA {
+        "dnaType" String "integer",
+        "label" String "maxRows"
+    },
+    "maxRows_cd" DNA {
+        "description" String "For search templates in CallCenter",
+        "dnaType" String "integer",
+        "domain" String "maxRows",
+        "format" String "domain",
+        "label" String "maxRows_cd"
+    },
+    "mbr_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "mbr_id"
+    },
+    "media" DNA {
+        "dnaType" String "blob",
+        "label" String "media"
+    },
+    "mediafile" DNA {
+        "dnaType" String "file",
+        "label" String "media file"
+    },
+    "merchantName" DNA {
+        "dnaType" String "string",
+        "label" String "merchantName",
+        "max" Integer "20",
+        "min" Integer "0"
+    },
+    "merchantStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "merchantStatusCode",
+        "format" String "domain",
+        "label" String "merchantStatusCode"
+    },
+    "message" DNA {
+        "dnaType" String "string",
+        "label" String "message",
+        "max" Integer "200",
+        "min" Integer "0"
+    },
+    "milliseconds" DNA {
+        "description" String "The amount of time, in milliseconds, it takes to do something",
+        "dnaType" String "integer",
+        "label" String "milliseconds",
+        "min" Integer "0"
+    },
+    "mimeType" DNA {
+        "dnaType" String "string",
+        "label" String "mime type",
+        "max" Integer "128",
+        "min" Integer "0"
+    },
+    "min" DNA {
+        "dnaType" String "variant",
+        "label" String "min"
+    },
+    "minDatetimeValue" DNA {
+        "description" String "Minimum value for datetime attributes.",
+        "dnaType" String "datetime",
+        "label" String "minDatetimeValue"
+    },
+    "minDoubleValue" DNA {
+        "description" String "Minimum value for double attributes.",
+        "dnaType" String "double",
+        "label" String "minDoubleValue"
+    },
+    "minIntegerValue" DNA {
+        "description" String "Minimum value for integer attributes.",
+        "dnaType" String "integer",
+        "label" String "minIntegerValue"
+    },
+    "minLength" DNA {
+        "description" String "Minimum length for string attributes.",
+        "dnaType" String "integer",
+        "label" String "minLength"
+    },
+    "modifiedByUser" DNA {
+        "dnaType" String "string",
+        "label" String "modifiedByUser"
+    },
+    "modifyDt" DNA {
+        "dnaType" String "datetime",
+        "label" String "modifyDt"
+    },
+    "month" DNA {
+        "description" String "Month of year",
+        "dnaType" String "integer",
+        "domain" String "month",
+        "format" String "domain",
+        "label" String "month"
+    },
+
+    "month_day" DNA {
+        "dbtype" String "varchar",
+        "description" String "Month and day",
+        "dnaType" String "string",
+        "label" String "Month/Day"
+    },
+
+    "monthsNumber" DNA {
+        "description" String "A domain of 0-12 for a month counter",
+        "dnaType" String "integer",
+        "domain" String "monthsNumber",
+        "format" String "domain",
+        "label" String "monthsNumber"
+    },
+    "moveAllLeftButton" DNA {
+        "dnaType" String "string",
+        "label" String "moveAllLeft"
+    },
+    "moveAllRightButton" DNA {
+        "dnaType" String "string",
+        "label" String "moveAllRight"
+    },
+    "moveLeftButton" DNA {
+        "dnaType" String "string",
+        "label" String "moveLeft"
+    },
+    "moveRightButton" DNA {
+        "dnaType" String "string",
+        "label" String "moveRight"
+    },
+    "name" DNA {
+        "description" String "Person names (i.e. first name, last name).",
+        "dnaType" String "string",
+        "label" String "name",
+        // "pattern" String "^[^&<]*\$",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "new_button" DNA {
+        "dnaType" String "string",
+        "label" String "new_button"
+    },
+    "newCard" DNA {
+        "dnaType" String "boolean",
+        "label" String "newCard"
+    },
+    "newpassword" DNA {
+        "dnaType" String "string",
+        "label" String "newpassword",
+        "max" Integer "40",
+        "min" Integer "6"
+    },
+    "nextButton" DNA {
+        "dnaType" String "string",
+        "label" String "nextButton"
+    },
+    "nextMonthButton" DNA {
+        "dnaType" String "string",
+        "label" String "nextMonthButton"
+    },
+    "nextTemplate" DNA {
+        "dnaType" String "string",
+        "label" String "nextTemplate"
+    },
+    "nextYearButton" DNA {
+        "dnaType" String "string",
+        "label" String "nextYearButton"
+    },
+    "nonnegativeInteger" DNA {
+        "dnaType" String "integer",
+        "label" String "nonnegative_integer",
+        "min" Integer "0"
+    },
+    "notes" DNA {
+        "dnaType" String "string",
+        "label" String "notes",
+        "min" Integer "0"
+    },
+    "notes_2000" DNA {
+        "dnaType" String "string",
+        "max" Integer "2000"
+    },
+    "notes_512" DNA {
+        "dnaType" String "string",
+        "max" Integer "512"
+    },
+    "notselectedvalue" DNA {
+        "dnaType" String "string",
+        "label" String "notselectedvalue"
+    },
+    "null_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "null",
+        "format" String "domain",
+        "label" String "null_cd"
+    },
+    "nullTreatment" DNA {
+        "dnaType" String "string",
+        "domain" String "nullTreatment",
+        "format" String "domain",
+        "label" String "nullTreatment"
+    },
+    "numericColumn" DNA {
+        "description" String "numeric element for numeric columns in RFM",
+        "dnaType" String "string",
+        "domain" String "numericColumn",
+        "format" String "domain",
+        "label" String "Numeric Column"
+    },
+    "numRuleAgents" DNA {
+        "dnaType" String "integer",
+        "label" String "numRuleAgents",
+        "max" Integer "100",
+        "min" Integer "1"
+    },
+    "objectAccessLevel" DNA {
+        "description" String "Object Access Level (View, Edit, Create, Delete)",
+        "dnaType" String "integer",
+        "domain" String "objectAccessLevel",
+        "format" String "domain",
+        "label" String "objectAccessLevel"
+    },
+    "objectApproved" DNA {
+        "dnaType" String "boolean",
+        "label" String "objectApproved"
+    },
+    "objectChooserContains" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserContains",
+        "format" String "domain",
+        "label" String "objectChooserContains"
+    },
+    "objectChooserCopyExplode" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserCopyExplode",
+        "format" String "domain",
+        "label" String "objectChooserCopyExplode"
+    },
+    "objectChooserCopyExplodeAttr" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserCopyExplodeAttr",
+        "format" String "domain",
+        "label" String "objectChooserCopyExplode"
+    },
+    "objectChooserInclusionOptions" DNA {
+        "dnaType" String "string",
+        "label" String "objectChooserInclusionOptions"
+    },
+    "objectChooserLink" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserLink",
+        "format" String "domain",
+        "label" String "objectChooserLink"
+    },
+    "objectChooserLinkCopyExplode" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserLinkCopyExplode",
+        "format" String "domain",
+        "label" String "objectChooserLinkCopyExplode"
+    },
+    "objectChooserLinkExplode" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserLinkExplode",
+        "format" String "domain",
+        "label" String "objectChooserLinkExplode"
+    },
+    "objectChooserObjectDescendants" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserObjectDescendants",
+        "format" String "domain",
+        "label" String "objectChooserObjectDescendants"
+    },
+    "objectChooserObjectOnly" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserObjectOnly",
+        "format" String "domain",
+        "label" String "objectChooserObjectOnly"
+    },
+    "objectChooserOption" DNA {
+        "description" String "Used in the option column for the object chooser when adding to assortments.",
+        "dnaType" String "variant",
+        "label" String "objectChooserOption"
+    },
+    "objectChooserPosition" DNA {
+        "dnaType" String "string",
+        "domain" String "objectChooserPosition",
+        "format" String "domain",
+        "label" String "objectChooserPosition"
+    },
+    "objectID" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "objectID"
+    },
+    "objectLabel" DNA {
+        "description" String "General data element for object labels",
+        "dnaType" String "string",
+        "label" String "objectLabel",
+        "max" Integer "128"
+    },
+    "objectLabelRestricted" DNA {
+        "description" String "General data element for object labels adds some more restrictions",
+        "dnaType" String "string",
+        "label" String "objectLabel",
+        "max" Integer "128",
+        "pattern" String "^[^\"'/\\\\]*\$"
+    },
+    "objectList" DNA {
+        "dnaType" String "long",
+        "domain" String "objectList",
+        "format" String "domain"
+    },
+    "objectLocaleID" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "objectLocaleID"
+    },
+    "objectName" DNA {
+        "description" String "General object names",
+        "dnaType" String "string",
+        "label" String "objectName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z0-9_]*\$"
+    },
+    "objectPath" DNA {
+        "dnaType" String "string",
+        "label" String "objectPath"
+    },
+    "objectPublishLevel" DNA {
+        "description" String "Object Publish Level (Publish, No Publish)",
+        "dnaType" String "integer",
+        "domain" String "objectPublishLevel",
+        "format" String "domain",
+        "label" String "objectPublishLevel"
+    },
+    "objectStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "objectStatusCode",
+        "format" String "domain",
+        "label" String "objectStatusCode"
+    },
+    "objectType" DNA {
+        "description" String "Business object types with user friendly display names.",
+        "dnaType" String "string",
+        "domain" String "objectType",
+        "format" String "domain",
+        "label" String "objectType"
+    },
+    "objectTypeID" DNA {
+        "description" String "Decode of object type IDs to string object types.",
+        "dnaType" String "integer",
+        "domain" String "_objectType",
+        "format" String "domain",
+        "label" String "objectTypeID"
+    },
+    "objectViewPrefix" DNA {
+        "dnaType" String "string",
+        "label" String "objectViewPrefix",
+        "max" Integer "3"
+    },
+    "oldpassword" DNA {
+        "dnaType" String "string",
+        "label" String "oldpassword",
+        "max" Integer "40",
+        "min" Integer "6"
+    },
+    "oneTime" DNA {
+        "description" String "Used to flag a promotion for one time use.",
+        "dnaType" String "string",
+        "domain" String "oneTime",
+        "format" String "domain",
+        "label" String "oneTime"
+    },
+    "order_po_nbr" DNA {
+        "description" String "Order PO number",
+        "dnaType" String "string",
+        "label" String "order_po_nbr",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[A-Za-z0-9]*\$"
+    },
+    "order_rma_nbr" DNA {
+        "description" String "Order RMA number",
+        "dnaType" String "string",
+        "label" String "order_rma_nbr",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[A-Za-z0-9]*\$"
+    },
+    "order_so_nbr" DNA {
+        "description" String "Order SO number",
+        "dnaType" String "string",
+        "label" String "order_so_nbr",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[A-Za-z0-9]*\$"
+    },
+    "orderBy" DNA {
+        "dnaType" String "string",
+        "label" String "order_by"
+    },
+    "ordered" DNA {
+        "dnaType" String "boolean",
+        "label" String "ordered"
+    },
+    "orderLinePromotion" DNA {
+        "dnaType" String "string",
+        "label" String "orderLinePromotion"
+    },
+    "orderNum" DNA {
+        "dnaType" String "string",
+        "label" String "orderNum",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "orderStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "orderStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "orderSubmitted" DNA {
+        "dnaType" String "boolean",
+        "domain" String "orderSubmitted",
+        "format" String "domain",
+        "label" String "orderSubmitted"
+    },
+    "orderType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "orderType",
+        "format" String "domain",
+        "label" String "orderType_cd"
+    },
+    "org_account_id" DNA {
+        "description" String "Organization account name",
+        "dnaType" String "string",
+        "label" String "accountid",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[A-Za-z0-9\\xc0-\\xff]*\$"
+    },
+    "orh_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "orh_id"
+    },
+    "orl_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "orl_id"
+    },
+    "orv_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "orv_id"
+    },
+    "overrideTax" DNA {
+        "dnaType" String "currency",
+        "label" String "overridetax",
+        "min" Currency "0.0"
+    },
+    "Owner" DNA {
+        "dnaType" String "long",
+        "domain" String "csrList_cd",
+        "format" String "domain"
+    },
+    "packageStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "packageStatusCode",
+        "format" String "domain",
+        "label" String "packageStatusCode"
+    },
+    "pageSize" DNA {
+        "description" String "For search templates",
+        "dnaType" String "integer",
+        "domain" String "maxRows",
+        "format" String "domain",
+        "label" String "pageSize"
+    },
+    "participant" DNA {
+        "description" String "Used to specify whether or not a domain value participates in an ordered list for mining.",
+        "dnaType" String "String",
+        "domain" String "participant",
+        "format" String "domain",
+        "label" String "participant"
+    },
+    "partners_button_hide" DNA {
+        "description" String "Used in about box (Partners) ",
+        "dnaType" String "string",
+        "label" String "partners_button_hide"
+    },
+    "partners_button_partners" DNA {
+        "description" String "Used in about box (Partners) ",
+        "dnaType" String "string",
+        "label" String "partners_button_partners"
+    },
+    "partNum" DNA {
+        "dnaType" String "string",
+        "label" String "partNum",
+        "max" String "128"
+    },
+    "password" DNA {
+        "dnaType" String "string",
+        "label" String "password",
+        "max" Integer "40",
+        "min" Integer "6"
+    },
+    "path" DNA {
+        "description" String "Path in bizact file",
+        "dnaType" String "string",
+        "label" String "path"
+    },
+    "pattern" DNA {
+        "dnaType" String "string",
+        "label" String "pattern"
+    },
+    "pay_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "pay_id"
+    },
+    "pay_type_id" DNA {
+        "dnaType" String "long",
+        "label" String "pay_type_id"
+    },
+    "paymentOptionList" DNA {
+        "description" String "Used when changing a payment option",
+        "dnaType" String "string",
+        "domain" String "paymentOptionList",
+        "format" String "domain"
+    },
+    "paymentRoutingList" DNA {
+        "description" String "List of payment routingd for a customer in customer details",
+        "dnaType" String "long",
+        "domain" String "paymentRoutingList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "paymentRoutingList"
+    },
+    "payStatus_cd" DNA {
+        "description" String "Used for order payment status",
+        "dnaType" String "string",
+        "domain" String "payStatus",
+        "format" String "domain",
+        "label" String "payStatus_cd"
+    },
+    "payType_cd" DNA {
+        "description" String "Used for order payment type",
+        "dnaType" String "string",
+        "domain" String "payType",
+        "format" String "domain",
+        "label" String "payType_cd"
+    },
+    "pendingAuth" DNA {
+        "dnaType" String "boolean",
+        "label" String "pendingAuth"
+    },
+    "percentItem" DNA {
+        "dnaType" String "double",
+        "format" String "percent",
+        "label" String "percentSign",
+        "max" Double "100.0",
+        "min" Double "0.0"
+    },
+    "percentValue" DNA {
+        "dnaType" String "double",
+        "format" String "percentValue"
+    },
+    "phone" DNA {
+        "dnaType" String "string",
+        "label" String "phone",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[^&<]*\$"
+    },
+    "pjb_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "pjb_id"
+    },
+    "planShipTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "planShipTypeCode",
+        "format" String "domain",
+        "label" String "planShipTypeCode"
+    },
+    "plf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "plf_id"
+    },
+    "pmc_id" DNA {
+        "dnaType" String "long",
+        "label" String "promotionConditionID"
+    },
+    "pmd_id" DNA {
+        "dnaType" String "long",
+        "label" String "pmd_id"
+    },
+    "pmf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "pmf_id"
+    },
+    "pmt_id" DNA {
+        "dnaType" String "long",
+        "label" String "pmt_id"
+    },
+    "postal" DNA {
+        "dnaType" String "string",
+        "label" String "postal",
+        "max" Integer "24",
+        "min" Integer "0",
+        "pattern" String "^[^&<]*\$"
+    },
+    "pp_token" DNA {
+        "dnaType" String "string",
+        "label" String "paypal_token"
+    },
+    "pp_transid" DNA {
+        "dnaType" String "string",
+        "label" String "paypal_transaction_id"
+    },
+    "pp_payerid" DNA {
+        "dnaType" String "string",
+        "label" String "paypal_payer_id"
+    },
+    "prd_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "prd_id"
+    },
+    "prefix" DNA {
+        "dnaType" String "string",
+        "label" String "prefix",
+        "max" Integer "3",
+        "min" Integer "0",
+        "pattern" String "^[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]"
+    },
+    "prepRunningFactor" DNA {
+        "dnaType" String "integer",
+        "label" String "prepRunningFactor",
+        "max" Integer "1000000",
+        "min" Integer "1"
+    },
+    "previewSetButton" DNA {
+        "dnaType" String "string",
+        "label" String "previewSetButton"
+    },
+    "previewStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "previewStatusCode",
+        "format" String "domain",
+        "label" String "previewStatusCode"
+    },
+    "previousButton" DNA {
+        "dnaType" String "string",
+        "label" String "previousButton"
+    },
+    "prevMonthButton" DNA {
+        "dnaType" String "string",
+        "label" String "prevMonthButton"
+    },
+    "prevYearButton" DNA {
+        "dnaType" String "string",
+        "label" String "prevYearButton"
+    },
+    "prf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "prf_id"
+    },
+    "prf_parent_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "prf_parent_id"
+    },
+    "priceAmount" DNA {
+        "dnaType" String "currency",
+        "label" String "priceAmount",
+        "max" Currency "922337203685477.5807",
+        "min" Currency "0.0"
+    },
+    "priceListEditMode" DNA {
+        "dnaType" String "integer",
+        "domain" String "priceListEditMode",
+        "format" String "domain",
+        "label" String "priceListEditMode"
+    },
+    "priceListFolderName" DNA {
+        "description" String "Data element for price list folder names",
+        "dnaType" String "string",
+        "label" String "priceListFolderName",
+        "max" Integer "26",
+        "pattern" String "^[A-Za-z][A-Za-z0-9_]*\$"
+    },
+    "priceObjectCode" DNA {
+        "description" String "Used by PRICING_DATA bizobj for product/sku code.",
+        "dnaType" String "variant",
+        "label" String "priceObjectCode"
+    },
+    "priority" DNA {
+        "description" String "Standard priority type",
+        "dnaType" String "integer",
+        "label" String "priority",
+        "min" Integer "1"
+    },
+    "privilegeName" DNA {
+        "description" String "Name of privilege as used in code",
+        "dnaType" String "string",
+        "label" String "privilegeName",
+        "max" Integer "40"
+    },
+    "privilegeNVAccess" DNA {
+        "description" String "used for roleOption (of privileges)",
+        "dnaType" String "integer",
+        "domain" String "privilegeNVAccess",
+        "format" String "domain",
+        "label" String "privilegeNVAccess"
+    },
+    "privilegeNVEAccess" DNA {
+        "description" String "used for roleOption (for privileges)",
+        "dnaType" String "integer",
+        "domain" String "privilegeNVEAccess",
+        "format" String "domain",
+        "label" String "privilegeNVEAccess"
+    },
+    "privilegeNVEDAccess" DNA {
+        "description" String "used for roleOption (for privileges)",
+        "dnaType" String "integer",
+        "domain" String "privilegeNVEDAccess",
+        "format" String "domain",
+        "label" String "privilegeNVEDAccess"
+    },
+    "privilegeOptionDomain" DNA {
+        "description" String "Name of domain table used for privilege's option",
+        "dnaType" String "string",
+        "label" String "privilegeOptionDomain",
+        "max" Integer "40",
+        "min" Integer "1",
+        "pattern" String "^[A-Za-z_0-9]*\$"
+    },
+    "privilegeType_cd" DNA {
+        "description" String "Types of privileges",
+        "dnaType" String "string",
+        "domain" String "privilegeType",
+        "format" String "domain",
+        "label" String "privilegeType_cd"
+    },
+    "prl_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "prl_id"
+    },
+    "prm_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "prm_id"
+    },
+    "processStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "processStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "productCode" DNA {
+        "dnaType" String "string",
+        "label" String "productCode",
+        "max" Integer "128",
+        "pattern" String "^[a-zA-Z0-9-_.]*\$"
+    },
+    "productFamilyLabel" DNA {
+        "dnaType" String "string",
+        "label" String "productFamilyLabel"
+    },
+    "productShortDescription" DNA {
+        "dnaType" String "string",
+        "label" String "productShortDescription"
+    },
+    "productStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "productStatusCode",
+        "format" String "domain",
+        "label" String "productStatusCode"
+    },
+    "promotionBeginDate" DNA {
+        "datetimeFormat" String "date",
+        "dnaType" String "datetime",
+        "label" String "promotionBeginDate"
+    },
+    "promotionCode" DNA {
+        "dnaType" String "string",
+        "label" String "promotionCode"
+    },
+    "promotionCondition" DNA {
+        "description" String "Used for promotion condition types",
+        "dnaType" String "string",
+        "domain" String "promotionConditionCode",
+        "format" String "domain",
+        "label" String "promotionCondition"
+    },
+    "promotionConditionAmt" DNA {
+        "dnaType" String "currency",
+        "label" String "promotionConditionAmt",
+        "min" Currency "0.0"
+    },
+    "promotionConditionAttributeID" DNA {
+        "dnaType" String "string",
+        "label" String "promotionConditionAttribute"
+    },
+    "promotionConditionAttributeOperator" DNA {
+        "description" String "Used for promotion condition operators(>,<,=,>=, <=)",
+        "dnaType" String "string",
+        "domain" String "promotionConditionAttributeOperatorCode",
+        "format" String "domain",
+        "label" String "promotionConditionOperator"
+    },
+    "promotionConditionBoolean" DNA {
+        "dnaType" String "boolean",
+        "label" String "promotionConditionBoolean"
+    },
+    "promotionConditionCustomerAttribute" DNA {
+        "description" String "Used for promotion condition types",
+        "dnaType" String "string",
+        "domain" String "promotionConditionCustomerAttributeCode",
+        "format" String "domain",
+        "label" String "promotionConditionCustomerAttribute"
+    },
+    "promotionConditionDateTime" DNA {
+        "dnaType" String "datetime",
+        "label" String "promotionConditionDateTime"
+    },
+    "promotionConditionDesc" DNA {
+        "dnaType" String "string",
+        "label" String "promotionConditionDesc"
+    },
+    "promotionConditionDouble" DNA {
+        "dnaType" String "double",
+        "label" String "promotionConditionDouble",
+        "min" Double "0.0"
+    },
+    "promotionConditionLong" DNA {
+        "dnaType" String "integer",
+        "label" String "promotionConditionLong",
+        "min" Integer "0"
+    },
+    "promotionConditionNonNumericOperator" DNA {
+        "description" String "Used for promotion condition operators(equals, not equals)",
+        "dnaType" String "string",
+        "domain" String "promotionConditionNonNumericOperatorCode",
+        "format" String "domain",
+        "label" String "promotionConditionOperator"
+    },
+    "promotionConditionNumericOperator" DNA {
+        "description" String "Used for promotion condition operators(>,<,=,>=, <=)",
+        "dnaType" String "string",
+        "domain" String "promotionConditionNumericOperatorCode",
+        "format" String "domain",
+        "label" String "promotionConditionOperator"
+    },
+    "promotionConditionObject" DNA {
+        "dnaType" String "string",
+        "label" String "promotionConditionObject"
+    },
+    "promotionConditionObjectID" DNA {
+        "dnaType" String "long",
+        "label" String "promotionConditionObject"
+    },
+    "promotionConditionOperator" DNA {
+        "description" String "Used for promotion condition operators(>,<,=,>=, <=)",
+        "dnaType" String "string",
+        "domain" String "promotionConditionOperatorCode",
+        "format" String "domain",
+        "label" String "promotionConditionOperator"
+    },
+    "promotionConditionQty" DNA {
+        "dnaType" String "integer",
+        "label" String "promotionConditionQty",
+        "min" Integer "0"
+    },
+    "promotionConditionString" DNA {
+        "dnaType" String "string",
+        "label" String "promotionConditionString"
+    },
+    "promotionConditionSummary" DNA {
+        "dnaType" String "string",
+        "label" String "promotionConditionSummary"
+    },
+    "promotionConditionTotalCode" DNA {
+        "description" String "Used for promotion condition types",
+        "dnaType" String "string",
+        "domain" String "promotionConditionTotalCode",
+        "format" String "domain",
+        "label" String "promotionConditionTotalCode"
+    },
+    "promotionConditionValue" DNA {
+        "dnaType" String "variant",
+        "label" String "promotionConditionValue"
+    },
+    "promotionDiscAmt" DNA {
+        "dnaType" String "currency",
+        "label" String "promotionDiscAmt",
+        "min" Currency "0.0"
+    },
+    "promotionDiscountAddProduct" DNA {
+        "dnaType" String "boolean",
+        "label" String "promotionDiscountAddProduct"
+    },
+    "promotionDiscPct" DNA {
+        "dnaType" String "double",
+        "format" String "percent",
+        "label" String "promotionDiscPct",
+        "max" Double "100.0",
+        "min" Double "0.0"
+    },
+    "promotionDiscQty" DNA {
+        "dnaType" String "integer",
+        "label" String "promotionDiscQty",
+        "min" Integer "0"
+    },
+    "promotionDiscTypeCode" DNA {
+        "description" String "Used for promotion discount types",
+        "dnaType" String "string",
+        "domain" String "promotionDiscTypeCode",
+        "format" String "domain",
+        "label" String "promotionDiscTypeCode"
+    },
+    "promotionEndDate" DNA {
+        "datetimeFormat" String "date",
+        "dnaType" String "datetime",
+        "label" String "promotionEndDate"
+    },
+    "promotionMultiplesAllowed" DNA {
+        "dnaType" String "integer",
+        "label" String "promotionMultiplesAllowed",
+        "min" Integer "0"
+    },
+    "promotionName" DNA {
+        "description" String "Promotion names",
+        "dnaType" String "string",
+        "label" String "promotionName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z][A-Za-z0-9_]*\$"
+    },
+    "promotionOrderTypeCode" DNA {
+        "description" String "Used for promotion type",
+        "dnaType" String "string",
+        "domain" String "promotionOrderType",
+        "format" String "domain",
+        "label" String "promotionOrderTypeCode"
+    },
+    "promotionPriceAmt" DNA {
+        "dnaType" String "currency",
+        "label" String "promotionPriceAmt",
+        "min" Currency "0.0"
+    },
+    "promotionPriority" DNA {
+        "dnaType" String "integer",
+        "label" String "promotionPriority"
+    },
+    "promotionPromotionCode" DNA {
+        "dnaType" String "string",
+        "label" String "promotionPromotionCode",
+        "pattern" String "^[A-Za-z_0-9.]*\$"
+    },
+    "promotionStatusCode" DNA {
+        "description" String "Used for promotion status",
+        "dnaType" String "string",
+        "domain" String "promotionStatusCode",
+        "format" String "domain",
+        "label" String "promotionStatusCode"
+    },
+    "promotionTypeCode" DNA {
+        "description" String "Used for promotion type",
+        "dnaType" String "string",
+        "domain" String "promotionType",
+        "format" String "domain",
+        "label" String "promotionTypeCode"
+    },
+    "promotionValue" DNA {
+        "dnaType" String "variant",
+        "label" String "promotionValue"
+    },
+    "propertyLabel" DNA {
+        "dnaType" String "string",
+        "label" String "propertyLabel"
+    },
+    "propertyName" DNA {
+        "dnaType" String "string",
+        "label" String "propertyName",
+        "pattern" String "^[A-Za-z_0-9.]*\$"
+    },
+    "prtStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "prtStatusCode",
+        "format" String "domain",
+        "label" String "prtStatusCode"
+    },
+    "psh_id" DNA {
+        "description" String "Plan Shipment Header id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "psh_id"
+    },
+    "psj_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "psj_id"
+    },
+    "psl_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "psl_id"
+    },
+    "publishButton" DNA {
+        "dnaType" String "string",
+        "label" String "publishButton"
+    },
+    "publishFailDetails" DNA {
+        "dnaType" String "string",
+        "label" String "publishFailDetails"
+    },
+    "publishHotfixStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "publishHotfixStatusCode",
+        "format" String "domain",
+        "label" String "publishHotfixStatusCode"
+    },
+    "publishLocales" DNA {
+        "dnaType" String "string",
+        "label" String "publishLocales"
+    },
+    "publishMinMaxMode" DNA {
+        "dnaType" String "string",
+        "domain" String "publishMinMaxMode",
+        "format" String "domain",
+        "label" String "publishMinMaxMode"
+    },
+    "publishPath" DNA {
+        "dnaType" String "string",
+        "label" String "publishPath"
+    },
+    "publishSequence" DNA {
+        "dnaType" String "integer",
+        "label" String "publishSequence",
+        "min" Integer "1"
+    },
+    "publishSetTypeCode" DNA {
+        "dnaType" String "string",
+        "domain" String "publishSetTypeCode",
+        "format" String "domain",
+        "label" String "publishSetTypeCode"
+    },
+    "publishStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "publishStatusCode",
+        "format" String "domain",
+        "label" String "publishStatusCode"
+    },
+    "publishStep" DNA {
+        "dnaType" String "string",
+        "domain" String "publishStep",
+        "format" String "domain",
+        "label" String "publishStep"
+    },
+    "pve_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "pve_id"
+    },
+    "quantity" DNA {
+        "dnaType" String "integer",
+        "label" String "quantity",
+        "min" Integer "1"
+    },
+    "quantityWithZero" DNA {
+        "dnaType" String "integer",
+        "label" String "quantityWithZero",
+        "min" Integer "0"
+    },
+    "queryString" DNA {
+        "description" String "Query string in the request URL",
+        "dnaType" String "string",
+        "label" String "queryString"
+    },
+    "quoteFolderList" DNA {
+        "description" String "Dynamic list of quote folders",
+        "dnaType" String "long",
+        "domain" String "quoteFolderList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "quoteFolderList"
+    },
+    "referer" DNA {
+        "description" String "The URL of the page before the current one",
+        "dnaType" String "string",
+        "label" String "referer"
+    },
+    "registry_code" DNA {
+        "description" String "Coded header identifier for Gift Registry URL",
+        "dnaType" String "string",
+        "label" String "registry_code"
+    },
+    "registryEventType_cd" DNA {
+        "description" String "Optional event type code on the registry",
+        "dnaType" String "integer",
+        "domain" String "registryEventType_cd",
+        "format" String "domain",
+        "label" String "registryEventType_cd"
+    },
+    "registryName" DNA {
+        "description" String "The user defined name of the gift registry",
+        "dnaType" String "string",
+        "label" String "registryName",
+        "max" Integer "40",
+        "min" Integer "1"
+    },
+    "registryOrderBy" DNA {
+        "description" String "Optional type code on the registry",
+        "dnaType" String "string",
+        "domain" String "registryOrderBy",
+        "format" String "domain",
+        "label" String "registryOrderBy"
+    },
+    "registryType_cd" DNA {
+        "description" String "Optional type code on the registry",
+        "dnaType" String "string",
+        "label" String "registryType_cd",
+        "max" Integer "3"
+    },
+    "relationshipType" DNA {
+        "dnaType" String "integer",
+        "domain" String "_relationshipType",
+        "format" String "domain",
+        "label" String "relationshipType"
+    },
+    "relevance" DNA {
+        "dnaType" String "integer",
+        "label" String "relevance"
+    },
+    "remove_button" DNA {
+        "dnaType" String "string",
+        "label" String "remove_button"
+    },
+    "requestTime" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "requestTime"
+    },
+    "required" DNA {
+        "description" String "Required param of bizact",
+        "dnaType" String "boolean",
+        "label" String "required"
+    },
+    "requiredAttributes" DNA {
+        "description" String "Required attributes of bizobj in bizact ",
+        "dnaType" String "string",
+        "label" String "requiredAttributes"
+    },
+    "requiredNoLabel" DNA {
+        "dnaType" String "string",
+        "label" String "requiredNoLabel"
+    },
+    "requiredOptLabel" DNA {
+        "dnaType" String "variant",
+        "label" String "required"
+    },
+    "requiredYesLabel" DNA {
+        "dnaType" String "string",
+        "label" String "requiredYesLabel"
+    },
+    "resultLabel" DNA {
+        "dnaType" String "string",
+        "label" String "resultLabel"
+    },
+    "returnQty" DNA {
+        "dnaType" String "integer",
+        "label" String "quantity",
+        "min" Integer "0"
+    },
+    "rfmFrequencyDate" DNA {
+        "dnaType" String "string",
+        "domain" String "databaseColumnName",
+        "format" String "domain",
+        "label" String "rfmFrequencyDate"
+    },
+    "rfmNumericDate" DNA {
+        "dnaType" String "string",
+        "domain" String "databaseColumnName",
+        "format" String "domain",
+        "label" String "rfmNumericDate"
+    },
+    "rfmRecencyDate" DNA {
+        "dnaType" String "string",
+        "domain" String "databaseColumnName",
+        "format" String "domain",
+        "label" String "rfmRecencyDate"
+    },
+    "rlf_id" DNA {
+        "description" String "ROLE_FOLDER primary key",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "rlf_id"
+    },
+    "rlf_parent_id" DNA {
+        "description" String "ROLE_FOLDER parent id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "rlf_parent_id"
+    },
+    "rol_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "rol_id"
+    },
+    "rol_rlf_id" DNA {
+        "description" String "ROLE_FOLDER foreign key in ROLE",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "rol_rlf_id"
+    },
+    "roleOption" DNA {
+        "description" String "Chosen option for a role's privilege",
+        "dnaType" String "variant",
+        "label" String "roleOption",
+        "variantType" String "integer"
+    },
+    "rpr_rol_id" DNA {
+        "description" String "ROLE_PRIVILEGE key to ROLE",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "rpr_rol_id"
+    },
+    "rule_base_declarations" DNA {
+        "dnaType" String "string",
+        "label" String "rule_base_declarations"
+    },
+    "rule_compile" DNA {
+        "dnaType" String "string",
+        "label" String "rule_compile"
+    },
+    "rule_compiles" DNA {
+        "dnaType" String "boolean",
+        "domain" String "rule_compiles",
+        "format" String "domain",
+        "label" String "rule_compiles"
+    },
+    "rule_else" DNA {
+        "dnaType" String "string",
+        "label" String "rule_else"
+    },
+    "rule_error" DNA {
+        "dnaType" String "string",
+        "label" String "rule_error"
+    },
+    "rule_if" DNA {
+        "dnaType" String "string",
+        "label" String "rule_if"
+    },
+    "rule_ignore" DNA {
+        "dnaType" String "string",
+        "label" String "rule_ignore"
+    },
+    "rule_line" DNA {
+        "dnaType" String "integer",
+        "label" String "rule_line"
+    },
+    "rule_then" DNA {
+        "dnaType" String "string",
+        "label" String "rule_then"
+    },
+    "rule_tree_cmd" DNA {
+        "dnaType" String "string",
+        "label" String "rule_tree_cmd"
+    },
+    "ruleAttribute" DNA {
+        "description" String "Object attribute",
+        "dnaType" String "string",
+        "label" String "ruleAttribute"
+    },
+    "ruleName" DNA {
+        "description" String "rule names",
+        "dnaType" String "string",
+        "label" String "ruleName",
+        "max" Integer "128",
+        "pattern" String "^[A-Za-z][A-Za-z0-9_]*\$"
+    },
+    "ruleObject" DNA {
+        "description" String "Type of object",
+        "dnaType" String "string",
+        "label" String "ruleObject"
+    },
+    "ruleOperator" DNA {
+        "description" String "Operator",
+        "dnaType" String "string",
+        "label" String "ruleOperator"
+    },
+    "rulePanelTree" DNA {
+        "description" String "Available object attributes and properties",
+        "dnaType" String "variant",
+        "label" String "rulePanelTree"
+    },
+    "ruleProperty" DNA {
+        "description" String "Object property",
+        "dnaType" String "string",
+        "label" String "ruleProperty"
+    },
+    "ruleUser" DNA {
+        "dnaType" String "string",
+        "label" String "ruleUser"
+    },
+    "save_button" DNA {
+        "dnaType" String "string",
+        "label" String "save_button"
+    },
+    "saveAndPreview" DNA {
+        "label" String "saveAndPreview"
+    },
+    "saveFileAs" DNA {
+        "dnaType" String "string",
+        "label" String "saveFileAs"
+    },
+    "sba_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "sba_id"
+    },
+    "searchForASSORTMENT" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_ASSORTMENT"
+    },
+    "searchForATTRIBUTE" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_ATTRIBUTE"
+    },
+    "searchForCONTENT" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_CONTENT"
+    },
+    "searchForCONTENT_FOLDER" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_CONTENT_FOLDER"
+    },
+    "search_expression" DNA {
+        "dnaType" String "string",
+        "label" String "search_expression"
+    },
+    "searchForMERCHANT" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_MERCHANT"
+    },
+    "searchForPRICE_LIST" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_PRICE_LIST"
+    },
+    "searchForPRODUCT" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_PRODUCT"
+    },
+    "searchForPRODUCT_FAMILY" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_PRODUCT_FAMILY"
+    },
+    "searchForPROMOTION" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_PROMOTION"
+    },
+    "searchForRULE_BASE" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_RULE_BASE"
+    },
+    "searchForSHIPMENT_CARRIER" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_SHIPMENT_CARRIER"
+    },
+    "searchForSHIPMENT_METHOD" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_SHIPMENT_METHOD"
+    },
+    "searchForSKU" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_SKU"
+    },
+    "searchForSUB_ASSORTMENT" DNA {
+        "dnaType" String "boolean",
+        "label" String "SEARCH_SUB_ASSORTMENT"
+    },
+    "searchAttributes" DNA {
+        "dnaType" String "boolean",
+        "label" String "searchAttributes"
+    },
+    "searchButton" DNA {
+        "dnaType" String "string",
+        "label" String "searchButton"
+    },
+    "searchDescription" DNA {
+        "dnaType" String "boolean",
+        "label" String "searchDescription"
+    },
+    "searchIndexStatus_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "searchIndexStatus",
+        "format" String "domain",
+        "label" String "searchIndexStatus_cd"
+    },
+    "searchOptions" DNA {
+        "dnaType" String "string",
+        "label" String "searchOptions"
+    },
+    "searchProdSkuCode" DNA {
+        "dnaType" String "boolean",
+        "label" String "searchProdSkuCode"
+    },
+    "searchStatus_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "searchStatus",
+        "format" String "domain",
+        "label" String "searchStatus_cd"
+    },
+    "searchTableNum" DNA {
+        "dnaType" String "integer",
+        "label" String "Search Table Number"
+    },
+    "section" DNA {
+        "description" String "Bizact bizact section",
+        "dnaType" String "string",
+        "label" String "section"
+    },
+    "selectAddressList" DNA {
+        "description" String "Dynamic list used for choosing line-level ship to locations",
+        "dnaType" String "long",
+        "domain" String "selectAddressList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectAddressList"
+    },
+    "selectFriendsFamilyList" DNA {
+        "description" String "Dynamic list used for choosing line-level ship to locations",
+        "dnaType" String "string",
+        "domain" String "selectFriendsFamilyList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectFriendsFamilyList"
+    },
+    "selectAuditObjectList" DNA {
+        "description" String "Dynamic list used for selecting an object",
+        "dnaType" String "long",
+        "domain" String "selectAuditObjectList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectAuditObjectList"
+    },
+    "selectCollectionFormatsList" DNA {
+        "description" String "Dynamic list used for selecting a collection format",
+        "dnaType" String "string",
+        "domain" String "selectCollectionFormatsList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectCollectionFormatsList"
+    },
+    "selectDateTimeFormatsList" DNA {
+        "description" String "Dynamic list used for selecting a datetime format",
+        "dnaType" String "string",
+        "domain" String "selectDateTimeFormatsList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectDateTimeFormatsList"
+    },
+    "selectDesktopLanguageList" DNA {
+        "description" String "Dynamic list used for selecting a desktop language",
+        "dnaType" String "string",
+        "domain" String "selectDesktopLanguageList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectDesktopLanguageList"
+    },
+    "selectEnvironmentList" DNA {
+        "description" String "Dynamic list used for selecting an environment",
+        "dnaType" String "integer",
+        "domain" String "selectEnvironmentList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectEnvironmentList"
+    },
+    "selectEnvironmentListAll" DNA {
+        "description" String "List of all environments",
+        "dnaType" String "integer",
+        "domain" String "selectEnvironmentListAll",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectEnvironmentListAll"
+    },
+    "selectRegistryList" DNA {
+        "description" String "Dynamic list used for choosing gift registry headers",
+        "dnaType" String "long",
+        "domain" String "selectRegistryList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectRegistryList"
+    },
+    "selectVersionList" DNA {
+        "description" String "Dynamic list used for selecting a version",
+        "dnaType" String "integer",
+        "domain" String "selectVersionList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "selectVersionList"
+    },
+    "sequence" DNA {
+        "dnaType" String "integer",
+        "label" String "sequence"
+    },
+    "sessionID" DNA {
+        "description" String "HttpSession ID",
+        "dnaType" String "string",
+        "label" String "sessionID",
+        "max" Integer "40",
+        "min" Integer "0"
+    },
+    "setLineChangeType" DNA {
+        "dnaType" String "string",
+        "domain" String "setLineChangeType",
+        "format" String "domain",
+        "label" String "setLineChangeType"
+    },
+    "setResolutionStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "setResolutionStatusCode",
+        "format" String "domain",
+        "label" String "setResolutionStatusCode"
+    },
+    "shc_id" DNA {
+        "description" String "Shipment Carrier ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "shc_id"
+    },
+    "shf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "shf_id"
+    },
+    "shh_id" DNA {
+        "description" String "Shipment Header ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "shh_id"
+    },
+    "shipDate" DNA {
+        "datetimeFormat" String "date",
+        "dnaType" String "datetime",
+        "label" String "shipDate"
+    },
+    "shipmentStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "shipmentStatusCode",
+        "format" String "domain",
+        "label" String "shipmentStatusCode"
+    },
+    "shippingMethodList" DNA {
+        "description" String "Dynamic list used for choosing shipping method",
+        "dnaType" String "long",
+        "domain" String "shippingMethodList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "shippingMethodList"
+    },
+    "shipPriceListType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "shipPriceListType",
+        "format" String "domain",
+        "label" String "shipPriceListType_cd"
+    },
+    "shipToAddress" DNA {
+        "dnaType" String "string",
+        "label" String "shipToAddress",
+        "max" Integer "80",
+        "min" Integer "0"
+    },
+    "shipToList" DNA {
+        "description" String "Dynamic list used for choosing creation/update of ship to addresses",
+        "dnaType" String "long",
+        "domain" String "updateAddressList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "shipToList"
+    },
+    "shl_id" DNA {
+        "description" String "Shipment Line id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "shl_id"
+    },
+    "shm_id" DNA {
+        "description" String "Shipment Method id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "shm_id"
+    },
+    "shortDesc" DNA {
+        "dnaType" String "string",
+        "label" String "shortDescription",
+        "max" Integer "512"
+    },
+    "shortDescription" DNA {
+        "dnaType" String "string",
+        "label" String "shortDescription",
+        "max" Integer "512"
+    },
+    "showCases_search" DNA {
+        "dnaType" String "string",
+        "domain" String "showCases",
+        "format" String "domain",
+        "label" String "showCases"
+    },
+    "showDeleted" DNA {
+        "dnaType" String "string",
+        "label" String "showDeleted"
+    },
+    "showTasks_search" DNA {
+        "dnaType" String "string",
+        "domain" String "showTasks",
+        "format" String "domain",
+        "label" String "showTasks"
+    },
+    "simpleStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "simpleStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "singleColumnLabel" DNA {
+        "dnaType" String "string",
+        "label" String "singleColumnLabel"
+    },
+    "sku_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "sku_id"
+    },
+    "skuAttributeIntegerValue" DNA {
+        "dnaType" String "integer",
+        "domain" String "skuAttributeIntegerValue",
+        "format" String "domain",
+        "label" String "skuAttributeIntegerValue"
+    },
+    "skuAttributeName" DNA {
+        "dnaType" String "string",
+        "label" String "skuAttributeName",
+        "max" Integer "40",
+        "pattern" String "^[A-Za-z][A-Za-z0-9_]*[A-Za-z0-9]\$"
+    },
+    "skuAttributeStringValue" DNA {
+        "dnaType" String "string",
+        "domain" String "skuAttributeStringValue",
+        "format" String "domain",
+        "label" String "skuAttributeStringValue"
+    },
+    "skuCode" DNA {
+        "description" String "SKU Code",
+        "dnaType" String "string",
+        "label" String "skuCode",
+        "pattern" String "^[A-Za-z0-9-_.]*\$"
+    },
+    "smt_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "smt_id"
+    },
+    "sortCaseBy_cd" DNA {
+        "description" String "For order search template in CallCenter",
+        "dnaType" String "string",
+        "domain" String "sortCaseBy",
+        "format" String "domain"
+    },
+    "sortCustomerOrderBy_cd" DNA {
+        "description" String "For order search template in CallCenter",
+        "dnaType" String "string",
+        "domain" String "sortCaseBy",
+        "format" String "domain"
+    },
+    "sortOrderBy_cd" DNA {
+        "description" String "For order search template in CallCenter",
+        "dnaType" String "string",
+        "domain" String "sortOrdersBy",
+        "format" String "domain",
+        "label" String "sortOrderBy_cd"
+    },
+    "sortTableNum" DNA {
+        "dnaType" String "integer",
+        "label" String "Sort Table Number"
+    },
+    "sortTaskBy_cd" DNA {
+        "description" String "For Task Search Templates",
+        "dnaType" String "string",
+        "domain" String "sortTaskBy",
+        "format" String "domain"
+    },
+    "sortUserBy_cd" DNA {
+        "description" String "For user search template in CallCenter",
+        "dnaType" String "string",
+        "domain" String "sortUsersBy",
+        "format" String "domain",
+        "label" String "sortUserBy_cd"
+    },
+    "source_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "orderSource",
+        "format" String "domain",
+        "label" String "source_cd"
+    },
+    "sourceNum" DNA {
+        "dnaType" String "string",
+        "label" String "sourceNum",
+        "max" Integer "80"
+    },
+    "sourceObject" DNA {
+        "dnaType" String "variant",
+        "label" String "sourceObject"
+    },
+    "spl_id" DNA {
+        "description" String "Ship Price List ID",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "spl_id"
+    },
+    "ssn" DNA {
+        "dnaType" String "string",
+        "label" String "ssn",
+        "min" Integer "0",
+        "pattern" String "^[0-9]{3}-[0-9]{2}-[0-9]{4}\$"
+    },
+    "ssn_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ssn_id"
+    },
+    "stagingStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "stagingStatusCode",
+        "format" String "domain",
+        "label" String "stagingStatusCode"
+    },
+    "stagingStepCode" DNA {
+        "dnaType" String "string",
+        "domain" String "stagingStepCode",
+        "format" String "domain",
+        "label" String "stagingStep"
+    },
+    "star_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "star_id"
+    },
+    "starTableName" DNA {
+        "dnaType" String "string",
+        "domain" String "starTableNames",
+        "format" String "domain",
+        "label" String "starTableName"
+    },
+    "startPage" DNA {
+        "description" String "Page to start paging with",
+        "dnaType" String "integer",
+        "label" String "startPage"
+    },
+    "state_CA" DNA {
+        "dnaType" String "string",
+        "domain" String "state_CA",
+        "format" String "domain",
+        "label" String "state_CA"
+    },
+    "state_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "state",
+        "format" String "domain",
+        "label" String "state_cd"
+    },
+    "state_US" DNA {
+        "dnaType" String "string",
+        "domain" String "state_US",
+        "format" String "domain",
+        "label" String "state_US"
+    },
+    "stateName" DNA {
+        "dnaType" String "string",
+        "label" String "stateName",
+        "max" Integer "40",
+        "min" Integer "0",
+        "pattern" String "^[^&<]*\$"
+    },
+    "statusFilter" DNA {
+        "dnaType" String "integer",
+        "domain" String "statusFilter",
+        "format" String "domain",
+        "label" String "statusFilter"
+    },
+    "storeStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "storeStatusCode",
+        "format" String "domain",
+        "label" String "storeStatusCode"
+    },
+    "string" DNA {
+        "dbtype" String "varchar",
+        "dnaType" String "string",
+        "label" String "string"
+    },
+    "string_search" DNA {
+        "dnaType" String "string",
+        "label" String "string_search",
+        "min" Integer "0"
+    },
+    "stringDomainValue" DNA {
+        "dnaType" String "string",
+        "label" String "string",
+        "max" Integer "512",
+        "pattern" String "^[^\\x09\\x0A\\x0D]*\$"
+    },
+    "subject" DNA {
+        "dnaType" String "string",
+        "label" String "Subject",
+        "max" Integer "256"
+    },
+    "substituteProduct" DNA {
+        "description" String "Substitute Product ID",
+        "dnaType" String "long",
+        "label" String "substituteProduct"
+    },
+    "tag" DNA {
+        "description" String "A comma delimited list of user-defined tags for a template",
+        "dnaType" String "string",
+        "label" String "tag",
+        "max" Integer "128",
+        "min" Integer "0"
+    },
+    "task_id" DNA {
+        "dnaType" String "long"
+    },
+    "taskNumber" DNA {
+        "dnaType" String "string",
+        "label" String "orderNum",
+        "max" Integer "80",
+        "min" Integer "0"
+    },
+    "taskPriority" DNA {
+        "dnaType" String "integer",
+        "domain" String "priority_cd",
+        "format" String "domain",
+        "label" String "taskPrority"
+    },
+    "taskStatus" DNA {
+        "dnaType" String "string",
+        "domain" String "taskStatus_cd",
+        "format" String "domain"
+    },
+    "taskType" DNA {
+        "dnaType" String "string",
+        "domain" String "taskType_cd",
+        "format" String "domain"
+    },
+    "relationshipType_cd" DNA {
+        "description" String "Relationship type code for an Individual",
+        "dnaType" String "integer",
+        "domain" String "relationshipType_cd",
+        "format" String "domain",
+        "label" String "relationshipType_cd"
+    },
+    "tbl_id" DNA {
+        "dnaType" String "integer",
+        "id" Boolean "true",
+        "label" String "tbl_id"
+    },
+    "template" DNA {
+        "description" String "The 'filename' part of a URL",
+        "dnaType" String "string",
+        "label" String "template"
+    },
+    "templateLabel" DNA {
+        "description" String "General data element for template labels",
+        "dnaType" String "string",
+        "label" String "objectLabel",
+        "max" Integer "30"
+    },
+    "textEditorFont" DNA {
+        "dnaType" String "string",
+        "domain" String "textEditorFont",
+        "format" String "domain"
+    },
+    "textEditorSize" DNA {
+        "dnaType" String "string",
+        "domain" String "textEditorSize",
+        "format" String "domain"
+    },
+    "textEditorSource" DNA {
+        "dnaType" String "boolean",
+        "label" String "textEditorSource"
+    },
+    "textEditorStyle" DNA {
+        "dnaType" String "string",
+        "domain" String "textEditorStyle",
+        "format" String "domain"
+    },
+    "tid_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "tid_id"
+    },    
+    "tidExtends" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "domain" String "tidExtends",
+        "format" String "domain",
+        "label" String "tidExtends"
+    },
+    "timestamp" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "timestamp"
+    },
+    "timestampminutes" DNA {
+        "datetimeFormat" String "timestampminutes",
+        "dnaType" String "datetime",
+        "label" String "timestamp"
+    },
+    "totalCreditAmount" DNA {
+        "dnaType" String "currency",
+        "label" String "totalCreditAmount"
+    },
+    "trackingNum" DNA {
+        "dnaType" String "string",
+        "label" String "trackingNum",
+        "max" Integer "40"
+    },
+    "trainingSetPct" DNA {
+        "dnaType" String "double",
+        "label" String "trainingSetPct",
+        "max" Double "100.0",
+        "min" Double "0.1"
+    },
+    "transportType" DNA {
+        "description" String "Publishing Transport Type",
+        "dnaType" String "string",
+        "domain" String "transportType",
+        "format" String "domain",
+        "label" String "transportType"
+    },
+    "transportTypeUI" DNA {
+        "description" String "Publishing Transport Type For UI Only",
+        "dnaType" String "string",
+        "domain" String "transportTypeUI",
+        "format" String "domain",
+        "label" String "transportTypeUI"
+    },
+    "transRefNum" DNA {
+        "description" String "Reference Num for CC Trx",
+        "dnaType" String "string",
+        "label" String "transRefNum"
+    },
+    "transType_cd" DNA {
+        "description" String "Credit Card transaction type",
+        "dnaType" String "string",
+        "domain" String "transType",
+        "format" String "domain",
+        "label" String "transType_cd"
+    },
+    "tsh_id" DNA {
+        "dnaType" String "long",
+        "label" String "TaskHistoryID"
+    },
+    "txnStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "txnStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "type" DNA {
+        "description" String "Bizact parameter type",
+        "dnaType" String "string",
+        "domain" String "dnaTypeAll",
+        "format" String "domain",
+        "label" String "type"
+    },
+    "uad_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uad_id"
+    },
+    "uad_usa_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uad_usa_id"
+    },
+    "uar_env_id" DNA {
+        "description" String "USER_ROLE env id",
+        "dnaType" String "Integer",
+        "id" Boolean "true",
+        "label" String "uar_env_id"
+    },
+    "uar_rol_id" DNA {
+        "description" String "USER_ROLE primary key (to role)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uar_rol_id"
+    },
+    "uar_usa_id" DNA {
+        "description" String "USER_ROLE primary key (to user)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uar_usa_id"
+    },
+    "ugf_id" DNA {
+        "description" String "USER_GROUP_FOLDER primary key",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ugf_id"
+    },
+    "ugf_parent_id" DNA {
+        "description" String "USER_GROUP_FOLDER parent id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ugf_parent_id"
+    },
+    "ugr_rol_id" DNA {
+        "description" String "USER_GROUP_ROLE primary key (to role)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ugr_rol_id"
+    },
+    "ugr_usg_id" DNA {
+        "description" String "USER_GROUP_ROLE primary key (to group)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "ugr_usg_id"
+    },
+    "unedit_button" DNA {
+        "dnaType" String "string",
+        "label" String "unedit_button"
+    },
+    "up_button" DNA {
+        "dnaType" String "string",
+        "label" String "upButtonLabel"
+    },
+    "upc" DNA {
+        "description" String "Universal Product Code",
+        "dnaType" String "string",
+        "label" String "upc",
+        "pattern" String "^[0-9]{12}\$"
+    },
+    "updateAddressList" DNA {
+        "description" String "Dynamic list used for choosing creation/update of bill to addresses",
+        "dnaType" String "long",
+        "domain" String "updateAddressList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "updateAddressList"
+    },
+    "updateButton" DNA {
+        "dnaType" String "string",
+        "label" String "updateButton"
+    },
+    "updateRegistryList" DNA {
+        "description" String "Dynamic list used for choosing creation/update of gift registry headers",
+        "dnaType" String "long",
+        "domain" String "updateRegistryList",
+        "format" String "domain",
+        "id" Boolean "true",
+        "label" String "updateRegistryList"
+    },
+    "uploadButton" DNA {
+        "description" String "Options for assigning content attribute values",
+        "dnaType" String "string",
+        "label" String "uploadButtonLabel"
+    },
+    "uploadOptions" DNA {
+        "description" String "Options for assigning content attribute values",
+        "dnaType" String "string",
+        "domain" String "contentUploadOptions",
+        "format" String "domain",
+        "label" String "uploadOptionsLabel"
+    },
+    "upSellProduct" DNA {
+        "description" String "Up-Sell Product ID",
+        "dnaType" String "long",
+        "label" String "upSellProduct"
+    },
+    "url" DNA {
+        "dnaType" String "string",
+        "format" String "url",
+        "label" String "url",
+        "min" Integer "0"
+    },
+    "usa_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usa_id"
+    },
+    "usa_usf_id" DNA {
+        "description" String "USER_FOLDER foreign key in USER_ACCOUNT",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usa_usf_id"
+    },
+    "usePriceOverride" DNA {
+        "dnaType" String "string",
+        "domain" String "usePriceOverride",
+        "format" String "domain",
+        "label" String "use Price Override Flag"
+    },
+    "userAccountStatus_cd" DNA {
+        "description" String "User Account Status Code",
+        "dnaType" String "string",
+        "domain" String "userAccountStatusCode",
+        "format" String "domain",
+        "label" String "userAccountStatus_cd"
+    },
+    "userAgent" DNA {
+        "description" String "Operating system and browser info for a request",
+        "dnaType" String "string",
+        "label" String "userAgent",
+        "max" Integer "80",
+        "min" Integer "0"
+    },
+    "userid" DNA {
+        "description" String "User account login",
+        "dnaType" String "string",
+        "label" String "userid",
+        "max" Integer "128",
+        "min" Integer "0",
+        "pattern" String "^[A-Za-z0-9_@\\x80-\\xff]*\$"
+    },
+    "userType_cd" DNA {
+        "dnaType" String "string",
+        "domain" String "userType",
+        "format" String "domain",
+        "label" String "userType_cd"
+    },
+    "usf_id" DNA {
+        "description" String "USER_FOLDER primary key",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usf_id"
+    },
+    "usf_parent_id" DNA {
+        "description" String "USER_FOLDER parent id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usf_parent_id"
+    },
+    "usg_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usg_id"
+    },
+    "usg_ugf_id" DNA {
+        "description" String "USER_GROUP primary key (to user group folder)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "usg_ugf_id"
+    },
+    "uug_env_id" DNA {
+        "description" String "USER_USR_GRP env id",
+        "dnaType" String "Integer",
+        "id" Boolean "true",
+        "label" String "uug_env_id"
+    },
+    "uug_usa_id" DNA {
+        "description" String "USER_USR_GRP primary key (to user)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uug_usa_id"
+    },
+    "uug_usg_id" DNA {
+        "description" String "USER_USR_GRP primary key (to group)",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "uug_usg_id"
+    },
+    "valueSourceObject" DNA {
+        "dnaType" String "variant",
+        "label" String "valueSourceObject"
+    },
+    "variableFlagProdAttr" DNA {
+        "dnaType" String "boolean",
+        "label" String "variableFlagProdAttr"
+    },
+    "variant" DNA {
+        "description" String "Generic variant data element.",
+        "dnaType" String "variant",
+        "label" String "variant"
+    },
+    "variantObjectLabel" DNA {
+        "description" String "Used for label on heterogeneous lists of objects.",
+        "dnaType" String "variant",
+        "label" String "variantObjectLabel"
+    },
+    "variantProperty" DNA {
+        "description" String "Property to use instead of <property>__V for variant bizobj property.",
+        "dnaType" String "string",
+        "label" String "variantProperty"
+    },
+    "version" DNA {
+        "dnaType" String "integer",
+        "label" String "version"
+    },
+    "versionStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "versionStatusCode",
+        "format" String "domain",
+        "label" String "versionStatusCode"
+    },
+    "view_projects_button" DNA {
+        "label" String "viewProjectsLabel"
+    },
+    "waf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "waf_id"
+    },
+    "wat_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wat_id"
+    },
+    "watDefaultStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "watDefaultStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "watFieldDisplayChoices" DNA {
+        "dnaType" String "string",
+        "domain" String "watFieldDisplayChoices",
+        "format" String "domain",
+        "label" String "editableLabel"
+    },
+    "watFieldDisplayOnly" DNA {
+        "dnaType" String "boolean",
+        "label" String "displayOnlyLabel"
+    },
+    "watFieldName" DNA {
+        "dnaType" String "string",
+        "label" String "watFieldName"
+    },
+    "watFieldRequired" DNA {
+        "dnaType" String "boolean",
+        "label" String "required"
+    },
+    "watLabel" DNA {
+        "dnaType" String "string",
+        "label" String "watLabel"
+    },
+    "watName" DNA {
+        "dnaType" String "string",
+        "label" String "watName"
+    },
+    "wcm_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wcm_id"
+    },
+    "webAuthFieldLabel" DNA {
+        "dnaType" String "string",
+        "label" String "webAuthFieldLabel"
+    },
+    "webAuthTemplateLabel" DNA {
+        "dnaType" String "string",
+        "label" String "webAuthTemplateLabel"
+    },
+    "wfProjectPriority" DNA {
+        "dnaType" String "integer",
+        "domain" String "wfProjectPriority",
+        "format" String "domain",
+        "label" String "wfProjectPriority"
+    },
+    "wfProjectStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "wfProjectStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "wfTaskStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "wfTaskStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "wob_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wob_id"
+    },
+    "workflowTemplates" DNA {
+        "description" String "List of all Workflow Templates",
+        "dnaType" String "integer",
+        "domain" String "workflowTemplates",
+        "format" String "domain",
+        "label" String "workflowTemplates"
+    },
+    "workTemplateName" DNA {
+        "dnaType" String "string",
+        "label" String "name",
+        "max" Integer "26",
+        "pattern" String "^[A-Za-z]([A-Za-z0-9_]*[A-Za-z0-9])?\$"
+    },
+    "wpj_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wpj_id"
+    },
+    "wtf_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wtf_id"
+    },
+    "wtk_choices" DNA {
+        "description" String "Choices of a workflow tasks",
+        "dnaType" String "String",
+        "domain" String "wtk_choices",
+        "format" String "domain",
+        "label" String "wtk_choices"
+    },
+    "wtk_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wtk_id"
+    },
+    "wtkUserStatusCode" DNA {
+        "dnaType" String "string",
+        "domain" String "wtkUserStatusCode",
+        "format" String "domain",
+        "label" String "status_cd"
+    },
+    "wtu_id" DNA {
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "wtu_id"
+    },
+    "yesNo" DNA {
+        "dnaType" String "boolean",
+        "domain" String "yesNo",
+        "format" String "domain",
+        "label" String "yesNo"
+    },
+    "zifEnabledDefault" DNA {
+        "dnaType" String "boolean",
+        "domain" String "zifEnabledDefault",
+        "format" String "domain",
+        "label" String "zifEnabled"
+    },
+    "zifEnabledParent" DNA {
+        "dnaType" String "boolean",
+        "domain" String "zifEnabledParent",
+        "format" String "domain",
+        "label" String "zifEnabled"
+    },
+    "__id" DNA {
+        "description" String "Effective object id",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "Object id"
+    },
+    "__parentId" DNA {
+        "description" String "Effective id of object's parent",
+        "dnaType" String "long",
+        "id" Boolean "true",
+        "label" String "Object parent id"
+    },
+    "__pubVersion" DNA {
+        "dnaType" String "integer",
+        "description" String "Effective publish version object",
+        "label" String "Publish version"
+    },
+    "__type" DNA {
+        "dnaType" String "integer",
+        "description" String "Object type",
+        "label" String "Object type id"
+    },
+    "__version" DNA {
+        "dnaType" String "integer",
+        "description" String "Effective EMS Version for object",
+        "label" String "EMS Version"
+    }
+}

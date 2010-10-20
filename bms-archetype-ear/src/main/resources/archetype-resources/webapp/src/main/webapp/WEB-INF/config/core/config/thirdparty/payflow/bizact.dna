@@ -1,0 +1,198 @@
+DNA {
+    "PayflowGetNVPContext" DNA {
+     	"class" String "com.bluemartini.thirdparty.payflow.bizact.PayflowGetNVPContext",
+        "description" String "Get the NVP Context for merchant"
+    },
+    "GatewayGetMerchant" DNA {
+     	"class" String "com.bluemartini.thirdparty.payflow.bizact.PFGetMerchant",
+        "description" String "Get merchant for Refunds"
+    },
+    "GatewayAuthPayment" DNA {
+        "class" String "com.bluemartini.thirdparty.payflow.bizact.PFAuthPayment",
+        "description" String "Process auth using Payflow",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ORDER",
+                "path" StringArray [
+                    "ORDER"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "ORDER_LINE",
+                "path" StringArray [
+                    "ORDER_LINE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            },
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "PAYMENT",
+                "path" StringArray [
+                    "PAYMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "CREDIT_CARD_TXN",
+                "path" StringArray [
+                    "CREDIT_CARD_TXN"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "transCode"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "success"
+                ],
+                "required" Boolean "true",
+                "type" String "Boolean"
+            }
+        ],
+        "section" String "Payment"
+    },
+    "GatewayBillPayment" DNA {
+        "class" String "com.bluemartini.thirdparty.payflow.bizact.PFBillPayment",
+        "description" String "Capture payment using Payflow",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "PAYMENT",
+                "path" StringArray [
+                    "PAYMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "SHIPMENT",
+                "path" StringArray [
+                    "SHIPMENT_ARRAY"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "transCode"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "success"
+                ],
+                "required" Boolean "true",
+                "type" String "Boolean"
+            }
+        ],
+        "section" String "Payment"
+    },
+    "GatewayCreditPayment" DNA {
+        "class" String "com.bluemartini.thirdparty.payflow.bizact.PFCreditPayment",
+        "description" String "Process credit using Payflow",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ORDER",
+                "path" StringArray [
+                    "ORDER"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "ORDER_LINE",
+                "path" StringArray [
+                    "ORDER_LINE_ARRAY"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObjectArray"
+            },
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "PAYMENT",
+                "path" StringArray [
+                    "PAYMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "transCode"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "success"
+                ],
+                "required" Boolean "true",
+                "type" String "Boolean"
+            }
+        ],
+        "section" String "Payment"
+    },
+    "GatewayCancelAuth" DNA {
+        "class" String "com.bluemartini.thirdparty.payflow.bizact.PFCancelAuth",
+        "description" String "Cancel Authorization using Payflow",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "PAYMENT",
+                "path" StringArray [
+                    "PAYMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "transCode"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "success"
+                ],
+                "required" Boolean "true",
+                "type" String "Boolean"
+            }
+        ],
+        "section" String "Payment"
+    }
+}

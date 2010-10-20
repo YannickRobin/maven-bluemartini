@@ -1,0 +1,31 @@
+DNA {
+    //
+    // This file is used by BMExport.
+    //
+
+    // Suffix of the export file.
+    "suffix" String "xml",
+
+    // The XML Schema to use.
+    "xml_schema" String "bms.xsd",
+
+     // XML format settings when processing the XML Schema
+    "XMLValidate" Boolean "false",
+    "namespaceAware" Boolean "true",
+
+    // The root node name of the export file.
+    "root_node" String "bmsRecords",
+
+    // The prefix of the namespace of the document.
+    "prefix" String "xmlns",
+    "bms_prefix" String "xmlns:bms",
+    "xsi_prefix" String "xmlns:xsi",
+    "schema_prefix" String "xsi:schemaLocation",
+
+    // The URIs of the namespaces used.
+    "uri" String "http://bluemartini.com/eng/bms",
+    "uri_xsi" String "http://www.w3.org/2001/XMLSchema-instance",
+
+    // Suffix for "split" multilingual files
+    "multilingual_file_suffix" String "_multilingual"
+}

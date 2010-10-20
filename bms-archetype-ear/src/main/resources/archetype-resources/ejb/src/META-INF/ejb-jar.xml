@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar id="ejb-jar_ID" 
+    version="2.1" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+  <display-name>${artifactId} EJB</display-name>
+  <enterprise-beans>
+    <message-driven>
+      <description>db util mdb</description>
+      <display-name>DBUtilTopicMDB</display-name>
+      <ejb-name>DBUtilTopicMDB</ejb-name>
+      <ejb-class>com.bluemartini.jms.mdb.DBUtilTopicMDB</ejb-class>
+      <transaction-type>Bean</transaction-type>
+      <message-destination-type>javax.jms.Topic</message-destination-type>
+	  </message-driven>
+    <message-driven>
+      <description>publishing mdb</description>
+      <display-name>PublishVersionTopicMDB</display-name>
+      <ejb-name>PublishVersionTopicMDB</ejb-name>
+      <ejb-class>com.bluemartini.jms.mdb.PublishVersionTopicMDB</ejb-class>
+      <transaction-type>Bean</transaction-type>
+      <message-destination-type>javax.jms.Topic</message-destination-type>
+    </message-driven>
+  </enterprise-beans>
+</ejb-jar>

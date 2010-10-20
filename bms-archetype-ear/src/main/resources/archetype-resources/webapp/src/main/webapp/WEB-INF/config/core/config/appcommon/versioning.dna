@@ -1,0 +1,165 @@
+DNA {
+    "tables" DNAArray [
+        {
+            "hasSequence" Boolean "false",
+            // order is important here
+            "name" String "LOCALE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "OBJECT"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "OBJECT_DATE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "OBJECT_ATTRIBUTE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "OBJECT_PRICE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "PROMOTION"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "PRICE_LIST_FOLDER"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "PROMOTION_DISCOUNT"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "PROMOTION_CONDITION"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "PRODUCT"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "CONTENT_FOLDER"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "CONTENT"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "CONTENT_REVISION"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "ASSORTMENT"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "SUB_ASSORTMENT"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "ATTR_GRP"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "SKU"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "RULE_BASE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "RULE_DATA"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "SHIP_PRICE_LIST"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "SHIP_PRICE"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "DOMAIN"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "DOMAIN_VALUE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "ATTRIBUTE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "RELATIONSHIP"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "GARBAGE_CONTENTS"
+        //},
+        //{
+        //    "hasSequence" Boolean "true",
+        //    "name" String "ACCOM_ALLOWANCE"
+        },
+        {
+            "hasSequence" Boolean "false",
+            "name" String "WEB_AUTH_TEMPLATE"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "OBJECT_LOCALE"
+        },
+        {
+            "hasSequence" Boolean "true",
+            "name" String "WEB_AUTH_FIELD"
+        },
+		{
+            "hasSequence" Boolean "true",
+            "name" String "TILES_DEFINITION"
+        }        
+    ],
+
+    "unversionedMedia" DNA {
+        "mediaIDBase" Integer "10",
+
+        // The paths string array is a list of regular expressions which
+        // if the content path matches indicate that the content should
+        // have an unversioned url.
+        "paths" StringArray [
+            // Example 1: Anything in the static_content folder
+            // "/static_content/"
+            //
+            // Example 2: Any PDF files in the terms folder but not in its
+            //            subfolders
+            // "/terms/[^/]*\.pdf"
+        ],
+
+        // The attributes which is matched indicate that the content should
+        // have an unversioned url. Attribute matches may be specified as
+        // a single value, or an array. If any single value matches (or
+        // any path above) then content wll be unversioned.
+        //
+        // NOTE: For performance reasons if any attributes are specified
+        // below then at least one of them should be set on the "/Content"
+        // folder with a value that DOES NOT match any of the specified value
+        "attributes" DNA {
+            // Example 1: No version if ShouldVersion is NO
+            // "ATR_ShouldVersion" String "NO"
+            //
+            // Example 2: No version if TypeCode is 4, 6, or 8
+            // "ATR_TypeCode" IntegerArray [ 4, 6, 8 ]
+        }
+    },
+
+    // Publish version Listeners
+    "listeners" DNA {
+    }
+}

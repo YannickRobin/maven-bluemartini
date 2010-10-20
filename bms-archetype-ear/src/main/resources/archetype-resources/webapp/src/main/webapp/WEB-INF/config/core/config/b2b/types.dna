@@ -1,0 +1,121 @@
+// 
+// ** Don't change this file unless you know what you are doing
+// **
+// ** Don't add types on a CVS branch without also adding them
+// ** to the trunk, to reserve the IDs.  Also, check that the
+// ** ID has not already been used in another config module.
+// ** Since types.dna has been split into other modules such as
+// ** b2b and mining.
+// **
+// ** ID numbers greater than 1000 are reserved for mining/types.dna
+// **
+// ** uniquenessType key:
+// **   S = System
+// **   P = Path
+// 
+DNA {
+    "OBJECT_TYPE_ARRAY" DNA {
+        "ORGANIZATION" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_ORG",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "ORGANIZATION",
+            "obt_id" Integer "43",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "true",
+            "uniquenessType" String "P",
+            "viewName" String "V_ORGANIZATION",
+            "viewPrefix" String "ORG",
+            "indent" Integer "1"
+        },
+        "QUOTE_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_QTF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "QUOTE_FOLDER",
+            "obt_id" Integer "44",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_QUOTE_FOLDER",
+            "viewPrefix" String "QTF",
+            "indent" Integer "1"
+        },
+        "BUSINESS_ENTITY" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_BSE",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "BUSINESS_ENTITY",
+            "obt_id" Integer "51",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "S",
+            "viewName" String "V_BUSINESS_ENTITY",
+            "viewPrefix" String "BSE",
+            "indent" Integer "1"
+        },
+        "CONTRACT" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_CTR",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "false",
+            "name" String "CONTRACT",
+            "obt_id" Integer "52",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_CONTRACT",
+            "viewPrefix" String "CTR",
+            "indent" Integer "1"
+        },
+        "CONTRACT_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_CTF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "CONTRACT_FOLDER",
+            "obt_id" Integer "53",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_CONTRACT_FOLDER",
+            "viewPrefix" String "CTF",
+            "indent" Integer "1"
+        },
+        "BSE_FOLDER" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_BEF",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "BSE_FOLDER",
+            "obt_id" Integer "60",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_BSE_FOLDER",
+            "viewPrefix" String "BEF"
+        },
+        "REQUEST_FOR_QUOTE" BO(OBJECT_TYPE) {
+            "databases" StringArray ["store"],
+            "sequenceName" String "SEQ_RFQ",
+            "createView" Boolean "true",
+            "descendantsByPath" Boolean "true",
+            "name" String "REQUEST_FOR_QUOTE",
+            "obt_id" Integer "62",
+            "supportsOwner" Boolean "true",
+            "supportsPermissions" Boolean "false",
+            "uniquenessType" String "P",
+            "viewName" String "V_RQST_FOR_QUOTE",
+            "viewPrefix" String "RFQ"
+        }
+        // 
+        // ** DO NOT ADD another object type without first ensuring that the ID
+        // ** has not already been used by another object that has been defined
+        // ** in a different config module.  The types.dna file has been split into
+        // ** multiple modules such as b2b and mining.
+        // 
+    }
+}

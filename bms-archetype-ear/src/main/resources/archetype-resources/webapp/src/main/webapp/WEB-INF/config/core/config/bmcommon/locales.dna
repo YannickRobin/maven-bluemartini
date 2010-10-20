@@ -1,0 +1,440 @@
+//  THIS FILE SHOULD NOT BE MODIFIED WITHOUT PROPER AUTHORIZATION FROM BLUE
+//  MARTINI ENGINEERING.   UNAUTHORIZED MODIFICATIONS TO THIS FILE MAY
+//  RESULT IN LOSS OF DATA
+//
+//
+//
+//  - Don't change the ID or code of an existing locale.
+//  - Don't add records with duplicate IDs (across product versions).
+//  - The name of the object must match the localeCode property.
+//  - Don't delete locales.
+//
+DNA {
+    "supportedLocales" DNA {
+        "az_AZ" BO(LOCALE) {
+            "label" String "Azerbaijani [Azerbaijan] [az_AZ]",
+            "loc_id" Integer "56",
+            "localeCode" String "az_AZ"
+        },
+        "be_BY" BO(LOCALE) {
+            "label" String "Byelorussian [Belarus] [be_BY]",
+            "loc_id" Integer "57",
+            "localeCode" String "be_BY"
+        },
+        "bg" BO(LOCALE) {
+            "label" String "Bulgarian [bg]",
+            "loc_id" Integer "85",
+            "localeCode" String "bg"
+        },
+        "bg_BG" BO(LOCALE) {
+            "label" String "Bulgarian [Bulgaria] [bg_BG]",
+            "loc_id" Integer "58",
+            "localeCode" String "bg_BG"
+        },
+        "ca" BO(LOCALE) {
+            "label" String "Catalan [ca]",
+            "loc_id" Integer "6",
+            "localeCode" String "ca"
+        },
+        "cs" BO(LOCALE) {
+            "label" String "Czech [cs]",
+            "loc_id" Integer "77",
+            "localeCode" String "cs"
+        },
+        "cs_CZ" BO(LOCALE) {
+            "label" String "Czech [Czech Republic] [cs_CZ]",
+            "loc_id" Integer "59",
+            "localeCode" String "cs_CZ"
+        },
+        "da" BO(LOCALE) {
+            "label" String "Danish [da]",
+            "loc_id" Integer "7",
+            "localeCode" String "da"
+        },
+        "de" BO(LOCALE) {
+            "label" String "German [de]",
+            "loc_id" Integer "18",
+            "localeCode" String "de"
+        },
+        "de_AT" BO(LOCALE) {
+            "label" String "German [Austria] [de_AT]",
+            "loc_id" Integer "19",
+            "localeCode" String "de_AT"
+        },
+        "de_CH" BO(LOCALE) {
+            "label" String "German [Switzerland] [de_CH]",
+            "loc_id" Integer "20",
+            "localeCode" String "de_CH"
+        },
+        "de_DE" BO(LOCALE) {
+            "label" String "German [Germany] [de_DE]",
+            "loc_id" Integer "3",
+            "localeCode" String "de_DE"
+        },
+        "el" BO(LOCALE) {         //Greek (spoken in Greece, Albania, Cyprus)
+            "label" String "Greek [el]",
+            "loc_id" Integer "47",
+            "localeCode" String "el"
+        },
+        "el_GR" BO(LOCALE) {
+            "label" String "Greek [Greece] [el_GR]",
+            "loc_id" Integer "48",
+            "localeCode" String "el_GR"
+        },
+        "en" BO(LOCALE) {
+            "label" String "English [en]",
+            "loc_id" Integer "1",
+            "localeCode" String "en"
+        },
+        "en_AU" BO(LOCALE) {
+            "label" String "English [Australia] [en_AU]",
+            "loc_id" Integer "40",
+            "localeCode" String "en_AU"
+        },
+        "en_BE" BO(LOCALE) {
+            "label" String "English [Belgium] [en_BE]",
+            "loc_id" Integer "41",
+            "localeCode" String "en_BE"
+        },
+        "en_CA" BO(LOCALE) {
+            "label" String "English [Canada] [ca_CA]",
+            "loc_id" Integer "39",
+            "localeCode" String "en_CA"
+        },
+        "en_DE" BO(LOCALE) {
+            "label" String "English [Germany] [en_DE]",
+            "loc_id" Integer "43",
+            "localeCode" String "en_DE"
+        },
+        "en_ES" BO(LOCALE) {
+            "label" String "English [Spain] [en_ES]",
+            "loc_id" Integer "46",
+            "localeCode" String "en_ES"
+        },
+        "en_FR" BO(LOCALE) {
+            "label" String "English [France] [en_FR]",
+            "loc_id" Integer "42",
+            "localeCode" String "en_FR"
+        },
+        "en_GB" BO(LOCALE) {
+            "label" String "English [United Kingdom] [en_GB]",
+            "loc_id" Integer "11",
+            "localeCode" String "en_GB"
+        },
+        "en_US" BO(LOCALE) {
+            "label" String "English [United States] [en_US]",
+            "loc_id" Integer "10",
+            "localeCode" String "en_US"
+        },
+        "es" BO(LOCALE) {
+            "label" String "Spanish [es]",
+            "loc_id" Integer "28",
+            "localeCode" String "es"
+        },
+        "es_AR" BO(LOCALE) {
+            "label" String "Spanish [Argentina] [es_AR]",
+            "loc_id" Integer "29",
+            "localeCode" String "es_AR"
+        },
+        "es_CO" BO(LOCALE) {
+            "label" String "Spanish [Colombia] [es_CO]",
+            "loc_id" Integer "30",
+            "localeCode" String "es_CO"
+        },
+        "es_ES" BO(LOCALE) {
+            "label" String "Spanish [Spain] [es_ES]",
+            "loc_id" Integer "5",
+            "localeCode" String "es_ES"
+        },
+        "es_MX" BO(LOCALE) {
+            "label" String "Spanish [Mexico] [es_MX]",
+            "loc_id" Integer "4",
+            "localeCode" String "es_MX"
+        },
+        "et" BO(LOCALE) {
+            "label" String "Estonian [et]",
+            "loc_id" Integer "82",
+            "localeCode" String "et"
+        },
+        "et_EE" BO(LOCALE) {
+            "label" String "Estonian [Estonia] [et_EE]",
+            "loc_id" Integer "60",
+            "localeCode" String "et_EE"
+        },
+        "fi" BO(LOCALE) {
+            "label" String "Finnish [fi]",
+            "loc_id" Integer "13",
+            "localeCode" String "fi"
+        },
+        "fo" BO(LOCALE) {
+            "label" String "Faeroese [fo]",
+            "loc_id" Integer "12",
+            "localeCode" String "fo"
+        },
+        "fr" BO(LOCALE) {
+            "label" String "French [fr]",
+            "loc_id" Integer "14",
+            "localeCode" String "fr"
+        },
+        "fr_BE" BO(LOCALE) {
+            "label" String "French [Belgium] [fr_BE]",
+            "loc_id" Integer "15",
+            "localeCode" String "fr_BE"
+        },
+        "fr_CA" BO(LOCALE) {
+            "label" String "French [Canada] [fr_CA]",
+            "loc_id" Integer "16",
+            "localeCode" String "fr_CA"
+        },
+        "fr_CH" BO(LOCALE) {
+            "label" String "French [Switzerland] [fr_CH]",
+            "loc_id" Integer "17",
+            "localeCode" String "fr_CH"
+        },
+        "fr_FR" BO(LOCALE) {
+            "label" String "French [France] [fr_FR]",
+            "loc_id" Integer "2",
+            "localeCode" String "fr_FR"
+        },
+        "ga" BO(LOCALE) {
+            "label" String "Irish [ga]",
+            "loc_id" Integer "23",
+            "localeCode" String "ga"
+        },
+        "hr" BO(LOCALE) {         //Croatian (spoken in Croatia, Austria, Bosnia, Serbia and Montenegro, Solvenia)
+            "label" String "Croatian [hr]",
+            "loc_id" Integer "51",
+            "localeCode" String "hr"
+        },
+        "hr_HR" BO(LOCALE) {
+            "label" String "Croatian [Croatia] [hr_HR]",
+            "loc_id" Integer "50",
+            "localeCode" String "hr_HR"
+        },
+        "hu" BO(LOCALE) {
+            "label" String "Hungarian [hu]",
+            "loc_id" Integer "79",
+            "localeCode" String "hu"
+        },
+        "hu_HU" BO(LOCALE) {
+            "label" String "Hungarian [Hungary] [hu_HU]",
+            "loc_id" Integer "69",
+            "localeCode" String "hu_HU"
+        },
+        "id" BO(LOCALE) {
+            "label" String "Indonesian [id]",
+            "loc_id" Integer "22",
+            "localeCode" String "id"
+        },
+        "is" BO(LOCALE) {
+            "label" String "Icelandic [is]",
+            "loc_id" Integer "21",
+            "localeCode" String "is"
+        },
+        "it" BO(LOCALE) {         //Italian (spoken in Italy, Argentina, Libya, Monaco, San Marino, Somalia, Switzerland, Vatican City)
+            "label" String "Italian [it]",
+            "loc_id" Integer "24",
+            "localeCode" String "it"
+        },
+        "it_IT" BO(LOCALE) {
+            "label" String "Italian [Italy] [it_IT]",
+            "loc_id" Integer "63",
+            "localeCode" String "it_IT"
+        },
+        "ja" BO(LOCALE) {
+            "label" String "Japanese [ja]",
+            "loc_id" Integer "32",
+            "localeCode" String "ja"
+        },
+        "ja_JP" BO(LOCALE) {
+            "label" String "Japanese [Japan] [ja_JP]",
+            "loc_id" Integer "33",
+            "localeCode" String "ja_JP"
+        },
+        "ko" BO(LOCALE) {
+            "label" String "Korean [ko]",
+            "loc_id" Integer "37",
+            "localeCode" String "ko"
+        },
+        "la" BO(LOCALE) {
+            "label" String "Latin [la]",
+            "loc_id" Integer "55",
+            "localeCode" String "la"
+        },
+        "lt" BO(LOCALE) {
+            "label" String "Lithuanian [lt]",
+            "loc_id" Integer "80",
+            "localeCode" String "lt"
+        },
+        "lt_LT" BO(LOCALE) {
+            "label" String "Lithuanian [Lithuania] [lt_LT]",
+            "loc_id" Integer "71",
+            "localeCode" String "lt_LT"
+        },
+        "lv" BO(LOCALE) {
+            "label" String "Latvian [lv]",
+            "loc_id" Integer "81",
+            "localeCode" String "lv"
+        },
+        "lv_LV" BO(LOCALE) {
+            "label" String "Latvian [Latvia] [lv_LV]",
+            "loc_id" Integer "70",
+            "localeCode" String "lv_LV"
+        },
+        "mk_MK" BO(LOCALE) {
+            "label" String "Macedonian [Macedonia] [mk_MK]",
+            "loc_id" Integer "72",
+            "localeCode" String "mk_MK"
+        },
+        "mo_MD" BO(LOCALE) {
+            "label" String "Moldovian [Moldova] [mo_MD]",
+            "loc_id" Integer "75",
+            "localeCode" String "mo_MD"
+        },
+        "ms_MY" BO(LOCALE) {
+            "label" String "Malay [Malaysia] [ms_MY]",
+            "loc_id" Integer "49",
+            "localeCode" String "ms_MY"
+        },
+        "nl" BO(LOCALE) {
+            "label" String "Dutch [nl]",
+            "loc_id" Integer "8",
+            "localeCode" String "nl"
+        },
+        "nl_BE" BO(LOCALE) {
+            "label" String "Dutch [Belgium] [nl_BE]",
+            "loc_id" Integer "9",
+            "localeCode" String "nl_BE"
+        },
+        "no" BO(LOCALE) {
+            "label" String "Norwegian [no]",
+            "loc_id" Integer "25",
+            "localeCode" String "no"
+        },
+        "pl" BO(LOCALE) {         //Polish (spoken in Poland, Lithuania)
+            "label" String "Polish [pl]",
+            "loc_id" Integer "54",
+            "localeCode" String "pl"
+        },
+        "pl_PL" BO(LOCALE) {
+            "label" String "Polish [Poland] [pl_PL]",
+            "loc_id" Integer "38",
+            "localeCode" String "pl_PL"
+        },
+        "pt" BO(LOCALE) {
+            "label" String "Portuguese [pt]",
+            "loc_id" Integer "26",
+            "localeCode" String "pt"
+        },
+        "pt_BR" BO(LOCALE) {
+            "label" String "Portuguese [Brazil] [pt_BR]",
+            "loc_id" Integer "27",
+            "localeCode" String "pt_BR"
+        },
+        "ro" BO(LOCALE) {
+            "label" String "Romanian [ro]",
+            "loc_id" Integer "84",
+            "localeCode" String "ro"
+        },
+        "ro_RO" BO(LOCALE) {
+            "label" String "Romanian [Romania] [ro_RO]",
+            "loc_id" Integer "53",
+            "localeCode" String "ro_RO"
+        },
+        "ru" BO(LOCALE) {         //Russian (spoken in Russia, Azerbaijan, Belarus, Estonia, Finland, Georgia, Kazakhstan, Kyrgyzstan, Lithuania, Moldova, Mongolia, Turkmenistan, Uzbekistan)
+            "label" String "Russian [ru]",
+            "loc_id" Integer "67",
+            "localeCode" String "ru"
+        },
+        "ru_RU" BO(LOCALE) {
+            "label" String "Russian [Russian Federation] [ru_RU]",
+            "loc_id" Integer "68",
+            "localeCode" String "ru_RU"
+        },
+        "sk" BO(LOCALE) {
+            "label" String "Slovak [sk]",
+            "loc_id" Integer "78",
+            "localeCode" String "sk"
+        },
+        "sk_SK" BO(LOCALE) {
+            "label" String "Slovak [Slovakia] [sk_SK]",
+            "loc_id" Integer "66",
+            "localeCode" String "sk_SK"
+        },
+        "sl" BO(LOCALE) {
+            "label" String "Slovenian [sl]",
+            "loc_id" Integer "83",
+            "localeCode" String "sl"
+        },
+        "sl_SI" BO(LOCALE) {
+            "label" String "Slovenian [Slovenia] [sl_SI]",
+            "loc_id" Integer "61",
+            "localeCode" String "sl_SI"
+        },
+        "sq_AL" BO(LOCALE) {
+            "label" String "Albanian [Albania] [sq_AL]",
+            "loc_id" Integer "74",
+            "localeCode" String "sq_AL"
+        },
+        "sr" BO(LOCALE) {
+            "label" String "Serbian [sr]",
+            "loc_id" Integer "87",
+            "localeCode" String "sr"
+        },
+        "sr_CS" BO(LOCALE) {
+            "label" String "Serbian [Serbia and Montenegro] [sr_CS]",
+            "loc_id" Integer "65",
+            "localeCode" String "sr_CS"
+        },
+        "sv" BO(LOCALE) {
+            "label" String "Swedish [sv]",
+            "loc_id" Integer "31",
+            "localeCode" String "sv"
+        },
+        "th" BO(LOCALE) {
+            "label" String "Thai [th]",
+            "loc_id" Integer "44",
+            "localeCode" String "th"
+        },
+        "th_TH" BO(LOCALE) {
+            "label" String "Thai [Thailand] [th_TH]",
+            "loc_id" Integer "45",
+            "localeCode" String "th_TH"
+        },
+        "tr" BO(LOCALE) {
+            "label" String "Turkish [tr]",
+            "loc_id" Integer "86",
+            "localeCode" String "tr"
+        },
+        "tr_TR" BO(LOCALE) {
+            "label" String "Turkish [Turkey] [tr_TR]",
+            "loc_id" Integer "73",
+            "localeCode" String "tr_TR"
+        },
+        "uk_UA" BO(LOCALE) {
+            "label" String "Ukranian [Ukraine] [uk_UA]",
+            "loc_id" Integer "52",
+            "localeCode" String "uk_UA"
+        },
+        "zh" BO(LOCALE) {
+            "label" String "Chinese [zh]",
+            "loc_id" Integer "34",
+            "localeCode" String "zh"
+        },
+        "zh_CN" BO(LOCALE) {
+            "label" String "Chinese [China] [zh_CN]",
+            "loc_id" Integer "35",
+            "localeCode" String "zh_CN"
+        },
+        "zh_HK" BO(LOCALE) {
+            "label" String "Chinese [Hong Kong] [zh_HK]",
+            "loc_id" Integer "76",
+            "localeCode" String "zh_HK"
+        },
+        "zh_TW" BO(LOCALE) {
+            "label" String "Chinese [Taiwan] [zh_TW]",
+            "loc_id" Integer "36",
+            "localeCode" String "zh_TW"
+        }
+    }
+}

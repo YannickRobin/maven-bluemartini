@@ -1,0 +1,3356 @@
+// 
+// ** THIS IS A GENERATED FILE (by gen_taxware_dna.pl).  DO NOT MODIFY
+// 
+DNA {
+    "GENERALINPUT" BOArray [
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "5",
+            "length" Integer "6",
+            "name" String "NUMBERINRECORDSPOS",
+            "scale" Integer "0",
+            "start" Integer "0"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "6",
+            "length" Integer "1",
+            "name" String "COMPRESSIONINDPOS",
+            "scale" Integer "0",
+            "start" Integer "6"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "7",
+            "length" Integer "1",
+            "name" String "COMPRESSIONCHAR1POS",
+            "scale" Integer "0",
+            "start" Integer "7"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "8",
+            "length" Integer "1",
+            "name" String "COMPRESSIONCHAR2POS",
+            "scale" Integer "0",
+            "start" Integer "8"
+        },
+        (GENERIC) {
+            "default" String "1",
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "9",
+            "length" Integer "1",
+            "name" String "OPENCLOSEPROCESSINDPOS",
+            "scale" Integer "0",
+            "start" Integer "9"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "59",
+            "length" Integer "50",
+            "name" String "RESERVED1POS",
+            "scale" Integer "0",
+            "start" Integer "10"
+        }
+    ],
+    "GENERALOUTPUT" BOArray [
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "5",
+            "length" Integer "6",
+            "name" String "NUMBEROUTRECORDSPOS",
+            "scale" Integer "0",
+            "start" Integer "0"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "9",
+            "length" Integer "4",
+            "name" String "COMCOMPLCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "6"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "209",
+            "length" Integer "200",
+            "name" String "COMPLCODEDSCPOS",
+            "scale" Integer "0",
+            "start" Integer "10"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "229",
+            "length" Integer "20",
+            "name" String "MERCHANTNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "210"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "230",
+            "length" Integer "1",
+            "name" String "COMPRESSINDPOS",
+            "scale" Integer "0",
+            "start" Integer "230"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "231",
+            "length" Integer "1",
+            "name" String "COMPRESSCHAR1POS",
+            "scale" Integer "0",
+            "start" Integer "231"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "232",
+            "length" Integer "1",
+            "name" String "COMPRESSCHAR2POS",
+            "scale" Integer "0",
+            "start" Integer "232"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "233",
+            "length" Integer "1",
+            "name" String "OPENCLOSEPROCINDPOS",
+            "scale" Integer "0",
+            "start" Integer "233"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "283",
+            "length" Integer "50",
+            "name" String "RESERVED1OUTPOS",
+            "scale" Integer "0",
+            "start" Integer "234"
+        }
+    ],
+    "INPUT" BOArray [
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            // "default" String "1",
+            "dnaType" String "String",
+            "end" Integer "0",
+            "length" Integer "1",
+            "name" String "SYSTEMINDPOS",
+            "scale" Integer "0",
+            "start" Integer "0"
+        },
+        (GENERIC) {
+            "default" String "ENG",
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "3",
+            "length" Integer "3",
+            "name" String "LANGCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "23",
+            "length" Integer "20",
+            "name" String "COMPANYIDPOS",
+            "scale" Integer "0",
+            "start" Integer "4"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "43",
+            "length" Integer "20",
+            "name" String "DIVISIONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "24"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "46",
+            "length" Integer "3",
+            "name" String "SHIPFROMCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "44"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "49",
+            "length" Integer "3",
+            "name" String "SHIPFROMTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "47"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "75",
+            "length" Integer "26",
+            "name" String "SHIPFROMPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "50"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "101",
+            "length" Integer "26",
+            "name" String "SHIPFROMCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "76"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "104",
+            "length" Integer "3",
+            "name" String "SHIPFROMCOUNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "102"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "130",
+            "length" Integer "26",
+            "name" String "SHIPFROMCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "105"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "139",
+            "length" Integer "9",
+            "name" String "SHIPFROMPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "131"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "143",
+            "length" Integer "4",
+            "name" String "SHIPFROMZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "140"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "145",
+            "length" Integer "2",
+            "name" String "SHIPFRGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "144"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "148",
+            "length" Integer "3",
+            "name" String "DSTCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "146"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "151",
+            "length" Integer "3",
+            "name" String "DSTTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "149"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "177",
+            "length" Integer "26",
+            "name" String "DSTPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "152"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "203",
+            "length" Integer "26",
+            "name" String "DSTCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "178"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "206",
+            "length" Integer "3",
+            "name" String "DSTCOUNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "204"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "232",
+            "length" Integer "26",
+            "name" String "DSTCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "207"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "241",
+            "length" Integer "9",
+            "name" String "DSTPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "233"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "245",
+            "length" Integer "4",
+            "name" String "DSTZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "242"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "247",
+            "length" Integer "2",
+            "name" String "DSTGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "246"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "273",
+            "length" Integer "26",
+            "name" String "DSTSECPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "248"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "276",
+            "length" Integer "3",
+            "name" String "DSTSECCNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "274"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "302",
+            "length" Integer "26",
+            "name" String "DSTSECCNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "277"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "328",
+            "length" Integer "26",
+            "name" String "DSTSECCITYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "303"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "337",
+            "length" Integer "9",
+            "name" String "DSTSECPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "329"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "341",
+            "length" Integer "4",
+            "name" String "DSTSECZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "338"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "343",
+            "length" Integer "2",
+            "name" String "DSTSECGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "342"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "346",
+            "length" Integer "3",
+            "name" String "ORGNCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "344"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "349",
+            "length" Integer "3",
+            "name" String "ORGNTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "347"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "375",
+            "length" Integer "26",
+            "name" String "ORGNPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "350"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "401",
+            "length" Integer "26",
+            "name" String "ORGNCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "376"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "404",
+            "length" Integer "3",
+            "name" String "ORGNCOUNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "402"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "430",
+            "length" Integer "26",
+            "name" String "ORGNCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "405"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "439",
+            "length" Integer "9",
+            "name" String "ORGNPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "431"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "443",
+            "length" Integer "4",
+            "name" String "ORGNZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "440"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "445",
+            "length" Integer "2",
+            "name" String "ORGNGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "444"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "448",
+            "length" Integer "3",
+            "name" String "POACOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "446"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "451",
+            "length" Integer "3",
+            "name" String "POATERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "449"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "477",
+            "length" Integer "26",
+            "name" String "POAPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "452"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "503",
+            "length" Integer "26",
+            "name" String "POACOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "478"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "506",
+            "length" Integer "3",
+            "name" String "POACOUNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "504"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "532",
+            "length" Integer "26",
+            "name" String "POACITYPOS",
+            "scale" Integer "0",
+            "start" Integer "507"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "541",
+            "length" Integer "9",
+            "name" String "POAPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "533"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "545",
+            "length" Integer "4",
+            "name" String "POAZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "542"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "547",
+            "length" Integer "2",
+            "name" String "POAGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "546"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "550",
+            "length" Integer "3",
+            "name" String "INVOICEDTOCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "548"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "553",
+            "length" Integer "3",
+            "name" String "INVOICEDTOTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "551"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "579",
+            "length" Integer "26",
+            "name" String "INVOICEDTOPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "554"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "605",
+            "length" Integer "26",
+            "name" String "INVOICEDTOCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "580"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "608",
+            "length" Integer "3",
+            "name" String "INVOICEDTOCOUNTYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "606"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "634",
+            "length" Integer "26",
+            "name" String "INVOICEDTOCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "609"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "643",
+            "length" Integer "9",
+            "name" String "INVOICEDTOPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "635"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "647",
+            "length" Integer "4",
+            "name" String "INVOICEDTOZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "644"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "649",
+            "length" Integer "2",
+            "name" String "INVOICEDTOGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "648"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "650",
+            "length" Integer "1",
+            "name" String "POTPOS",
+            "scale" Integer "0",
+            "start" Integer "650"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "651",
+            "length" Integer "1",
+            "name" String "TAXINGLOCPOS",
+            "scale" Integer "0",
+            "start" Integer "651"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "652",
+            "length" Integer "1",
+            "name" String "CALCULATIONMODEPOS",
+            "scale" Integer "0",
+            "start" Integer "652"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "653",
+            "length" Integer "1",
+            "name" String "TRANSACTIONTYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "653"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "655",
+            "length" Integer "2",
+            "name" String "WTAXCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "654"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "656",
+            "length" Integer "1",
+            "name" String "TAXTYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "656"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "664",
+            "length" Integer "8",
+            "name" String "TAXPNTPOS",
+            "scale" Integer "0",
+            "start" Integer "657"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "672",
+            "length" Integer "8",
+            "name" String "DELIVERYDATEPOS",
+            "scale" Integer "0",
+            "start" Integer "665"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "674",
+            "length" Integer "2",
+            "name" String "MODEOFTRANSPORTPOS",
+            "scale" Integer "0",
+            "start" Integer "673"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "699",
+            "length" Integer "25",
+            "name" String "COMMODCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "675"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "700",
+            "length" Integer "1",
+            "name" String "CREDITINDICATORPOS",
+            "scale" Integer "0",
+            "start" Integer "700"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "702",
+            "length" Integer "2",
+            "name" String "COUNTRYREASONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "701"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "704",
+            "length" Integer "2",
+            "name" String "PROVINCEREASONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "703"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "706",
+            "length" Integer "2",
+            "name" String "COUNTYREASONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "705"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "708",
+            "length" Integer "2",
+            "name" String "CITYREASONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "707"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "733",
+            "length" Integer "25",
+            "name" String "COUNTRYTAXCERTNOPOS",
+            "scale" Integer "0",
+            "start" Integer "709"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "758",
+            "length" Integer "25",
+            "name" String "PROVINCETAXCERTNOPOS",
+            "scale" Integer "0",
+            "start" Integer "734"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "783",
+            "length" Integer "25",
+            "name" String "COUNTYTAXCERTNOPOS",
+            "scale" Integer "0",
+            "start" Integer "759"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "808",
+            "length" Integer "25",
+            "name" String "CITYTAXCERTNOPOS",
+            "scale" Integer "0",
+            "start" Integer "784"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "809",
+            "length" Integer "1",
+            "name" String "EXMPTALLPOS",
+            "scale" Integer "0",
+            "start" Integer "809"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "810",
+            "length" Integer "1",
+            "name" String "EXMPTCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "810"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "811",
+            "length" Integer "1",
+            "name" String "EXMPTTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "811"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "812",
+            "length" Integer "1",
+            "name" String "EXMPTPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "812"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "813",
+            "length" Integer "1",
+            "name" String "EXMPTCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "813"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "814",
+            "length" Integer "1",
+            "name" String "EXMPTCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "814"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "815",
+            "length" Integer "1",
+            "name" String "EXMPTSECPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "815"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "816",
+            "length" Integer "1",
+            "name" String "EXMPTSECCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "816"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "817",
+            "length" Integer "1",
+            "name" String "EXMPTSECCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "817"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "818",
+            "length" Integer "1",
+            "name" String "EXMPTDISTPOS",
+            "scale" Integer "0",
+            "start" Integer "818"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "838",
+            "length" Integer "20",
+            "name" String "DOCUMENTNUMBERPOS",
+            "scale" Integer "0",
+            "start" Integer "819"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "841",
+            "length" Integer "3",
+            "name" String "CURRENCYCODE1POS",
+            "scale" Integer "0",
+            "start" Integer "839"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "844",
+            "length" Integer "3",
+            "name" String "CURRENCYCODE2POS",
+            "scale" Integer "0",
+            "start" Integer "842"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "845",
+            "length" Integer "1",
+            "name" String "AUDFILEINDPOS",
+            "scale" Integer "0",
+            "start" Integer "845"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "846",
+            "length" Integer "1",
+            "name" String "EXEMPTUSEFLAGPOS",
+            "scale" Integer "0",
+            "start" Integer "846"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "847",
+            "length" Integer "1",
+            "name" String "CRITFLGPOS",
+            "scale" Integer "0",
+            "start" Integer "847"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "848",
+            "length" Integer "1",
+            "name" String "STEPPROCFLGPOS",
+            "scale" Integer "0",
+            "start" Integer "848"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "868",
+            "length" Integer "20",
+            "name" String "CUSTOMERNUMBERPOS",
+            "scale" Integer "0",
+            "start" Integer "849"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "878",
+            "length" Integer "10",
+            "name" String "CONTRACTNUMBERPOS",
+            "scale" Integer "0",
+            "start" Integer "869"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "888",
+            "length" Integer "10",
+            "name" String "COSTCENTERPOS",
+            "scale" Integer "0",
+            "start" Integer "879"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "901",
+            "length" Integer "13",
+            "name" String "LOCNCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "889"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "916",
+            "length" Integer "15",
+            "name" String "UNITOFMEASPOS",
+            "scale" Integer "0",
+            "start" Integer "902"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1016",
+            "length" Integer "100",
+            "name" String "DESCRPOS",
+            "scale" Integer "0",
+            "start" Integer "917"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1017",
+            "length" Integer "1",
+            "name" String "ENDPROCPOS",
+            "scale" Integer "0",
+            "start" Integer "1017"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1018",
+            "length" Integer "1",
+            "name" String "INVSAMINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1018"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1019",
+            "length" Integer "1",
+            "name" String "RECOVINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1019"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1020",
+            "length" Integer "1",
+            "name" String "RESERVEDPOS",
+            "scale" Integer "0",
+            "start" Integer "1020"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1035",
+            "length" Integer "15",
+            "name" String "ACCTREFPOS",
+            "scale" Integer "0",
+            "start" Integer "1021"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1055",
+            "length" Integer "20",
+            "name" String "ORIGINDOCNUMPOS",
+            "scale" Integer "0",
+            "start" Integer "1036"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1057",
+            "length" Integer "2",
+            "name" String "DOCTYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "1056"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1058",
+            "length" Integer "1",
+            "name" String "AGNTINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1058"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1061",
+            "length" Integer "3",
+            "name" String "AGNTIDPOS",
+            "scale" Integer "0",
+            "start" Integer "1059"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1064",
+            "length" Integer "3",
+            "name" String "COUNTRYOFORIGINPOS",
+            "scale" Integer "0",
+            "start" Integer "1062"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1066",
+            "length" Integer "2",
+            "name" String "REGIONOFORIGINPOS",
+            "scale" Integer "0",
+            "start" Integer "1065"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1071",
+            "length" Integer "5",
+            "name" String "DELIVERYTERMPOS",
+            "scale" Integer "0",
+            "start" Integer "1067"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1076",
+            "length" Integer "5",
+            "name" String "PORTOFLOADPOS",
+            "scale" Integer "0",
+            "start" Integer "1072"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1078",
+            "length" Integer "2",
+            "name" String "NATOFTRANSCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1077"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1079",
+            "length" Integer "1",
+            "name" String "DISTSALEINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1079"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1080",
+            "length" Integer "1",
+            "name" String "ZONETAXFREEPOS",
+            "scale" Integer "0",
+            "start" Integer "1080"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1083",
+            "length" Integer "3",
+            "name" String "ORIGINCURRENCYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1081"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1086",
+            "length" Integer "3",
+            "name" String "DSTCURRENCYCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1084"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1092",
+            "length" Integer "6",
+            "name" String "STATISTPROCEDUREPOS",
+            "scale" Integer "0",
+            "start" Integer "1087"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1103",
+            "length" Integer "11",
+            "name" String "SUPPLUNITPOS",
+            "scale" Integer "0",
+            "start" Integer "1093"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1104",
+            "length" Integer "1",
+            "name" String "CORRECTCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1104"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1105",
+            "length" Integer "1",
+            "name" String "REVERSECHRGINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1105"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1106",
+            "length" Integer "1",
+            "name" String "NEWMEANSOFTRNSPRTPOS",
+            "scale" Integer "0",
+            "start" Integer "1106"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1108",
+            "length" Integer "2",
+            "name" String "BOECDPOS",
+            "scale" Integer "0",
+            "start" Integer "1107"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1109",
+            "length" Integer "1",
+            "name" String "AFFILIATIONPOS",
+            "scale" Integer "0",
+            "start" Integer "1109"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1110",
+            "length" Integer "1",
+            "name" String "CSAPOS",
+            "scale" Integer "0",
+            "start" Integer "1110"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1111",
+            "length" Integer "1",
+            "name" String "LICINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1111"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1112",
+            "length" Integer "1",
+            "name" String "DROPSHIPINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1112"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1132",
+            "length" Integer "20",
+            "name" String "CUSTNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "1113"
+        },
+        (GENERIC) {
+            "default" String "3",
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1133",
+            "length" Integer "1",
+            "name" String "TAXSELPARMPOS",
+            "scale" Integer "0",
+            "start" Integer "1133"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1153",
+            "length" Integer "20",
+            "name" String "PARTNUMPOS",
+            "scale" Integer "0",
+            "start" Integer "1134"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "1161",
+            "length" Integer "8",
+            "name" String "FISCALDATEPOS",
+            "scale" Integer "0",
+            "start" Integer "1154"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1211",
+            "length" Integer "50",
+            "name" String "MISCINFOPOS",
+            "scale" Integer "0",
+            "start" Integer "1162"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1212",
+            "length" Integer "1",
+            "name" String "USENEXPROINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1212"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1213",
+            "length" Integer "1",
+            "name" String "EXTRAIND1POS",
+            "scale" Integer "0",
+            "start" Integer "1213"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1214",
+            "length" Integer "1",
+            "name" String "EXTRAIND2POS",
+            "scale" Integer "0",
+            "start" Integer "1214"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1215",
+            "length" Integer "1",
+            "name" String "EXTRAIND3POS",
+            "scale" Integer "0",
+            "start" Integer "1215"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1216",
+            "length" Integer "1",
+            "name" String "AUDFILETYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "1216"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1236",
+            "length" Integer "20",
+            "name" String "BILLTOCUSTNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "1217"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1256",
+            "length" Integer "20",
+            "name" String "BILLTOCUSTIDPOS",
+            "scale" Integer "0",
+            "start" Integer "1237"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1257",
+            "length" Integer "1",
+            "name" String "SERVINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1257"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1258",
+            "length" Integer "1",
+            "name" String "ROUNDINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1258"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1259",
+            "length" Integer "1",
+            "name" String "GENINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1259"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1260",
+            "length" Integer "1",
+            "name" String "MOVEMENTCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1260"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1261",
+            "length" Integer "1",
+            "name" String "STORAGECODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1261"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1262",
+            "length" Integer "1",
+            "name" String "PRODCODECONVPOS",
+            "scale" Integer "0",
+            "start" Integer "1262"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1263",
+            "length" Integer "1",
+            "name" String "PRODCODETYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "1263"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1264",
+            "length" Integer "1",
+            "name" String "COUNTRYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1264"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1265",
+            "length" Integer "1",
+            "name" String "TERRITORYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1265"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1266",
+            "length" Integer "1",
+            "name" String "PROVINCESLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1266"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1267",
+            "length" Integer "1",
+            "name" String "COUNTYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1267"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1268",
+            "length" Integer "1",
+            "name" String "CITYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1268"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1269",
+            "length" Integer "1",
+            "name" String "SECPROVINCESLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1269"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1270",
+            "length" Integer "1",
+            "name" String "SECCOUNTYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1270"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1271",
+            "length" Integer "1",
+            "name" String "SECCITYSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1271"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1272",
+            "length" Integer "1",
+            "name" String "DISTSLSUSEPOS",
+            "scale" Integer "0",
+            "start" Integer "1272"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1273",
+            "length" Integer "1",
+            "name" String "NOTAXINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1273"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1274",
+            "length" Integer "1",
+            "name" String "NOCOUNTRYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1274"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1275",
+            "length" Integer "1",
+            "name" String "NOTERRITORYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1275"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1276",
+            "length" Integer "1",
+            "name" String "NOPROVINCETAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1276"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1277",
+            "length" Integer "1",
+            "name" String "NOCOUNTYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1277"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1278",
+            "length" Integer "1",
+            "name" String "NOCITYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1278"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1279",
+            "length" Integer "1",
+            "name" String "NOSECCOUNTYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1279"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1280",
+            "length" Integer "1",
+            "name" String "NOSECCITYTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1280"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1281",
+            "length" Integer "1",
+            "name" String "NOSECPROVINCETAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1281"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1282",
+            "length" Integer "1",
+            "name" String "NODISTTAXPOS",
+            "scale" Integer "0",
+            "start" Integer "1282"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1283",
+            "length" Integer "1",
+            "name" String "INOUTCITYLIMITSPOS",
+            "scale" Integer "0",
+            "start" Integer "1283"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1284",
+            "length" Integer "1",
+            "name" String "INOUTCILIMSHTOPOS",
+            "scale" Integer "0",
+            "start" Integer "1284"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1285",
+            "length" Integer "1",
+            "name" String "INOUTCILIMSHFRPOS",
+            "scale" Integer "0",
+            "start" Integer "1285"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1286",
+            "length" Integer "1",
+            "name" String "INOUTCILIMPOOPOS",
+            "scale" Integer "0",
+            "start" Integer "1286"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1287",
+            "length" Integer "1",
+            "name" String "INOUTCILIMPOAPOS",
+            "scale" Integer "0",
+            "start" Integer "1287"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1288",
+            "length" Integer "1",
+            "name" String "INOUTCILIMBITOPOS",
+            "scale" Integer "0",
+            "start" Integer "1288"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1289",
+            "length" Integer "1",
+            "name" String "PLACEBUSNSHTOPOS",
+            "scale" Integer "0",
+            "start" Integer "1289"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1290",
+            "length" Integer "1",
+            "name" String "PLACEBUSNSHFRPOS",
+            "scale" Integer "0",
+            "start" Integer "1290"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1291",
+            "length" Integer "1",
+            "name" String "PLACEBUSNPOOPOS",
+            "scale" Integer "0",
+            "start" Integer "1291"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1292",
+            "length" Integer "1",
+            "name" String "PLACEBUSNPOAPOS",
+            "scale" Integer "0",
+            "start" Integer "1292"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1293",
+            "length" Integer "1",
+            "name" String "SHORTLONAMEIND",
+            "scale" Integer "0",
+            "start" Integer "1293"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1318",
+            "length" Integer "25",
+            "name" String "SELLERREGNUMPOS",
+            "scale" Integer "0",
+            "start" Integer "1294"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1343",
+            "length" Integer "25",
+            "name" String "BUYERREGNUMPOS",
+            "scale" Integer "0",
+            "start" Integer "1319"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1344",
+            "length" Integer "1",
+            "name" String "REPORTEXCLDINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1344"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1370",
+            "length" Integer "26",
+            "name" String "WORKORDPOS",
+            "scale" Integer "0",
+            "start" Integer "1345"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1372",
+            "length" Integer "2",
+            "name" String "FACILITYSFCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1371"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1374",
+            "length" Integer "2",
+            "name" String "FACILITYSTCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1373"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1375",
+            "length" Integer "1",
+            "name" String "ACCTREFEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "1375"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1380",
+            "length" Integer "5",
+            "name" String "BILLTOCUSTIDEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "1376"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1383",
+            "length" Integer "3",
+            "name" String "DOCUMENTNUMBEREXTPOS",
+            "scale" Integer "0",
+            "start" Integer "1381"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1396",
+            "length" Integer "13",
+            "name" String "TERMLOCATIONCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "1384"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1399",
+            "length" Integer "3",
+            "name" String "LICNOCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "1397"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1402",
+            "length" Integer "3",
+            "name" String "LICNOPROVPOS",
+            "scale" Integer "0",
+            "start" Integer "1400"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1405",
+            "length" Integer "3",
+            "name" String "LICNOCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "1403"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1408",
+            "length" Integer "3",
+            "name" String "LICNOCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "1406"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1415",
+            "length" Integer "7",
+            "name" String "ODOMETERREADINGPOS",
+            "scale" Integer "0",
+            "start" Integer "1409"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "1423",
+            "length" Integer "8",
+            "name" String "DATESTARTPOS",
+            "scale" Integer "0",
+            "start" Integer "1416"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "1431",
+            "length" Integer "8",
+            "name" String "DATEENDPOS",
+            "scale" Integer "0",
+            "start" Integer "1424"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1954",
+            "length" Integer "523",
+            "name" String "RESERVED2POS",
+            "scale" Integer "0",
+            "start" Integer "1432"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1980",
+            "length" Integer "26",
+            "name" String "CARRIERNAME1POS",
+            "scale" Integer "0",
+            "start" Integer "1955"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1989",
+            "length" Integer "9",
+            "name" String "CARRIERNAME2POS",
+            "scale" Integer "0",
+            "start" Integer "1981"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "2015",
+            "length" Integer "26",
+            "name" String "VENDORNAME1POS",
+            "scale" Integer "0",
+            "start" Integer "1990"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "2024",
+            "length" Integer "9",
+            "name" String "VENDORNAME2POS",
+            "scale" Integer "0",
+            "start" Integer "2016"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "2028",
+            "length" Integer "4",
+            "name" String "TRANTIMEPOS",
+            "scale" Integer "0",
+            "start" Integer "2025"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "2043",
+            "length" Integer "15",
+            "name" String "GROSSVOLPOS",
+            "scale" Integer "0",
+            "start" Integer "2029"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2057",
+            "length" Integer "14",
+            "name" String "OVERAMTCOUNTRYPOS",
+            "scale" Integer "2",
+            "start" Integer "2044"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2071",
+            "length" Integer "14",
+            "name" String "OVERAMTTERRITORYPOS",
+            "scale" Integer "2",
+            "start" Integer "2058"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2085",
+            "length" Integer "14",
+            "name" String "OVERAMTPROVINCEPOS",
+            "scale" Integer "2",
+            "start" Integer "2072"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2099",
+            "length" Integer "14",
+            "name" String "OVERAMTCOUNTYPOS",
+            "scale" Integer "2",
+            "start" Integer "2086"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2113",
+            "length" Integer "14",
+            "name" String "OVERAMTCITYPOS",
+            "scale" Integer "2",
+            "start" Integer "2100"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2127",
+            "length" Integer "14",
+            "name" String "OVERAMTDISTPOS",
+            "scale" Integer "2",
+            "start" Integer "2114"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2141",
+            "length" Integer "14",
+            "name" String "OVERAMTSECPROVINCEPOS",
+            "scale" Integer "2",
+            "start" Integer "2128"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2155",
+            "length" Integer "14",
+            "name" String "OVERAMTSECCOUNTYPOS",
+            "scale" Integer "2",
+            "start" Integer "2142"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Currency",
+            "end" Integer "2169",
+            "length" Integer "14",
+            "name" String "OVERAMTSECCITYPOS",
+            "scale" Integer "2",
+            "start" Integer "2156"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2176",
+            "length" Integer "7",
+            "name" String "OVERRATECOUNTRYPOS",
+            "scale" Integer "6",
+            "start" Integer "2170"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2183",
+            "length" Integer "7",
+            "name" String "OVERRATETERRITORYPOS",
+            "scale" Integer "6",
+            "start" Integer "2177"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2190",
+            "length" Integer "7",
+            "name" String "OVERRATEPROVINCEPOS",
+            "scale" Integer "6",
+            "start" Integer "2184"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2197",
+            "length" Integer "7",
+            "name" String "OVERRATECOUNTYPOS",
+            "scale" Integer "6",
+            "start" Integer "2191"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2204",
+            "length" Integer "7",
+            "name" String "OVERRATECITYPOS",
+            "scale" Integer "6",
+            "start" Integer "2198"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2211",
+            "length" Integer "7",
+            "name" String "OVERRATEDISTPOS",
+            "scale" Integer "6",
+            "start" Integer "2205"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2218",
+            "length" Integer "7",
+            "name" String "OVERRATESECPROVINCEPOS",
+            "scale" Integer "6",
+            "start" Integer "2212"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2225",
+            "length" Integer "7",
+            "name" String "OVERRATESECCOUNTYPOS",
+            "scale" Integer "6",
+            "start" Integer "2219"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "true",
+            "dnaType" String "Double",
+            "end" Integer "2232",
+            "length" Integer "7",
+            "name" String "OVERRATESECCITYPOS",
+            "scale" Integer "6",
+            "start" Integer "2226"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2239",
+            "length" Integer "7",
+            "name" String "NUMITEMSPOS",
+            "scale" Integer "0",
+            "start" Integer "2233"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2244",
+            "length" Integer "5",
+            "name" String "INVOICELINENOPOS",
+            "scale" Integer "0",
+            "start" Integer "2240"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2258",
+            "length" Integer "14",
+            "name" String "LINEITEMAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2245"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2272",
+            "length" Integer "14",
+            "name" String "TAXAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2259"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2286",
+            "length" Integer "14",
+            "name" String "DISCOUNTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2273"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2300",
+            "length" Integer "14",
+            "name" String "FRGHTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2287"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2314",
+            "length" Integer "14",
+            "name" String "INSURANCEAMTLOCALPOS",
+            "scale" Integer "2",
+            "start" Integer "2301"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2328",
+            "length" Integer "14",
+            "name" String "COUNTRYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2315"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2342",
+            "length" Integer "14",
+            "name" String "TERRITORYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2329"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2356",
+            "length" Integer "14",
+            "name" String "PROVINCEEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2343"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2370",
+            "length" Integer "14",
+            "name" String "COUNTYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2357"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2384",
+            "length" Integer "14",
+            "name" String "CITYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2371"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2398",
+            "length" Integer "14",
+            "name" String "DISTEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2385"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2412",
+            "length" Integer "14",
+            "name" String "SECPROVINEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2399"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2426",
+            "length" Integer "14",
+            "name" String "SECCOUNTYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2413"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2440",
+            "length" Integer "14",
+            "name" String "SECCITYEXEMPTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2427"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2454",
+            "length" Integer "14",
+            "name" String "INSAMTFOREIGNPOS",
+            "scale" Integer "2",
+            "start" Integer "2441"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2468",
+            "length" Integer "14",
+            "name" String "SHIPAMTFOREIGNPOS",
+            "scale" Integer "2",
+            "start" Integer "2455"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2482",
+            "length" Integer "14",
+            "name" String "CONTRACTAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2469"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "2496",
+            "length" Integer "14",
+            "name" String "INSTALLAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "2483"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2503",
+            "length" Integer "7",
+            "name" String "BASISPERCPOS",
+            "scale" Integer "0",
+            "start" Integer "2497"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "2518",
+            "length" Integer "15",
+            "name" String "CURRENCYCONVFACTORPOS",
+            "scale" Integer "0",
+            "start" Integer "2504"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "2533",
+            "length" Integer "15",
+            "name" String "NETMASPOS",
+            "scale" Integer "2",
+            "start" Integer "2519"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "2548",
+            "length" Integer "15",
+            "name" String "SHIPFRCURRCONVFACTPOS",
+            "scale" Integer "0",
+            "start" Integer "2534"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "2563",
+            "length" Integer "15",
+            "name" String "DSTCURRCONVFACTPOS",
+            "scale" Integer "0",
+            "start" Integer "2549"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "2570",
+            "length" Integer "7",
+            "name" String "RECOVERPCTPOS",
+            "scale" Integer "2",
+            "start" Integer "2564"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2573",
+            "length" Integer "3",
+            "name" String "EXPONENTPOS",
+            "scale" Integer "0",
+            "start" Integer "2571"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2576",
+            "length" Integer "3",
+            "name" String "PRECISIONFACTLICPOS",
+            "scale" Integer "0",
+            "start" Integer "2574"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2579",
+            "length" Integer "3",
+            "name" String "OVAMTCOUNTRYPFPOS",
+            "scale" Integer "0",
+            "start" Integer "2577"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2582",
+            "length" Integer "3",
+            "name" String "OVAMTTERRITORYPFPOS",
+            "scale" Integer "0",
+            "start" Integer "2580"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2585",
+            "length" Integer "3",
+            "name" String "OVAMTPROVINCEPFPOS",
+            "scale" Integer "0",
+            "start" Integer "2583"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2588",
+            "length" Integer "3",
+            "name" String "OVAMTCOUNTYPFPOS",
+            "scale" Integer "0",
+            "start" Integer "2586"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "2591",
+            "length" Integer "3",
+            "name" String "OVAMTCITYPFPOS",
+            "scale" Integer "0",
+            "start" Integer "2589"
+        }
+    ],
+    "OUTPUT" BOArray [
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "0",
+            "length" Integer "1",
+            "name" String "SYSINDPOS",
+            "scale" Integer "0",
+            "start" Integer "0"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "4",
+            "length" Integer "4",
+            "name" String "GENCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "1"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "8",
+            "length" Integer "4",
+            "name" String "COUNTRYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "5"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "12",
+            "length" Integer "4",
+            "name" String "TERRITORYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "9"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "16",
+            "length" Integer "4",
+            "name" String "PROVINCECMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "13"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "20",
+            "length" Integer "4",
+            "name" String "COUNTYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "17"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "24",
+            "length" Integer "4",
+            "name" String "CITYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "21"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "28",
+            "length" Integer "4",
+            "name" String "SECPROVINCECMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "25"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "32",
+            "length" Integer "4",
+            "name" String "SECCOUNTYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "29"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "36",
+            "length" Integer "4",
+            "name" String "SECCITYCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "33"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "40",
+            "length" Integer "4",
+            "name" String "DISTCMPLCDPOS",
+            "scale" Integer "0",
+            "start" Integer "37"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "44",
+            "length" Integer "4",
+            "name" String "EXTRACMPLCD1POS",
+            "scale" Integer "0",
+            "start" Integer "41"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "48",
+            "length" Integer "4",
+            "name" String "EXTRACMPLCD2POS",
+            "scale" Integer "0",
+            "start" Integer "45"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "52",
+            "length" Integer "4",
+            "name" String "EXTRACMPLCD3POS",
+            "scale" Integer "0",
+            "start" Integer "49"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "56",
+            "length" Integer "4",
+            "name" String "EXTRACMPLCD4POS",
+            "scale" Integer "0",
+            "start" Integer "53"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "60",
+            "length" Integer "4",
+            "name" String "SUSPCDCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "57"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "64",
+            "length" Integer "4",
+            "name" String "SUSPCDPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "61"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "68",
+            "length" Integer "4",
+            "name" String "SUSPCDCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "65"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "72",
+            "length" Integer "4",
+            "name" String "SUSPCDCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "69"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "272",
+            "length" Integer "200",
+            "name" String "GENCMPLCDDSCPOS",
+            "scale" Integer "0",
+            "start" Integer "73"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "DateTime",
+            "end" Integer "280",
+            "length" Integer "8",
+            "name" String "SYSTEMDATEPOS",
+            "scale" Integer "0",
+            "start" Integer "273"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "290",
+            "length" Integer "10",
+            "name" String "TRANSACTIONNUMBERPOS",
+            "scale" Integer "0",
+            "start" Integer "281"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "295",
+            "length" Integer "5",
+            "name" String "LINEITEMIDPOS",
+            "scale" Integer "0",
+            "start" Integer "291"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "296",
+            "length" Integer "1",
+            "name" String "MANUALTRANSIDPOS",
+            "scale" Integer "0",
+            "start" Integer "296"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "297",
+            "length" Integer "1",
+            "name" String "ZERORATEINDPOS",
+            "scale" Integer "0",
+            "start" Integer "297"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "298",
+            "length" Integer "1",
+            "name" String "JURLOCTYPEPOS",
+            "scale" Integer "0",
+            "start" Integer "298"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "301",
+            "length" Integer "3",
+            "name" String "JURCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "299"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "304",
+            "length" Integer "3",
+            "name" String "JURTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "302"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "330",
+            "length" Integer "26",
+            "name" String "JURPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "305"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "333",
+            "length" Integer "3",
+            "name" String "JURCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "331"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "359",
+            "length" Integer "26",
+            "name" String "JURCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "334"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "368",
+            "length" Integer "9",
+            "name" String "JURPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "360"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "372",
+            "length" Integer "4",
+            "name" String "JURZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "369"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "374",
+            "length" Integer "2",
+            "name" String "JURGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "373"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "400",
+            "length" Integer "26",
+            "name" String "JURSECPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "375"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "403",
+            "length" Integer "3",
+            "name" String "JURSECCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "401"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "429",
+            "length" Integer "26",
+            "name" String "JURSECCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "404"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "438",
+            "length" Integer "9",
+            "name" String "JURSECPOSTALCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "430"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "442",
+            "length" Integer "4",
+            "name" String "JURSECZIPEXTPOS",
+            "scale" Integer "0",
+            "start" Integer "439"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "444",
+            "length" Integer "2",
+            "name" String "JURSECGEOPOS",
+            "scale" Integer "0",
+            "start" Integer "443"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "445",
+            "length" Integer "1",
+            "name" String "TYPCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "445"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "446",
+            "length" Integer "1",
+            "name" String "TYPPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "446"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "447",
+            "length" Integer "1",
+            "name" String "TYPCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "447"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "448",
+            "length" Integer "1",
+            "name" String "TYPCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "448"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "449",
+            "length" Integer "1",
+            "name" String "TYPSECPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "449"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "450",
+            "length" Integer "1",
+            "name" String "TYPSECCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "450"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "451",
+            "length" Integer "1",
+            "name" String "TYPSECCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "451"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "452",
+            "length" Integer "1",
+            "name" String "TYPDISTPOS",
+            "scale" Integer "0",
+            "start" Integer "452"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "454",
+            "length" Integer "2",
+            "name" String "COUNTRYREASCODOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "453"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "456",
+            "length" Integer "2",
+            "name" String "PROVINCEREASCODOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "455"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "458",
+            "length" Integer "2",
+            "name" String "COUNTYREASCODOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "457"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "460",
+            "length" Integer "2",
+            "name" String "CITYREASCODOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "459"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "485",
+            "length" Integer "25",
+            "name" String "COUNTRYCERTNOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "461"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "510",
+            "length" Integer "25",
+            "name" String "PROVINCECERTNOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "486"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "535",
+            "length" Integer "25",
+            "name" String "COUNTYCERTNOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "511"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "560",
+            "length" Integer "25",
+            "name" String "CITYCERTNOUTPOS",
+            "scale" Integer "0",
+            "start" Integer "536"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "561",
+            "length" Integer "1",
+            "name" String "COUNTRYSTATUSCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "561"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "562",
+            "length" Integer "1",
+            "name" String "COUNTRYCOMMENCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "562"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "563",
+            "length" Integer "1",
+            "name" String "PROVINCESTATUSCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "563"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "564",
+            "length" Integer "1",
+            "name" String "PROVINCECOMMENCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "564"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "565",
+            "length" Integer "1",
+            "name" String "COUNTYSTATUSCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "565"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "566",
+            "length" Integer "1",
+            "name" String "COUNTYCOMMENCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "566"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "567",
+            "length" Integer "1",
+            "name" String "CITYSTATUSCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "567"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "568",
+            "length" Integer "1",
+            "name" String "CITYCOMMENCODEPOS",
+            "scale" Integer "0",
+            "start" Integer "568"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "594",
+            "length" Integer "26",
+            "name" String "JURCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "569"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "620",
+            "length" Integer "26",
+            "name" String "JURSECCOUNTYNAMEPOS",
+            "scale" Integer "0",
+            "start" Integer "595"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1318",
+            "length" Integer "698",
+            "name" String "RESERV2OUTPOS",
+            "scale" Integer "0",
+            "start" Integer "621"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1332",
+            "length" Integer "14",
+            "name" String "LINEITEMAMOUNTPOS",
+            "scale" Integer "2",
+            "start" Integer "1319"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1346",
+            "length" Integer "14",
+            "name" String "CALCAMTCOUNTRYPOS",
+            "scale" Integer "2",
+            "start" Integer "1333"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1360",
+            "length" Integer "14",
+            "name" String "CALCAMTTERRITORYPOS",
+            "scale" Integer "2",
+            "start" Integer "1347"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1374",
+            "length" Integer "14",
+            "name" String "CALCAMTPROVINCEPOS",
+            "scale" Integer "2",
+            "start" Integer "1361"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1388",
+            "length" Integer "14",
+            "name" String "CALCAMTCOUNTYPOS",
+            "scale" Integer "2",
+            "start" Integer "1375"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1402",
+            "length" Integer "14",
+            "name" String "CALCAMTCITYPOS",
+            "scale" Integer "2",
+            "start" Integer "1389"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1416",
+            "length" Integer "14",
+            "name" String "SECPROVINCETXAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1403"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1430",
+            "length" Integer "14",
+            "name" String "SECCOUNTYTXAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1417"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1444",
+            "length" Integer "14",
+            "name" String "SECCITYTXAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1431"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1458",
+            "length" Integer "14",
+            "name" String "DISTTXAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1445"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1472",
+            "length" Integer "14",
+            "name" String "COUNTRYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1459"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1486",
+            "length" Integer "14",
+            "name" String "TERRITORYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1473"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1500",
+            "length" Integer "14",
+            "name" String "PROVINCEBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1487"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1514",
+            "length" Integer "14",
+            "name" String "COUNTYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1501"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1528",
+            "length" Integer "14",
+            "name" String "CITYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1515"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1542",
+            "length" Integer "14",
+            "name" String "SECPROVINBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1529"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1556",
+            "length" Integer "14",
+            "name" String "SECCOUNTYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1543"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1570",
+            "length" Integer "14",
+            "name" String "SECCITYBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1557"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Currency",
+            "end" Integer "1584",
+            "length" Integer "14",
+            "name" String "DISTBASISAMTPOS",
+            "scale" Integer "2",
+            "start" Integer "1571"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1591",
+            "length" Integer "7",
+            "name" String "TAXRATECOUNTRYPOS",
+            "scale" Integer "6",
+            "start" Integer "1585"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1598",
+            "length" Integer "7",
+            "name" String "TAXRATETERRITORYPOS",
+            "scale" Integer "6",
+            "start" Integer "1592"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1605",
+            "length" Integer "7",
+            "name" String "TAXRATEPROVINCEPOS",
+            "scale" Integer "6",
+            "start" Integer "1599"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1612",
+            "length" Integer "7",
+            "name" String "TAXRATECOUNTYPOS",
+            "scale" Integer "6",
+            "start" Integer "1606"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1619",
+            "length" Integer "7",
+            "name" String "TAXRATECITYPOS",
+            "scale" Integer "6",
+            "start" Integer "1613"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1626",
+            "length" Integer "7",
+            "name" String "SECPROVINTXRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1620"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1633",
+            "length" Integer "7",
+            "name" String "SECCOUNTYTXRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1627"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1640",
+            "length" Integer "7",
+            "name" String "SECCITYTXRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1634"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1647",
+            "length" Integer "7",
+            "name" String "DISTTXRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1641"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1654",
+            "length" Integer "7",
+            "name" String "CALCCOUNTRYRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1648"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1661",
+            "length" Integer "7",
+            "name" String "CALCTERRITORYRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1655"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1668",
+            "length" Integer "7",
+            "name" String "CALCPROVINCERATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1662"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1675",
+            "length" Integer "7",
+            "name" String "CALCCOUNTYRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1669"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Double",
+            "end" Integer "1682",
+            "length" Integer "7",
+            "name" String "CALCCITYRATEPOS",
+            "scale" Integer "6",
+            "start" Integer "1676"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "String",
+            "end" Integer "1688",
+            "length" Integer "6",
+            "name" String "REPORTINDPOS",
+            "scale" Integer "0",
+            "start" Integer "1683"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "1691",
+            "length" Integer "3",
+            "name" String "TAXAMTPFCOUNTRYPOS",
+            "scale" Integer "0",
+            "start" Integer "1689"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "1694",
+            "length" Integer "3",
+            "name" String "TAXAMTPFTERRITORYPOS",
+            "scale" Integer "0",
+            "start" Integer "1692"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "1697",
+            "length" Integer "3",
+            "name" String "TAXAMTPFPROVINCEPOS",
+            "scale" Integer "0",
+            "start" Integer "1695"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "1700",
+            "length" Integer "3",
+            "name" String "TAXAMTPFCOUNTYPOS",
+            "scale" Integer "0",
+            "start" Integer "1698"
+        },
+        (GENERIC) {
+            "defaultIsSpaces" Boolean "false",
+            "dnaType" String "Integer",
+            "end" Integer "1703",
+            "length" Integer "3",
+            "name" String "TAXAMTPFCITYPOS",
+            "scale" Integer "0",
+            "start" Integer "1701"
+        }
+    ]
+}

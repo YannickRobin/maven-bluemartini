@@ -1,0 +1,164 @@
+DNA {
+    // ObjectFactory settings
+    "objectfactory" DNA {
+        "com.bluemartini.core.BMHashMapIterator" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "com.bluemartini.dna.BusinessObject" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "com.bluemartini.dna.DNABoolean" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNACurrency" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNADateTime" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNADouble" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNAInteger" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNAList" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "com.bluemartini.dna.DNAListArray" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "com.bluemartini.dna.DNAListIterator" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "com.bluemartini.dna.DNAObject" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "com.bluemartini.dna.DNAString" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "false"
+        },
+        "default" DNA {
+            "capacity" Integer "1000",
+            "enabled" Boolean "true"
+        },
+        "enabled" Boolean "true",
+        "recurse" Boolean "false"
+    },
+    "props.oracle.jdbc.pool.OracleConnectionPoolDataSource" DNA {
+        "driverType" String "thin",
+        "disableAutoConnectionCleanup" String "true"
+    },
+    "props.COM.ibm.db2.jdbc.DB2ConnectionPoolDataSource" DNA {
+        "connectionAttribute" String "cursorhold=1",
+        "disableAutoConnectionCleanup" String "true",
+        // This prevents a warning in WebSphere since DB2 doesn't use this property
+        "networkProtocol" String ""
+    },
+    // Protocols supported by URL validation.
+    "url.protocol" StringArray [
+        "http",
+        "https",
+        "ftp",
+        "gopher"
+    ],
+    "jdbc" DNA {
+        // This mapping provides support for the deprecated practice of
+        // specifying a driver class rather than a logical driver name
+        // in appconfig and/or db_env.dna.  Do not add mappings from
+        // class names to this list, as it lists only those drivers that were
+        // supported at the time the switch was made to specifying logical
+        // driver names instead.  You may, however, use this list to set up
+        // aliases for an existing driver if desired.  Note that any number
+        // of indirections is permissable.
+        "driver_map" DNA {
+            "COM.ibm.db2.jdbc.app.DB2Driver" String "ibm_db2",
+            "jdbc.searchserver.SSDriver" String "fulcrum_5.0",
+            "oracle.jdbc.driver.OracleDriver" String "oracle_thin",
+            "weblogic.jdbc.sqlserver.SQLServerDriver" String "weblogic_sqlserver_type_4",
+            "weblogic.jdbc.oci.Driver" String "weblogic_oracle_oci",
+            "weblogic.jdbc.pool.Driver" String "weblogic_pool",
+			"com.microsoft.sqlserver.jdbc.SQLServerDriver" String "microsoft_sqlserver_type_4",
+            "net.sourceforge.jtds.jdbc.Driver" String "jtds_sqlserver_type_4"
+        },
+        // This list specifies the default driver for use with each supported
+        // database vendor.  If no driver is specified in appconfig or
+        // db_env.dna, the appropriate driver from this list will be used.
+        "default_drivers" DNA {
+            "db2" String "ibm_db2",
+            "fulcrum" String "fulcrum_5.0",
+            "microsoft" String "microsoft_sqlserver_type_4",
+            //"microsoft" String "jtds_sqlserver_type_4",
+            //"microsoft" String "weblogic_sqlserver_type_4",
+            "oracle" String "oracle_thin",
+            "teradata" String "teradata"
+        },
+        // This list specifies the details about a particular logical driver name.
+        // The name of each sublist is the logical name, and the supported
+        // properties are presently 'class' which specifies the full class name
+        // of the driver, and 'url' which specifies the URL pattern to be used
+        // when creating a connection to the database using the driver.
+        "supported_drivers" DNA {
+            "ibm_db2" DNA {
+                "class" String "COM.ibm.db2.jdbc.app.DB2Driver",
+                "url" String "jdbc:db2:{databaseName}"
+            },
+            "oracle_oci" DNA {
+                "class" String "oracle.jdbc.driver.OracleDriver",
+                "url" String "jdbc:oracle:oci:@(description=(address=(host={server})(protocol=tcp)(port={port}))(connect_data=(sid={sid})))"
+            },
+            "oracle_thin" DNA {
+                "class" String "oracle.jdbc.driver.OracleDriver",
+                "url" String "jdbc:oracle:thin:@{server}:{port}:{sid}"
+            },
+            "fulcrum_5.0" DNA {
+                "class" String "jdbc.searchserver.SSDriver",
+                "url" String "jdbc:searchserver:SearchServer_5.4"
+            },
+            "teradata" DNA {
+                "class" String "com.ncr.teradata.TeraDriver",
+                "url" String "jdbc:teradata://{server}:{port}/{service}/DATABASE={instance}"
+            },
+            "weblogic_pool" DNA {
+                "class" String "weblogic.jdbc.pool.Driver",
+                "url" String "jdbc:weblogic:pool"
+            },
+            "weblogic_oracle_oci" DNA {
+                "class" String "weblogic.jdbc.oci.Driver",
+                "url" String "jdbc:weblogic:oracle:{server}"
+            },
+            "weblogic_sqlserver_type_4" DNA {
+                "class" String "weblogic.jdbc.sqlserver.SQLServerDriver",
+                "url" String "jdbc:bea:sqlserver://{server}:{port};DatabaseName={instance}",
+                "useVarChars" String "true"
+            },            
+            "microsoft_sqlserver_type_4" DNA {
+                "class" String "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+                "url" String "jdbc:sqlserver://{server}:{port};SelectMethod=cursor;DatabaseName={instance}",
+                "useVarChars" String "true"
+            },
+            "jtds_sqlserver_type_4" DNA {
+                "class" String "net.sourceforge.jtds.jdbc.Driver",
+                "url" String "jdbc:jtds:sqlserver://{server}:{port}/{instance};TDS=8.0;prepareSQL=2",
+                "useVarChars" String "true"
+            }
+        }
+    },
+    "deadlockRetry" DNA {
+        "db2" DNA {
+            "SQLPattern" String ".*((?i)create|drop|alter).*((?i)table|view|index).*",
+            "retryCount" Integer "200"
+        }
+    }
+}

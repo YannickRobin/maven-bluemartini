@@ -1,0 +1,3180 @@
+DNA {
+    "ACCOMMODATION_ALLOWANCE_SEARCH" DNA {
+        "description" String "Gather criteria for Accommodation Allowance search",
+        "label" String "ACCOMMODATION_ALLOWANCE_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "orderBy",
+                "label" String "orderBy"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            }
+        }
+    },
+    "ADDRESS" DNA {
+        "databaseClass" String "com.bluemartini.b2b.util.B2BAddressBusinessObjectUtil",
+        "properties" DNA {
+        }
+    },
+    "ASSORTMENT" DNA {
+        "supportMultiTableQuery" Boolean "true"
+    },
+    "ASSORTMENT_SEARCH" DNA {
+        "description" String "Gather criteria for Assortment search",
+        "label" String "ASSORTMENT_SEARCH_bizobj",
+        "properties" DNA {
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "name" DNA {
+                "databaseColumnName" String "AST_NM",
+                "dataElement" String "string_search",
+                "label" String "Assortment Name"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "AST_STATUS_CD",
+                "dataElement" String "productStatusCode",
+                "label" String "Assortment Status Code"
+            }
+        }
+    },
+    "BSE_FOLDER" DNA {
+        "aliases" StringArray [
+        ],
+        "databaseClass" String "com.bluemartini.util.BasicBusinessObjectUtilPS",
+        "databaseViewName" String "V_BSE_FOLDER",
+        "description" String "Business Entity Folder",
+        "label" String "BSE_FOLDER_bizobj",
+        "objectIDProperty" String "bef_id",
+        "objectNameProperty" String "name",
+        "parentIDProperty" String "bef_parent_id",
+        "properties" DNA {
+            "bef_id" DNA {
+                "databaseColumnName" String "BEF_ID",
+                "dataElement" String "longID",
+                "label" String "objectID"
+            },
+            "bef_parent_id" DNA {
+                "databaseColumnName" String "BEF_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "bef_parent_id"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "BEF_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "BEF_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "BEF_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "BEF_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "BEF_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "BEF_NM",
+                "dataElement" String "objectName",
+                "label" String "objectName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "BEF_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "BEF_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "BEF_STATUS_CD",
+                "dataElement" String "contractFolderStatusCode",
+                "label" String "contractFolderStatusCode"
+            }
+        },
+        "version" String "Z"
+    },
+    "BUSINESS_ENTITY" DNA {
+        "aliases" StringArray [
+            "CURRENT_BUSINESS_ENTITY",
+            "SELECT_BUSINESS_ENTITY"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "BusinessEntity",
+        "bseOwnerProperty" String "bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.BusinessEntityBusinessObjectUtil",
+        "databaseTableName" String "BUSINESS_ENTITY",
+        "databaseViewName" String "V_BUSINESS_ENTITY",
+        "defaultStatusCode" String "A",
+        "description" String "Business Entity",
+        "label" String "BUSINESS_ENTITY_bizobj",
+        "objectIDProperty" String "bse_id",
+        "objectNameProperty" String "name",
+        "objectStatusCodeProperty" String "status_cd",
+        "parentIDProperty" String "bse_parent_id",
+        "properties" DNA {
+            "bse_ctf_id" DNA {
+                "databaseColumnName" String "BSE_CTF_ID",
+                "dataElement" String "ctf_id",
+                "label" String "ctf_id"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "bse_id"
+            },
+            "bse_is_led_gen" DNA {
+                "databaseColumnName" String "BSE_LEAD_GEN_IND",
+                "dataElement" String "boolean",
+                "label" String "isLeadGenerated"
+            },
+            "bse_parent_id" DNA {
+                "databaseColumnName" String "BSE_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "bse_parent_id"
+            },
+            "bse_root_org_id" DNA {
+                "databaseColumnName" String "BSE_ROOT_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "bse_root_org_id"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "BSE_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "BSE_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "industry_cd" DNA {
+                "databaseColumnName" String "BSE_INDUSTRY_CD",
+                "dataElement" String "industryCode",
+                "label" String "industryCode"
+            },
+            "label" DNA {
+                "databaseColumnName" String "BSE_LABEL",
+                "dataElement" String "businessEntityName",
+                "label" String "businessEntityName"
+            },
+            "loginName" DNA {
+                "databaseColumnName" String "BSE_LOGIN_NM",
+                "dataElement" String "bse_login_name",
+                "label" String "businessEntityLoginName"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "BSE_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "BSE_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "BSE_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "BSE_NM",
+                "dataElement" String "objectName",
+                "label" String "objectName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "BSE_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "BSE_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "BSE_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "businessEntityNum"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "BSE_STATUS_CD",
+                "dataElement" String "businessEntityStatusCode",
+                "label" String "businessEntityStatusCode"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "BSE_TYPE_CD",
+                "dataElement" String "businessType_cd",
+                "label" String "businessType_cd"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "version" String "Z"
+    },
+    "BUSINESS_ENTITY_SEARCH" DNA {
+        "description" String "Gather criteria for Business Entity search",
+        "label" String "BUSINESS_ENTITY_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_ID",
+                "dataElement" String "string_search"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDtMax" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "createDtMin" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "email_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_EMAIL",
+                "dataElement" String "string_search",
+                "label" String "Email"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "industry_cd" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_INDUSTRY_CD",
+                "dataElement" String "industryCode",
+                "label" String "industryCode"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Account Name"
+            },
+            "loginName" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LOGIN_NM",
+                "dataElement" String "string_search"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "firstRow"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "name" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_NM",
+                "dataElement" String "string_search"
+            },
+            "NOT_type_cd" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_TYPE_CD",
+                "dataElement" String "businessType_cd",
+                "label" String "businessType_cd"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortAccountsBy_cd",
+                "label" String "orderBy"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CTC_PH",
+                "dataElement" String "string_search",
+                "label" String "Phone"
+            },
+            "showAccounts" DNA {
+                "dataElement" String "showAccounts_search",
+                "label" String "Show Accounts"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "businessEntityNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_STATUS_CD",
+                "dataElement" String "businessEntityStatusCode",
+                "label" String "Status Code"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_TYPE_CD",
+                "dataElement" String "businessType_cd",
+                "label" String "businessType_cd"
+            },
+            "valid" DNA {
+                "dataElement" String "boolean",
+                "label" String "valid"
+            }
+        }
+    },
+    "CALL_TRACKING" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Case",
+        "bseOwnerProperty" String "ctk_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BCallTrackingBusinessObjectUtil",
+        "orgOwnerProperty" String "ctk_org_id",
+        "properties" DNA {
+            "ctk_bse_id" DNA {
+                "databaseColumnName" String "CTK_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "ctk_bse_id"
+            },
+            "ctk_org_id" DNA {
+                "databaseColumnName" String "CTK_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "ctk_org_id"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "assignedTo"
+        ]
+    },
+    "CART_HEADER" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Quote",
+        "bseOwnerProperty" String "cth_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BCartHeaderBusinessObjectUtil",
+        "orgOwnerProperty" String "cth_org_id",
+        "properties" DNA {
+            "accept_cd" DNA {
+                "databaseColumnName" String "CTH_ACCEPT_CD",
+                "dataElement" String "cartHeaderAccept_cd",
+                "label" String "accept_cd"
+            },
+            "cth_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "businessEntityID"
+            },
+            "cth_ctr_id" DNA {
+                "databaseColumnName" String "CTH_CTR_ID",
+                "dataElement" String "longID",
+                "label" String "contractID"
+            },
+            "cth_org_id" DNA {
+                "dataElement" String "org_id",
+                "label" String "cth_org_id"
+            },
+            "cth_qtf_id" DNA {
+                "databaseColumnName" String "CTH_QTF_ID",
+                "dataElement" String "longID",
+                "label" String "quoteFolderID"
+            },
+            "ext_po_nbr" DNA {
+                "databaseColumnName" String "CTH_EXT_PO_NBR",
+                "dataElement" String "order_po_nbr",
+                "label" String "externalPONumber"
+            },
+            "orderSubmitted" DNA {
+                "databaseColumnName" String "CTH_ORDR_SUBMIT_IND",
+                "dataElement" String "orderSubmitted",
+                "label" String "orderSubmitted"
+            },
+            "repriceQuote" DNA {
+                "dataElement" String "boolean",
+                "label" String "repriceQuote"
+            },
+            "revision" DNA {
+                "databaseColumnName" String "CTH_REVISION",
+                "dataElement" String "integer",
+                "label" String "revision"
+            },
+            "savedInactiveQuote" DNA {
+                "dataElement" String "boolean"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "CTH_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "quoteNum"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor"
+        ]
+    },
+    "CART_HEADER_SEARCH" DNA {
+        "description" String "Gather criteria for Quote search",
+        "label" String "CART_HEADER_SEARCH_bizobj",
+        "properties" DNA {
+            "accept_cd" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_ACCEPT_CD",
+                "dataElement" String "cartHeaderAccept_cd",
+                "label" String "Acceptance Code"
+            },
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "beginDateMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_BEGIN_DT",
+                "dataElement" String "date_search",
+                "label" String "Begin Date"
+            },
+            "beginDateMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_BEGIN_DT",
+                "dataElement" String "date_search",
+                "label" String "Begin Date"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "Business Entity ID"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Business Entity Name"
+            },
+            "businessEntityNum" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "businessEntityNum"
+            },
+            "ByFirstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name By"
+            },
+            "ByLastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "ByMiddleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createdFor" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_CREATED_FOR",
+                "dataElement" String "usa_id",
+                "label" String "createdFor"
+            },
+            "createDtMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "createDtMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "cth_id" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_ID",
+                "dataElement" String "cth_id",
+                "label" String "Quote ID"
+            },
+            "cth_parent_id" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "Quote_Folder_or_RFQ_ID"
+            },
+            "cth_qtf_id" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_QTF_ID",
+                "dataElement" String "longID",
+                "label" String "Quote Folder ID"
+            },
+            "customerNum" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_CUST_NBR",
+                "dataElement" String "string_search",
+                "label" String "customerNum"
+            },
+            "email_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_EMAIL",
+                "dataElement" String "string_search",
+                "label" String "Email"
+            },
+            "endDateMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_END_DT",
+                "dataElement" String "date_search",
+                "label" String "End Date"
+            },
+            "endDateMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_END_DT",
+                "dataElement" String "date_search",
+                "label" String "End Date"
+            },
+            "firstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "ForFirstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "ForFirstName"
+            },
+            "ForLastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "ForLastName"
+            },
+            "ForMiddleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "ForMiddleName"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Quote Name"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "maxRows"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "NOT_userAccountStatusCode" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_STATUS_CD",
+                "dataElement" String "userAccountStatus_cd",
+                "label" String "User Status Code"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortQuotesBy_cd",
+                "label" String "orderBy"
+            },
+            "orderSubmitted" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_ORDR_SUBMIT_IND",
+                "dataElement" String "orderSubmitted",
+                "label" String "Order Submitted Indicator"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "Organization ID"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CTC_PH",
+                "dataElement" String "string_search",
+                "label" String "Phone"
+            },
+            "postal_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_PCODE",
+                "dataElement" String "string_search",
+                "label" String "Postal Code"
+            },
+            "quoteFolderLabel" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Opportunity Name"
+            },
+            "revision" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_REVISION",
+                "dataElement" String "integer",
+                "label" String "Revision Number"
+            },
+            "rfq_buyer_usa_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_BUYER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "buyer_usa_id"
+            },
+            "rfq_seller_usa_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_SELLER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "seller_usa_id"
+            },
+            "rfqLabel" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "rfqLabel"
+            },
+            "searchCreatedForAndCreatedBy" DNA {
+                "dataElement" String "boolean",
+                "label" String "SearchCreatedForAndCreatedBy"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "showQuotes" DNA {
+                "dataElement" String "showQuotes_search",
+                "label" String "Show Quotes"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "quoteNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_STATUS_CD",
+                "dataElement" String "cartHeaderStatus_cd",
+                "label" String "Status Code"
+            },
+            "totalPriceAmtMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Total Amount"
+            },
+            "totalPriceAmtMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Total Amount"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_TYPE_CD",
+                "dataElement" String "cartHeaderType_cd",
+                "label" String "Type Code"
+            },
+            "userType_cd" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_TYPE_CD",
+                "dataElement" String "userType_cd",
+                "label" String "userType_cd"
+            }
+        }
+    },
+    "CART_ITEM" DNA {
+        "properties" DNA {
+            "quoteOverridePriceAmt" DNA {
+                "dataElement" String "currency",
+                "label" String "quoteOverridePriceAmt"
+            },
+            "requestPriceAmt" DNA {
+                "databaseColumnName" String "CRT_RQST_PRICE_AMT",
+                "dataElement" String "currency",
+                "label" String "requestPriceAmt"
+            }
+        }
+    },
+    "CASE_SEARCH" DNA {
+        "aliases" StringArray [
+            "INFOBAR_CASE_SEARCH"
+        ],
+        "description" String "Gather criteria for Case search",
+        "label" String "CASE_SEARCH_bizobj",
+        "properties" DNA {
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            }
+        }
+    },
+    "CONTRACT" DNA {
+        "aliases" StringArray [
+            "CURRENT_CONTRACT"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Contract",
+        "bseOwnerProperty" String "ctr_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.ContractBusinessObjectUtil",
+        "databaseTableName" String "CONTRACT",
+        "databaseViewName" String "V_CONTRACT",
+        "defaultStatusCode" String "A",
+        "description" String "Contract",
+        "label" String "CONTRACT_bizobj",
+        "objectIDProperty" String "ctr_id",
+        "objectNameProperty" String "name",
+        "objectStatusCodeProperty" String "status_cd",
+        "parentIDProperty" String "ctr_parent_id",
+        "properties" DNA {
+            "beginDate" DNA {
+                "databaseColumnName" String "CTR_BEGIN_DT",
+                "dataElement" String "datetime",
+                "label" String "beginDate"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "CTR_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "CTR_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "ctr_ast_id" DNA {
+                "databaseColumnName" String "CTR_AST_ID",
+                "dataElement" String "ast_id",
+                "label" String "ctr_ast_id"
+            },
+            "ctr_bse_id" DNA {
+                "databaseColumnName" String "CTR_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "ctr_bse_id"
+            },
+            "ctr_id" DNA {
+                "databaseColumnName" String "CTR_ID",
+                "dataElement" String "ctr_id",
+                "label" String "ctr_id"
+            },
+            "ctr_parent_id" DNA {
+                "databaseColumnName" String "CTR_PARENT_ID",
+                "dataElement" String "ctf_id",
+                "label" String "ctr_parent_id"
+            },
+            "ctr_plf_id" DNA {
+                "databaseColumnName" String "CTR_PLF_ID",
+                "dataElement" String "plf_id",
+                "label" String "ctr_plf_id"
+            },
+            "endDate" DNA {
+                "databaseColumnName" String "CTR_END_DT",
+                "dataElement" String "datetime",
+                "label" String "endDate"
+            },
+            "label" DNA {
+                "databaseColumnName" String "CTR_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "objectLabel"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "CTR_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "CTR_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "CTR_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "CTR_NM",
+                "dataElement" String "objectName",
+                "label" String "objectName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "CTR_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "CTR_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "CTR_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "ctr_id"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "CTR_STATUS_CD",
+                "dataElement" String "contractStatusCode",
+                "label" String "contractStatusCode"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "version" String "Z"
+    },
+    "CONTRACT_FOLDER" DNA {
+        "aliases" StringArray [
+        ],
+        "databaseClass" String "com.bluemartini.b2b.util.ContractFolderBusinessObjectUtil",
+        "databaseViewName" String "V_CONTRACT_FOLDER",
+        "defaultStatusCode" String "A",
+        "description" String "Contract Folder",
+        "label" String "CONTRACT_FOLDER_bizobj",
+        "objectIDProperty" String "ctf_id",
+        "objectNameProperty" String "name",
+        "objectStatusCodeProperty" String "status_cd",
+        "parentIDProperty" String "ctf_parent_id",
+        "properties" DNA {
+            "createdBy" DNA {
+                "databaseColumnName" String "CTF_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "CTF_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "ctf_id" DNA {
+                "databaseColumnName" String "CTF_ID",
+                "dataElement" String "ctf_id",
+                "label" String "ctf_id"
+            },
+            "ctf_parent_id" DNA {
+                "databaseColumnName" String "CTF_PARENT_ID",
+                "dataElement" String "ctf_id",
+                "label" String "ctf_parent_id"
+            },
+            "label" DNA {
+                "databaseColumnName" String "CTF_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "objectLabel"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "CTF_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "CTF_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "CTF_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "CTF_NM",
+                "dataElement" String "objectName",
+                "label" String "objectName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "CTF_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "CTF_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "CTF_STATUS_CD",
+                "dataElement" String "contractFolderStatusCode",
+                "label" String "contractFolderStatusCode"
+            }
+        },
+        "version" String "Z"
+    },
+    "CONTRACT_SEARCH" DNA {
+        "description" String "Gather criteria for Contract search",
+        "label" String "CONTRACT_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_BSE_ID",
+                "dataElement" String "string_search"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "currencyCode" DNA {
+                "dataElement" String "currency_cd",
+                "label" String "currencyCode"
+            },
+            "endDtMax" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_END_DT",
+                "dataElement" String "date_search",
+                "label" String "Expiration Date "
+            },
+            "endDtMin" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_END_DT",
+                "dataElement" String "date_search",
+                "label" String "Expiration Date "
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Contract Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "firstRow"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortContractsBy_cd",
+                "label" String "orderBy"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CTC_PH",
+                "dataElement" String "string_search",
+                "label" String "Phone"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_CONTRACT.CTR_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "ctr_id"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            }
+        }
+    },
+    "GIFT_REGISTRY_HEADER" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "GiftRegistry",
+        "bseOwnerProperty" String "grh_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BGiftRegistryBusinessObjectUtil",
+        "orgOwnerProperty" String "grh_org_id",
+        "properties" DNA {
+            "grh_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "grh_bse_id"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor",
+            "grh_parent_id"
+        ]
+    },
+    "INVOICE" DNA {
+        "properties" DNA {
+            "ext_po_nbr" DNA {
+                "dataElement" String "order_po_nbr",
+                "label" String "externalPONumber"
+            }
+        }
+    },
+    "LEAD" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Lead",
+        "bseOwnerProperty" String "led_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.LeadBusinessObjectUtil",
+        "databaseTableName" String "LEAD",
+        "defaultStatusCode" String "A",
+        "description" String "Lead",
+        "label" String "LEAD_bizobj",
+        "objectIDProperty" String "led_id",
+        "objectNameProperty" String "name",
+        "objectStatusCodeProperty" String "leadStatusCode",
+        "oracleSequenceName" String "SEQ_LED",
+        "orgOwnerProperty" String "led_org_id",
+        "properties" DNA {
+            "address1" DNA {
+                "databaseColumnName" String "LED_ADDR1",
+                "dataElement" String "address",
+                "label" String "address1"
+            },
+            "address2" DNA {
+                "databaseColumnName" String "LED_ADDR2",
+                "dataElement" String "address",
+                "label" String "address2"
+            },
+            "address3" DNA {
+                "databaseColumnName" String "LED_ADDR3",
+                "dataElement" String "address",
+                "label" String "address3"
+            },
+            "city" DNA {
+                "databaseColumnName" String "LED_CITY",
+                "dataElement" String "city",
+                "label" String "city"
+            },
+            "contactEmail" DNA {
+                "databaseColumnName" String "LED_CTC_EMAIL",
+                "dataElement" String "email",
+                "label" String "contactEmail"
+            },
+            "contactFirstNm" DNA {
+                "databaseColumnName" String "LED_CTC_FIRST_NM",
+                "dataElement" String "name",
+                "label" String "contactFirstNm"
+            },
+            "contactLastNm" DNA {
+                "databaseColumnName" String "LED_CTC_LAST_NM",
+                "dataElement" String "name",
+                "label" String "contactLastNm"
+            },
+            "contactMiddleNm" DNA {
+                "databaseColumnName" String "LED_CTC_MIDDLE_NM",
+                "dataElement" String "name",
+                "label" String "contactMiddleNm"
+            },
+            "contactPhone" DNA {
+                "databaseColumnName" String "LED_CTC_PHONE",
+                "dataElement" String "phone",
+                "label" String "contactPhone"
+            },
+            "contactTitle" DNA {
+                "databaseColumnName" String "LED_CTC_TITLE",
+                "dataElement" String "string",
+                "label" String "contactTitle"
+            },
+            "convertUseDefaultOrg" DNA {
+                "dataElement" String "boolean",
+                "label" String "mergeSessionUserAccount"
+            },
+            "country_cd" DNA {
+                "databaseColumnName" String "LED_COUNTRY_CD",
+                "dataElement" String "country_cd",
+                "label" String "country_cd"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "LED_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "LED_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "industryCode" DNA {
+                "databaseColumnName" String "LED_INDUSTRY_CD",
+                "dataElement" String "industryCode",
+                "label" String "industryCode"
+            },
+            "leadAcceptanceCode" DNA {
+                "databaseColumnName" String "LED_ACCEPT_CD",
+                "dataElement" String "led_acceptance_cd",
+                "label" String "leadAcceptanceCode"
+            },
+            "leadActionDt" DNA {
+                "databaseColumnName" String "LED_ACTION_DT",
+                "dataElement" String "date",
+                "label" String "leadActionDt"
+            },
+            "leadAssignedCode" DNA {
+                "databaseColumnName" String "LED_ASSIGNED_CD",
+                "dataElement" String "led_assigned_cd",
+                "label" String "leadAssignedCode"
+            },
+            "leadBusinessName" DNA {
+                "databaseColumnName" String "LED_BUS_NM",
+                "dataElement" String "name",
+                "label" String "leadBusinessName"
+            },
+            "leadConvertedIndicator" DNA {
+                "databaseColumnName" String "LED_CONVERTED_IND",
+                "dataElement" String "boolean",
+                "label" String "leadConvertedIndicator"
+            },
+            "leadName" DNA {
+                "databaseColumnName" String "LED_NM",
+                "dataElement" String "objectLabel",
+                "label" String "leadName"
+            },
+            "leadNotes" DNA {
+                "databaseColumnName" String "LED_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "leadNotes"
+            },
+            "leadOpportunityCloseDt" DNA {
+                "databaseColumnName" String "LED_OPPR_CLOSE_DT",
+                "dataElement" String "date",
+                "label" String "leadOpportunityCloseDt"
+            },
+            "leadOpportunityNm" DNA {
+                "databaseColumnName" String "LED_OPPR_NM",
+                "dataElement" String "name",
+                "label" String "leadOpportunityNm"
+            },
+            "leadOpportunityNotes" DNA {
+                "databaseColumnName" String "LED_OPPR_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "leadOpportunityNotes"
+            },
+            "leadOpportunityRevenue" DNA {
+                "databaseColumnName" String "LED_OPPR_REVENUE",
+                "dataElement" String "currency",
+                "label" String "leadOpportunityRevenue"
+            },
+            "leadProbability" DNA {
+                "databaseColumnName" String "LED_PROB_PCT",
+                "dataElement" String "led_probability",
+                "label" String "leadProbability"
+            },
+            "leadRevenue" DNA {
+                "databaseColumnName" String "LED_YRLY_REVENUE",
+                "dataElement" String "currency",
+                "label" String "leadRevenue"
+            },
+            "leadStatusCode" DNA {
+                "databaseColumnName" String "LED_STATUS_CD",
+                "dataElement" String "led_status_cd",
+                "label" String "leadStatusCode"
+            },
+            "leadTypeCode" DNA {
+                "databaseColumnName" String "LED_TYPE_CD",
+                "dataElement" String "led_type_cd",
+                "label" String "leadTypeCode"
+            },
+            "led_bse_id" DNA {
+                "databaseColumnName" String "LED_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "led_bse_id"
+            },
+            "led_conv_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "bse_id"
+            },
+            "led_conv_org_id" DNA {
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "led_conv_org_nm" DNA {
+                "dataElement" String "objectLabel",
+                "label" String "organizationName"
+            },
+            "led_conv_qtf_id" DNA {
+                "dataElement" String "longID",
+                "label" String "qtf_id"
+            },
+            "led_conv_qtf_nm" DNA {
+                "dataElement" String "objectLabel",
+                "label" String "convQuoteFolder"
+            },
+            "led_conv_qtf_type" DNA {
+                "dataElement" String "quoteFolderType_cd",
+                "label" String "led_qtf_type_cd"
+            },
+            "led_conv_usa_id" DNA {
+                "dataElement" String "usa_id",
+                "label" String "usa_id"
+            },
+            "led_id" DNA {
+                "databaseColumnName" String "LED_ID",
+                "dataElement" String "led_id",
+                "label" String "led_id"
+            },
+            "led_org_id" DNA {
+                "databaseColumnName" String "LED_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "led_org_id"
+            },
+            "led_usa_id" DNA {
+                "databaseColumnName" String "LED_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "led_usa_id"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "LED_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "LED_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "postal" DNA {
+                "databaseColumnName" String "LED_PCODE",
+                "dataElement" String "postal",
+                "label" String "postal"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "LED_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "ledNum"
+            },
+            "state_cd" DNA {
+                "databaseColumnName" String "LED_STATE_CD",
+                "dataElement" String "state_cd",
+                "label" String "state_cd"
+            },
+            "stateName" DNA {
+                "databaseColumnName" String "LED_STATE_NM",
+                "dataElement" String "stateName",
+                "label" String "stateName"
+            },
+            "useSessionBusinessEntity" DNA {
+                "dataElement" String "boolean",
+                "label" String "mergeSessionBusinessEntity"
+            },
+            "useSessionOrganization" DNA {
+                "dataElement" String "boolean",
+                "label" String "mergeSessionUserAccount"
+            },
+            "useSessionQuoteFolder" DNA {
+                "dataElement" String "boolean",
+                "label" String "mergeSessionUserAccount"
+            },
+            "useSessionUserAccount" DNA {
+                "dataElement" String "boolean",
+                "label" String "mergeSessionUserAccount"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "supportsUniversalAttributes" Boolean "true",
+        "usaOwnerProperty" String "led_usa_id"
+    },
+    "LEAD_CONVERSION" DNA {
+        "databaseTableName" String "LEAD_CONVERSION",
+        "description" String "Maps to associative table for lead conversions",
+        "label" String "LEAD_CONVERSION_bizobj",
+        "properties" DNA {
+            "ldc_led_id" DNA {
+                "databaseColumnName" String "LDC_LED_ID",
+                "dataElement" String "longID",
+                "label" String "ldc_led_id"
+            },
+            "ldc_obj_id" DNA {
+                "databaseColumnName" String "LDC_OBJ_ID",
+                "dataElement" String "longID",
+                "label" String "ldc_obj_id"
+            },
+            "ldc_obj_type" DNA {
+                "databaseColumnName" String "LDC_OBJ_TYPE",
+                "dataElement" String "objectType",
+                "label" String "ldc_obj_type"
+            }
+        }
+    },
+    "LEAD_SEARCH" DNA {
+        "description" String "Gather criteria for Lead search",
+        "label" String "LEAD_SEARCH_bizobj",
+        "properties" DNA {
+            "actionDtMax" DNA {
+                "databaseColumnName" String "LEAD.LED_ACTION_DT",
+                "dataElement" String "date_search",
+                "label" String "actionDtMax"
+            },
+            "actionDtMin" DNA {
+                "databaseColumnName" String "LEAD.LED_ACTION_DT",
+                "dataElement" String "date_search",
+                "label" String "actionDtMin"
+            },
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "ByassignedTo_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_UID",
+                "dataElement" String "string_search",
+                "label" String "Assigned To"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "boolean",
+                "label" String "caseSensitive"
+            },
+            "contactEmail" DNA {
+                "databaseColumnName" String "LEAD.LED_CTC_EMAIL",
+                "dataElement" String "string",
+                "label" String "contactFirstName"
+            },
+            "contactFirstName" DNA {
+                "databaseColumnName" String "LEAD.LED_CTC_FIRST_NM",
+                "dataElement" String "string",
+                "label" String "contactFirstName"
+            },
+            "contactLastName" DNA {
+                "databaseColumnName" String "LEAD.LED_CTC_LAST_NM",
+                "dataElement" String "string",
+                "label" String "contactLastName"
+            },
+            "contactMiddleName" DNA {
+                "databaseColumnName" String "LEAD.LED_CTC_MIDDLE_NM",
+                "dataElement" String "string",
+                "label" String "contactMiddleName"
+            },
+            "contactPhone" DNA {
+                "databaseColumnName" String "LEAD.LED_CTC_PHONE",
+                "dataElement" String "string",
+                "label" String "contactPhone"
+            },
+            "createDtMax" DNA {
+                "databaseColumnName" String "LEAD.LED_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "createDtMax"
+            },
+            "createDtMin" DNA {
+                "databaseColumnName" String "LEAD.LED_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "createDtMin"
+            },
+            "leadAcceptanceCode" DNA {
+                "databaseColumnName" String "LEAD.LED_ACCEPT_CD",
+                "dataElement" String "led_acceptance_cd",
+                "label" String "leadAcceptanceCode"
+            },
+            "leadAssignedCode" DNA {
+                "databaseColumnName" String "LEAD.LED_ASSIGNED_CD",
+                "dataElement" String "led_assigned_cd",
+                "label" String "leadAssignedCode"
+            },
+            "leadBusinessName" DNA {
+                "databaseColumnName" String "LEAD.LED_BUS_NM",
+                "dataElement" String "name",
+                "label" String "leadBusinessName"
+            },
+            "leadConvertedIndicator" DNA {
+                "databaseColumnName" String "LEAD.LED_CONVERTED_IND",
+                "dataElement" String "leadConvertedIndicator",
+                "label" String "leadConvertedIndicator"
+            },
+            "leadName" DNA {
+                "databaseColumnName" String "LEAD.LED_NM",
+                "dataElement" String "string_search",
+                "label" String "leadName"
+            },
+            "leadOpportunityNm" DNA {
+                "databaseColumnName" String "LEAD.LED_OPPR_NM",
+                "dataElement" String "name",
+                "label" String "leadOpportunityNm"
+            },
+            "leadStatusCode" DNA {
+                "databaseColumnName" String "LEAD.LED_STATUS_CD",
+                "dataElement" String "led_status_cd",
+                "label" String "leadStatusCode"
+            },
+            "leadTypeCode" DNA {
+                "databaseColumnName" String "LEAD.LED_TYPE_CD",
+                "dataElement" String "led_type_cd",
+                "label" String "leadTypeCode"
+            },
+            "led_bse_id" DNA {
+                "databaseColumnName" String "LEAD.LED_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "led_bse_id"
+            },
+            "led_id" DNA {
+                "databaseColumnName" String "LEAD.LED_ID",
+                "dataElement" String "led_id",
+                "label" String "led_id"
+            },
+            "led_org_id" DNA {
+                "databaseColumnName" String "LEAD.LED_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "led_org_id"
+            },
+            "led_usa_id" DNA {
+                "databaseColumnName" String "LEAD.LED_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "led_usa_id"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "LEAD.LED_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "modifyDtMax"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "LEAD.LED_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "modifyDtMin"
+            },
+            "opportunityCloseDtMax" DNA {
+                "databaseColumnName" String "LEAD.LED_OPPR_CLOSE_DT",
+                "dataElement" String "date_search",
+                "label" String "opportunityCloseDtMax"
+            },
+            "opportunityCloseDtMin" DNA {
+                "databaseColumnName" String "LEAD.LED_OPPR_CLOSE_DT",
+                "dataElement" String "date_search",
+                "label" String "opportunityCloseDtMin"
+            },
+            "opportunityRevenueMax" DNA {
+                "databaseColumnName" String "LEAD.LED_OPPR_REVENUE",
+                "dataElement" String "currency",
+                "label" String "opportunitytRevenueMax"
+            },
+            "opportunityRevenueMin" DNA {
+                "databaseColumnName" String "LEAD.LED_OPPR_REVENUE",
+                "dataElement" String "currency",
+                "label" String "opportunitytRevenueMin"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortLeadsBy_cd",
+                "label" String "orderBy"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "probabilityMax" DNA {
+                "databaseColumnName" String "LEAD.LED_PROB_PCT",
+                "dataElement" String "led_probability",
+                "label" String "Probability"
+            },
+            "probabilityMin" DNA {
+                "databaseColumnName" String "LEAD.LED_PROB_PCT",
+                "dataElement" String "led_probability",
+                "label" String "Probability"
+            },
+            "showLeads" DNA {
+                "dataElement" String "showLeads_search",
+                "label" String "Show Leads"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "LEAD.LED_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "ledNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            }
+        }
+    },
+    "ORDER" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Order",
+        "B2BPrivilegeProperty" String "type_cd",
+        "B2BPropertyValueToPrivilege" DNA {
+            "EXC" String "Order",
+            "ORD" String "Order",
+            "RET" String "RMA"
+        },
+        "bseOwnerProperty" String "orh_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BOrderBusinessObjectUtil",
+        "orgOwnerProperty" String "orh_org_id",
+        "properties" DNA {
+            "ext_po_nbr" DNA {
+                "databaseColumnName" String "ORH_EXT_PO_NBR",
+                "dataElement" String "order_po_nbr",
+                "label" String "externalPONumber"
+            },
+            "ext_so_nbr" DNA {
+                "databaseColumnName" String "ORH_EXT_SO_NBR",
+                "dataElement" String "order_so_nbr",
+                "label" String "externalSONumber"
+            },
+            "orh_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "orh_bse_id"
+            },
+            "orh_ctr_id" DNA {
+                "databaseColumnName" String "ORH_CTR_ID",
+                "dataElement" String "ctr_id",
+                "label" String "contractID"
+            },
+            "orh_org_id" DNA {
+                "databaseColumnName" String "ORH_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "orh_org_id"
+            },
+            "orh_org_nbr" DNA {
+                "databaseColumnName" String "ORH_ORG_NBR",
+                "dataElement" String "org_account_id",
+                "label" String "orgAccountID"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor"
+        ]
+    },
+    "ORDER_SEARCH" DNA {
+        "description" String "Gather criteria for Order search",
+        "label" String "ORDER_SEARCH_bizobj",
+        "properties" DNA {
+            "bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "bse_id"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "ByFirstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name By"
+            },
+            "ByLastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "ByMiddleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createdFor" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_CREATED_FOR",
+                "dataElement" String "usa_id",
+                "label" String "createdFor"
+            },
+            "createDtMax" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "createDtMin" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date"
+            },
+            "cth_qtf_id" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_QTF_ID",
+                "dataElement" String "longID",
+                "label" String "cth_qtf_id"
+            },
+            "ext_rma_nbr" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_EXT_RMA_NBR",
+                "dataElement" String "order_rma_nbr",
+                "label" String "externalRMANumber"
+            },
+            "ForFirstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "ForFirstName"
+            },
+            "ForLastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "ForLastName"
+            },
+            "ForMiddleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "ForMiddleName"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Order Name"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "usa_id"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "NOT_userAccountStatusCode" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_STATUS_CD",
+                "dataElement" String "userAccountStatus_cd",
+                "label" String "User Status Code"
+            },
+            "orderNum" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_SOURCE_NBR",
+                "dataElement" String "orderNum",
+                "label" String "orderNum"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "orh_cth_id" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_CTH_ID",
+                "dataElement" String "longID",
+                "label" String "Original Quote ID"
+            },
+            "orh_id" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_ID",
+                "dataElement" String "longID",
+                "label" String "Order ID"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_HOME_PH",
+                "dataElement" String "phone",
+                "label" String "Phone"
+            },
+            "quoteFolderLabel" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Opportunity Name"
+            },
+            "searchCreatedForAndCreatedBy" DNA {
+                "dataElement" String "boolean",
+                "label" String "Show Orders"
+            },
+            "showOrders" DNA {
+                "dataElement" String "showOrders_search",
+                "label" String "Show Orders"
+            },
+            "showReturns" DNA {
+                "dataElement" String "showReturns_search",
+                "label" String "Show Returns"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_STATUS_CD",
+                "dataElement" String "orderStatusCode",
+                "label" String "Status Code"
+            },
+            "totalAmtMax" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Total Amount"
+            },
+            "totalAmtMin" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Total Amount"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "V_ORDER_HEADER.ORH_TYPE_CD",
+                "dataElement" String "orderType_cd",
+                "label" String "orderType_cd"
+            },
+            "userAccountStatusCode" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_STATUS_CD",
+                "dataElement" String "userAccountStatus_cd",
+                "label" String "User Status Code"
+            },
+            "userType_cd" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_TYPE_CD",
+                "dataElement" String "userType_cd",
+                "label" String "userType_cd"
+            }
+        }
+    },
+    "ORGANIZATION" DNA {
+        "aliases" StringArray [
+            "CURRENT_ORGANIZATION",
+            "DELETE_ORGANIZATION",
+            "SELECT_ORGANIZATION",
+            "ADD_ORGANIZATION"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Organization",
+        "bseOwnerProperty" String "org_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.OrganizationBusinessObjectUtil",
+        "databaseTableName" String "ORGANIZATION",
+        "databaseViewName" String "V_ORGANIZATION",
+        "defaultStatusCode" String "A",
+        "description" String "Organization",
+        "label" String "ORGANIZATION_bizobj",
+        "objectIDProperty" String "org_id",
+        "objectNameProperty" String "name",
+        "objectStatusCodeProperty" String "status_cd",
+        "orgOwnerProperty" String "org_id",
+        "parentIDProperty" String "org_parent_id",
+        "properties" DNA {
+            "accountid" DNA {
+                "databaseColumnName" String "ORG_ACCOUNT_NBR",
+                "dataElement" String "org_account_id",
+                "label" String "accountid"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "ORG_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createdFor" DNA {
+                "databaseColumnName" String "ORG_CREATED_FOR",
+                "dataElement" String "usa_id",
+                "label" String "createdFor"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "ORG_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "label" DNA {
+                "databaseColumnName" String "ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "objectLabel"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "ORG_NOTES",
+                "dataElement" String "notes",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "ORG_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "ORG_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "ORG_NM",
+                "dataElement" String "objectName",
+                "label" String "objectName"
+            },
+            "org_bill_to_uad_id" DNA {
+                "databaseColumnName" String "ORG_BILL_TO_UAD_ID",
+                "dataElement" String "uad_id",
+                "label" String "org_bill_to_uad_id"
+            },
+            "org_bse_id" DNA {
+                "databaseColumnName" String "ORG_BSE_ID",
+                "dataElement" String "org_bse_id",
+                "label" String "bse_id"
+            },
+            "org_default_ctr_id" DNA {
+                "databaseColumnName" String "ORG_DEFAULT_CTR_ID",
+                "dataElement" String "ctr_id",
+                "label" String "org_default_ctr_id"
+            },
+            "org_default_shm_id" DNA {
+                "databaseColumnName" String "ORG_DEFAULT_SHM_ID",
+                "dataElement" String "shm_id",
+                "label" String "shm_id"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "org_is_led_gen" DNA {
+                "databaseColumnName" String "ORG_LEAD_GEN_IND",
+                "dataElement" String "boolean",
+                "label" String "isleadGenerated"
+            },
+            "org_parent_id" DNA {
+                "databaseColumnName" String "ORG_PARENT_ID",
+                "dataElement" String "org_id",
+                "label" String "org_parent_id"
+            },
+            "org_ship_to_uad_id" DNA {
+                "databaseColumnName" String "ORG_SHIP_TO_UAD_ID",
+                "dataElement" String "uad_id",
+                "label" String "org_ship_to_uad_id"
+            },
+            "path" DNA {
+                "databaseColumnName" String "ORG_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "ORG_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "ORG_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "organizationNum"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "ORG_STATUS_CD",
+                "dataElement" String "organizationStatus_cd",
+                "label" String "organizationStatusCode"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "ORG_TYPE_CD",
+                "dataElement" String "organizationType_cd",
+                "label" String "organizationTypeCode"
+            },
+            "type_cd_ext" DNA {
+                "databaseColumnName" String "ORG_TYPE_CD_EXT",
+                "dataElement" String "external_org_types",
+                "label" String "organizationTypeCodeExternal"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor"
+        ],
+        "version" String "Z"
+    },
+    "ORGANIZATION_SEARCH" DNA {
+        "description" String "Gather criteria for Quote folder search",
+        "label" String "ORGANIZATION_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "customerNum" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_CUST_NBR",
+                "dataElement" String "string_search",
+                "label" String "customerNum"
+            },
+            "email_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_EMAIL",
+                "dataElement" String "string_search",
+                "label" String "Email"
+            },
+            "firstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "maxRows"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modify Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modify Date"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortOrganizationsBy_cd",
+                "label" String "orderBy"
+            },
+            "org_bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "org_bse_id",
+                "label" String "org_bse_id"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "org_parent_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_PARENT_ID",
+                "dataElement" String "org_id",
+                "label" String "org_parent_id"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "parent_label" DNA {
+                "dataElement" String "objectLabel",
+                "label" String "Parent Organization"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CTC_PH",
+                "dataElement" String "string_search",
+                "label" String "Phone"
+            },
+            "showOrganizations" DNA {
+                "dataElement" String "showOrganizations_search",
+                "label" String "Show Organizations"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "organizationNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_STATUS_CD",
+                "dataElement" String "organizationStatus_cd",
+                "label" String "Status Code"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_TYPE_CD",
+                "dataElement" String "organizationType_cd",
+                "label" String "organizationTypeCode"
+            },
+            "usa_id" DNA {
+                "databaseColumnName" String "USER_ORG.USO_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "usa_id"
+            }
+        }
+    },
+    "PRICE_LIST_FOLDER_SEARCH" DNA {
+        "description" String "Gather criteria for Price List search",
+        "label" String "PRICELIST_SEARCH_bizobj",
+        "properties" DNA {
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "name" DNA {
+                "databaseColumnName" String "V_PRICE_LIST_FOLDER.PLF_NM",
+                "dataElement" String "string_search",
+                "label" String "Price List Name"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_PRICE_LIST_FOLDER.PLF_STATUS_CD",
+                "dataElement" String "productStatusCode",
+                "label" String "Price List Status Code"
+            }
+        }
+    },
+    "QUOTE_FOLDER" DNA {
+        "aliases" StringArray [
+            "ADD_QUOTE_FOLDER"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "QuoteFolder",
+        "bseOwnerProperty" String "qtf_bse_id",
+        // "applyFolderPermissions" Boolean "true",
+        "databaseClass" String "com.bluemartini.b2b.util.QuoteFolderBusinessObjectUtil",
+        "databaseTableName" String "QUOTE_FOLDER",
+        "databaseViewName" String "V_QUOTE_FOLDER",
+        "defaultStatusCode" String "N",
+        "description" String "Quote Folder",
+        "label" String "QUOTE_FOLDER_bizobj",
+        "objectIDProperty" String "qtf_id",
+        // "objectNameProperty" String "quoteFolderid",
+        "objectStatusCodeProperty" String "status_cd",
+        "orgOwnerProperty" String "qtf_org_id",
+        "parentIDProperty" String "qtf_parent_id",
+        "properties" DNA {
+            "beginDate" DNA {
+                "databaseColumnName" String "QTF_BEGIN_DT",
+                "dataElement" String "datetime",
+                "label" String "quoteFolderBeginDate"
+            },
+            "closeDt" DNA {
+                "databaseColumnName" String "QTF_CLOSE_DT",
+                "dataElement" String "quoteFolderCloseDt",
+                "label" String "qtf_close_dt"
+            },
+            "contractList" DNA {
+                "dataElement" String "contractList",
+                "label" String "contractList"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "QTF_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createdFor" DNA {
+                "databaseColumnName" String "QTF_CREATED_FOR",
+                "dataElement" String "usa_id",
+                "label" String "createdFor"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "QTF_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "currency_cd" DNA {
+                "databaseColumnName" String "QTF_CURRENCY_CD",
+                "dataElement" String "currency_cd",
+                "label" String "currency_cd"
+            },
+            "endDate" DNA {
+                "databaseColumnName" String "QTF_END_DT",
+                "dataElement" String "datetime",
+                "label" String "quoteFolderEndDate"
+            },
+            "label" DNA {
+                "databaseColumnName" String "QTF_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "objectLabel"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "QTF_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "QTF_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "QTF_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "QTF_NM",
+                "dataElement" String "objectName",
+                "label" String "quoteFolderName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "QTF_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "probability" DNA {
+                "databaseColumnName" String "QTF_PROB_PCT",
+                "dataElement" String "quoteFolder_probability",
+                "label" String "qtf_probability"
+            },
+            "qtf_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "businessEntityID"
+            },
+            "qtf_id" DNA {
+                "databaseColumnName" String "QTF_ID",
+                "dataElement" String "longID",
+                "label" String "qtf_id"
+            },
+            "qtf_is_led_gen" DNA {
+                "databaseColumnName" String "QTF_LEAD_GEN_IND",
+                "dataElement" String "boolean",
+                "label" String "isLeadGenerated"
+            },
+            "qtf_org_id" DNA {
+                "databaseColumnName" String "QTF_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "qtf_org_id"
+            },
+            "qtf_parent_id" DNA {
+                "databaseColumnName" String "QTF_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "qtf_parent_id"
+            },
+            "revenue" DNA {
+                "databaseColumnName" String "QTF_REVENUE",
+                "dataElement" String "currency",
+                "label" String "qtf_revenue"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "QTF_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "QTF_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "quoteFolderNum"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "QTF_STATUS_CD",
+                "dataElement" String "quoteFolderStatus_cd",
+                "label" String "quoteFolderStatusCode"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "QTF_TYPE_CD",
+                "dataElement" String "quoteFolderType_cd",
+                "label" String "qtf_type_cd"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor"
+        ],
+        "version" String "Z"
+    },
+    "QUOTE_FOLDER_SEARCH" DNA {
+        "description" String "Gather criteria for Quote folder search",
+        "label" String "QUOTE_FOLDER_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "bse_id"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "decisionDtMax" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_CLOSE_DT",
+                "dataElement" String "quoteFolderCloseDt",
+                "label" String "Expected Decision Date "
+            },
+            "decisionDtMin" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_CLOSE_DT",
+                "dataElement" String "quoteFolderCloseDt",
+                "label" String "Expected Decision Date "
+            },
+            "email_search" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_EMAIL",
+                "dataElement" String "string_search",
+                "label" String "Email"
+            },
+            "firstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Opportunity Name"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "maxRows"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date "
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortOpportunitiesBy_cd",
+                "label" String "orderBy"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone_search" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CTC_PH",
+                "dataElement" String "string_search",
+                "label" String "Phone"
+            },
+            "probabilityMax" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_PROB_PCT",
+                "dataElement" String "quoteFolder_probability",
+                "label" String "Probability"
+            },
+            "probabilityMin" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_PROB_PCT",
+                "dataElement" String "quoteFolder_probability",
+                "label" String "Probability"
+            },
+            "qtf_id" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_ID",
+                "dataElement" String "longID",
+                "label" String "Opportunity ID"
+            },
+            "revenueMax" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_REVENUE",
+                "dataElement" String "currency",
+                "label" String "Expected revenue"
+            },
+            "revenueMin" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_REVENUE",
+                "dataElement" String "currency",
+                "label" String "Expected revenue"
+            },
+            "showOpportunities" DNA {
+                "dataElement" String "showOpportunities_search",
+                "label" String "Show Opportunities"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "quoteFolderNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_STATUS_CD",
+                "dataElement" String "quoteFolderStatus_cd",
+                "label" String "Status Code"
+            }
+        }
+    },
+    "REQUEST_FOR_QUOTE" DNA {
+        "aliases" StringArray [
+            "ADD_REQUEST_FOR_QUOTE"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "RequestForQuote",
+        "bseOwnerProperty" String "rfq_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.RequestForQuoteBusinessObjectUtil",
+        "databaseTableName" String "RQST_FOR_QUOTE",
+        "databaseViewName" String "V_RQST_FOR_QUOTE",
+        "description" String "Request For Quote",
+        "label" String "REQUEST_FOR_QUOTE_bizobj",
+        "objectIDProperty" String "rfq_id",
+        "orgOwnerProperty" String "rfq_org_id",
+        "parentIDProperty" String "rfq_parent_id",
+        "properties" DNA {
+            "beginDate" DNA {
+                "databaseColumnName" String "RFQ_BEGIN_DT",
+                "dataElement" String "datetime",
+                "label" String "beginDate"
+            },
+            "buyer_usa_id" DNA {
+                "databaseColumnName" String "RFQ_BUYER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "buyer_usa_id"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "RFQ_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "createdFor" DNA {
+                "databaseColumnName" String "RFQ_CREATED_FOR",
+                "dataElement" String "usa_id",
+                "label" String "createdFor"
+            },
+            "createDt" DNA {
+                "databaseColumnName" String "RFQ_CREATE_DT",
+                "dataElement" String "timestamp",
+                "label" String "createDt"
+            },
+            "current_cth_id" DNA {
+                "databaseColumnName" String "RFQ_CTH_ID",
+                "dataElement" String "cth_id",
+                "label" String "current_cth_id"
+            },
+            "endDate" DNA {
+                "databaseColumnName" String "RFQ_END_DT",
+                "dataElement" String "datetime",
+                "label" String "endDate"
+            },
+            "label" DNA {
+                "databaseColumnName" String "RFQ_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "objectLabel"
+            },
+            "longDesc" DNA {
+                "databaseColumnName" String "RFQ_NOTES",
+                "dataElement" String "longDescription",
+                "label" String "longDescription"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "RFQ_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "modifiedBy"
+            },
+            "modifyDt" DNA {
+                "databaseColumnName" String "RFQ_MODIFY_DT",
+                "dataElement" String "timestamp",
+                "label" String "modifyDt"
+            },
+            "name" DNA {
+                "databaseColumnName" String "RFQ_NM",
+                "dataElement" String "objectName",
+                "label" String "rfqName"
+            },
+            "path" DNA {
+                "databaseColumnName" String "RFQ_PATH",
+                "dataElement" String "objectPath",
+                "label" String "objectPath"
+            },
+            "rfq_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "businessEntityID"
+            },
+            "rfq_id" DNA {
+                "databaseColumnName" String "RFQ_ID",
+                "dataElement" String "rfq_id",
+                "label" String "rfq_id"
+            },
+            "rfq_org_id" DNA {
+                "dataElement" String "org_id",
+                "label" String "rfq_org_id"
+            },
+            "rfq_parent_id" DNA {
+                "databaseColumnName" String "RFQ_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "quoteFolderID"
+            },
+            "seller_usa_id" DNA {
+                "databaseColumnName" String "RFQ_SELLER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "seller_usa_id"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "RFQ_DESC",
+                "dataElement" String "shortDescription",
+                "label" String "shortDescription"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "RFQ_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "rfqNum"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "RFQ_STATUS_CD",
+                "dataElement" String "rfqStatus_cd",
+                "label" String "rfqStatusCode"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "createdFor"
+        ],
+        "version" String "Z"
+    },
+    "REQUEST_FOR_QUOTE_SEARCH" DNA {
+        "description" String "Gather criteria for RFQ search",
+        "label" String "REQUEST_FOR_QUOTE_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "Business Entity ID"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Business Entity Name"
+            },
+            "buyer_usa_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_BUYER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "Buyer User ID"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "boolean",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "Created By"
+            },
+            "createDtMax" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date Maximum"
+            },
+            "createDtMin" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_CREATE_DT",
+                "dataElement" String "date_search",
+                "label" String "Create Date Minimum"
+            },
+            "current_cth_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_CTH_ID",
+                "dataElement" String "longID",
+                "label" String "current_cth_id"
+            },
+            "currentQuoteAcceptCode" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_ACCEPT_CD",
+                "dataElement" String "cartHeaderAccept_cd",
+                "label" String "Current Quote Acceptance Code"
+            },
+            "currentQuoteLabel" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Current Quote Name"
+            },
+            "currentQuoteOrderSubmitted" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_ORDR_SUBMIT_IND",
+                "dataElement" String "orderSubmitted",
+                "label" String "Current Quote Order Submitted Indicator"
+            },
+            "currentQuoteRevision" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_REVISION",
+                "dataElement" String "integer",
+                "label" String "Current Quote Revision Number"
+            },
+            "currentQuoteSourceNum" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "Current Quote Source Number"
+            },
+            "currentQuoteStatusCode" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_STATUS_CD",
+                "dataElement" String "cartHeaderStatus_cd",
+                "label" String "Current Quote Status Code"
+            },
+            "currentQuoteTotalPriceAmtMax" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Current Quote Total Amount"
+            },
+            "currentQuoteTotalPriceAmtMin" DNA {
+                "databaseColumnName" String "V_CART_HEADER.CTH_TOTAL_AMT",
+                "dataElement" String "currency",
+                "label" String "Current Quote Total Amount"
+            },
+            "firstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "Created By First Name"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Quote Name"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Created By Last Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "maxRows"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Created By Middle Name"
+            },
+            "modifiedBy" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_MODIFIED_BY",
+                "dataElement" String "usa_id",
+                "label" String "Modified By"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modify Date Maximum"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modify Date Minimum"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortRolesBy_cd",
+                "label" String "orderBy"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "Organization ID"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "quoteFolderLabel" DNA {
+                "databaseColumnName" String "V_QUOTE_FOLDER.QTF_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Quote Folder Name"
+            },
+            "rfq_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_ID",
+                "dataElement" String "rfq_id",
+                "label" String "Request For Quote ID"
+            },
+            "rfq_parent_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_PARENT_ID",
+                "dataElement" String "longID",
+                "label" String "Quote Folder ID"
+            },
+            "rfqLabel" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "RFQ Label"
+            },
+            "seller_usa_id" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_SELLER_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "Seller User ID"
+            },
+            "sourceNum" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_SOURCE_NBR",
+                "dataElement" String "string_search",
+                "label" String "rfqNum"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_RQST_FOR_QUOTE.RFQ_STATUS_CD",
+                "dataElement" String "rfqStatus_cd",
+                "label" String "Status Code"
+            }
+        }
+    },
+    "ROLE" DNA {
+        // inherits from ROLE in appcommon
+        "databaseClass" String "com.bluemartini.b2b.util.B2BRoleBusinessObjectUtil",
+        "supportMultiTableQuery" Boolean "true"
+    },
+    "ROLE_SEARCH" DNA {
+        "description" String "Gather criteria for Role search",
+        "label" String "ROLE_SEARCH_bizobj",
+        "properties" DNA {
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "label" DNA {
+                "databaseColumnName" String "V_ROLE.ROL_LABEL",
+                "dataElement" String "string_search",
+                "label" String "Role Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "firstRow"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_ROLE.ROL_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Date Modified "
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_ROLE.ROL_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Date Modified "
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortRolesBy_cd",
+                "label" String "orderBy"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "rol_rlf_id" DNA {
+                "databaseColumnName" String "V_ROLE.ROL_PARENT_ID",
+                "dataElement" String "rol_rlf_id",
+                "label" String "rol_rlf_id"
+            },
+            "shortDesc" DNA {
+                "databaseColumnName" String "V_ROLE.ROL_DESC",
+                "dataElement" String "description",
+                "label" String "description"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "usa_id" DNA {
+                "databaseColumnName" String "USER_ROLE.UAR_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "usa_id"
+            },
+            "uso_id" DNA {
+                "databaseColumnName" String "USER_ORG_ROLE.UOR_USO_ID",
+                "dataElement" String "uso_id",
+                "label" String "uso_id"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true"
+    },
+    "TASK" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "Task",
+        "bseOwnerProperty" String "tsk_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BTaskBusinessObjectUtil",
+        "orgOwnerProperty" String "tsk_org_id",
+        "properties" DNA {
+            "tsk_bse_id" DNA {
+                "databaseColumnName" String "TSK_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "tsk_bse_id"
+            },
+            "tsk_org_id" DNA {
+                "databaseColumnName" String "TSK_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "tsk_org_id"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" StringArray [
+            "createdBy",
+            "owner"
+        ]
+    },
+    "TASK_SEARCH" DNA {
+        "properties" DNA {
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "CALL_CENTER_TASK.TSK_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "tsk_org_id"
+            }
+        }
+    },
+    // inherits from appcommon
+    "USER_ACCOUNT" DNA {
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "UserAccount",
+        "bseOwnerProperty" String "usa_usf_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BUserBusinessObjectUtil",
+        "properties" DNA {
+            "usa_is_led_gen" DNA {
+                "databaseColumnName" String "USA_LEAD_GEN_IND",
+                "dataElement" String "boolean",
+                "label" String "isLeadGenerated"
+            }
+        },
+        "supportMultiTableQuery" Boolean "true",
+        "usaOwnerProperty" String "usa_id"
+    },
+    "USER_ACCOUNT_SEARCH" DNA {
+        "description" String "Gather criteria for User search",
+        "label" String "USER_ACCOUNT_SEARCH_bizobj",
+        "properties" DNA {
+            "address1" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_ADDR1",
+                "dataElement" String "string_search",
+                "label" String "address1"
+            },
+            "address2" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_ADDR2",
+                "dataElement" String "string_search",
+                "label" String "address2"
+            },
+            "address3" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_ADDR3",
+                "dataElement" String "string_search",
+                "label" String "address3"
+            },
+            "addressCity" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_CITY",
+                "dataElement" String "string_search",
+                "label" String "addressCity"
+            },
+            "addressPostal" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_PCODE",
+                "dataElement" String "string_search",
+                "label" String "addressPostal"
+            },
+            "addressState_cd" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_STATE_CD",
+                "dataElement" String "state_cd",
+                "label" String "addressState_cd"
+            },
+            "addressStateName" DNA {
+                "databaseColumnName" String "ADDRESS.UAD_STATE_NM",
+                "dataElement" String "string_search",
+                "label" String "addressStateName"
+            },
+            "baseIndex" DNA {
+                "dataElement" String "baseIndex",
+                "label" String "baseIndex"
+            },
+            "bse_id" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_PARENT_ID",
+                "dataElement" String "bse_id",
+                "label" String "bse_id"
+            },
+            "businessEntityLabel" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Account Name"
+            },
+            "businessEntityNum" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_SOURCE_NBR",
+                "dataElement" String "sourceNum",
+                "label" String "businessEntityNum"
+            },
+            "businessEntityType_cd" DNA {
+                "databaseColumnName" String "V_BUSINESS_ENTITY.BSE_TYPE_CD",
+                "dataElement" String "businessType_cd",
+                "label" String "businessEntityType_cd"
+            },
+            "caseSensitive" DNA {
+                "dataElement" String "caseSensitive",
+                "label" String "caseSensitive"
+            },
+            "createdBy" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_CREATED_BY",
+                "dataElement" String "usa_id",
+                "label" String "createdBy"
+            },
+            "customerNum" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_CUST_NBR",
+                "dataElement" String "customerNum",
+                "label" String "customerNum"
+            },
+            "email" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_EMAIL",
+                "dataElement" String "string_search",
+                "label" String "Email "
+            },
+            "firstName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_FIRST_NM",
+                "dataElement" String "string_search",
+                "label" String "First Name"
+            },
+            "firstRow" DNA {
+                "dataElement" String "integer",
+                "label" String "firstRow"
+            },
+            "homePhone" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_HOME_PH",
+                "dataElement" String "string_search",
+                "label" String "homePhone"
+            },
+            "lastName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_LAST_NM",
+                "dataElement" String "string_search",
+                "label" String "Last Name"
+            },
+            "maxRanges" DNA {
+                "dataElement" String "maxRanges",
+                "label" String "maxRanges"
+            },
+            "maxRows_cd" DNA {
+                "dataElement" String "maxRows_cd",
+                "label" String "maxRows"
+            },
+            "maxSearchResults" DNA {
+                "dataElement" String "integer",
+                "label" String "MaxResultsToReturn"
+            },
+            "middleName" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MIDDLE_NM",
+                "dataElement" String "string_search",
+                "label" String "Middle Name"
+            },
+            "modifyDtMax" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "modifyDtMin" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_MODIFY_DT",
+                "dataElement" String "date_search",
+                "label" String "Modified Date"
+            },
+            "orderBy_cd" DNA {
+                "dataElement" String "sortContactsBy_cd",
+                "label" String "orderBy"
+            },
+            "org_bse_id" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_BSE_ID",
+                "dataElement" String "bse_id",
+                "label" String "org_bse_id"
+            },
+            "org_id" DNA {
+                "databaseColumnName" String "USER_ORG.USO_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "org_id"
+            },
+            "organizationLabel" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_LABEL",
+                "dataElement" String "objectLabel",
+                "label" String "Organization Name"
+            },
+            "organizationPathLower" DNA {
+                "databaseColumnName" String "V_ORGANIZATION.ORG_PATH_LOWER",
+                "dataElement" String "string_search",
+                "label" String "Organization Path Lower"
+            },
+            "pageSize" DNA {
+                "dataElement" String "pageSize",
+                "label" String "pageSize"
+            },
+            "phone" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_BUS_PH",
+                "dataElement" String "phone",
+                "label" String "Phone"
+            },
+            "showConsumers" DNA {
+                "dataElement" String "showConsumers_search",
+                "label" String "Show Customers"
+            },
+            "showContacts" DNA {
+                "dataElement" String "showContacts_search",
+                "label" String "Show Contacts"
+            },
+            "startPage" DNA {
+                "dataElement" String "startPage",
+                "label" String "startPage"
+            },
+            "status_cd" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_STATUS_CD",
+                "dataElement" String "userAccountStatus_cd",
+                "label" String "User Status Code"
+            },
+            "type_cd" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_TYPE_CD",
+                "dataElement" String "userType_cd",
+                "label" String "userType_cd"
+            },
+            "user_org_status_cd" DNA {
+                "databaseColumnName" String "USER_ORG.USO_STATUS_CD",
+                "dataElement" String "userOrgStatus_cd",
+                "label" String "Status in Organizations"
+            },
+            "userid" DNA {
+                "databaseColumnName" String "V_USER_ACCOUNT.USA_UID",
+                "dataElement" String "string_search",
+                "label" String "userid"
+            },
+            "valid" DNA {
+                "dataElement" String "boolean",
+                "label" String "valid"
+            }
+        }
+    },
+    "USER_ORG" DNA {
+        "aliases" StringArray [
+            "CURRENT_USER_ORG"
+        ],
+        "B2BApplyFolderPermissions" Boolean "true",
+        "B2BBasePrivilegeName" String "UserOrg",
+        "bseOwnerProperty" String "uso_bse_id",
+        "databaseClass" String "com.bluemartini.b2b.util.B2BUserOrgBusinessObjectUtil",
+        "databaseTableName" String "USER_ORG",
+        "description" String "USER_ORG",
+        "label" String "USER_ORG_bizobj",
+        "objectIDProperty" String "uso_id",
+        "oracleSequenceName" String "SEQ_USO",
+        "orgOwnerProperty" String "uso_org_id",
+        "properties" DNA {
+            "status_cd" DNA {
+                "databaseColumnName" String "USO_STATUS_CD",
+                "dataElement" String "userOrgStatus_cd",
+                "label" String "accountid"
+            },
+            "uso_bill_to_uad_id" DNA {
+                "databaseColumnName" String "USO_BILL_TO_UAD_ID",
+                "dataElement" String "uad_id",
+                "label" String "uso_bill_to_uad_id"
+            },
+            "uso_bse_id" DNA {
+                "dataElement" String "bse_id",
+                "label" String "businessEntityID"
+            },
+            "uso_default_cth_id" DNA {
+                "databaseColumnName" String "USO_DEFAULT_CTH_ID",
+                "dataElement" String "cth_id",
+                "label" String "uso_default_cth_id"
+            },
+            "uso_default_ctr_id" DNA {
+                "databaseColumnName" String "USO_DEFAULT_CTR_ID",
+                "dataElement" String "ctr_id",
+                "label" String "uso_default_ctr_id"
+            },
+            "uso_id" DNA {
+                "databaseColumnName" String "USO_ID",
+                "dataElement" String "uso_id",
+                "label" String "uso_id"
+            },
+            "uso_is_led_gen" DNA {
+                "databaseColumnName" String "USO_LEAD_GEN_IND",
+                "dataElement" String "boolean",
+                "label" String "isLeadGenerated"
+            },
+            "uso_org_id" DNA {
+                "databaseColumnName" String "USO_ORG_ID",
+                "dataElement" String "org_id",
+                "label" String "uso_org_id"
+            },
+            "uso_ship_to_uad_id" DNA {
+                "databaseColumnName" String "USO_SHIP_TO_UAD_ID",
+                "dataElement" String "uad_id",
+                "label" String "usa_ship_to_uad_id"
+            },
+            "uso_usa_id" DNA {
+                "databaseColumnName" String "USO_USA_ID",
+                "dataElement" String "usa_id",
+                "label" String "org_parent_id"
+            }
+        },
+        "supportsUniversalAttributes" Boolean "true",
+        "usaOwnerProperty" String "uso_usa_id"
+    },
+    "USER_ORG_ROLE" DNA {
+        "databaseTableName" String "USER_ORG_ROLE",
+        "description" String "USER_ORG_ROLE",
+        "label" String "USER_ORG_ROLE_bizobj",
+        "objectIDProperty" String "uor_id",
+        "oracleSequenceName" String "SEQ_UOR",
+        "properties" DNA {
+            "uor_id" DNA {
+                "databaseColumnName" String "uor_id",
+                "dataElement" String "uor_id",
+                "label" String "uor_id"
+            },
+            "uor_rol_id" DNA {
+                "databaseColumnName" String "uor_rol_id",
+                "dataElement" String "rol_id",
+                "label" String "uor_rol_id"
+            },
+            "uor_uso_id" DNA {
+                "databaseColumnName" String "uor_uso_id",
+                "dataElement" String "uso_id",
+                "label" String "uor_uso_id"
+            }
+        }
+    }
+}

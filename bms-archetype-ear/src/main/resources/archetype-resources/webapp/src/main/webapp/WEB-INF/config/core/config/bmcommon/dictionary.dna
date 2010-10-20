@@ -1,0 +1,167 @@
+DNA {
+    "blob" DNA {
+        "dnaType" String "blob",
+        "label" String "blob"
+    },
+    "boolean" DNA {
+        "dnaType" String "boolean",
+        "label" String "boolean"
+    },
+    "calledBusinessActions" DNA {
+        "dnaType" String "string",
+        "domain" String "_calledBusinessActions",
+        "format" String "domain"
+    },
+    "cancel_button" DNA {
+        "dnaType" String "string",
+        "label" String "cancel_button"
+    },
+    "componentClassName" DNA {
+        "dnaType" String "string",
+        "label" String "componentClassName"
+    },
+    "componentHashCode" DNA {
+        "dnaType" String "string",
+        "label" String "componentHashCode"
+    },
+    "currency" DNA {
+        "dnaType" String "currency",
+        "label" String "currency"
+    },
+    "date_combo_text" DNA {
+        "datetimeFormat" String "date",
+        "dnaType" String "datetime",
+        "label" String "time_chooser_text"
+    },
+    "datetime" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "datetime"
+    },
+    "datetime_combo_cmd" DNA {
+        "dnaType" String "string",
+        "label" String "datetime_combo_cmd"
+    },
+    "datetime_combo_text" DNA {
+        "datetimeFormat" String "timestamp",
+        "dnaType" String "datetime",
+        "label" String "time_chooser_text"
+    },
+    "dlabelErrorIcon" DNA {
+        "dnaType" String "string",
+        "label" String "dlabelErrorIcon"
+    },
+    "dna_annotation" DNA {
+        "description" String "Annotation on DNA element",
+        "dnaType" String "string",
+        "label" String "dna_annotation"
+    },
+    "dnaType" DNA {
+        "dnaType" String "string",
+        "label" String "lstring"
+    },
+    "double" DNA {
+        "dnaType" String "double",
+        "label" String "double"
+    },
+    "file" DNA {
+        "dnaType" String "string",
+        "label" String "file"
+    },
+    "finish_button" DNA {
+        "dnaType" String "string",
+        "label" String "finish_button"
+    },
+    "help_button" DNA {
+        "dnaType" String "string",
+        "label" String "help_button"
+    },
+    "integer" DNA {
+        "dnaType" String "integer",
+        "label" String "integer"
+    },
+    "long" DNA {
+        "dnaType" String "long",
+        "label" String "long"
+    },
+    "long_text_edit_button" DNA {
+        "dnaType" String "string",
+        "label" String "long_text_edit_button"
+    },
+    "lstring" DNA {
+        "dnaType" String "lstring",
+        "label" String "lstring"
+    },
+    "month" DNA {
+        "description" String "Month of year",
+        "dnaType" String "integer",
+        "domain" String "month",
+        "format" String "domain",
+        "label" String "month"
+    },
+    "newInstallation" DNA {
+        "dnaType" String "string",
+        "label" String "newInstallation"
+    },
+    "next_button" DNA {
+        "dnaType" String "string",
+        "label" String "next_button"
+    },
+    "nextMonthButton" DNA {
+        "dnaType" String "string",
+        "label" String "nextMonthButton"
+    },
+    "nextYearButton" DNA {
+        "dnaType" String "string",
+        "label" String "nextYearButton"
+    },
+    "ok_button" DNA {
+        "dnaType" String "string",
+        "label" String "ok_button"
+    },
+    "prev_button" DNA {
+        "dnaType" String "string",
+        "label" String "prev_button"
+    },
+    "prevMonthButton" DNA {
+        "dnaType" String "string",
+        "label" String "prevMonthButton"
+    },
+    "prevYearButton" DNA {
+        "dnaType" String "string",
+        "label" String "prevYearButton"
+    },
+    "string" DNA {
+        "dnaType" String "string",
+        "label" String "string"
+    },
+    "tableViewExportFlatButton" DNA {
+        "dnaType" String "string",
+        "label" String "tableViewExportFlatButton"
+    },
+    "tableViewExportHTMLButton" DNA {
+        "dnaType" String "string",
+        "label" String "tableViewExportHTMLButton"
+    },
+    "time" DNA {
+        "datetimeFormat" String "time",
+        "dnaType" String "datetime",
+        "label" String "time_chooser"
+    },
+    "time_chooser_text" DNA {
+        "datetimeFormat" String "time",
+        "dnaType" String "datetime",
+        "label" String "time_chooser_text"
+    },
+    "time_combo_text" DNA {
+        "datetimeFormat" String "time",
+        "dnaType" String "datetime",
+        "label" String "time_chooser_text"
+    },
+    "yesNo" DNA {
+        "dnaType" String "boolean",
+        "domain" String "yesNo",
+        "format" String "domain",
+        "label" String "yesNo"
+    }
+}

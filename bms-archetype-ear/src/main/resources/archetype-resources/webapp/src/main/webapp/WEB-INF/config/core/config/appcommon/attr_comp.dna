@@ -1,0 +1,68 @@
+DNA {
+    "merchants" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Merchants",
+        "types" StringArray [
+            "MERCHANT_FOLDER",
+            "MERCHANT"
+        ]
+    },
+    "promotion" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Promotions",
+        "types" StringArray [
+            "PROMOTION_FOLDER",
+            "PROMOTION"
+        ]
+    },
+    "content" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Content",
+        "types" StringArray [
+            "CONTENT_FOLDER",
+            "CONTENT"
+        ]
+    },
+    "products" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Products",
+        "types" StringArray [
+            "PRODUCT_FAMILY",
+            "PRODUCT",
+            "SKU"
+        ]
+    },
+    "assortments" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Assortments",
+        "types" StringArray [
+            "ASSORTMENT_FOLDER",
+            "ASSORTMENT",
+            "SUB_ASSORTMENT"
+        ]
+    },
+    "priceList" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/PriceLists",
+        "types" StringArray [
+            "PRICE_LIST_FOLDER",
+            "PRICE_LIST"
+        ]
+    },
+    "shipment" DNA {
+        "class" String "com.bluemartini.util.ObjectAttributeCompiler",
+        "root" String "/Shipments",
+        "types" StringArray [
+            "SHIP_CARRIER_FOLDER",
+            "SHIPMENT_CARRIER",
+            "SHIPMENT_METHOD"
+        ]
+    },
+    "relationships" DNA {
+        "class" String "com.bluemartini.util.RelationshipAttributeCompiler",
+        "root" String "/",
+        "types" StringArray [
+            "RELATIONSHIP"
+        ]
+    }
+}

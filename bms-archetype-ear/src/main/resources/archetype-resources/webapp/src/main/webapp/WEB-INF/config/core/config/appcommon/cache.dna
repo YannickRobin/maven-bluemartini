@@ -1,0 +1,500 @@
+DNA {
+    //
+    // Default settings used on all caches
+    // The values below show the default settings of the default settings
+    "default" DNA {
+        // "type" String "default",
+        // "enabled" Boolean "true",
+        // "checkSeconds" Integer "0",
+        // "instrument" Boolean "false",
+        // "id" Null,
+        // "storage" DNAArray [ ]
+    },
+
+    // Object loading configuration:
+    "finder" DNA {
+        // Should the finders operate in optimistic or pessimistic mode?
+        //
+        // An optimistic finder hopes that the data required is already
+        // loaded into PublishedObjects and it just needs to identify the
+        // correct pub-version. This is appropriate if small publishes
+        // are common.
+        //
+        // A pessimistic finder fears that the data is not loaded and
+        // therefore loads the entire business object, before checking
+        // in PublishedObjects.
+        //
+        // A pessimistic finder's database query is more expensive than
+        // the query used by the optimistic finder to identify a publish
+        // version, but the optimistic finder must still load the business
+        // object if it is not found. This means that the optimistic finder
+        // is more efficient when the object is found in PublishedObjects
+        // often enough to counter-balance the extra query required when it
+        // is not found.
+        // "finderIsOptimistic" Boolean "false",
+
+        // Should a business action be used to find objects by id?
+        // "bizactFindByID" Boolean "false",
+
+        // Should a business action be used to find objects by a path?
+        // "bizactFindByPath" Boolean "false",
+
+        // Should a business action be used to find objects by a unique name?
+        // "bizactFindByName" Boolean "false",
+
+        // Should a business action be used to find objects by a key?
+        // "bizactFindByKey" Boolean "false",
+
+        // Should a business action be used to find root objects?
+        // "bizactFindRoot" Boolean "false",
+    },
+
+    // Specification of what cache elements should be prepared during
+    // publishing and pre-loaded by the web application servers.
+    "preload" DNA {
+        // Is the key file in binary or text? The default is text.
+        // "keyFileIsBinary" Boolean "false",
+
+        // Name of the key file in the cache folder. The default is "cache_keys.txt".
+        // "keyFile" String "cache_keys.txt",
+
+        // How are keys selected? These methods are tried in order until
+        // one succeeds.
+        "saver" DNAArray [
+            {                
+                // If a cache has the PreloadKeyUsageCounter, then the
+                // keys which account for a specified percentage of the
+                // usage can be saved. The default percentage is 80%.
+                "class" String "com.bluemartini.cache.CacheLoader\$UsageSaver",
+                "perCent" Double "80.0"
+            },{
+                // Save what the cache considers the specified percentage
+                // or count of the most important keys. If the cache is an
+                // LRU cache, this will be the most recently used set. Some
+                // caches have no concept of importance and will simply save
+                // a random set of keys.
+                "class" String "com.bluemartini.cache.CacheLoader\$MRUSaver",
+                "perCent" Double "25.0"
+                // "count" Integer "1000"
+            },{
+                // Save all the keys in the cache
+                "class" String "com.bluemartini.cache.CacheLoader\$AllSaver"
+            }
+        ],
+
+        // The folders DNAArray specifies folders whose contents are preloaded
+        // and how they should be loaded.
+        "folders" DNAArray [
+            /*---
+            // This example shows how to specify folders to pre-load
+            {
+                // If "inContext" is true, attribute overrides will be loaded.
+                // This is only useful if the folder an object is loaded from
+                // is the same as the folder it is accessed by on the website.
+                // If "inContext" is false, only the canonical object will be
+                // loaded, which is useful if the folder it is loaded by is not
+                // the one it is normally accessed by.
+                "inContext" Boolean "false",
+
+                // If price lists are specified the prices for products and
+                // skus will be loaded from those price lists.
+                "priceLists" StringArray [
+                ],
+
+                // Specify array of paths by the business object type that the
+                // paths point to. The object does not have to be a folder.  If
+                // the path does not reference an object of the right type it
+                // will not be loaded. All the descendants of the object will
+                // be loaded.
+
+                // Example of loading a product family. All products and skus
+                // will be loaded.
+                "PRODUCT_FAMILY" StringArray [
+                    "/Products/Books",
+                    "/Products/Tents"
+                ],
+
+                // Example of loading all content media.
+                "CONTENT_FOLDER" StringArray [
+                    "/Content/media"
+                ]
+            },
+            ---*/
+            /*---
+            // This example shows how to specify to preload objects in the
+            // context of a specific assortment.
+            {
+                // If "inContext" is true, attribute overrides will be loaded.
+                // This is only useful if the folder an object is loaded from
+                // is the same as the folder it is accessed by on the website.
+                // If "inContext" is false, only the canonical object will be
+                // loaded, which is useful if the folder it is loaded by is not
+                // the one it is normally accessed by.
+                "inContext" Boolean "true",
+
+                // If price lists are specified the prices for products and
+                // skus will be loaded from those price lists.
+                "priceLists" StringArray [
+                    "USA_Standard",
+                    "Euro_Standard"
+                ],
+
+                // Example of loading assortments. As "inContext" is true in
+                // this example, the attribute over-rides will be loaded too.
+                "ASSORTMENT" StringArray [
+                    "/Assortments/Bundles/Backpacking",
+                    "/Assortments/Bundles/MensClothing"
+                ]
+            }
+            ---*/
+        ]
+    },
+
+    //
+    // Settings for caches on a per-name basis
+    "settings" DNA {
+        // 
+        // INSTRUMENTATION
+        //
+        // You may list here any instruments you want on any named cache.
+        // If you specify nothing, the cache receives the default list
+        // of instruments (see below). 
+        //
+        // If you specify an "instrumentInclude" StringArray, this is added
+        // to the default list.
+        //
+        // If you specify an "instrumentExclude" StringArray, this is removed
+        // from the default list.
+
+        // sample cache configuration
+        "sampleNameOfCache" DNA {
+            // automatically expire entries older than 300 seconds
+            "checkSeconds" Integer "300",
+
+            // specify where data is cached
+            "storage" DNAArray [
+                {
+                    // In memory storage of 500 items
+                    "type" String "memory",
+                    "size" Integer "500"
+                },{
+                    // Soft storage of 1000 items. These may be GCed
+                    "type" String "soft",
+                    "size" Integer "1000"
+                },{
+                    // Custom storage class
+                    "class" String "com.custom.cache.Storage",
+                    "customConfig" Integer "2",
+                    "moreCustomConfig" String "set"
+                }
+            ],
+
+            // turn on instrumentation
+            "instrument" Boolean "true",
+
+            // specify instruments to include
+            "instrumentInclude" StringArray [
+                "ActivityLogger",
+                "LastHour",
+                "HitRatio"
+            ]
+        },
+
+
+        "Alternate" DNA {
+            // the alternate cache stores business objects retrieved via
+            // an alternate key such as name or path rather than id.
+            "actualType" String "lru",
+            "storage" DNAArray [
+                { "type" String "memory", "size" Integer "10000" }
+            ]
+/*---
+            // example of a network shadow
+            ,"shadow" DNA {
+                "type" String "network",
+                "asyncQueue" String "default",
+                "addresses" StringArray [
+                    "localhost:7070"
+                ]
+            }
+---*/
+/*---
+            // example of a disk shadow
+            ,"shadow" DNA {
+                "type" String "diskshadow",
+                "asyncQueue" String "default",
+                "folder" String "cache",
+
+                // The file stem should be configured in the appconfig as the
+                // file is exclusively locked.
+                "stem" String "server_name"
+            }
+---*/
+
+            // turn on instrumentation
+            ,"instrument" Boolean "true",
+
+            // specify instruments to include
+            "instrumentInclude" StringArray [
+                "KeyUsageCounter",
+                "PreloadKeyUsageCounter"
+            ]
+        },
+
+
+        "Attributes" DNA {
+            // The Attributes cache is managed internally and
+            // cannot be configured except for shadow storage.
+        },
+
+
+        "CurrentObjects" DNA {
+            // The current object cache stores business objects for the
+            // current publish version.
+            "type" String "lru",
+            "storage" DNAArray [
+                { "type" String "memory", "size" Integer "10000" }
+            ]
+
+            // This cache may have shadow storage. See the "Alternate"
+            // cache for example config
+/*
+            ,"shadow" DNA {
+                "type" String "network",
+                "asyncQueue" String "default",
+                "addresses" StringArray [
+                    "localhost:7070"
+                ]
+            }
+*/
+
+            // turn on instrumentation
+            ,"instrument" Boolean "true",
+
+            // specify instruments to include
+            "instrumentInclude" StringArray [
+                "KeyUsageCounter",
+                "PreloadKeyUsageCounter"
+            ]
+        },
+
+
+        "DateRanged" DNA {
+            // the date ranged cache stores business objects that change
+            // over time
+            "type" String "lru",
+            "storage" DNAArray [
+                { "type" String "memory", "size" Integer "10000" }
+            ]
+
+            // This cache may have shadow storage. See the "Alternate"
+            // cache for example config
+        },
+
+
+        "Folders" DNA {
+            // the Folders cache is managed internally and
+            // cannot be configured.
+        },
+
+
+        "Prices" DNA {
+            // the price cache stores the prices of SKUs
+            "type" String "lru",
+            "storage" DNAArray [
+                { "type" String "memory", "size" Integer "10000" }
+            ]
+
+            // This cache may have shadow storage. See the "Alternate"
+            // cache for example config
+        },
+
+
+        "PublishedObjects" DNA {
+            // the PublishedObjects cache is managed internally and
+            // cannot be configured except for shadow storage.
+            // See the "Alternate" cache for example config, but be aware
+            // that PublishedObjects will only retain data that is also in
+            // other caches.
+        },
+
+
+        "ContentMediaHTML" DNA {
+            // There is no clean-up on this cache which maps media-ids to HTML
+            // but the only clean-up needed is to enforce an upper limit on
+            // its size. It is also worth mentioning that the values for this
+            // cache, being HTML files, can be quite large and they are
+            // automatically stored on the local disk from which they can
+            // quickly be retrieved, therefore this limit should be kept low.
+            "type" String "lru",
+            "storage" DNAArray [
+                {
+                    "type" String "memory",
+                    "size" Integer "100"
+                }
+            ]
+        },
+
+
+        "rulesProjectNameToRulesProject" DNA {
+             //This cache crashes JVM if the ObjectSizer is used on it,
+             //presumably due to the way blaze compiles its rules. Hence
+             //we exclude the memory instrument.
+            "instrumentExclude" StringArray [
+                "Memory"
+            ]
+        }
+     },
+
+
+    // This is the instruments configuration.
+    //
+    // Each instrument must specify a class and may specify parameters
+    // for the instrument factory.
+    "instruments" DNA {
+        // This is the list of default instruments
+        // Uncomment what you want
+        "default" StringArray [
+//            "Size",
+//            "Memory",
+//            "Activity",
+//            "LastMinute",
+//            "Last5Minutes",
+//            "LastHour",
+//            "HitRatio",
+//            "CreateRatio",
+//            "Top5",
+//            "RareUse",
+//            "SizeChange",
+//            "ActivityLogger",
+//            "PreloadKeyUsageCounter",
+//            "KeyUsageCounter"
+        ],
+            
+        "Size" DNA {
+            // measures the number of entries in the cache
+            "class" String "com.bluemartini.cache.instrument.SizeInstrument"
+        },
+
+        "Memory" DNA {
+            // measures the number of bytes used by the cache
+            "class" String "com.bluemartini.cache.instrument.MemoryInstrument"
+        },
+
+        "Activity" DNA {
+            // measures the activity on the cache
+            "class" String "com.bluemartini.cache.instrument.ActivityInstrument"
+        },
+
+        "LastMinute" DNA {
+            // measures the activity on the cache in the last minute
+            "class" String "com.bluemartini.cache.instrument.RecentActivityInstrument",
+            "window" Integer "60"
+        },
+
+        "Last5Minutes" DNA {
+            // measures the activity on the cache in the last 5 minutes
+            "class" String "com.bluemartini.cache.instrument.RecentActivityInstrument",
+            "window" Integer "300"
+        },
+
+        "LastHour" DNA {
+            // measures the activity on the cache in the last hour
+            "class" String "com.bluemartini.cache.instrument.RecentActivityInstrument",
+            "window" Integer "3600",
+            "frames" Integer "60"
+        },
+
+        "HitRatio" DNA {
+            // measures the hit ratio for a cache. Note that hits and misses
+            // on both the contains() method and the get() method are counted.
+            "class" String "com.bluemartini.cache.instrument.HitRatioInstrument"
+        },
+
+        "CreateRatio" DNA {
+            // measures the ratio of creates to gets for a cache. Note that
+            // gets via both the contains() method and the get() method are
+            // counted as either of these could lead to a create.
+            "class" String "com.bluemartini.cache.instrument.CreateRatioInstrument"
+        },
+
+        "Top5" DNA {
+            // measures the top requests for a cache by get() calls.
+            "class" String "com.bluemartini.cache.instrument.TopNInstrument",
+
+            // This instrument takes a parameter which defines how many
+            // items are listed in the top N.
+            "topN" Integer "5"
+        },
+
+        "RareUse" DNA {
+            // measures the number of items in the cache which are rarely
+            // used.
+            "class" String "com.bluemartini.cache.instrument.RarelyUsedInstrument",
+
+            // This instrument takes a parameter which is the maximum number
+            // of times a key can be used before it is no longer counted
+            // as rarely used
+            "maxUsage" Integer "2"
+        },
+
+        "SizeChange" DNA {
+            // Calculate the rate of change in size of the cache, measured in
+            // entries added per hour.
+            "class" String "com.bluemartini.cache.instrument.SizeChangeInstrument",
+
+            // This instrument takes a parameter which defines the amount of
+            // exponential smoothing used in estimating the rate of change
+            // in size. The value must be between 0 and 1.
+            "smooth" Double "0.9"
+        },
+
+        "ActivityLogger" DNA {
+            // Log activity on the cache
+            "class" String "com.bluemartini.cache.instrument.ActivityLoggerInstrument",
+            // The following are the default values for what to log and
+            // what log level to log at. These are the default setting
+            //
+            // "logGet" Boolean "false",
+            // "logContains" Boolean "false",
+            // "logPut" Boolean "true",
+            // "logRemove" Boolean "true",
+            // "logClear" Boolean "true",
+            // "logDestroy" Boolean "true",
+            // "logComponent" String "system",
+            "logLevel" Integer "0"
+        },
+
+        "PreloadKeyUsageCounter" DNA {
+            // Counts usage of cache keys so that the minimum set of keys to
+            // account for a given percentage of cache usage can be identified
+            // and preloaded on start up.
+            "class" String "com.bluemartini.cache.instrument.UsageCounterInstrument",
+
+            // This array should be empty. This instrument does not report
+            // anything. It only identifies what is worth pre-loading.
+            "intervals" DoubleArray []
+        },
+
+        "KeyUsageCounter" DNA {
+            // Counts usage of cache keys and reports on the number of keys
+            // required to account for various proportions of the usage.
+            "class" String "com.bluemartini.cache.instrument.UsageCounterInstrument",
+
+            // This array specifies the number of keys required for the
+            // specified proportions of the cache usage which will be reported
+            // in the statistics.
+            "intervals" DoubleArray [
+                "0.05",
+                "0.10",
+                "0.25",
+                "0.33",
+                "0.50",
+                "0.66",
+                "0.75",
+                "0.90",
+                "0.95"
+            ]
+        }
+    }
+}

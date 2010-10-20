@@ -1,0 +1,103 @@
+// 
+// This file is for INTERNAL USE ONLY!
+// It should not be modified.
+// 
+DNA {
+    // Contains the mapping of current RFQ acceptance codes/states to their
+    // next codes/states, along with requirements for the state transitions.
+    "accept_map" DNA {
+        "accept_quote" DNA {
+            // Current state is: "Buyer Submitted"
+            "BS" DNA {
+                // Next state is: "Seller Accepted"
+                "nextState" String "SA",
+                "requiresHostSellerUser" Boolean "true"
+            }
+        },
+        "cancel_quote" DNA {
+            // Current state is: "Buyer Creating"
+            "BC" DNA {
+                // Next state is: "Buyer Cancelled"
+                "nextState" String "BX",
+                "requiresHostSellerUser" Boolean "false"
+            },
+            // Current state is: "Buyer Submitted"
+            "BS" DNA {
+                // Next state is: "Buyer Cancelled"
+                "nextState" String "BX",
+                "requiresHostSellerUser" Boolean "false"
+            },
+            // Current state is: "Seller Creating"
+            "SC" DNA {
+                // Next state is: "Seller Cancelled"
+                "nextState" String "SX",
+                "requiresHostSellerUser" Boolean "true"
+            },
+            // Current state is: "Seller Submitted"
+            "SS" DNA {
+                // Next state is: "Seller Cancelled"
+                "nextState" String "SX",
+                "requiresHostSellerUser" Boolean "true"
+            },
+            // Current state is: "Seller Accepted"
+            "SA" DNA {
+                // Next state is: "Seller Cancelled"
+                "nextState" String "SX",
+                "requiresHostSellerUser" Boolean "true"
+            }
+        },
+        "create_revised_quote" DNA {
+            // Current state is: "Buyer Submitted"
+            "BS" DNA {
+                // Next state is: "Seller Creating"
+                "nextState" String "SC",
+                "requiresHostSellerUser" Boolean "true"
+            },
+            // Current state is: "Seller Submitted"
+            "SS" DNA {
+                // Next state is: "Buyer Creating"
+                "nextState" String "BC",
+                "requiresHostSellerUser" Boolean "false"
+            }
+        },
+        "decline_quote" DNA {
+            // Current state is: "Buyer Submitted"
+            "BS" DNA {
+                // Next state is: "Seller Declined"
+                "nextState" String "SD",
+                "requiresHostSellerUser" Boolean "true"
+            },
+            // Current state is: "Seller Submitted"
+            "SS" DNA {
+                // Next state is: "Buyer Declined"
+                "nextState" String "BD",
+                "requiresHostSellerUser" Boolean "false"
+            }
+        },
+        "submit_quote" DNA {
+            // Current state is: "Buyer Creating"
+            "BC" DNA {
+                // Next state is: "Buyer Submitted"
+                "nextState" String "BS",
+                "requiresHostSellerUser" Boolean "false"
+            },
+            "SC" DNA {
+                // Current state is: "Seller Creating"
+                "nextState" String "SS", // Next state is: "Seller Submitted"
+                "requiresHostSellerUser" Boolean "true"
+            }
+        }
+    },
+    "buyer_initial_accept_code" String "BC",
+    "seller_initial_accept_code" String "SC",
+    "buyer_add_to_quote_accept_codes" StringArray [
+        "BC"
+    ],
+    "seller_add_to_quote_accept_codes" StringArray [
+        "SC"
+    ],
+    "checkout_accept_codes" StringArray [
+        "SA",
+        "SS"
+    ]
+}

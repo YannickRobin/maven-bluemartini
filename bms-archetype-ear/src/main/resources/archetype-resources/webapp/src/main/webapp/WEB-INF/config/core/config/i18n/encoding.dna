@@ -1,0 +1,361 @@
+DNA {
+    "defaultCharset" String "ISO-8859-1",
+    // look at http://www.imc.org/imc-intl/ for mailCharset and mailEncoding
+    "defaultEncoding" String "ISO8859_1",
+    "defaultMailCharset" String "ISO-8859-1",
+    "defaultMailEncoding" String "ISO8859_1",
+    "supportedLocales" DNA {
+        "az" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "be_BY" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "bg" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "bg_BG" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "ca" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "cs" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "cs_CZ" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "da" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "de" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "de_AT" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "de_CH" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "de_DE" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "el" DNA {
+            "charset" String "ISO-8859-7",
+            "encoding" String "ISO8859_7"
+        },
+        "el_GR" DNA {
+            "charset" String "ISO-8859-7",
+            "encoding" String "ISO8859_7"
+        },
+        "en" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_AU" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_BE" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_CA" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_DE" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_ES" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_FR" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_GB" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "en_US" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "es" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "es_AR" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "es_CO" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "es_ES" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "es_MX" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "et" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "et_EE" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "fi" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fo" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fr" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fr_BE" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fr_CA" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fr_CH" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "fr_FR" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "ga" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "hr" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "hr_HR" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "hu" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "hu_HU" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "id" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "is" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "it" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "it_IT" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "ja" DNA {
+            "charset" String "Shift_JIS",
+            "encoding" String "SJIS",
+            "mailCharset" String "JIS",
+            "mailEncoding" String "JIS"
+        },
+        "ja_JP" DNA {
+            "charset" String "Shift_JIS",
+            "encoding" String "SJIS",
+            "mailCharset" String "ISO-2022-JP",
+            "mailEncoding" String "ISO2022JP"
+        },
+        "ko" DNA {
+            "charset" String "Cp933",
+            "encoding" String "Cp933"
+        },
+        "la" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "lt" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "lt_LT" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "lv" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "lv_LV" DNA {
+            "charset" String "ISO-8859-10",
+            "encoding" String "ISO8859_10"
+        },
+        "mk_MK" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "mo_MD" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "ms_MY" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "nl" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "nl_BE" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "no" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "pl" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "pl_PL" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "pt" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "pt_BR" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "ro" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "ro_RO" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "ru" DNA {
+            "charset" String "KOI8-R",
+            "encoding" String "KOI8_R",
+            "mailCharset" String "KOI8-R",
+            "mailEncoding" String "KOI8_R"
+        },
+        "ru_RU" DNA {
+            "charset" String "KOI8-R",
+            "encoding" String "KOI8_R",
+            "mailCharset" String "KOI8-R",
+            "mailEncoding" String "KOI8_R"
+        },
+        "sk" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sk_SK" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sl" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sl_SI" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sq_AL" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sr" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sr_CS" DNA {
+            "charset" String "ISO-8859-2",
+            "encoding" String "ISO8859_2"
+        },
+        "sv" DNA {
+            "charset" String "ISO-8859-1",
+            "encoding" String "ISO8859_1"
+        },
+        "th" DNA {
+            "charset" String "TIS-620",
+            "encoding" String "TIS620"
+        },
+        "th_TH" DNA {
+            "charset" String "TIS-620",
+            "encoding" String "TIS620"
+        },
+        "tr" DNA {
+            "charset" String "ISO-8859-9",
+            "encoding" String "ISO8859_9"
+        },
+        "tr_TR" DNA {
+            "charset" String "ISO-8859-9",
+            "encoding" String "ISO8859_9"
+        },
+        "uk_UA" DNA {
+            "charset" String "ISO-8859-5",
+            "encoding" String "ISO8859_5"
+        },
+        "zh" DNA {
+            "charset" String "GBK",
+            "encoding" String "GBK",
+            "mailCharset" String "ISO-2022-CN",
+            "mailEncoding" String "ISO2022CN_GB"
+        },
+        "zh_CN" DNA {
+            "charset" String "GBK",
+            "encoding" String "GBK",
+            "mailCharset" String "ISO-2022-CN",
+            "mailEncoding" String "ISO2022CN_GB"
+        },
+        "zh_HK" DNA {
+            "charset" String "Big5",
+            "encoding" String "Big5"
+        },
+        "zh_TW" DNA {
+            "charset" String "Big5",
+            "encoding" String "Big5"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 6.0//EN" "http://www.bea.com/servers/wls600/dtd/weblogic-web-jar.dtd">
+
+<weblogic-web-app>
+
+<jsp-descriptor>
+  <jsp-param>
+    <param-name>
+      printNulls
+    </param-name>
+    <param-value>
+      false
+    </param-value>
+  </jsp-param>
+  
+  <jsp-param>
+    <param-name>
+      pageCheckSeconds 
+    </param-name>
+    <param-value>
+      30
+    </param-value>
+  </jsp-param>
+
+  <jsp-param>
+    <param-name>
+      keepgenerated 
+    </param-name>
+    <param-value>
+      true
+    </param-value>
+  </jsp-param>
+
+  <jsp-param>
+    <param-name>
+      packagePrefix 
+    </param-name>
+    <param-value>
+      com.bluemartini
+    </param-value>
+  </jsp-param>
+
+  <jsp-param>
+    <param-name>
+      compileCommand 
+    </param-name>
+    <param-value>
+      javac
+    </param-value>
+  </jsp-param>
+
+  <jsp-param>
+    <param-name>
+      verbose 
+    </param-name>
+    <param-value>
+      true
+    </param-value>
+  </jsp-param>
+
+</jsp-descriptor>
+
+</weblogic-web-app>

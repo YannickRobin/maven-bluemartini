@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss> 
+    <enterprise-beans> 
+        <message-driven> 
+            <ejb-name>DBUtilTopicMDB</ejb-name> 
+            <destination-jndi-name>com.bluemartini.DBUtilTopic</destination-jndi-name> 
+        </message-driven>
+        <message-driven> 
+            <ejb-name>PublishVersionTopicMDB</ejb-name> 
+            <destination-jndi-name>com.bluemartini.PublishVersionTopic</destination-jndi-name> 
+        </message-driven>    
+    </enterprise-beans> 
+</jboss> 

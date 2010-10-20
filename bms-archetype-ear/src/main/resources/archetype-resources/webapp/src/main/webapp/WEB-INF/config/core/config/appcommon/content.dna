@@ -1,0 +1,469 @@
+DNA {
+    "abs" DNA {
+        "mimeType" String "video/x-mpeg"
+    },
+    "ai" DNA {
+        "mimeType" String "application/postscript"
+    },
+    "aif" DNA {
+        "mimeType" String "audio/x-aiff"
+    },
+    "aiff" DNA {
+        "mimeType" String "audio/x-aiff"
+    },
+    "asp" DNA {
+        "mimeType" String "text/html"
+    },
+    "avi" DNA {
+        "mimeType" String "video/avi"
+    },
+    "bmp" DNA {
+        "mimeType" String "image/x-MS-bmp"
+    },
+    "class" DNA {
+        "mimeType" String "application/x-java-bean"
+    },
+    "css" DNA {
+        "mimeType" String "text/css"
+    },
+    "default" DNA {
+        "mimeType" String "unknown"
+    },
+    "dna" DNA {
+        "mimeType" String "text/dna"
+    },
+    "doc" DNA {
+        "mimeType" String "application/msword"
+    },
+    "drl" DNA {
+        "mimeType" String "text/plain"
+    },
+    "enc" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "eps" DNA {
+        "mimeType" String "application/postscript"
+    },
+    "fla" DNA {
+        "mimeType" String "application/x-unknown-content-type-Flash.Movie"
+    },
+    "gif" DNA {
+        "mimeType" String "image/gif"
+    },
+    "gtar" DNA {
+        "mimeType" String "application/x-gtar"
+    },
+    "hqx" DNA {
+        "mimeType" String "application/mac-binhex40"
+    },
+    "htm" DNA {
+        "mimeType" String "text/html"
+    },
+    "html" DNA {
+        "mimeType" String "text/html"
+    },
+    "htx" DNA {
+        "mimeType" String "text/html"
+    },
+    "idc" DNA {
+        "mimeType" String "text/plain"
+    },
+    "idt" DNA {
+        "mimeType" String "text/plain"
+    },
+    "idtp" DNA {
+        "mimeType" String "text/plain"
+    },
+    "jar" DNA {
+        "mimeType" String "application/java-archive"
+    },
+    "jfif" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "jhtml" DNA {
+        "mimeType" String "text/jhtml"
+    },
+    "jnlp" DNA {
+        "mimeType" String "application/x-java-jnlp-file"
+    },
+    "jpe" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "jpeg" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "jpg" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "jsp" DNA {
+        "mimeType" String "text/jsp"
+    },
+    "m1v" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mid" DNA {
+        "mimeType" String "audio/x-midi"
+    },
+    "midi" DNA {
+        "mimeType" String "audio/x-midi"
+    },
+    "mimeTypes" DNA {
+        "application/futuresplash" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/java-archive" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/mac-binhex40" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/msword" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/pdf" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/postsript" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/postscript" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/pot" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/pps" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/ppt" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/vnd.ms-excel" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/vnd.ms-powerpoint" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-compressed" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-gtar" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-java-bean" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-shockwave-flash" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-stuffit" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-tar" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-Flash.Movie" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-InternetShortcut" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-Photoshop.Image.5" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-shtmfile" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-Visio.Drawing.5" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-unknown-content-type-wrifile" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "application/x-zip-compressed" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/mid" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/wav" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/x-wav" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/x-aiff" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/x-midi" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "audio/x-rmf" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "image/bmp" DNA {
+            "htmlPattern" String "<img src=\"{url}\">",
+            "panel" String "gifViewer"
+        },
+        "image/gif" DNA {
+            "htmlPattern" String "<img src=\"{url}\">",
+            "panel" String "gifViewer"
+        },
+        "image/jpeg" DNA {
+            "htmlPattern" String "<img src=\"{url}\">",
+            "panel" String "gifViewer"
+        },
+        "image/x-MS-bmp" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "text/css" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>",
+            "panel" String "textViewer"
+        },
+        "text/dna" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/html" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/jhtml" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/pjsp" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/wjsp" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/jsp" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/plain" DNA {
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "text/xml" DNA {
+            "documentHandlerClass" String "com.bluemartini.xml.document.XMLDocumentHandler",
+            "documentRequestClass" String "com.bluemartini.xml.document.XMLDocumentRequest",
+            "documentResponseClass" String "com.bluemartini.xml.document.XMLDocumentResponse",
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "application/x-sap.busdoc" DNA {
+            "documentHandlerClass" String "com.bluemartini.sap.inbound.bapirfc.SAPDocumentHandler",
+            "documentRequestClass" String "com.bluemartini.sap.inbound.bapirfc.SAPDocumentRequest",
+            "documentResponseClass" String "com.bluemartini.sap.inbound.bapirfc.SAPDocumentResponse",
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "application/x-sap.idoc" DNA {
+            "documentHandlerClass" String "com.bluemartini.sap.inbound.idoc.SAPDocumentHandler",
+            "documentRequestClass" String "com.bluemartini.sap.inbound.idoc.SAPDocumentRequest",
+            "documentResponseClass" String "com.bluemartini.sap.inbound.idoc.SAPDocumentResponse",
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "application/soap" DNA {
+            "documentHandlerClass" String "com.bluemartini.wsm.inbound.soap.SOAPDocumentHandler",
+            "documentRequestClass" String "com.bluemartini.wsm.inbound.soap.SOAPDocumentRequest",
+            "documentResponseClass" String "com.bluemartini.wsm.inbound.soap.SOAPDocumentResponse",
+            "htmlPattern" String "text",
+            "panel" String "textViewer"
+        },
+        "unknown" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/avi" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/mpeg" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/quicktime" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/x-mpeg" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/x-mpeg2" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        },
+        "video/x-pn-realaudio" DNA {
+            "htmlPattern" String "<a href=\"{url}\">{name}</a>"
+        }
+    },
+    "mov" DNA {
+        "mimeType" String "video/quicktime"
+    },
+    "mp2" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mp2v" DNA {
+        "mimeType" String "video/x-mpeg2"
+    },
+    "mpa" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpe" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpeg" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpega" DNA {
+        "mimeType" String "video/x-mpeg"
+    },
+    "mpegv" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpg" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpv" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "mpv2" DNA {
+        "mimeType" String "video/x-mpeg2"
+    },
+    "pdf" DNA {
+        "mimeType" String "application/pdf"
+    },
+    "pjp" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "pjpeg" DNA {
+        "mimeType" String "image/jpeg"
+    },
+    "pjsp" DNA {
+        "mimeType" String "text/pjsp"
+    },
+    "plg" DNA {
+        "mimeType" String "text/html"
+    },
+    "pot" DNA {
+        "mimeType" String "application/pot"
+    },
+    "ppt" DNA {
+        "mimeType" String "application/ppt"
+    },
+    "ps" DNA {
+        "mimeType" String "application/postscript"
+    },
+    "psd" DNA {
+        "mimeType" String "application/x-unknown-content-type-Photoshop.Image.5"
+    },
+    "pss" DNA {
+        "mimeType" String "application/pps"
+    },
+    "ra" DNA {
+        "mimeType" String "video/x-pn-realaudio"
+    },
+    "ram" DNA {
+        "mimeType" String "video/x-pn-realaudio"
+    },
+    "rb" DNA {
+        "mimeType" String "text/plain"
+    },
+    "rm" DNA {
+        "mimeType" String "video/x-pn-realaudio"
+    },
+    "rmf" DNA {
+        "mimeType" String "audio/x-rmf"
+    },
+    "rmi" DNA {
+        "mimeType" String "audio/mid"
+    },
+    "shtm" DNA {
+        "mimeType" String "application/x-unknown-content-type-shtmfile"
+    },
+    "shtml" DNA {
+        "mimeType" String "text/html"
+    },
+    "sit" DNA {
+        "mimeType" String "application/x-stuffit"
+    },
+    "spa" DNA {
+        "mimeType" String "application/x-unknown-content-type-Flash.Movie"
+    },
+    "spl" DNA {
+        "mimeType" String "application/futuresplash"
+    },
+    "stm" DNA {
+        "mimeType" String "text/html"
+    },
+    "swf" DNA {
+        "mimeType" String "application/x-shockwave-flash"
+    },
+    "tar" DNA {
+        "mimeType" String "application/x-tar"
+    },
+    "text" DNA {
+        "mimeType" String "text/plain"
+    },
+    "tgz" DNA {
+        "mimeType" String "application/x-compressed"
+    },
+    "tld" DNA {
+        "mimeType" String "text/xml"
+    },
+    "txt" DNA {
+        "mimeType" String "text/plain"
+    },
+    "url" DNA {
+        "mimeType" String "application/x-unknown-content-type-InternetShortcut"
+    },
+    "vbs" DNA {
+        "mimeType" String "video/mpeg"
+    },
+    "vsd" DNA {
+        "mimeType" String "application/x-unknown-content-type-Visio.Drawing.5"
+    },
+    "vss" DNA {
+        "mimeType" String "application/x-unknown-content-type-Visio.Drawing.5"
+    },
+    "vst" DNA {
+        "mimeType" String "application/x-unknown-content-type-Visio.Drawing.5"
+    },
+    "vsw" DNA {
+        "mimeType" String "application/x-unknown-content-type-Visio.Drawing.5"
+    },
+    "wav" DNA {
+        "mimeType" String "audio/x-wav"
+    },
+    "wjsp" DNA {
+        "mimeType" String "text/wjsp"
+    },
+    "wri" DNA {
+        "mimeType" String "application/x-unknown-content-type-wrifile"
+    },
+    "xla" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xlc" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xld" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xll" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xls" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xlt" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "xlw" DNA {
+        "mimeType" String "application/vnd.ms-excel"
+    },
+    "zip" DNA {
+        "mimeType" String "application/x-zip-compressed"
+    }
+}

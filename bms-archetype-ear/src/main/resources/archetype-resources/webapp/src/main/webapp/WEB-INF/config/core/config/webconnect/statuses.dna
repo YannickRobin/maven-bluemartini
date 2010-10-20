@@ -1,0 +1,143 @@
+DNA {
+    "actionAllowedOrderStatuses" DNAArray [
+        {
+            "action" String "BLOCK",
+            "EXC" StringArray [
+                "S"
+            ],
+            "ORD" StringArray [
+                "S"
+            ]
+        },
+        {
+            "action" String "UNBLOCK",
+            "EXC" StringArray [
+                "K"
+            ],
+            "ORD" StringArray [
+                "K"
+            ]
+        },
+        {
+            "action" String "EDIT_PAYMENT",
+            "ORD" StringArray [
+                "K",
+                "S"
+            ]
+        },
+        {
+            "action" String "CANCEL",
+            "ORD" StringArray [
+                "K",
+                "S"
+            ]
+        },
+        {
+            "action" String "ORDER_ACCOMMODATION",
+            "EXC" StringArray [
+                "C",
+                "T"
+            ],
+            "ORD" StringArray [
+                "C",
+                "T"
+            ]
+        },
+        {
+            "action" String "PARTIAL_CANCEL",
+            "ORD" StringArray [
+                "K",
+				"T",
+                "S"
+            ]
+        },
+        {
+            "action" String "RETURN",
+            "EXC" StringArray [
+                "C",
+                "T"
+            ],
+            "ORD" StringArray [
+                "C",
+                "T"
+            ]
+        },
+        {
+            "action" String "EDIT_NOTES",
+            "EXC" StringArray [
+                "S",
+                "K"
+            ],
+            "ORD" StringArray [
+                "S",
+                "K"
+            ],
+            "RET" StringArray [
+                "S",
+                "K"
+            ]
+        }
+    ],
+    "actionAllowedOrderLineStatuses" DNAArray [        
+        {
+            "action" String "RETURN",
+            "RET" StringArray [
+                "H",
+                "T"
+            ]
+        }
+    ],
+    "ORDER" DNA {
+        "cancelled" String "X",
+        "checkOrder" StringArray [
+            "S",
+            "C"
+        ], // submit complete, ready for new order in session
+        "complete" String "C",
+        "history" StringArray [
+            "S",
+            "T",
+            "X",
+            "C",
+            "R",
+            "A"
+        ],
+        "new" String "N",
+        "partialReturned" String "Y",
+        "partialShipped" String "T",
+        "paymentSucceeded" String "M",
+        "refunded" String "U",
+        "rejected" String "J",
+        "returned" String "R",
+        "saved" String "P",
+        "shipped" String "H",
+        "submitted" String "S",
+        "pendingAuth" String "A",
+        "blocked" String "K",
+        "taxwareAudit" StringArray [
+            "S"
+        ],
+        "orderValid" StringArray [
+            "M"
+        ]
+    },
+    "ORDER_LINE" DNA {
+        "cancelled" String "X",
+        "new" String "N",
+        "orderComplete" StringArray [
+            "X",
+            "H",
+            "R"
+        ],
+        "partialReturned" String "Y",
+        "partialShipped" String "T",
+        "returned" String "R",
+        "shipped" String "H", // ready for payment capture
+        "submitted" String "S"
+    },
+    "SHIPMENT" DNA {
+        "awaitingProcess" String "A",
+        "paymentFailed" String "F",
+        "paymentReceived" String "R"
+    }
+}

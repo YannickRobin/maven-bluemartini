@@ -1,0 +1,59 @@
+DNA {
+    "types" DNAArray [
+        {
+            "code" String "AP",
+            "class" String "com.bluemartini.promotion.component.AdditionalProductPromotion"
+        },
+        {
+            "code" String "FG",
+            "class" String "com.bluemartini.promotion.component.FreeGiftPromotion"
+        },
+        {
+            "code" String "SP",
+            "class" String "com.bluemartini.promotion.component.ProductDiscountPromotion"
+        },
+        {
+            "code" String "CD",
+            "class" String "com.bluemartini.promotion.component.BasketDiscountPromotion"
+        },
+        {
+            "code" String "OD",
+            "class" String "com.bluemartini.promotion.component.OrderDiscountPromotion"
+        },
+        {
+            "code" String "SD",
+            "class" String "com.bluemartini.promotion.component.ShippingDiscountPromotion"
+        },{
+            "code" String "TP",
+            "class" String "com.bluemartini.promotion.component.TotalProductDiscountPromotion"
+        }
+    ],
+    "conditions" DNAArray [
+        {
+            "code" String "BC",
+            "class" String "com.bluemartini.promotion.component.BasketContentsCondition"
+        },
+        {
+            "code" String "AD",
+            "class" String "com.bluemartini.promotion.component.CustomerAddressCondition"
+        },
+        {
+            "code" String "CA",
+            "class" String "com.bluemartini.promotion.component.CustomerAttributeCondition"
+        },
+        {
+            "code" String "OT",
+            "class" String "com.bluemartini.promotion.component.OrderTotalCondition"
+        },
+        {
+            "code" String "P",
+            "class" String "com.bluemartini.promotion.component.ProductCondition"
+        },
+        {
+            "code" String "PC",
+            "class" String "com.bluemartini.promotion.component.PromotionCodeCondition"
+        }
+    ],
+
+    "enableProductDiscountCache" boolean "false"
+}

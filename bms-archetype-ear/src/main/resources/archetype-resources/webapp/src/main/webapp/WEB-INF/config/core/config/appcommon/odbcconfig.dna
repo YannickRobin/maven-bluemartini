@@ -1,0 +1,11 @@
+DNA {
+    "databases" StringArray [
+        "dss",
+        "main",
+        "publish",
+        "store",
+        "eac",
+        "clickstream",
+        "content"
+    ]
+}

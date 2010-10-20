@@ -1,0 +1,439 @@
+// archive_objects.dna
+DNA {
+    "objectTypes" DNA {
+        "CLICKSTREAM" DNA {
+            "databaseName" String "clickstream",
+            "businessObjectType" String "ARC_CLICKSTREAM",
+            "useDirectSQL" Boolean "true",
+            "lookupClass" String "com.bluemartini.archive.ClickStreamObjectLookup",
+            "archiverClass" String "com.bluemartini.archive.ClickStreamObjectArchiver"
+        },
+        "ACCOMMODATION" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "ACCOMMODATION"
+        },
+        "ACCOUNT_ACTIVITY" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "ACCOUNT_ACTIVITY"
+        },
+        "CALL_TRACKING" DNA {
+            "referredBy" DNA {
+                "INTERACTION_HISTORY" DNA {
+                    "referenceField" String "IXH_CTK_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "CALL_TRACKING"
+        },
+        "CREDIT_CARD_TXN" DNA {
+            "referredBy" DNA {
+                "OBJECT_CCD_TXN" DNA {
+                    "referenceField" String "OCT_CCT_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "CREDIT_CARD_TXN"
+        },
+        "INTERACTION_HISTORY" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "INTERACTION_HISTORY"
+        },
+        "INVOICE" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "INVOICE"
+        },
+        "OBJECT_CCD_TXN" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "OBJECT_CCD_TXN",
+            "indexField" StringArray [
+                "OCT_OBJ_ID",
+                "OCT_CCT_ID"
+            ]
+        },
+        // 
+        // This is the ORDER object tree which we will archive:
+        // 
+        //  order_header
+        //      accommodation (where acm_orl_id=null)
+        //      call_tracking
+        //          task (where tsk_ctk_id != null)
+        //              task_history
+        //          interaction_hist
+        //      order_event (where orv_orl_id = null)
+        //      order_line
+        //          accommodation (where acm_orl_id != null)
+        //          order_event (where orv_orl_id != null)
+        //          plan_ship_line
+        //          shipment_line
+        //      payment
+        //          account_activity
+        //          credit_card_txn
+        //              object_ccd_txn
+        //          invoice
+        //          payment_txn
+        //      plan_shipment
+        //          plan_ship_line (repeat!)
+        //      shipment
+        //          shipment_line (repeat!)
+        //      task (where tsk_ctk_id=null)
+        //          task_history
+        //      order_header (returns)
+        // 
+        "ORDER" DNA {
+            "referredBy" DNA {
+                "ACCOMMODATION" DNA {
+                    "referenceField" String "ACM_ORH_ID",
+                    "where" DNAArray [
+                        {
+                            "field" String "ACM_ORL_ID",
+                            "value" null
+                        }
+                    ]
+                },
+                "CALL_TRACKING" DNA {
+                    "referenceField" String "CTK_ORH_ID"
+                },
+                "ORDER_EVENT" DNA {
+                    "referenceField" String "ORV_ORH_ID",
+                    "where" DNAArray [
+                        {
+                            "field" String "ORV_ORL_ID",
+                            "value" null
+                        }
+                    ]
+                },
+                "ORDER_LINE" DNA {
+                    "referenceField" String "ORL_ORH_ID"
+                },
+                "PAYMENT" DNA {
+                    "referenceField" String "PAY_ORH_ID"
+                },
+                "PLAN_SHIPMENT" DNA {
+                    "referenceField" String "PSH_ORH_ID"
+                },
+                "SHIPMENT" DNA {
+                    "referenceField" String "SHH_ORH_ID"
+                },
+                "TASK" DNA {
+                    "referenceField" String "TSK_ORH_ID",
+                    "where" DNAArray [
+                        {
+                            "field" String "TSK_CTK_ID",
+                            "value" null
+                        }
+                    ]
+                },
+                "ORDER" DNA {
+                    "referenceField" String "ORH_REFERENCE_ID"
+                }
+            },
+            "businessObjectType" String "ORDER",
+            "databaseName" String "store",
+            "x_table" Boolean "true", // default is 'false', if not specified
+/*---
+            // this field will be used only if 'IDAttribute' is not
+            // available i.e if 'objectIDProperty' is not given in bizObj def
+            "indexField" String "orh_id",
+---*/
+            "dateField" String "orh_modify_dt",
+            "statusField" String "orh_status_cd",
+            "archiverClass" String "com.bluemartini.archive.OrderObjectArchiver",
+            "lookupClass" String "com.bluemartini.archive.OrderObjectLookup"
+        },
+        "ORDER_EVENT" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "ORDER_EVENT"
+        },
+        "ORDER_LINE" DNA {
+            "referredBy" DNA {
+                "ACCOMMODATION" DNA {
+                    "referenceField" String "ACM_ORL_ID"
+                },
+                "ORDER_EVENT" DNA {
+                    "referenceField" String "ORV_ORL_ID"
+                },
+                "PLAN_SHIPMENT_LINE" DNA {
+                    "referenceField" String "PSL_ORL_ID"
+                },
+                "SHIPMENT_LINE" DNA {
+                    "referenceField" String "SHL_ORL_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "ORDER_LINE"
+        },
+        "PAYMENT" DNA {
+            "referredBy" DNA {
+                "ACCOUNT_ACTIVITY" DNA {
+                    "referenceField" String "ACA_PAY_ID"
+                },
+                "CREDIT_CARD_TXN" DNA {
+                    "referenceField" String "CCT_PAY_ID"
+                },
+                "INVOICE" DNA {
+                    "referenceField" String "IVC_PAY_ID"
+                },
+                "PAYMENT_TXN" DNA {
+                    "referenceField" String "PTX_PAY_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "PAYMENT"
+        },
+        "PAYMENT_TXN" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "PAYMENT_TXN"
+        },
+        "PLAN_SHIPMENT" DNA {
+            "referredBy" DNA {
+                "PLAN_SHIPMENT_LINE" DNA {
+                    "referenceField" String "PSL_PSH_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "PLAN_SHIPMENT"
+        },
+        "PLAN_SHIPMENT_LINE" DNA {
+            "parent" String "PLAN_SHIPMENT",
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "PLAN_SHIPMENT_LINE"
+        },
+        "SHIPMENT" DNA {
+            "referredBy" DNA {
+                "SHIPMENT_LINE" DNA {
+                    "referenceField" String "SHL_SHH_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "SHIPMENT"
+        },
+        "SHIPMENT_LINE" DNA {
+            "parent" String "SHIPMENT",
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "SHIPMENT_LINE"
+        },
+        "TASK" DNA {
+            "referredBy" DNA {
+                "TASK_HISTORY" DNA {
+                    "referenceField" String "TSH_TSK_ID"
+                }
+            },
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "TASK"
+        },
+        "TASK_HISTORY" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "TASK_HISTORY"
+        },
+        // 
+        // This is the object tree for CARTs or QUOTEs
+        // CART_HEADER
+        //     CALL_CENTER_TASK
+        //         TASK_HISTORY
+        //     CALL_TRACKING
+        //         CALL_CENTER_TASK (done)
+        //         INTERACTION_HIST
+        //     CART_ITEM
+        //     ORDER_HEADER
+        //     RQST_FOR_QUOTE
+        //     USER_ORG
+        // 
+        "CART" DNA {
+            "referredBy" DNA {
+                "CALL_TRACKING" DNA {
+                    "referenceField" String "CTK_CTH_ID"
+                },
+                "CART_ITEM" DNA {
+                    "referenceField" String "CRT_CTH_ID"
+                },
+                "ORDER" DNA {
+                    "referenceField" String "ORH_CTH_ID",
+                    "where" DNAArray [
+                        // Exclude returns (i.e. orders with a reference) since they will be included as children of orders.
+                        // And if we don't exclude them here, they will be included in the archive file twice.
+                        {
+                            "field" String "ORH_REFERENCE_ID",
+                            "value" null
+                        }
+                    ]
+                },
+                "TASK" DNA {
+                    "referenceField" String "TSK_CTH_ID",
+                    "where" DNAArray [
+                        {
+                            "field" String "TSK_CTK_ID",
+                            "value" null
+                        }
+                    ]
+                }
+            },
+            "databaseName" String "store",
+            "businessObjectType" String "CART_HEADER",
+            "x_table" Boolean "true",
+            "dateField" String "cth_modify_dt",
+            "statusField" String "cth_status_cd",
+            "lookupClass" String "com.bluemartini.archive.CartObjectLookup",
+            "archiverClass" String "com.bluemartini.archive.CartObjectArchiver",
+            "preDeleteSQL" String "UPDATE USER_ORG SET USO_DEFAULT_CTH_ID = NULL WHERE USO_DEFAULT_CTH_ID = ?",
+            "preDeleteBindProperties" StringArray [
+                "cth_id"
+            ]
+        },
+        "CART_ITEM" DNA {
+            "databaseName" String "store",
+            "x_table" Boolean "true",
+            "businessObjectType" String "CART_ITEM"
+        },
+        "CART_EVENT" DNA {
+            "databaseName" String "clickstream",
+            "businessObjectType" String "CART_EVENT",
+            "x_table" Boolean "false", // note: value is 'false'
+            "indexField" StringArray [
+                "EVT_SSN_ID",
+                "EVT_SEQUENCE"
+            ]
+        },
+        "CHECKOUT_EVENT" DNA {
+            "databaseName" String "clickstream",
+            "businessObjectType" String "CHECKOUT_EVENT",
+            "x_table" Boolean "false", // note: value is 'false'
+            "indexField" StringArray [
+                "EVT_SSN_ID",
+                "EVT_SEQUENCE"
+            ]
+        },
+        "GENERIC_EVENT" DNA {
+            "databaseName" String "clickstream",
+            "businessObjectType" String "GENERIC_EVENT",
+            "x_table" Boolean "false", // note: value is 'false'
+            "indexField" StringArray [
+                "EVT_SSN_ID",
+                "EVT_SEQUENCE"
+            ]
+        },
+        "REQUEST" DNA {
+            "referredBy" DNA {
+                "CART_EVENT" DNA {
+                    "referenceField" StringArray [
+                        "EVT_SSN_ID",
+                        "EVT_RQT_SEQUENCE"
+                    ]
+                },
+                "CHECKOUT_EVENT" DNA {
+                    "referenceField" StringArray [
+                        "EVT_SSN_ID",
+                        "EVT_RQT_SEQUENCE"
+                    ]
+                },
+                "GENERIC_EVENT" DNA {
+                    "referenceField" StringArray [
+                        "EVT_SSN_ID",
+                        "EVT_RQT_SEQUENCE"
+                    ]
+                },
+                "SEARCH_EVENT" DNA {
+                    "referenceField" StringArray [
+                        "EVT_SSN_ID",
+                        "EVT_RQT_SEQUENCE"
+                    ]
+                }
+            },
+            "databaseName" String "clickstream",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "REQUEST",
+            "indexField" StringArray [
+                "RQT_SSN_ID",
+                "RQT_SEQUENCE"
+            ]
+        },
+        "SEARCH_EVENT" DNA {
+            "databaseName" String "clickstream",
+            "x_table" Boolean "false", // note: value is 'false'
+            "businessObjectType" String "SEARCH_EVENT",
+            "indexField" StringArray [
+                "EVT_SSN_ID",
+                "EVT_SEQUENCE"
+            ]
+        },
+        // 
+        // Alternative clickstream archiving. The object tree is:
+        //  SESSION
+        //      REQUEST
+        //          CART_EVENT
+        //          CHECKOUT_EVENT
+        //          GENERIC_EVENT
+        //          SEARCH_EVENT
+        // 
+        "SESSION" DNA {
+            "referredBy" DNA {
+                "REQUEST" DNA {
+                    "referenceField" String "RQT_SSN_ID"
+                }
+            },
+            "databaseName" String "clickstream",
+            "businessObjectType" String "SESSION",
+            "x_table" Boolean "false", // note: value is 'false'
+            "dateField" String "SSN_LAST_RQT_DT"
+/*---,
+            // uncomment the line below to enable clickstream archiving
+            // to a file
+            "lookupClass" String "com.bluemartini.archive.DefaultObjectLookup"
+---*/
+        }
+    },
+    "clickstreamTables" DNA {
+        "CLIENT_SESSION" DNA {
+            "order" Integer "0",
+            "sourceTable" String "CLIENT_SESSION",
+            "destTable" String "ARC_CLIENT_SESSION",
+            "sessionId" String "SSN_ID"
+        },
+        "CLIENT_REQUEST" DNA {
+            "order" Integer "1",
+            "sourceTable" String "CLIENT_REQUEST",
+            "destTable" String "ARC_CLIENT_REQUEST",
+            "sessionId" String "RQT_SSN_ID"
+        },
+        "CLIENT_CART_EVENT" DNA {
+            "order" Integer "2",
+            "sourceTable" String "CLIENT_CART_EVENT",
+            "destTable" String "ARC_CLIENT_CART_EVENT",
+            "sessionId" String "EVT_SSN_ID"
+        },
+        "CLIENT_CHECKOUT_EVENT" DNA {
+            "order" Integer "2",
+            "sourceTable" String "CLIENT_CHECKOUT_EVENT",
+            "destTable" String "ARC_CLIENT_CHECKOUT_EVENT",
+            "sessionId" String "EVT_SSN_ID"
+        },
+        "CLIENT_GENERIC_EVENT" DNA {
+            "order" Integer "2",
+            "sourceTable" String "CLIENT_GENERIC_EVENT",
+            "destTable" String "ARC_CLIENT_GENERIC_EVENT",
+            "sessionId" String "EVT_SSN_ID"
+        },
+        "CLIENT_SEARCH_EVENT" DNA {
+            "order" Integer "2",
+            "sourceTable" String "CLIENT_SEARCH_EVENT",
+            "destTable" String "ARC_CLIENT_SEARCH_EVENT",
+            "sessionId" String "EVT_SSN_ID"
+        }
+    }
+}

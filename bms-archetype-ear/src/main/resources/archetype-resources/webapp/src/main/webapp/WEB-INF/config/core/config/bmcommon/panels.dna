@@ -1,0 +1,11 @@
+DNA {
+    "annotationPanel" DNA {
+        "panelClass" String "com.bluemartini.ui.AnnotationPanel"
+    },
+    "tablechooser" DNA {
+        "panelClass" String "com.bluemartini.ui.TableChooserPanel"
+    },
+    "treechooser" DNA {
+        "panelClass" String "com.bluemartini.ui.TreeChooserPanel"
+    }
+}

@@ -1,0 +1,22 @@
+DNA {
+    "addLinesToProcessedShipments" Boolean "false",
+    "autoInsertDomainValues" Boolean "false",
+    "delimiter" String "|",
+    "enclosure" String "^",
+    "escape" String "\\",
+    "inferOrderLine" Boolean "true",
+    "sortRecords" Boolean "false",
+    "updateOnDuplicateProduct" Boolean "false",
+    "updateOnDuplicateSku" Boolean "false",
+    "usePlannedAddressForShipment" Boolean "false",
+    "startWorkflow" Boolean "false",
+
+    // XML format setting
+    "XMLValidate" Boolean "false",
+    "namespaceAware" Boolean "true",
+
+    // Default location where to start grabbing elements to process.  
+    // It is prefixed (i.e. bms:) because XPath requires it when
+    // grabbing elements belonging in a default namespace.
+    "recordXPath" String "/bmsRecords/record"
+}

@@ -1,0 +1,11 @@
+DNA {
+    "ERRORS" DNA {
+       "ENV_CIRCULAR_DEPENDENCY" String "Circular dependency detected in the configuration. Please select another environment as target"  
+    },
+    "FORMATMESSAGES" DNA {
+    },
+    "LABELS" DNA {
+    },
+    "USERMESSAGES" DNA {
+    }
+}

@@ -1,0 +1,141 @@
+DNA {
+    "CalculateTax" DNA {
+        "class" String "com.bluemartini.thirdparty.taxware.TWCalculateTax",
+        "description" String "Tax calculation using taxware",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ORDER",
+                "path" StringArray [
+                    "ORDER"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "ORDER_LINE",
+                "path" StringArray [
+                    "ORDER_LINE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "TAX_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "DNAArray"
+            }
+        ],
+        "section" String "Tax"
+    },
+    "PayPalCancelAuthorization" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalCancelAuthorization",
+        "description" String "Calls PayPal DoVoid API"
+    },
+    "PayPalClearSession" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalClearSession",
+        "description" String "Clears PayPal data from form data"
+    },
+    "PayPalDoAuthorization" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalDoAuthorization",
+        "description" String "Calls PayPal DoAuthorization API and creates TRX record"
+    },
+    "PayPalDoCapture" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalDoCapture",
+        "description" String "Calls PayPal DoCapture API"
+    },
+    "PayPalDoExpressCheckoutPayment" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalDoExpressCheckoutPayment",
+        "description" String "Calls PayPal DoExpressCheckoutPayment API, saves Transaction id"
+    },
+    "PayPalGetExpressCheckoutDetails" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalGetExpressCheckoutDetails",
+        "description" String "Calls PayPal GetExpressCheckoutDetails API"
+    },
+    "PayPalGoToReturnTemplate" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalGoToReturnTemplate",
+        "description" String "Navigate to return template"
+    },
+    "PayPalLogin" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalLogin",
+        "description" String "Login to PayPal API"
+    },
+    "PayPalOriginalAuth" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalOriginalAuth",
+        "description" String "Original Authorization bizact for PayPal"
+    },
+    "PayPalRefundComplete" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalRefundComplete",
+        "description" String "Refund Complete bizact for PayPal"
+    },
+    "PayPalRefundTransaction" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalRefundTransaction",
+        "description" String "Calls PayPal Refund Transaction API"
+    },
+    "PayPalRemainingAuth" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalRemainingAuth",
+        "description" String "Remaining Authorization bizact for PayPal"
+    },
+    "PayPalRemainingCredit" DNA {
+     	"class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalRemainingCredit",
+        "description" String "Calculates Pending Credit"
+    },
+    "PayPalSavePayPalPayment" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSavePayPalPayment",
+        "description" String "Saves the PayPal payment into the payment array"
+    },
+    "PayPalSetAddress" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSetAddress",
+        "description" String "Sets the default billing and shipping address ids"
+    },
+    "PayPalSetCancelTemplate" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSetCancelTemplate",
+        "description" String "Sets the cancel template for PayPal to return to"
+    },
+    "PayPalSetCheckoutExpress" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSetCheckoutExpress",
+        "description" String "Sets the PayPal checkout type as express"
+    },
+    "PayPalSetCheckoutMark" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSetCheckoutMark",
+        "description" String "Sets the PayPal checkout type as mark"
+    },
+    "PayPalSetExpressCheckout" DNA {
+        "class" String "com.bluemartini.thirdparty.paypal.bizact.PayPalSetExpressCheckout",
+        "description" String "Calls PayPal SetExpressCheckout API"
+    },
+    "UpdatePayPal" DNA {
+        "class" String "com.bluemartini.bizact.UpdateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "PAYPAL",
+                "path" StringArray [
+                    "PAYPAL"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            },
+            {
+                "path" StringArray [
+                    "new"
+                ],
+                "required" Boolean "false",
+                "type" String "Boolean"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "PAYPAL",
+                "path" StringArray [
+                    "PAYPAL"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    }
+}

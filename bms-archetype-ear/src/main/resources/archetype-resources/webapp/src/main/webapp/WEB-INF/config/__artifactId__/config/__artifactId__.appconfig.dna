@@ -1,0 +1,518 @@
+DNA {
+    "title" String "Blue Martini ${artifactId}",
+
+    // Core application components.
+    "components" DNA {
+        "dataSourceFactory" String "$BMS_DATASOURCE_FACTORY",
+        "jmsProvider" String "$BMS_JMS_PROVIDER"
+    },
+
+    // Publishing settings.
+    "using_env" String "$BMS_${artifactId}_EVR_NAME",
+    "usePubVersions" Boolean "true",
+    "supportsPubVersions" Boolean "true",
+    "versionCheckSeconds" Integer "30",
+    // For Business Action Reloading.
+    // This feature is for development only and must not be used in production.
+    // Uncomment to enable it.
+    "businessActionCheckSeconds" Integer "$BMS_${artifactId}_BIZACT_CHECK_SECONDS",
+    // For Configuration File Reloading.
+    // This feature is for development only and must not be used in production.
+    // Uncomment to enable it.
+    "configCheckSeconds" Integer "$BMS_${artifactId}_CONFIG_CHECK_SECONDS",
+
+    // The threshold for the time difference between the server and the
+    // database clocks.
+    "dbClockSkewThreshold" Integer "$BMS_DB_CLOCK_SKEW_THRESHOLD",
+
+    // Web server port settings.  Uncomment if running in a three-tier
+    // environment.
+    "httpPort" String "$BMS_${artifactId}_HTTP_PORT",
+    "httpsPort" String "$BMS_${artifactId}_HTTPS_PORT",
+
+    // Connfiguration modules.
+    "modules" StringArray [
+        "core",
+        "${artifactId}"
+    ],
+    "module_paths" DNA {
+        "core" StringArray [
+            "$BMS_CONFIG_HOME/core/config/eac",
+            "$BMS_CONFIG_HOME/core/config/bmcommon",
+            "$BMS_CONFIG_HOME/core/config/appcommon",
+            "$BMS_CONFIG_HOME/core/config/webconnect",
+            "$BMS_CONFIG_HOME/core/config/thirdparty",
+            "$BMS_CONFIG_HOME/core/config/b2b",
+            "$BMS_CONFIG_HOME/core/config/radmin",
+            "$BMS_CONFIG_HOME/core/config/i18n",
+            "$BMS_CONFIG_HOME/core/config/symbol",
+            "$BMS_CONFIG_HOME/core/config/archive",
+            "$BMS_CONFIG_HOME/core/config/custom"
+        ],
+        "${artifactId}" StringArray [
+            "$BMS_CONFIG_HOME/${artifactId}/config/${artifactId}"
+        ]
+    },
+
+    // Request settings.
+    "append_url_uid" Boolean "true",
+    "expire_responses" Boolean "false",
+    "default_auth_required" Boolean "false",
+    "default_session_expire" Boolean "false",
+
+    // Security settings.
+    // Turn on field protection for all forms.
+    "secure_form_fields" Boolean "true",
+    // Do not allow the following fields to be submitted except  from a
+    // protected form. These are examples only. Values should be changed
+    // according to the implementation.
+    "secured_form_fields" StringArray [
+        "ORDER<>orderNum"
+    ],
+
+    // Encode form data in the template URLs.
+    "encode_form_data" Boolean "true",
+    "encoded_params" StringArray [
+        "PRODUCT<>prd_id",
+        "FOLDER<>folder_id",
+        "ASSORTMENT<>ast_id",
+        "CONTENT<>cnt_id"
+    ],
+
+    // File upload settings.
+    "upload" DNA {
+        "enabled" Boolean "true",
+        "maxSize" Integer "10240000", // in bytes
+        "tempDir" String "$BMS_TMPDIR",
+        // possible mutually exclusive options:
+        //   0: DELETE_NEVER
+        //   1: DELETE_ON_GC - deletes when the file object is gc'd
+        //   3: DELETE_ON_VM_END - only deletes on clean exit
+        "delete" Integer "1"
+    },
+
+    // Templates to display for various error conditions.
+    "conditions" DNA {
+/*---
+        "invalid_shipment_method_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        },
+        "product_search_failure_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        },
+        "tax_failure_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        },
+        "order_closed_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        },
+        "cart_quantity_unavailable_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        },
+        "currency_mismatch_template" DNA {
+            "jsp" DNA {
+                "template" String ""
+            }
+        }
+---*/
+    },
+
+    // Callbacks made by the system at specific execution points.
+    "callback" DNA {
+        "startup" StringArray [
+            "com.bluemartini.dbinit.SetupSchema",
+            "com.bluemartini.server.BusinessActionServerStartup",
+            "com.bluemartini.util.AttributeCompilerUtil",
+            "com.bluemartini.util.AttributeUtil",
+            "com.bluemartini.i18n.CurrencyUtil",
+            "com.bluemartini.html.HTMLStartup",
+            "com.bluemartini.thirdparty.cybersource.CyberSourceUtil",
+            "com.bluemartini.util.PaymentUtil",
+            "com.bluemartini.server.ContentStartup",
+            "com.bluemartini.search.SearchStartup",
+            "com.bluemartini.server.StatusCodesStartup",
+            "com.bluemartini.html.HTMLObjectFactory",
+            //"com.bluemartini.thirdparty.rules.RulesStartup",
+            "com.bluemartini.webconnect.callback.WebConnectStartup",
+            "com.bluemartini.thirdparty.akamai.AkamaiUtil",
+            // For BMDeveloper Debugging.
+            // This feature is for development only and must not be used
+            // in production.
+            // Uncomment to enable it.
+            "com.bluemartini.dev.net.DevServer",
+            // For Configuration File Reloading.
+            // This feature is for development only and must not be used
+            // in production.
+            // Uncomment to enable it.
+            "com.bluemartini.server.ConfigMonitor",
+            "com.bluemartini.jms.JMSClientStartup",
+
+            // Create a B2C business entity.
+            "com.bluemartini.b2b.htmlapp.B2BCreateDefaultConsumerBusinessEntity"
+        ],
+        "shutdown" StringArray [
+            "com.bluemartini.dna.BMThreadManager",
+            "com.bluemartini.core.JNDIUtil"
+        ],
+        "begin_request" StringArray [
+            "com.bluemartini.http.ThreadDumpBeginRequest",
+            "com.bluemartini.webconnect.callback.WebConnectBeginRequest"
+        ],
+        "end_request" StringArray [
+            "com.bluemartini.webconnect.callback.WebConnectEndRequest",
+            "com.bluemartini.http.ThreadDumpEndRequest"
+        ],
+        "begin_session" StringArray [
+            "com.bluemartini.webconnect.callback.WebConnectBeginSession"
+        ],
+        "end_session" StringArray [
+        ],
+        "user_login" StringArray [
+            "com.bluemartini.webconnect.callback.WebConnectLoginSession"
+        ],
+        "exception" StringArray [
+            "com.bluemartini.dna.BMLogExceptionHandler",
+            "com.bluemartini.html.HTMLExceptionHandler"
+        ],
+        "set_current_version" StringArray [
+            "com.bluemartini.htmlapp.HTMLSetCurrentVersion"
+        ],
+        "template_not_found" StringArray [
+            "com.bluemartini.webconnect.callback.WebConnectTemplateNotFound"
+        ],
+        "log_form_errors" StringArray [
+            "com.bluemartini.webconnect.callback.WebConnectLogFormError"
+        ]
+    },
+
+    // JMS settings.
+    "jms" DNA {
+        "enabled" Boolean "$BMS_JMS_ENABLED",
+        "topicConnectionFactory" DNA {
+            "queueManager" String "$BMS_JMS_MQ_QM",
+            "jndiName" String "$BMS_JMS_TOPIC_FACTORY_JNDI_NAME"			
+        },
+        "queueConnectionFactory" DNA {
+            "queueManager" String "$BMS_JMS_MQ_QM",
+            "jndiName" String "$BMS_JMS_QUEUE_FACTORY_JNDI_NAME"			
+        },
+        "server" String "$BMS_JMS_SERVER_NAME",
+        "reconnect_sleep_secs" Integer "5",
+        "topics" DNA {
+            "com.bluemartini.PublishVersionTopic" DNA {
+                "listeners" Integer "1",
+                "publishers" Integer "0",
+                "acknowledgement_mode" String "DUPS_OK_ACKNOWLEDGE",
+                "class" String "com.bluemartini.util.PublishVersionTopicListener"
+            },
+            "com.bluemartini.DBUtilTopic" DNA {
+                "listeners" Integer "5",
+                "publishers" Integer "5",
+                "acknowledgement_mode" String "DUPS_OK_ACKNOWLEDGE",
+                "class" String "com.bluemartini.remotedesktop.util.DBUtilTopicListener"
+            }
+        }
+    },
+
+    // Cache settings.
+    "cache" DNA {
+        "enabled" Boolean "true"
+/*---,
+        // Set an expiration time for cached entries.
+        "checkSeconds" DNA {
+            "objectIDToObject" Integer "600",
+            "objectPathToObjectIDType" Integer "600",
+            "objectIDToChildrenIDs" Integer "600",
+            "objectToObjectAttribute" Integer "600",
+            "objectToObjectAttributeIDs" Integer "600",
+            "objectToIDs" Integer "600"
+        }
+---*/
+    },
+
+    // Do not print null values within JSP expressions.
+    "template" DNA {
+        "printNulls" Boolean "false"
+    },
+
+    // JSP template settings.
+    "jsp" DNA {
+        // "home_page" String "",
+        // "header" String "",
+        // "footer" String "",
+        "blank_marker" String "<FONT FACE=\"courier new\" size=\"3\"><TT>&nbsp;</TT></FONT>",
+        "invalid_marker" String "<FONT FACE=\"courier new\" size=\"3\" COLOR=\"#b22222\"><TT><B>!</B></TT></FONT>",
+        "required_marker" String "<FONT FACE=\"courier new\" size=\"3\" COLOR=\"blue\"><TT><B>*</B></TT></FONT>"
+    },
+
+    // Business action settings.
+    "bizact" DNA {
+        "strict" Boolean "false",
+        "client" DNA {
+            "website" DNA {
+                "default" Boolean "true",
+                "protocol" String "rmi",
+                "host" String "$BMS_${artifactId}_SERVER",
+                "port" Integer "$BMS_${artifactId}_PORT"
+            }
+        },
+        "server" DNA {
+            "website" DNA {
+                "default" Boolean "true",
+                "protocol" String "rmi",
+                "host" String "$BMS_${artifactId}_SERVER",
+                "port" Integer "$BMS_${artifactId}_PORT"
+            }
+        }
+    },
+
+    // Database settings.
+    "database" DNA {
+        "eac" DNA {
+            // * Connection pool *
+            "pool" DNA {
+                "jndiName" String "com.bluemartini.dbpool.${artifactId}.eac",
+                "isClustered" Boolean "false", //change to enable clustered evironment optimization
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        },    
+        "store" DNA {
+            "aliases" StringArray [
+                "currency"
+            ],
+            "default" Boolean "true",
+            // * Connection pool *
+            "pool" DNA {
+                "jndiName" String "com.bluemartini.dbpool.${artifactId}.store",
+                "isClustered" Boolean "false", //change to enable clustered evironment optimization
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        },
+        "main" DNA {
+            "aliases" StringArray [
+                "object",
+                "attribute",
+                "locale"
+            ],
+            // * Connection pool *
+            "pool" DNA {
+                "jndiName" String "com.bluemartini.dbpool.${artifactId}.main",
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        },
+        "clickstream" DNA {
+            // * Connection pool *
+            "pool" DNA {
+                "jndiName" String "com.bluemartini.dbpool.${artifactId}.clickstream",
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        },
+        "search" DNA {
+            "driver" String "$SEARCH_DB_DRIVER",
+            "vendor" String "$SEARCH_DB_VENDOR",
+            // * No connection pooling with search *
+            "pool" DNA {
+                "jndiName" String "com.bluemartini.dbpool.${artifactId}.search",
+                "enabled" Boolean "false",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "2",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15"
+            }
+        }
+    },
+
+    // Email settings.
+    "email" DNA {
+        "enable" Boolean "true",
+        "smtpHost" String "puresmtp.bluemartini.com",
+        "fromAddress" String "website@bluemartini.com"
+    },
+
+    // Clickstream settings.
+    "clickstream" DNA {
+        "record_clickstream" Boolean "false",
+        "debug_output" Boolean "false",
+        "sleep_interval" Integer "30",
+        "recording_percentage" Integer "100",
+        "warnOnDuplicateLog" Boolean "true",
+        // Enable this to check the usa_id on the session when an order is
+        // placed.  Makes sure login/registration is working correctly.
+        "checkUsaIdOnOrder" Boolean "true",
+        "add_instrumentation" Boolean "true",
+        "instrumentation_sections" StringArray [
+            "crawlerTrap",
+            "browserInfo"
+        ],
+        "use_prepared_statement" Boolean "true",
+        "removeCookieOnOptOut" Boolean "false",
+        // Collection method Key
+        //        1  Direct writes of all requests/sessions
+        //        2. Multiple threads writing to the database
+        //
+        "collection_method" Integer "2"
+    },
+
+    // Capture clickstream information upon certain events.
+    "events" DNA {
+        "logEvents" Boolean "true",
+        "log" DNA {
+            "CART_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "CHECKOUT_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "SEARCH_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "GENERIC_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "MISSING_TEMPLATE_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "CAMPAIGN_CLICK_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "FORM_ERROR_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "100.0"
+            },
+            "RECOM_ASSOC_EVENT" DNA {
+                "enabled" Boolean "true",
+                "percentage" Double "10.0"
+            }
+        }
+    },
+
+    // Heartbeat thread.
+    "heartbeat" DNA {
+        "enabled" Boolean "true",
+        "verbose" Boolean "false",
+        "sleepSeconds" Integer "120"
+    },
+
+	"radmin" DNA {
+        "enabled" Boolean "true",
+        "httpsRequired" Boolean "true",
+        // number of seconds since last request after which session is considered idle
+        "activeSessionTimeoutSeconds" Integer "10",
+        "server" String "b2b",
+        "exception_reference_url" String "http://209.157.149.39/cgi-bin/exception.cgi",
+        "file_access" DNA {
+            // use this to add directories or files to be browsed by remote admin
+            // the name is the 'dir' parameter passed to dirlist.jsp
+            // and the value is the root for that directory.
+            // INCLUDE A TRAILING SEPARATOR FOR DIRECTORIES!
+            "roots" DNA {
+                // "name" String "c:/dirname/"
+            }
+        }
+    },
+	
+    // Log settings.
+    "log" DNA {
+        "enabled" Boolean "true",
+        "echo" Boolean "false",
+        "name" String "${artifactId}",
+        "dir" String "$BMS_LOG_DIR",
+        "components" DNA {
+            "system" Integer "0",
+            "heap" Integer "0",
+            "threads" Integer "0",
+            "exceptions" Integer "3",
+            "urltest" Integer "0",
+            "dbsql" Integer "0",
+            "html" Integer "0",
+            "dbconn" Integer "0",
+            "dbtx" Integer "0",
+            "webstore" Integer "0",
+            "webconnect" Integer "0",
+            "b2b" Integer "0",
+            "radmin" Integer "0",
+            "clickstream" Integer "0",
+            "bizact" Integer "0",
+            "search" Integer "0"
+        }
+    },
+    "log_blocked_params" StringArray [
+        "cardNum",
+        "password",
+        "LOGIN<>password",
+        "CREDIT_CARD<>cardNum"
+    ],
+
+    // Application-specific settings.
+    "app" DNA {
+        // Default price list folder used to create the B2C business entity.
+        "default_price_folder" String "",
+
+        // Default assortment used to create the B2C business entity.
+        "default_assortment" String "",
+
+        // Maximum number of search results.
+        // "default_search_maximum" Integer "15",
+
+        // Default name of the attribute that denotes products that have no
+        // shipping cost.
+        "no_ship_cost_attr" String "no_ship_cost",
+
+        // Default B2C settings.
+        "default_consumer_business_entity" String "DEFAULT_CONSUMER_BUSINESS_ENTITY_LABEL",
+        "auto_create_business_entity_default_contract" Boolean "true",
+        "default_user_roles" DNA {
+             "B2C" String "DEFAULT_B2C_ROLE"
+        }
+    }
+}

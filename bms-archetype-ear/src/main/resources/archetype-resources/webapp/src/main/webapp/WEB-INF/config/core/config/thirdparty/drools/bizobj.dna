@@ -1,0 +1,23 @@
+DNA {
+    "RULE_CONSTRAINT" DNA {
+        "description" String "used for databinding in the RuleManager UI",
+        "properties" DNA {
+            "attributeName" DNA {
+                "dataElement" String "ruleConstraintAttribute_cd",
+                "label" String "ruleConstraintAttributeName"
+            },
+            "operator" DNA {
+                "dataElement" String "variant",
+                "label" String "ruleConstraintOperator"
+            },
+            "value" DNA {
+                "dataElement" String "variant",
+                "label" String "ruleConstraintValue"
+            },
+            "logicalConnective" DNA {
+                "dataElement" String "ruleConstraintLogicalConnective_cd",
+                "label" String "ruleConstraintLogical"
+            }
+        }
+    }
+}

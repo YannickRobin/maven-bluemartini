@@ -1,0 +1,156 @@
+DNA {    
+    "productHierarchyDomain" DNA {
+        "description" String "Dynamic Domain that queries the Product Hierarchy",
+        "dnaType" String "long",
+        "dynamicTable" Boolean "true",
+        "hierarchical" Boolean "true",
+        "dynamicDomainClass" String "com.bluemartini.datasource.ObjectBasedHDomainElement",
+        "rootFolderType" String "PRODUCT_FAMILY",
+        //optional for dynamic domains
+        "boType" String "OBJECTS_HDOMAIN_CHOOSER"
+    },
+    "contentHierarchyDomain" DNA {
+        "description" String "Dynamic Domain that queries the Content Hierarchy",
+        "dnaType" String "long",
+        "dynamicTable" Boolean "true",
+        "hierarchical" Boolean "true",
+        "dynamicDomainClass" String "com.bluemartini.datasource.ObjectBasedHDomainElement",
+        "rootFolderType" String "CONTENT_FOLDER",
+        //optional for dynamic domains
+        "boType" String "OBJECTS_HDOMAIN_CHOOSER"
+    },
+    "attributeHierarchyDomain" DNA {
+        "description" String "Dynamic Domain that queries the Attribute Hierarchy",
+        "dnaType" String "long",
+        "dynamicTable" Boolean "true",
+        "hierarchical" Boolean "true",
+        "dynamicDomainClass" String "com.bluemartini.datasource.ObjectBasedHDomainElement",
+        "rootFolderType" String "ATTRIBUTE_GROUP",
+        //optional for dynamic domains
+        "boType" String "OBJECTS_HDOMAIN_CHOOSER"
+    },
+    "typeFolders" DNA {
+        "description" String "Type folder hierarchy",
+        "dnaType" String "string",
+        "hierarchical" Boolean "true",
+        "decode" String "Types",
+        "isFolder" Boolean "true",
+        "values" DNAArray [
+            {
+                "code" String "string",
+                "decode" String "Text"
+            },
+            {
+                "code" String "integer",
+                "decode" String "Number"
+            },
+            {
+                "code" String "long",
+                "decode" String "Long Number"
+            },
+            {
+                "code" String "double",
+                "decode" String "Double"
+            },
+            {
+                "code" String "currency",
+                "decode" String "Currency"
+            },
+            {
+                "code" String "datetime",
+                "decode" String "Date/Time Stamp"
+            },
+            {
+                "code" String "date",
+                "decode" String "Date Only"
+            },
+            {
+                "code" String "boolean",
+                "decode" String "True/False (Boolean)"
+            },
+            {
+                "code" String "auxiliary",
+                "decode" String "Advanced",
+                "order_children_alphabetically" Boolean "false",
+                "isFolder" Boolean "true",
+                "values" DNAArray [
+                    {
+                        "code" String "datetime_offset",
+                        "decode" String "Date/Time Offset"
+                    },
+                    {
+                        "code" String "minute_of_hour",
+                        "decode" String "Minute Of Hour"
+                    },
+                    {
+                        "code" String "month_day",
+                        "decode" String "Month/Day"
+                    },
+                    {
+                        "code" String "year",
+                        "decode" String "Year"
+                    }
+                ]
+            },
+            {
+                "code" String "domain",
+                "decode" String "List Of Choices",
+                "order_children_alphabetically" Boolean "false",
+                "isFolder" Boolean "true",
+                "values" DNAArray [
+                    {
+                        "code" String "ordered_domain",
+                        "decode" String "Date/Time",
+                        "isFolder" Boolean "true",
+                        "values" DNAArray [
+                            {
+                                "code" String "hour_of_day",
+                                "decode" String "Hour Of Day"
+                            },
+                            {
+                                "code" String "day_of_week",
+                                "decode" String "Day Of Week"
+                            },
+                            {
+                                "code" String "day_of_month",
+                                "decode" String "Day Of Month"
+                            },
+                            {
+                                "code" String "month",
+                                "decode" String "Month"
+                            }
+                        ]
+                    },
+                    {
+                        "code" String "unordered_domain",
+                        "decode" String "Blue Martini Domains",
+                        "isFolder" Boolean "true",
+                        "values" DNAArray [
+                          {
+                                "code" String "attributeHierarchyDomain",
+                                "decode" String "Attributes"
+                           },
+			                     {
+                                "code" String "productHierarchyDomain",
+                                "decode" String "Products"
+                           },
+                           {
+                                "code" String "contentHierarchyDomain",
+                                "decode" String "Content Items"
+                           },
+                            {
+                                "code" String "emailHierarchyDomain",
+                                "decode" String "E-mail Template IDs"
+                           },
+                           {
+                                "code" String "emailLinkHierarchyDomain",
+                                "decode" String "E-mail Template Link IDs"
+                           }
+                        ]
+
+                    }
+                ]
+            }
+        ]
+    }
+}

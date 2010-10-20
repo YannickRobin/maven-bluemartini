@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+      <display-name>${artifactId}</display-name>
+      <context-param id="ContextParam_1">
+         <param-name>env.BMS_APPNAME</param-name>
+         <param-value>${artifactId}</param-value>
+      </context-param>
+      <context-param>
+         <param-name>env.BMS_HOME</param-name>
+         <param-value>$BMS_LOCAL_WEBAPPROOT/WEB-INF</param-value>
+      </context-param>
+      <context-param>
+         <param-name>env.BMS_CONFIG_HOME</param-name>
+         <param-value>$BMS_LOCAL_WEBAPPROOT/WEB-INF/config</param-value>
+      </context-param>
+      <context-param>
+         <param-name>env.BMS_ENV</param-name>
+         <param-value>$BMS_CONFIG_HOME/$BMS_ENV_PATH</param-value>
+      </context-param>
+      <context-param id="ContextParam_2">
+         <param-name>env.BMS_APPCONFIG</param-name>
+         <param-value>$BMS_CONFIG_HOME/${artifactId}/config/${artifactId}.appconfig.dna</param-value>
+      </context-param>
+      <filter id="Filter_1">
+         <filter-name>bmhtml</filter-name>
+         <filter-class>com.bluemartini.html.HTMLFilter</filter-class>
+      </filter>
+      <filter id="Filter_2">
+         <filter-name>bmjsp</filter-name>
+         <filter-class>com.bluemartini.jsp.JSPFilter</filter-class>
+      </filter>
+      <filter-mapping id="FilterMapping_1">
+         <filter-name>bmhtml</filter-name>
+         <url-pattern>*.jsp</url-pattern>
+         <dispatcher>FORWARD</dispatcher>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>INCLUDE</dispatcher>
+      </filter-mapping>
+      <filter-mapping id="FilterMapping_2">
+         <filter-name>bmhtml</filter-name>
+         <url-pattern>*.pjsp</url-pattern>
+         <dispatcher>FORWARD</dispatcher>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>INCLUDE</dispatcher>
+      </filter-mapping>
+      <filter-mapping id="FilterMapping_3">
+         <filter-name>bmhtml</filter-name>
+         <url-pattern>*.wjsp</url-pattern>
+         <dispatcher>FORWARD</dispatcher>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>INCLUDE</dispatcher>
+      </filter-mapping>
+      <filter-mapping id="FilterMapping_4">
+         <filter-name>bmjsp</filter-name>
+         <url-pattern>*.jsp</url-pattern>
+         <dispatcher>FORWARD</dispatcher>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>INCLUDE</dispatcher>
+      </filter-mapping>     
+      <servlet id="Servlet_1">
+         <servlet-name>bminit</servlet-name>
+         <servlet-class>com.bluemartini.http.BMHTTPServlet</servlet-class>
+         <load-on-startup>2</load-on-startup>
+      </servlet>
+      <servlet id="Servlet_2">
+         <servlet-name>bmtemplate</servlet-name>
+         <servlet-class>com.bluemartini.html.TemplateServlet</servlet-class>
+      </servlet>
+      <servlet-mapping id="ServletMapping_1">
+         <servlet-name>bmtemplate</servlet-name>
+         <url-pattern>*.pjsp</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping id="ServletMapping_2">
+         <servlet-name>bmtemplate</servlet-name>
+         <url-pattern>*.wjsp</url-pattern>
+      </servlet-mapping>
+      <mime-mapping id="MimeMapping_1">
+        <extension>ppt</extension>
+        <mime-type>application/power-point</mime-type>
+      </mime-mapping>
+      <mime-mapping id="MimeMapping_2">
+        <extension>doc</extension>
+        <mime-type>application/msword</mime-type>
+      </mime-mapping>
+      <mime-mapping id="MimeMapping_3">
+        <extension>msw</extension>
+        <mime-type>application/msword</mime-type>
+      </mime-mapping>
+      <mime-mapping id="MimeMapping_4">
+        <extension>swf</extension>
+        <mime-type>application/x-shockwave-flash</mime-type>
+      </mime-mapping>
+</web-app>

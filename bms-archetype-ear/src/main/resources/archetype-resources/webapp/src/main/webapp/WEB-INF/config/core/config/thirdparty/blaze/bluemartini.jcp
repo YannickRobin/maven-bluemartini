@@ -1,0 +1,111 @@
+NDVersion: 1.0
+
+resource: NdAdvisorAutoImportJavaPackageList
+packages.length: 0
+
+resource: NdAdvisorJavaClassesList
+classes.length:13
+classes[0]: com.objectspace.jgl.Container
+classes[1]: com.objectspace.jgl.Set
+classes[2]: java.util.Calendar
+classes[3]: java.util.Collection
+classes[4]: com.bluemartini.dna.Currency
+classes[5]: com.bluemartini.thirdparty.rules.RulesRecommendation
+classes[6]: com.bluemartini.thirdparty.rules.RulesAssortment
+classes[7]: com.bluemartini.thirdparty.rules.RulesCollection
+classes[8]: com.bluemartini.thirdparty.rules.RulesCrossSell
+classes[9]: com.bluemartini.thirdparty.rules.RulesUpSell
+classes[10]: com.bluemartini.thirdparty.rules.RulesObjectCache
+classes[11]: com.bluemartini.thirdparty.rules.RulesB2BCollection
+classes[12]: com.bluemartini.thirdparty.rules.RulesTargetRecommendation
+
+resource: NdAdvisorCustomizedJavaClassMappings
+classInfos.length: 11
+classInfos[0]: NdCustomClass.com.objectspace.jgl.Container
+classInfos[1]: NdCustomClass.com.objectspace.jgl.Set
+classInfos[2]: NdCustomClass.java.util.Collection
+classInfos[3]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesRecommendation
+classInfos[4]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesAssortment
+classInfos[5]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesCollection
+classInfos[6]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesCrossSell
+classInfos[7]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesUpSell
+classInfos[8]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesObjectCache
+classInfos[9]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesB2BCollection
+classInfos[10]: NdCustomClass.com.bluemartini.thirdparty.rules.RulesTargetRecommendation
+
+resource: NdCustomClass.com.objectspace.jgl.Container
+advisorClassName: JGLContainer
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.objectspace.jgl.Set
+advisorClassName: JGLSet
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.java.util.Collection
+advisorClassName: JavaCollection
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesRecommendation
+advisorClassName: Recommendation
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesAssortment
+advisorClassName: Assortment
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesCollection
+advisorClassName: Collection
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesCrossSell
+advisorClassName: CrossSell
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesUpSell
+advisorClassName: UpSell
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesObjectCache
+advisorClassName: ObjectCache
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesB2BCollection
+advisorClassName: B2BCollection
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0
+
+resource: NdCustomClass.com.bluemartini.thirdparty.rules.RulesTargetRecommendation
+advisorClassName: TargetRecommendation
+customConstructors.length: 0
+customMethods.length: 0
+customProperties.length: 0
+customStaticProperties.length: 0

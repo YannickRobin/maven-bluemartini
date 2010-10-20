@@ -1,0 +1,154 @@
+DNA {
+    // --------------------------------------------------------------------------
+    // Data Mining
+    // --------------------------------------------------------------------------
+
+    "Mining" DNA {
+        "class" String "com.bluemartini.test.BMUnitTestGroup",
+        "tests" StringArray [
+            "MiningContext",
+            "MiningTableSchema",
+            "MTRCache",
+            "MiningExpressions",
+            "Transformation",
+            "ReadStar",
+            "TransNewColumn",
+            "TransFilter",
+            "TransSample",
+            "TransAssocEngine",
+            "TransSinkGetDistinctValues",
+            "TransDelete",
+            "TransSaveTable",
+            "TransTagTrainTest",
+//          "TransDataCleansing",
+            "VizAggregation",
+            "StarTransferDBStorage",
+            "InvestigationDBStorage",
+            "DSSToStoreUtil",
+            "DSSMeta"
+
+// Can only run when STORE is available (which it isn't in bi.server.appconfig.dna now)
+//          "AssocRecommender",
+//          "DSSModel",
+
+// Acxiom testers - need a network connection to succeed
+//          "GetAcxiomData",
+//          "GetAcxiomTransCode",
+
+// Bad testers - these need work
+//          "TransScoring",
+//          "BMDRecordTester",
+//          "DSSGen",
+        ]
+    },
+    "MiningExamples" DNA {
+        "class" String "com.bluemartini.mining.test.t_MiningExamples",
+        "investigations" StringArray [
+            "Examples/Tutorial/Customers",
+            "Examples/Tutorial/Attitude",
+            "Examples/Tutorial/Heavy Spenders"
+        ]
+    },
+
+    "MiningContext" DNA {
+        "class" String "com.bluemartini.mining.test.t_MiningContext"
+    },
+    "MiningTableSchema" DNA {
+        "class" String "com.bluemartini.mining.test.t_MiningTableSchema"
+    },
+    "MTRCache" DNA {
+        "class" String "com.bluemartini.mining.test.t_MTRCache"
+    },
+    "MiningExpressions" DNA {
+        "class" String "com.bluemartini.mining.test.t_MiningExpressions"
+    },
+    "Transformation" DNA {
+        "class" String "com.bluemartini.mining.test.t_Transformation"
+    },
+    "ReadStar" DNA {
+        "class" String "com.bluemartini.mining.test.t_ReadStar"
+    },
+    "TransNewColumn" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransNewColumn"
+    },
+    "TransFilter" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransFilter"
+    },
+    "TransSample" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransSample"
+    },
+    "TransAssocEngine" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransAssocEngine"
+    },
+    "TransSinkGetDistinctValues" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransSinkGetDistinctValues"
+    },
+    "TransDelete" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransDelete"
+    },
+    "TransSaveTable" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransSaveTable"
+    },
+    "TransTagTrainTest" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransTagTrainTest"
+    },
+    "TransDataCleansing" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransDataCleansing"
+    },
+    "TransScoring" DNA {
+        "class" String "com.bluemartini.mining.test.t_TransScoring"
+    },
+    "VizAggregation" DNA {
+        "class" String "com.bluemartini.mining.test.t_VizAggregation"
+    },
+    "AssocRecommender" DNA {
+        "class" String "com.bluemartini.mining.test.t_AssocRecommender"
+    },
+    "StarTransferDBStorage" DNA {
+        "class" String "com.bluemartini.mining.test.t_StarTransferDBStorage"
+    },
+    "InvestigationDBStorage" DNA {
+        "class" String "com.bluemartini.mining.test.t_InvestigationDBStorage"
+    },
+    "DSSModel" DNA {
+        "class" String "com.bluemartini.mining.test.t_DSSModel"
+    },
+    "DSSMeta" DNA {
+        "class" String "com.bluemartini.mining.test.t_DSSMeta"
+    },
+    "DSSGen" DNA {
+        "class" String "com.bluemartini.mining.test.t_DSSGen"
+    },
+    "DSSToStoreUtil" DNA {
+        "class" String "com.bluemartini.mining.test.t_DSSToStoreUtil"
+    },
+    "GetAcxiomData" DNA {
+        "class" String "com.bluemartini.mining.test.t_GetAcxiomData"
+    },
+    "GetAcxiomTransCode" DNA {
+        "class" String "com.bluemartini.mining.test.t_GetAcxiomTransCode"
+    },
+    "BMDRecordTester" DNA {
+        "class" String "com.bluemartini.mining.test.t_BMDRecordTester",
+        "nodiff" Boolean "true",
+        "STAR_AND_TABLES_TO_TEST" DNAArray [
+            {
+                //"SOURCE_NAME" String "Customer Profiles",
+                "SOURCE_NAME" String "Clickstream",
+                "SOURCE_IS_STAR" Boolean "true",
+                "EXCLUDE_COL_NAMES" StringArray 
+                [
+                 //   "Customer Random Number"
+                ],
+                "EXCLUDE_MTS_TYPE" StringArray
+                [
+                    "Double"
+                ]
+
+            }
+        ]
+    },
+    "QueueManager" DNA {
+        "class" String "com.bluemartini.test.QueueManagerTest"
+    }
+}

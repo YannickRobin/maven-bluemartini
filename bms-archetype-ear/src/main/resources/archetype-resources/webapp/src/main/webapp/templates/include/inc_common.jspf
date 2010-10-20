@@ -1,0 +1,24 @@
+<%@ 
+
+page import="java.util.*, java.text.*, com.bluemartini.bizact.*, com.bluemartini.core.*, com.bluemartini.dna.*, com.bluemartini.html.*, com.bluemartini.webconnect.*, com.bluemartini.webconnect.htmlapp.*, com.bluemartini.server.*, com.bluemartini.thirdparty.rules.*"
+
+%>
+
+<%!
+
+public static final String HTML_SPACE = HTMLContext.HTML_SPACE;
+public static final String EMPTY_STRING = DNAString.EMPTY_STRING;
+public static String REQUIRED_MARKER = "*";
+public static String INVALID_MARKER = "!";
+
+%>
+
+<%
+HTMLContext htmlContext = HTMLContext.getContext();
+
+REQUIRED_MARKER = htmlContext.getRequiredMarker();
+INVALID_MARKER = htmlContext.getInvalidMarker();
+
+DNAList dnaFormData = htmlContext.getFormData();
+WebConnect webconnect = WebConnect.getWebConnect();
+%>

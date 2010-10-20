@@ -1,0 +1,4756 @@
+DNA {
+    "bulk" DNA {
+        "enabled" Boolean "false",
+        "processors" StringArray [
+            "com.bluemartini.loader.bulk.ProductProcessor",
+            "com.bluemartini.loader.bulk.SkuProcessor",
+            "com.bluemartini.loader.bulk.AssortmentContentsProcessor",
+            "com.bluemartini.loader.bulk.UserAccountAttributeProcessor",
+            "com.bluemartini.loader.bulk.ProductAttributeProcessor",
+            "com.bluemartini.loader.bulk.SkuAttributeProcessor",
+            "com.bluemartini.loader.bulk.ObjectPriceProcessor"
+        ]
+    },
+    "recordTypes" DNA {
+        "ACCOMMODATION_ALLOWANCE" DNA {
+            "businessObjectType" String "ACCOMMODATION_ALLOWANCE",
+            "fields" DNAArray [
+                {
+                    "name" String "Price List Folder",
+                    "objectType" String "PRICE_LIST_FOLDER",
+                    "property" String "acc_plf_id",
+                    "useContentDB" Boolean "true",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Type (i.e. ROLE)",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Name (i.e. Role Label)",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Accommodation Amount",
+                    "property" String "accAmt",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Accommodation Type Code",
+                    "property" String "accTypeCode",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AccommodationAllowanceRecordProcessor"
+        },
+        "ACCOUNT" DNA {
+            "businessObjectType" String "ACCOUNT",
+            "fields" DNAArray [
+                {
+                    "name" String "Account Number",
+                    "property" String "accountNumber",
+                    "type" String "K"
+                },
+                {
+                    "name" String "owned_by",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "type_cd",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "user_type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "currency_cd",
+                    "property" String "currency_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "current_balance",
+                    "property" String "currentBalance",
+                    "type" String "R"
+                },
+                {
+                    "name" String "transferrable",
+                    "property" String "transferrable",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "status_cd",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Order Line ID",
+                    "property" String "act_orl_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Expiration Date",
+                    "property" String "expirationDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notification Email",
+                    "property" String "notificationEmail",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Account Number",
+                    "property" String "accountNumber",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AccountRecordProcessor"
+        },
+        "ADDRESS" DNA {
+            "businessObjectType" String "ADDRESS",
+            "exporterClass" String "com.bluemartini.export.AddressRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Unique_Address_Name",
+                    "property" String "name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User ID",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User Type",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "First Name",
+                    "property" String "firstName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Middle Name",
+                    "property" String "middleName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Last Name",
+                    "property" String "lastName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 1",
+                    "property" String "address1",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Address Line 2",
+                    "property" String "address2",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 3",
+                    "property" String "address3",
+                    "type" String "O"
+                },
+                {
+                    "name" String "City",
+                    "property" String "city",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State",
+                    "property" String "state_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Zip Code",
+                    "property" String "postal",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Country",
+                    "property" String "country_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Phone",
+                    "property" String "phone",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Type",
+                    "property" String "type_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Default Billto Flag",
+                    "property" String "indDefaultBillTo",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Default Shipto Flag",
+                    "property" String "indDefaultShipTo",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Gift Indicator",
+                    "property" String "indGift",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "StateName",
+                    "property" String "stateName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "latitude",
+                    "property" String "latitude",
+                    "type" String "O"
+                },
+		            {
+                    "name" String "longitude",
+                    "property" String "longitude",
+                    "type" String "O"
+                }
+		    
+
+
+            ],
+            "processorClass" String "com.bluemartini.loader.AddressRecordProcessor"
+        },
+        "ASSORTMENT" DNA {
+            "businessObjectType" String "ASSORTMENT",
+            "exporterClass" String "com.bluemartini.export.AssortmentRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Assortment Name",
+                    "objectType" String "ASSORTMENT",
+                    "type" String "K",
+                    "updateProperty" String "ast_id"
+                },
+                {
+                    "default" String "/Assortments",
+                    "folderRoot" String "/Assortments",
+                    "folderType" String "ASSORTMENT_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Assortment Folder",
+                    "property" String "ast_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "ZIF Indicator",
+                    "property" String "zifEnabled",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New WorkFlow Project Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "WorkFlow Template Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Assortments",
+                    "folderType" String "ASSORTMENT_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "ast_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AssortmentRecordProcessor"
+        },
+        "ASSORTMENT_CONTENTS" DNA {
+            "businessObjectType" String "RELATIONSHIP",
+            "fields" DNAArray [
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Assortment",
+                    "objectType" String "ASSORTMENT",
+                    "property" String "parentID",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Type",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Name",
+                    "type" String "R"
+                },
+                {
+                    "folderType" String "SUB_ASSORTMENT",
+                    "name" String "Folder",
+                    "property" String "parentID",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Priority",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AssortmentContentsRecordProcessor"
+        },
+        "ASSORTMENT_FOLDER" DNA {
+            "businessObjectType" String "ASSORTMENT_FOLDER",
+            "exporterClass" String "com.bluemartini.export.AssortmentFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "ASSORTMENT_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "asf_id"
+                },
+                {
+                    "default" String "/Assortments",
+                    "folderRoot" String "/Assortments",
+                    "folderType" String "ASSORTMENT_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "asf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Assortments",
+                    "folderType" String "ASSORTMENT_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "asf_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "ATTRIBUTE" DNA {
+            "businessObjectType" String "ATTRIBUTE",
+            "exporterClass" String "com.bluemartini.export.AttributeRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Name",
+                    "objectType" String "ATTRIBUTE",
+                    "type" String "K",
+                    "updateProperty" String "atr_id"
+                },
+                {
+                    "default" String "DSC",
+                    "name" String "Access Group",
+                    "property" String "accessGroupCode",
+                    "type" String "R"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "default" String "string",
+                    "name" String "Data Type",
+                    "property" String "extendedType",
+                    "type" String "R"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "default" String "/Attributes",
+                    "folderRoot" String "/Attributes",
+                    "folderType" String "ATTRIBUTE_GROUP",
+                    "name" String "Attribute Folder",
+                    "property" String "atr_atg_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "U",
+                    "name" String "Null Treatment",
+                    "property" String "nullTreatment",
+                    "type" String "R"
+                },
+                {
+                    "default" String "false",
+                    "name" String "Supports Order By",
+                    "property" String "supportsOrderBy",
+                    "type" String "R"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Format",
+                    "property" String "format",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Domain Ordered",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Min",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Max",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Pattern",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Format Class",
+                    "type" String "O"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "default" Boolean "false",
+                    "name" String "Multilingual",
+                    "property" String "multilingual",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Parametric Search",
+                    "property" String "parametricSearch",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Text Search",
+                    "property" String "textSearch",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Text Edit",
+                    "property" String "textEdit",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "name" String "Fast Index Field",
+                    "property" String "indexFieldName",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AttributeRecordProcessor"
+        },
+        "ATTRIBUTE_DOMAIN_VALUE" DNA {
+            "businessObjectType" String "ATTRIBUTE_DOMAIN_VALUE",
+            "fields" DNAArray [
+                {
+                    "name" String "Attribute Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Value",
+                    "type" String "K"
+                },
+                {
+                    "default" String "{field2}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Sequence",
+                    "property" String "sequence",
+                    "type" String "R"
+                },
+                {
+                    "default" String "S",
+                    "name" String "Participant",
+                    "property" String "participant",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AttributeDomainValueRecordProcessor"
+        },
+        "BUSINESS_ENTITY" DNA {
+            "businessObjectType" String "BUSINESS_ENTITY",
+            "exporterClass" String "com.bluemartini.export.BusinessEntityRecordExporter",
+            "fields" DNAArray [
+                {
+                    "encodeLabel" Boolean "true",
+                    "insertProperty" String "label",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "type" String "K",
+                    "updateProperty" String "bse_id"
+                },
+                {
+                    "name" String "Login Name",
+                    "property" String "loginName",
+                    "type" String "R"
+                },
+                {
+                    "name" String "type_cd",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Industry Code",
+                    "property" String "industry_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Entity Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Business Entity Label",
+                    "property" String "label",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.BusinessEntityRecordProcessor"
+        },
+        "BUSINESS_ENTITY_ACCESS" DNA {
+            "businessObjectType" String "OBJECT_PERMISSION",
+            "fields" DNAArray [
+                {
+                    "name" String "CSR Group Business Entity Label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "CSR Group Name",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Permission Access Level",
+                    "property" String "accessLevel",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "0"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.BusinessEntityAccessRecordProcessor"
+        },
+        "CONTENT" DNA {
+            "businessObjectType" String "CONTENT",
+            "exporterClass" String "com.bluemartini.export.ContentRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Content Item Name",
+                    "objectType" String "CONTENT",
+                    "type" String "K",
+                    "updateProperty" String "cnt_id"
+                },
+                {
+                    "default" String "/Content",
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Content Folder",
+                    "property" String "cnt_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Type Code",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Mime Type",
+                    "property" String "mimeType",
+                    "type" String "O"
+                },
+                {
+                    "name" String "URL",
+                    "property" String "url",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New WorkFlow Project Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "WorkFlow Template Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "cnt_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ContentRecordProcessor"
+        },
+        "CONTENT_FOLDER" DNA {
+            "businessObjectType" String "CONTENT_FOLDER",
+            "exporterClass" String "com.bluemartini.export.ContentFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "CONTENT_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "cnf_id"
+                },
+                {
+                    "default" String "/Content",
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "cnf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "cnf_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "CONTRACT" DNA {
+            "businessObjectType" String "CONTRACT",
+            "exporterClass" String "com.bluemartini.export.ContractRecordExporter",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "encodeLabel" Boolean "true",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "property" String "ctr_bse_id",
+                    "type" String "K"
+                },
+                {
+                    "encodeLabel" Boolean "true",
+                    "insertProperty" String "label",
+                    "name" String "Contract Label",
+                    "objectType" String "CONTRACT",
+                    "type" String "K",
+                    "updateProperty" String "ctr_id"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Contract Folder",
+                    "objectType" String "CONTRACT_FOLDER",
+                    "property" String "ctr_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Assortment Path",
+                    "objectType" String "ASSORTMENT",
+                    "property" String "ctr_ast_id",
+                    "useMainDB" Boolean "true",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Price List Folder Name",
+                    "objectType" String "PRICE_LIST_FOLDER",
+                    "property" String "ctr_plf_id",
+                    "type" String "R",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Contract Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Contract End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contract Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Contract Label",
+                    "property" String "label",
+                    "type" String "U"
+                },
+                {
+                    "name" String "New Contract Folder Path",
+                    "objectType" String "CONTRACT_FOLDER",
+                    "property" String "ctr_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ContractRecordProcessor"
+        },
+        "CONTRACT_FOLDER" DNA {
+            "businessObjectType" String "CONTRACT_FOLDER",
+            "exporterClass" String "com.bluemartini.export.ContractFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "label",
+                    "name" String "Folder Name",
+                    "objectType" String "CONTRACT_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "ctf_id"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Parent Folder Path",
+                    "objectType" String "CONTRACT_FOLDER",
+                    "property" String "ctf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ContractFolderRecordProcessor"
+        },
+        "CREDIT_CARD" DNA {
+            "businessObjectType" String "CREDIT_CARD",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Credit Card Name",
+                    "type" String "K",
+                    "updateProperty" String "ccd_id"
+                },
+                {
+                    "name" String "User Account",
+                    "type" String "R"
+                },
+                {
+                    "name" String "User Account Type",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Card Type (Brand)",
+                    "property" String "cardBrand_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Card Number",
+                    "property" String "cardNum",
+                    "type" String "R"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Expiration Date",
+                    "property" String "cardExpiration",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Card Holder Name",
+                    "property" String "cardholderName",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Card Extension",
+                    "property" String "cardExtension",
+                    "type" String "O"
+                },
+                {
+                    "default" String "ENB",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.CreditCardRecordProcessor"
+        },
+        "CURRENCY_CONVERSION" DNA {
+            "businessObjectType" String "CURRENCY_CONVERSION",
+            "exporterClass" String "com.bluemartini.export.CurrencyConversionRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "From Currency",
+                    "property" String "fromCurrency",
+                    "type" String "K"
+                },
+                {
+                    "name" String "To Currency",
+                    "property" String "toCurrency",
+                    "type" String "K"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Conversion Rate",
+                    "property" String "rate",
+                    "type" String "R"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "LEAD" DNA {
+            "businessObjectType" String "LEAD",
+            "exporterClass" String "com.bluemartini.export.LeadRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "property" String "led_bse_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Name",
+                    "property" String "leadBusinessName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Lead Name",
+                    "property" String "leadName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "First Name",
+                    "property" String "contactFirstNm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Middle Name",
+                    "property" String "contactMiddleNm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Last Name",
+                    "property" String "contactLastNm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contact Email Address",
+                    "property" String "contactEmail",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contact Title",
+                    "property" String "contactTitle",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contact Phone",
+                    "property" String "contactPhone",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 1",
+                    "property" String "address1",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 2",
+                    "property" String "address2",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 3",
+                    "property" String "address3",
+                    "type" String "O"
+                },
+                {
+                    "name" String "City",
+                    "property" String "city",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State Code",
+                    "property" String "state_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State Name",
+                    "property" String "stateName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Zip Code",
+                    "property" String "postal",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Country",
+                    "property" String "country_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "leadNotes",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Industry Code",
+                    "property" String "industryCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Yearly Revenue",
+                    "property" String "leadRevenue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Type Code",
+                    "property" String "leadTypeCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Lead Status Code",
+                    "property" String "leadStatusCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Assigned Code",
+                    "property" String "leadAssignedCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Action Date",
+                    "property" String "leadActionDt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Probability Percentage",
+                    "property" String "leadProbability",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Opportunity Name",
+                    "property" String "leadOpportunityNm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Opportunity Revenue",
+                    "property" String "leadOpportunityRevenue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Opportunity Notes",
+                    "property" String "leadOpportunityNotes",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Opportunity Close Date",
+                    "property" String "leadOpportunityCloseDt",
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization Label",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "led_org_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User Account",
+                    "property" String "led_usa_id",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.LeadRecordProcessor"
+        },
+        "MERCHANT" DNA {
+            "businessObjectType" String "MERCHANT",
+            "exporterClass" String "com.bluemartini.export.MerchantRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Merchant Name",
+                    "objectType" String "MERCHANT",
+                    "type" String "K",
+                    "updateProperty" String "mrh_id"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "/Merchants",
+                    "folderRoot" String "/Merchants",
+                    "folderType" String "MERCHANT_FOLDER",
+                    "name" String "Merchant Folder",
+                    "property" String "mrh_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Merchant Name",
+                    "property" String "name",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.MerchantRecordProcessor"
+        },
+        "MERCHANT_FOLDER" DNA {
+            "businessObjectType" String "MERCHANT_FOLDER",
+            "exporterClass" String "com.bluemartini.export.MerchantFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Merchant Folder Name",
+                    "objectType" String "MERCHANT_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "mrf_id"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "MERCHANT_FOLDER",
+                    "property" String "mrf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "MULTILINGUAL_ATTRIBUTE_DOMAIN_VALUE" DNA {
+            "businessObjectType" String "ATTRIBUTE_DOMAIN_VALUE",
+            "fields" DNAArray [
+                {
+                    "name" String "Attribute Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Value",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Locale",
+                    "property" String "localeID",
+                    "type" String "K"
+                },
+                {
+                    "default" String "{field2}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.AttributeDomainValueRecordProcessor"
+        },
+        "MULTILINGUAL_OBJECT_ATTRIBUTE" DNA {
+            "businessObjectType" String "OBJECT_ATTRIBUTE",
+            "fields" DNAArray [
+                {
+                    "name" String "Object Type",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Name",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Attribute Name",
+                    "objectType" String "ATTRIBUTE",
+                    "property" String "attributeID",
+                    "type" String "K",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Locale",
+                    "property" String "localeID",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Value",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "File Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quote Folder",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectAttributeRecordProcessor"
+        },
+        "OBJECT_ADDRESS" DNA {
+            "businessObjectType" String "OBJECT_ADDRESS",
+            "exporterClass" String "com.bluemartini.export.ObjectAddressRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Address Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Type",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Address Type",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectAddressRecordProcessor"
+        },
+        "OBJECT_ATTRIBUTE" DNA {
+            "businessObjectType" String "OBJECT_ATTRIBUTE",
+            "fields" DNAArray [
+                {
+                    "name" String "Object Type",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Name",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Attribute Name",
+                    "objectType" String "ATTRIBUTE",
+                    "property" String "attributeID",
+                    "type" String "K",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Value",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Collection Object Type",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Collection Priority",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Order Source",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Variable",
+                    "property" String "variable",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "File Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quote Folder",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectAttributeRecordProcessor"
+        },
+        "OBJECT_LOCALE" DNA {
+            "businessObjectType" String "OBJECT_LOCALE",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "name" String "Object Type",
+                    "type" String "K"
+                },
+                {
+                    // 2
+                    "name" String "Object Name",
+                    "type" String "K"
+                },
+                {
+                    // 3
+                    "name" String "Locale",
+                    "property" String "localeID",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectLocaleRecordProcessor"
+        },
+        "OBJECT_PERMISSION" DNA {
+            "businessObjectType" String "OBJECT_PERMISSION",
+            "exporterClass" String "com.bluemartini.export.ObjectPermissionRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Object Path",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Group Name",
+                    "objectType" String "USER_GROUP",
+                    "property" String "userGroupID",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Permission Option Domain",
+                    "property" String "accessLevel",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Object Database (main, store, eac, etc.)",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectPermissionRecordProcessor"
+        },
+        "OBJECT_PRICE" DNA {
+            "businessObjectType" String "OBJECT_PRICE",
+            "fields" DNAArray [
+                {
+                    "name" String "Object Type",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Object Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Price List Folder",
+                    "type" String "K"
+                },
+                {
+                    "name" String "As Of Date",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Amount",
+                    "property" String "amount",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ObjectPriceRecordProcessor"
+        },
+        "ORDER_HEADER" DNA {
+            "businessObjectType" String "ORDER",
+            "exporterClass" String "com.bluemartini.export.OrderHeaderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Order Source",
+                    "property" String "source_cd",
+                    "type" String "K"
+                },
+                {
+                    "insertProperty" String "orderNum",
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "type" String "K",
+                    "updateProperty" String "orh_id"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization Label Path",
+                    "property" String "orh_org_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contract Label",
+                    "property" String "orh_ctr_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Created For",
+                    "property" String "createdFor",
+                    "type" String "O"
+                    // "lookupOnInsert" Boolean "true",
+                    // "objectType" String "USER_ACCOUNT"
+                },
+                {
+                    "default" String "USD",
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "O"
+                },
+                {
+                    "default" String "ORD",
+                    "name" String "Order Type",
+                    "property" String "type_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Billing Address ID",
+                    "property" String "orh_uad_id",
+                    "type" String "O"
+                    // "lookupOnInsert" Boolean "true",
+                    // "objectType" String "ADDRESS"
+                },
+                {
+                    "name" String "Subtotal Amount",
+                    "property" String "subtotalAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Amount",
+                    "property" String "discountAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Tax Amount",
+                    "property" String "totalTaxAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Shipping Amount",
+                    "property" String "totalShipAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Shipping Discount Amount",
+                    "property" String "shippingDiscountAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Amount",
+                    "property" String "totalAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Code",
+                    "property" String "promotionCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quote Source Number",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Original Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "reference",
+                    "type" String "O"
+                },
+                {
+                    "name" String "External Order Number",
+                    "property" String "ext_so_nbr",
+                    "type" String "O"
+                },
+                {
+                    "name" String "External RMA Number",
+                    "property" String "ext_rma_nbr",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.OrderHeaderRecordProcessor"
+        },
+        "ORDER_LINE" DNA {
+            "businessObjectType" String "ORDER_LINE",
+            "exporterClass" String "com.bluemartini.export.OrderLineRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Order Source",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "orl_orh_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Order Line Sequence Number",
+                    "property" String "sequence",
+                    "type" String "O"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "SKU Code",
+                    "objectType" String "SKU",
+                    "property" String "orl_sku_id",
+                    "type" String "O",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quantity",
+                    "property" String "quantity",
+                    "type" String "O"
+                },
+                {
+                    "name" String "List Price Amount",
+                    "property" String "listPriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Sale Price Amount",
+                    "property" String "salePriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Extended Price Amount",
+                    "property" String "extendedPriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Tax Amount",
+                    "property" String "taxAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Amount",
+                    "property" String "totalAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Tax Rate",
+                    "property" String "taxRate",
+                    "type" String "O"
+                },
+                {
+                    "default" String "USD",
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Return Quantity",
+                    "property" String "returnedQty",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.OrderLineRecordProcessor"
+        },
+        "ORG_ADDRESS" DNA {
+            "businessObjectType" String "ADDRESS",
+            "fields" DNAArray [
+                {
+                    "name" String "Unique Name",
+                    "objectType" String "ADDRESS",
+                    "property" String "name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "path",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.OrgAddressRecordProcessor"
+        },
+        "ORG_CONTRACT" DNA {
+            "businessObjectType" String "RELATIONSHIP",
+            "exporterClass" String "com.bluemartini.export.OrganizationContractRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "path",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Contract Label",
+/*---
+                    "objectType" String "CONTRACT",
+---*/
+                    "type" String "K"
+                },
+                {
+                    "encodeLabel" Boolean "true",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "property" String "label",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.OrganizationContractRecordProcessor"
+        },
+        "ORGANIZATION" DNA {
+            "businessObjectType" String "ORGANIZATION",
+            "exporterClass" String "com.bluemartini.export.OrganizationRecordExporter",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "encodeLabel" Boolean "true",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "property" String "org_bse_id",
+                    "type" String "K"
+                },
+                {
+                    "insertProperty" String "label",
+                    "name" String "Organization Label",
+                    "objectType" String "ORGANIZATION",
+                    "type" String "K",
+                    "updateProperty" String "org_id"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Parent Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "org_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Account Number",
+                    "property" String "accountid",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Default Contract Label",
+                    "property" String "org_default_ctr_id",
+                    "type" String "O"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Organization Type",
+                    "property" String "type_cd",
+                    "default" String "ORG",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Organization Label",
+                    "property" String "label",
+                    "type" String "U"
+                },
+                {
+                    "name" String "New Parent Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "org_parent_id",
+                    "type" String "U"
+                },
+                {
+                    "name" String "External Organization Type",
+                    "property" String "type_cd_ext",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.OrganizationRecordProcessor"
+        },
+        "PAYMENT_INVOICE" DNA {
+            "businessObjectType" String "INVOICE",
+            "fields" DNAArray [
+                {
+                    "belongsTo" String "PAYMENT",
+                    "name" String "Order Source",
+                    "property" String "source_cd",
+                    "type" String "R"
+                },
+                {
+                    "belongsTo" String "PAYMENT",
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "pay_orh_id",
+                    "type" String "R"
+                },
+                {
+                    "belongsTo" String "PAYMENT",
+                    "name" String "Payment Type",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "belongsTo" String "PAYMENT",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Created For",
+                    "property" String "customer",
+                    "type" String "R"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Billing Address",
+                    "property" String "uad_id",
+                    "type" String "O"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Reference Number",
+                    "property" String "reference",
+                    "type" String "O"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Type Code",
+                    "property" String "type_cd",
+                    "type" String "O"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Bill Amount",
+                    "property" String "amount",
+                    "type" String "O"
+                },
+                {
+                    "belongsTo" String "INVOICE",
+                    "name" String "Paid Amount",
+                    "property" String "paidAmt",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PaymentInvoiceRecordProcessor"
+        },
+        "PAYMENT_ROUTING" DNA {
+            "businessObjectType" String "PAYMENT_ROUTING",
+            "exporterClass" String "com.bluemartini.export.PaymentRoutingRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Bank Name",
+                    "property" String "bankName",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Routing Number",
+                    "property" String "routingNum",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Account Number",
+                    "property" String "accountNum",
+                    "type" String "R"
+                },
+                {
+                    "name" String "User ID",
+                    "type" String "R"
+                },
+                {
+                    "name" String "User Type",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Amount",
+                    "property" String "amount",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 1",
+                    "property" String "address1",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 2",
+                    "property" String "address2",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 3",
+                    "property" String "address3",
+                    "type" String "O"
+                },
+                {
+                    "name" String "City",
+                    "property" String "city",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State Code",
+                    "property" String "state_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State Name",
+                    "property" String "stateName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Zip Code",
+                    "property" String "postal",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Country",
+                    "property" String "country_cd",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PaymentRoutingRecordProcessor"
+        },
+        "PLAN_SHIPMENT" DNA {
+            "businessObjectType" String "PLAN_SHIPMENT",
+            "exporterClass" String "com.bluemartini.export.PlanShipmentRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Order Source",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "psh_orh_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Plan Shipment Name",
+                    "property" String "name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Primary Index",
+                    "property" String "indPrimary",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Address ID",
+                    "property" String "psh_uad_id",
+                    "type" String "R"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Shipment Method ID",
+                    "objectType" String "SHIPMENT_METHOD",
+                    "property" String "psh_shm_id",
+                    "type" String "O",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Total Ship Amount",
+                    "property" String "totalShipAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Tax Amount",
+                    "property" String "totalTaxAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Amount",
+                    "property" String "totalAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Ship Discount Amount",
+                    "property" String "discountAmt",
+                    "type" String "O"
+                },
+                {
+                    "default" String "PHY",
+                    "name" String "Plan Shipment Type",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "USD",
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PlanShipmentRecordProcessor"
+        },
+        "PLAN_SHIPMENT_LINE" DNA {
+            "businessObjectType" String "PLAN_SHIPMENT_LINE",
+            "exporterClass" String "com.bluemartini.export.PlanShipmentLineRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Order Source",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Order Number",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Order Line Sequence",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Address ID",
+                    // Address ID is required only for INSERT, not for UPDATE.
+                    "type" String "R"
+                },
+                {
+                    "name" String "Quantity",
+                    "property" String "quantity",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PlanShipmentLineRecordProcessor"
+        },
+        "PRICE_LIST" DNA {
+            "businessObjectType" String "PRICE_LIST",
+            "exporterClass" String "com.bluemartini.export.PriceListRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Price List Name",
+                    "objectType" String "PRICE_LIST",
+                    "type" String "K",
+                    "updateProperty" String "prl_id"
+                },
+                {
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Price List Folder",
+                    "property" String "prl_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "R"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "R"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "prl_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PriceListRecordProcessor"
+        },
+        "PRICE_LIST_FOLDER" DNA {
+            "businessObjectType" String "PRICE_LIST_FOLDER",
+            "exporterClass" String "com.bluemartini.export.PriceListFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "PRICE_LIST_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "plf_id"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "currency_cd",
+                    "property" String "currencyCode",
+                    "type" String "R"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "default" String "/PriceLists",
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    // Currently 'not' to be advertised to the user
+                    // since a folder path other than "/PriceLists" is not
+                    // valid for now.
+                    "name" String "Folder Path",
+                    "property" String "plf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    // Currently 'not' to be advertised to the user
+                    // since a folder path other than "/PriceLists" is not
+                    // valid for now.
+                    "name" String "New Folder",
+                    "property" String "plf_parent_id",
+                    "type" String "U"
+                },
+                {
+                    "name" String "Fast Index Field",
+                    "property" String "indexFieldName",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PriceListFolderRecordProcessor"
+        },
+        "PRODUCT" DNA {
+            "businessObjectType" String "PRODUCT",
+            "exporterClass" String "com.bluemartini.export.ProductRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "productCode",
+                    "name" String "Product Code",
+                    "objectType" String "PRODUCT",
+                    "type" String "K",
+                    "updateProperty" String "prd_id"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "/Products",
+                    "folderRoot" String "/Products",
+                    "folderType" String "PRODUCT_FAMILY",
+                    "name" String "Product Family",
+                    "property" String "prd_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "ZIF Indicator",
+                    "property" String "zifEnabled",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New WorkFlow Project Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "WorkFlow Template Name",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Product Code",
+                    "property" String "productCode",
+                    "type" String "U"
+                },
+                {
+                	"default" Boolean "false",
+                    "name" String "Back Orderable Flag",
+                    "property" String "backorderable",
+                    "type" String "O"
+                },
+                {
+                    "name" String "SKU Reserve Quantity",
+                    "property" String "skuReserveQuantity",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ProductRecordProcessor"
+        },
+        "PRODUCT_FAMILY" DNA {
+            "businessObjectType" String "PRODUCT_FAMILY",
+            "exporterClass" String "com.bluemartini.export.ProductFamilyRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "PRODUCT_FAMILY",
+                    "type" String "K",
+                    "updateProperty" String "prf_id"
+                },
+                {
+                    "default" String "/Products",
+                    "folderRoot" String "/Products",
+                    "folderType" String "PRODUCT_FAMILY",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "prf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Products",
+                    "folderType" String "PRODUCT_FAMILY",
+                    "name" String "New Folder",
+                    "property" String "prf_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "PROMOTION" DNA {
+            "businessObjectType" String "PROMOTION",
+            "exporterClass" String "com.bluemartini.export.PromotionRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Promotion Name",
+                    "objectType" String "PROMOTION",
+                    "type" String "K",
+                    "updateProperty" String "prm_id"
+                },
+                {
+                    "default" String "/Promotions",
+                    "folderRoot" String "/Promotions",
+                    "folderType" String "PROMOTION_FOLDER",
+                    "name" String "Promotion Folder",
+                    "property" String "prm_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "One Time",
+                    "property" String "oneTime",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Name",
+                    "property" String "name",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PromotionRecordProcessor"
+        },
+        "PROMOTION_CONDITION" DNA {
+            "businessObjectType" String "PROMOTION_CONDITION",
+            "exporterClass" String "com.bluemartini.export.PromotionConditionRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Promotion Name",
+                    "objectType" String "PROMOTION",
+                    "property" String "pmc_prm_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Promotion Condition Type Code",
+                    "property" String "pmc_typ_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Promotion Condition Operator",
+                    "property" String "pmc_operator",
+                    "type" String "R"
+                },
+                {
+                    "default" String "/PriceLists",
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    "name" String "Promotion Price List Folder",
+                    "property" String "pmc_plf_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Total Code",
+                    "property" String "promotionConditionTotalCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Promotion Code",
+                    "property" String "promotionPromotionCode",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Object",
+                    "property" String "pmc_obj_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Customer Attribute",
+                    "property" String "pmc_atr_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Value Quantity",
+                    "property" String "integerValue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Value Amount",
+                    "property" String "amountValue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Value String",
+                    "property" String "stringValue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Condition Value Double",
+                    "property" String "doubleValue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Condition Object Type",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PromotionConditionRecordProcessor"
+        },
+        "PROMOTION_DATE" DNA {
+            "businessObjectType" String "PROMOTION_DATE",
+            "exporterClass" String "com.bluemartini.export.PromotionDateRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Promotion Name",
+                    "objectType" String "PROMOTION",
+                    "property" String "odt_prm_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Begin Date",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion End Date",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PromotionDateRecordProcessor"
+        },
+        "PROMOTION_DISCOUNT" DNA {
+            "businessObjectType" String "PROMOTION_DISCOUNT",
+            "exporterClass" String "com.bluemartini.export.PromotionDiscountRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Promotion Name",
+                    "objectType" String "PROMOTION",
+                    "property" String "pmd_prm_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Promotion Type Code",
+                    "property" String "pmd_disc_typ_cd",
+                    "type" String "R"
+                },
+                {
+                    "default" String "/PriceLists",
+                    "folderRoot" String "/PriceLists",
+                    "folderType" String "PRICE_LIST_FOLDER",
+                    "name" String "Promotion Price List Folder",
+                    "property" String "pmd_plf_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Promotion Pricing Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Multiples Allowed",
+                    "property" String "maxMultiple",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Amount",
+                    "property" String "pmd_disc_amt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Percent",
+                    "property" String "pmd_disc_pct",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Price Amount",
+                    "property" String "pmd_price_amt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Object",
+                    "property" String "pmd_obj_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Quantity",
+                    "property" String "productQty",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Promotion Type Code",
+                    "property" String "pmd_typ_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Discount Object Type",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.PromotionDiscountRecordProcessor"
+        },
+        "PROMOTION_FOLDER" DNA {
+            "businessObjectType" String "PROMOTION_FOLDER",
+            "exporterClass" String "com.bluemartini.export.PromotionFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "PROMOTION_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "pmf_id"
+                },
+                {
+                    "default" String "/Promotions",
+                    "folderRoot" String "/Promotions",
+                    "folderType" String "PROMOTION_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "pmf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Promotions",
+                    "folderType" String "PROMOTION_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "pmf_parent_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "QUOTE" DNA {
+            "businessObjectType" String "CART_HEADER",
+            "exporterClass" String "com.bluemartini.export.QuoteRecordExporter",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Organization Path",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Quote Folder Label",
+                    "objectType" String "QUOTE_FOLDER",
+                    "property" String "cth_qtf_id",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "insertProperty" String "label",
+                    "name" String "Quote Label",
+                    "objectType" String "CART_HEADER",
+                    "type" String "K",
+                    "updateProperty" String "cth_id"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Created For User ID",
+                    "type" String "R"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Created For User Type",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quote Type Code",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Total Price",
+                    "property" String "totalPriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contract Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Cart Header Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Revision",
+                    "property" String "revision",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Order Submitted",
+                    "property" String "orderSubmitted",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Acceptance Code",
+                    "property" String "accept_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Request For Quote Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Created For User's Business Entity",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.QuoteRecordProcessor"
+        },
+        "QUOTE_FOLDER" DNA {
+            "businessObjectType" String "QUOTE_FOLDER",
+            "exporterClass" String "com.bluemartini.export.QuoteFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "qtf_org_id",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Parent Quote Folder Path",
+                    "objectType" String "QUOTE_FOLDER",
+                    "property" String "qtf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "insertProperty" String "label",
+                    "name" String "Quote Folder Name",
+                    "objectType" String "QUOTE_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "qtf_id"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Quote Folder Type",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Close Date",
+                    "property" String "closeDt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Revenue",
+                    "property" String "revenue",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Probability",
+                    "property" String "probability",
+                    "type" String "O"
+                },
+                {
+                    "default" String "N",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Quote Folder Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Label",
+                    "property" String "label",
+                    "type" String "U"
+                },
+                {
+                    "name" String "New Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "qtf_org_id",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.QuoteFolderRecordProcessor"
+        },
+        "QUOTE_ITEM" DNA {
+            "exporterClass" String "com.bluemartini.export.QuoteItemRecordExporter",
+            "businessObjectType" String "CART_ITEM",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Organization Label Path",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "Quote Folder Label Path",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Quote Label",
+                    "objectType" String "CART_HEADER",
+                    "property" String "cth_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "SKU Code",
+                    "objectType" String "SKU",
+                    "property" String "sku_id",
+                    "type" String "R",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Quantity",
+                    "property" String "quantity",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Currency Code",
+                    "property" String "currency_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "List Price Amount",
+                    "property" String "listPriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Sale Price Amount",
+                    "property" String "salePriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Request Price Amount",
+                    "property" String "requestPriceAmt",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Request For Quote Label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.QuoteItemRecordProcessor"
+        },
+        "REQUEST_FOR_QUOTE" DNA {
+            "businessObjectType" String "REQUEST_FOR_QUOTE",
+            "exporterClass" String "com.bluemartini.export.RequestForQuoteRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "type" String "K"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Organization",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "rfq_org_id",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Quote Folder Label",
+                    "objectType" String "QUOTE_FOLDER",
+                    "property" String "rfq_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "insertProperty" String "label",
+                    "name" String "RFQ Label",
+                    "objectType" String "REQUEST_FOR_QUOTE",
+                    "type" String "K",
+                    "updateProperty" String "rfq_id"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Long Description",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Current Quote",
+                    "objectType" String "CART_HEADER",
+                    "property" String "current_cth_id",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Buyer Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Buyer",
+                    "property" String "buyer_usa_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Seller Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Seller",
+                    "property" String "seller_usa_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Source Number",
+                    "property" String "sourceNum",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.RequestForQuoteRecordProcessor"
+        },
+        "ROLE" DNA {
+            "businessObjectType" String "ROLE",
+            "exporterClass" String "com.bluemartini.export.RoleRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "label",
+                    "name" String "Role Label",
+                    "objectType" String "ROLE",
+                    "type" String "K",
+                    "updateProperty" String "rol_id"
+                },
+                {
+                    "default" String "/Roles",
+                    "folderRoot" String "/Roles",
+                    "folderType" String "ROLE_FOLDER",
+                    "name" String "Role Folder",
+                    "property" String "rol_rlf_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Role Short Desc",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Role Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.RoleRecordProcessor"
+        },
+        "ROLE_FOLDER" DNA {
+            "businessObjectType" String "ROLE_FOLDER",
+            "exporterClass" String "com.bluemartini.export.RoleFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Role Folder Name",
+                    "objectType" String "ROLE_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "rlf_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "ROLE_FOLDER",
+                    "property" String "rlf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "ROLE_PRIVILEGE" DNA {
+            "businessObjectType" String "ROLE_PRIVILEGE",
+            "exporterClass" String "com.bluemartini.export.RolePrivilegeRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Role Privilege Name",
+                    "property" String "privilegeName",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Role Label",
+                    "objectType" String "ROLE",
+                    "property" String "rpr_rol_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Role Option Domain",
+                    "property" String "roleOption",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.RolePrivilegeRecordProcessor"
+        },
+        "RULE" DNA {
+            "businessObjectType" String "RULE",
+            "exporterClass" String "com.bluemartini.export.RuleRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Rule Name",
+                    "property" String "name",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule Base",
+                    "objectType" String "RULE_BASE",
+                    "property" String "rul_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule If",
+                    "property" String "rule_if",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule Then",
+                    "property" String "rule_then",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule Compiles",
+                    "property" String "rule_compiles",
+                    "type" String "R"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Rule Else",
+                    "property" String "rule_else",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Rule Short Desc",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Rule Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "RULE_BASE" DNA {
+            "businessObjectType" String "RULE_BASE",
+            "exporterClass" String "com.bluemartini.export.RuleBaseRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Rule Base Name",
+                    "objectType" String "RULE_BASE",
+                    "type" String "K",
+                    "updateProperty" String "rub_id"
+                },
+                {
+                    "default" String "/RuleBases",
+                    "folderRoot" String "/RuleBases",
+                    "folderType" String "RULE_FOLDER",
+                    "name" String "Rule Folder",
+                    "property" String "rub_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Number of Rule Agents",
+                    "property" String "numRuleAgents",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Rule Declaration",
+                    "property" String "rule_base_declarations",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Rule Short Desc",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Rule Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "RULE_FOLDER" DNA {
+            "businessObjectType" String "RULE_FOLDER",
+            "exporterClass" String "com.bluemartini.export.RuleFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Rule Folder Name",
+                    "objectType" String "RULE_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "ruf_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "RULE_FOLDER",
+                    "property" String "ruf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Begin Date",
+                    "property" String "beginDate",
+                    "type" String "O"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "End Date",
+                    "property" String "endDate",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "SET_DEFINITION_FOLDER" DNA {
+            "businessObjectType" String "SET_DEFINITION_FOLDER",
+            "exporterClass" String "com.bluemartini.export.SetDefinitionFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "SET_DEFINITION_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "sdf_id"
+                },
+                {
+                    "default" String "/Sets",
+                    "folderRoot" String "/Sets",
+                    "folderType" String "SET_DEFINITION_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "sdf_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "SHIP_CARRIER_FOLDER" DNA {
+            "businessObjectType" String "SHIP_CARRIER_FOLDER",
+            "exporterClass" String "com.bluemartini.export.ShipCarrierFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Shipment Folder Name",
+                    "objectType" String "SHIP_CARRIER_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "shf_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Shipment Carrier Folder",
+                    "objectType" String "SHIP_CARRIER_FOLDER",
+                    "property" String "shf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "SHIP_PRICE" DNA {
+            "businessObjectType" String "SHIP_PRICE",
+            "exporterClass" String "com.bluemartini.export.ShipPriceRecordExporter",
+            "fields" DNAArray [
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Shipment Method",
+                    "objectType" String "SHIPMENT_METHOD",
+                    "property" String "shm_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "type_cd",
+                    "type" String "K"
+                },
+                {
+                    "name" String "currency_cd",
+                    "type" String "K"
+                },
+                {
+                    "name" String "min",
+                    "property" String "min",
+                    "type" String "K"
+                },
+                {
+                    "name" String "max",
+                    "property" String "max",
+                    "type" String "O"
+                },
+                {
+                    "name" String "priceAmount",
+                    "property" String "priceAmount",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ShipPriceRecordProcessor"
+        },
+        "SHIP_PRICE_LIST" DNA {
+            "businessObjectType" String "SHIP_PRICE_LIST",
+            "exporterClass" String "com.bluemartini.export.ShipPriceListRecordExporter",
+            "fields" DNAArray [
+                {
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Shipment Method",
+                    "objectType" String "SHIPMENT_METHOD",
+                    "property" String "spl_shm_id",
+                    "type" String "K"
+                },
+                {
+                    "name" String "type_cd",
+                    "property" String "typeCode",
+                    "type" String "K"
+                },
+                {
+                    "name" String "currency_cd",
+                    "property" String "currencyCode",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ShipPriceListRecordProcessor"
+        },
+        "SHIPMENT_CARRIER" DNA {
+            "businessObjectType" String "SHIPMENT_CARRIER",
+            "exporterClass" String "com.bluemartini.export.ShipmentCarrierRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Shipment Carrier Name",
+                    "objectType" String "SHIPMENT_CARRIER",
+                    "type" String "K",
+                    "updateProperty" String "shc_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Shipment Carrier Folder",
+                    "objectType" String "SHIP_CARRIER_FOLDER",
+                    "property" String "shc_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "SHIPMENT_HEADER" DNA {
+            "businessObjectType" String "SHIPMENT",
+            "exporterClass" String "com.bluemartini.export.ShipmentHeaderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "sourceNum",
+                    "name" String "Shipment Number",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Order Source",
+                    "property" String "source_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "shh_orh_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Shipment Method",
+                    "objectType" String "SHIPMENT_METHOD",
+                    "property" String "shh_shm_id",
+                    "type" String "R",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "datetimeFormat" String "yyyy-MM-dd HH:mm:ss",
+                    "name" String "Ship Date",
+                    "property" String "shipDate",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Address Line 1",
+                    "property" String "address1",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 2",
+                    "property" String "address2",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Address Line 3",
+                    "property" String "address3",
+                    "type" String "O"
+                },
+                {
+                    "name" String "City",
+                    "property" String "city",
+                    "type" String "O"
+                },
+                {
+                    "name" String "State",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Country",
+                    "property" String "country_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Postal Code",
+                    "property" String "postal",
+                    "type" String "O"
+                },
+                {
+                    "name" String "First Name",
+                    "property" String "firstName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Middle Name",
+                    "property" String "middleName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Last Name",
+                    "property" String "lastName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Contact Phone",
+                    "property" String "phone",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Tracking Number",
+                    "property" String "trackingNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Order Line Sequence Number",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ShipmentHeaderRecordProcessor"
+        },
+        "SHIPMENT_LINE" DNA {
+            "businessObjectType" String "SHIPMENT_LINE",
+            "exporterClass" String "com.bluemartini.export.ShipmentLineRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "shl_shh_id",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Shipment Number",
+                    "objectType" String "SHIPMENT",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Order Line Sequence Number",
+                    "type" String "O"
+                },
+                {
+                    "name" String "SKU Code",
+                    "objectType" String "SKU",
+                    "property" String "shl_sku_id",
+                    "type" String "R",
+                    "useMainDB" Boolean "true"
+                },
+                {
+                    "name" String "Quantity",
+                    "property" String "quantity",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.ShipmentLineRecordProcessor"
+        },
+        "SHIPMENT_METHOD" DNA {
+            "businessObjectType" String "SHIPMENT_METHOD",
+            "exporterClass" String "com.bluemartini.export.ShipmentMethodRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Shipment Method Name",
+                    "objectType" String "SHIPMENT_METHOD",
+                    "type" String "K",
+                    "updateProperty" String "shm_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Shipment Method Folder",
+                    "objectType" String "SHIPMENT_CARRIER",
+                    "property" String "shm_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "SKU" DNA {
+            "businessObjectType" String "SKU",
+            "exporterClass" String "com.bluemartini.export.SkuRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "skuCode",
+                    "name" String "SKU Code",
+                    "objectType" String "SKU",
+                    "type" String "K",
+                    "updateProperty" String "sku_id"
+                },
+                {
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Product Code",
+                    "objectType" String "PRODUCT",
+                    "property" String "sku_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "UPC",
+                    "property" String "upc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New SKU Code",
+                    "property" String "skuCode",
+                    "type" String "U"
+                },
+                {
+                	"default" Boolean "false",
+                    "name" String "Back Orderable Flag",
+                    "property" String "backorderable",
+                    "type" String "O"
+                },
+                {
+                    "name" String "SKU Reserve Quantity",
+                    "property" String "skuReserveQuantity",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.SkuRecordProcessor"
+        },
+        "SUB_ASSORTMENT" DNA {
+            "businessObjectType" String "SUB_ASSORTMENT",
+            "exporterClass" String "com.bluemartini.export.SubAssortmentRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "SUB_ASSORTMENT",
+                    "type" String "K",
+                    "updateProperty" String "sba_id"
+                },
+                {
+                    "folderRoot" String "/Assortments",
+                    "folderRootType" String "ASSORTMENT",
+                    "folderType" String "SUB_ASSORTMENT",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "sba_parent_id",
+                    "type" String "K"
+                },
+                {
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "ZIF Indicator",
+                    "property" String "zifEnabled",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    "folderRoot" String "/Assortments",
+                    "folderRootType" String "ASSORTMENT",
+                    "folderType" String "SUB_ASSORTMENT",
+                    "name" String "New Folder",
+                    "property" String "sba_parent_id",
+                    "type" String "U"
+                },
+                {
+                    "name" String "Priority",
+                    "property" String "priority",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "TASK" DNA {
+            "businessObjectType" String "TASK",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "name" String "Owner Business Entity Label",
+                    "encodeLabel" Boolean "true",
+                    "lookupOnInsert" Boolean "true",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "property" String "tsk_bse_id",
+                    "type" String "R"
+                },
+                {
+                    // 2
+                    "name" String "Created By User ID",
+                    "objectType" String "USER_ACCOUNT",
+                    "property" String "createdBy",
+                    "type" String "R"
+                },
+                {
+                    // 3
+                    "name" String "Owner ID",
+                    "objectType" String "USER_ACCOUNT",
+                    "property" String "owner",
+                    "type" String "R"
+                },
+                {
+                    // 4
+                    "name" String "Modified By User ID",
+                    "objectType" String "USER_ACCOUNT",
+                    "property" String "modifiedBy",
+                    "type" String "R"
+                },
+                {
+                    // 5
+                    "name" String "Status Code",
+                    "property" String "status",
+                    "type" String "R"
+                },
+                {
+                    // 6
+                    "name" String "Task Type",
+                    "property" String "type",
+                    "type" String "R"
+                },
+                {
+                    // 7
+                    "name" String "Customer Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "type" String "0"
+                },
+                {
+                    // 8
+                    "name" String "Customer ID",
+                    "objectType" String "USER_ACCOUNT",
+                    "property" String "customerId",
+                    "type" String "O"
+                },
+                {
+                    // 9
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "tsk_org_id",
+                    "type" String "O"
+                },
+                {
+                    // 10
+                    "name" String "Order Number",
+                    "objectType" String "ORDER",
+                    "property" String "orderId",
+                    "type" String "O"
+                },
+                {
+                    // 11
+                    "name" String "Service Header",
+                    "objectType" String "CART_HEADER",
+                    "property" String "tsk_cth_id",
+                    "type" String "O"
+                },
+                {
+                    // 12
+                    "name" String "Promise date",
+                    "property" String "promiseResTime",
+                    "type" String "O"
+                },
+                {
+                    // 13
+                    "name" String "Task Subject",
+                    "property" String "subject",
+                    "type" String "O"
+                },
+                {
+                    // 14
+                    "name" String "Task Priority",
+                    "property" String "priority",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.TaskRecordProcessor"
+        },
+        "USER_ACCOUNT" DNA {
+            "businessObjectType" String "USER_ACCOUNT",
+            "exporterClass" String "com.bluemartini.export.UserAccountRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "User ID",
+                    "objectType" String "USER_ACCOUNT",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User Type",
+                    "property" String "type_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Password",
+                    "property" String "password",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Password Expired",
+                    "property" String "passwordExpired",
+                    "type" String "R"
+                },
+                {
+                    "name" String "First Name",
+                    "property" String "firstName",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Middle Name",
+                    "property" String "middleName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Last Name",
+                    "property" String "lastName",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Email Address",
+                    "property" String "email",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Home Phone",
+                    "property" String "homePhone",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Business Phone",
+                    "property" String "busPhone",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Fax",
+                    "property" String "fax",
+                    "type" String "O"
+                },
+                {
+                    "name" String "optOut",
+                    "property" String "optOut",
+                    "type" String "O"
+                },
+                {
+                    "name" String "shippingMethodList",
+                    "property" String "usa_default_shm_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Employee Number",
+                    "property" String "employeeNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Customer Number",
+                    "property" String "customerNum",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User Folder Path",
+                    "type" String "O"
+                },
+                {
+                    "name" String "New User ID",
+                    "property" String "userid",
+                    "type" String "U"
+                },
+                {
+                    "name" String "Loyalty Program ID",
+                    "property" String "loyaltyProgramID",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Loyalty Program Name",
+                    "property" String "loyaltyProgramName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Cell",
+                    "property" String "cell",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserAccountRecordProcessor"
+        },
+        "USER_FOLDER" DNA {
+            "businessObjectType" String "USER_FOLDER",
+            "exporterClass" String "com.bluemartini.export.UserFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "User Folder Name",
+                    "objectType" String "USER_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "usf_id"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "USER_FOLDER",
+                    "property" String "usf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "USER_GROUP" DNA {
+            "businessObjectType" String "USER_GROUP",
+            "exporterClass" String "com.bluemartini.export.UserGroupRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "label",
+                    "name" String "User Group Label",
+                    "objectType" String "USER_GROUP",
+                    "type" String "K",
+                    "updateProperty" String "usg_id"
+                },
+                {
+                    "default" String "/Groups",
+                    "folderRoot" String "/Groups",
+                    "folderType" String "USER_GROUP_FOLDER",
+                    "name" String "User Group Folder",
+                    "property" String "usg_ugf_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "User Group Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "User Group Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User Group Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "USER_GROUP_FOLDER" DNA {
+            "businessObjectType" String "USER_GROUP_FOLDER",
+            "exporterClass" String "com.bluemartini.export.UserGroupFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "User Group Folder Name",
+                    "objectType" String "USER_GROUP_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "ugf_id"
+                },
+                {
+                    "name" String "Status",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "USER_GROUP_FOLDER",
+                    "property" String "ugf_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "USER_GROUP_ROLE" DNA {
+            "businessObjectType" String "USER_GROUP_ROLE",
+            "exporterClass" String "com.bluemartini.export.UserGroupRoleRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Role Name",
+                    "objectType" String "ROLE",
+                    "property" String "ugr_rol_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Group Name",
+                    "objectType" String "USER_GROUP",
+                    "property" String "ugr_usg_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Environment Name",
+                    "property" String "ugr_env_id",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserGroupRoleRecordProcessor"
+        },
+        "USER_ORG" DNA {
+            "businessObjectType" String "USER_ORG",
+            "exporterClass" String "com.bluemartini.export.UserOrgRecordExporter",
+            "fields" DNAArray [
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Business Entity Label",
+                    "objectType" String "BUSINESS_ENTITY",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "uso_org_id",
+                    "type" String "K"
+                },
+                {
+                    "canUpdate" Boolean "false",
+                    "name" String "User ID",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Default Contract Label",
+                    "type" String "O"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Default User Organization",
+                    "type" String "O"
+                },
+                {
+                    "name" String "User's Business Entity Label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserOrgRecordProcessor"
+        },
+        "USER_ORG_ADDRESS" DNA {
+            "businessObjectType" String "ADDRESS",
+            "fields" DNAArray [
+                {
+                    "name" String "Unique Name",
+                    "objectType" String "ADDRESS",
+                    "property" String "name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "User Login Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "User Type",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Organization Path",
+                    "objectType" String "ORGANIZATION",
+                    "property" String "path",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserOrgAddressRecordProcessor"
+        },
+        "USER_ORG_ROLE" DNA {
+            "businessObjectType" String "USER_ORG_ROLE",
+            "exporterClass" String "com.bluemartini.export.UserOrgRoleRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "Business Entity Label",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Organization Path",
+                    "type" String "K"
+                },
+                {
+                    "name" String "User Login Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Role Label",
+                    "type" String "K"
+                },
+                {
+                    "name" String "User's Business Entity Label",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserOrgRoleRecordProcessor"
+        },
+        "USER_ROLE" DNA {
+            "businessObjectType" String "USER_ROLE",
+            "exporterClass" String "com.bluemartini.export.UserRoleRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "User Login Name",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Role Label",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Environment Name",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.UserRoleRecordProcessor"
+        },
+        "USER_USR_GRP" DNA {
+            "businessObjectType" String "USER_USR_GRP",
+            "exporterClass" String "com.bluemartini.export.UserAccountUserGroupRecordExporter",
+            "fields" DNAArray [
+                {
+                    "name" String "User Name",
+                    "objectType" String "USER_ACCOUNT",
+                    "property" String "uug_usa_id",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Group Name",
+                    "objectType" String "USER_GROUP",
+                    "property" String "uug_usg_id",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "WAT_USER_GROUP" DNA {
+            "businessObjectType" String "OBJECT_PERMISSION",
+            "exporterClass" String "com.bluemartini.export.WATUserGroupRecordExporter",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "name" String "WAT Name",
+                    "type" String "R"
+                },
+                {
+                    // 2
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "User Group Name",
+                    "objectType" String "USER_GROUP",
+                    "property" String "userGroupID",
+                    "type" String "K"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.WATUserGroupRecordProcessor"
+        },
+        "WEB_AUTH_FIELD" DNA {
+            "businessObjectType" String "WEB_AUTH_FIELD",
+            "exporterClass" String "com.bluemartini.export.WebAuthFieldRecordExporter",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "name" String "Field Name",
+                    "property" String "name",
+                    "type" String "K"
+                },
+                {
+                    // 2
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Template Name",
+                    "objectType" String "WEB_AUTH_TEMPLATE",
+                    "property" String "wat_id",
+                    "type" String "K"
+                },
+                {
+                    // 3
+                    "name" String "Object Type",
+                    "property" String "bizobjType",
+                    "type" String "O"
+                },
+                {
+                    // 4
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    // 5
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    // 6
+                    "default" String "0",
+                    "name" String "Index",
+                    "property" String "index",
+                    "type" String "R"
+                },
+                {
+                    // 7
+                    "name" String "Required",
+                    "property" String "required",
+                    "type" String "O"
+                },
+                {
+                    // 8
+                    "name" String "Display Only",
+                    "property" String "displayOnly",
+                    "type" String "O"
+                },
+                {
+                    // 9
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "name" String "Upload Folder Path",
+                    "property" String "uploadFolderID",
+                    "type" String "O"
+                },
+                {
+                    // 10
+                    "name" String "Upload Option",
+                    "property" String "uploadOption",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.WebAuthFieldRecordProcessor"
+        },
+        "WEB_AUTH_FOLDER" DNA {
+            "businessObjectType" String "WEB_AUTH_FOLDER",
+            "exporterClass" String "com.bluemartini.export.WebAuthFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "insertProperty" String "name",
+                    "name" String "Folder Name",
+                    "objectType" String "WEB_AUTH_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "wtf_id"
+                },
+                {
+                    // 2
+                    "default" String "/AuthoringTemplates",
+                    "folderRoot" String "/AuthoringTemplates",
+                    "folderType" String "WEB_AUTH_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Folder Path",
+                    "property" String "parentID",
+                    "type" String "K"
+                },
+                {
+                    // 3
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    // 4
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    // 5
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    // 6
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    // 7
+                    "name" String "New Name",
+                    "property" String "name",
+                    "type" String "U"
+                },
+                {
+                    // 8
+                    "folderRoot" String "/AuthoringTemplates",
+                    "folderType" String "WEB_AUTH_FOLDER",
+                    "name" String "New Folder",
+                    "property" String "parentID",
+                    "type" String "U"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.FolderRecordProcessor"
+        },
+        "WEB_AUTH_TEMPLATE" DNA {
+            "businessObjectType" String "WEB_AUTH_TEMPLATE",
+            "exporterClass" String "com.bluemartini.export.WebAuthTemplateRecordExporter",
+            "fields" DNAArray [
+                {
+                    // 1
+                    "insertProperty" String "name",
+                    "name" String "Template Name",
+                    "objectType" String "WEB_AUTH_TEMPLATE",
+                    "type" String "K",
+                    "updateProperty" String "wat_id"
+                },
+                {
+                    // 2
+                    "default" String "/AuthoringTemplates",
+                    "folderRoot" String "/AuthoringTemplates",
+                    "folderType" String "WEB_AUTH_FOLDER",
+                    "lookupOnInsert" Boolean "true",
+                    "name" String "Web Auth Folder",
+                    "property" String "parentID",
+                    "type" String "K"
+                },
+                {
+                    // 3
+                    "default" String "I",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    // 4
+                    "default" String "{field1}",
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    // 5
+                    "name" String "Base Template",
+                    "property" String "baseTemplate",
+                    "type" String "R"
+                },
+                {
+                    // 6
+                    "name" String "Associated Folder Path",
+                    "type" String "R"
+                },
+                {
+                    // 7
+                    "folderRoot" String "/Content",
+                    "folderType" String "CONTENT_FOLDER",
+                    "name" String "Default Upload Folder Path",
+                    "property" String "defaultUploadFolderID",
+                    "type" String "O"
+                },
+                {
+                    // 8
+                    "default" String "I",
+                    "name" String "Object Status Code",
+                    "property" String "objectStatus",
+                    "type" String "R"
+                },
+                {
+                    // 9
+                    "name" String "All Locales",
+                    "property" String "allLocales",
+                    "default" String "true",
+                    "type" String "R"
+                },
+                {
+                    // 10
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    // 11
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    // 12
+                    "name" String "Priority",
+                    "property" String "priority",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.WebAuthTemplateRecordProcessor"
+        },
+        "WORK_TEMPLATE_FOLDER" DNA {
+            "businessObjectType" String "WORK_TEMPLATE_FOLDER",
+            "exporterClass" String "com.bluemartini.export.WorkTemplateFolderRecordExporter",
+            "fields" DNAArray [
+                {
+                    "insertProperty" String "name",
+                    "name" String "Work Template Folder Name",
+                    "objectType" String "WORK_TEMPLATE_FOLDER",
+                    "type" String "K",
+                    "updateProperty" String "wff_id"
+                },
+                {
+                    "name" String "Parent Folder Path",
+                    "objectType" String "WORK_TEMPLATE_FOLDER",
+                    "property" String "wff_parent_id",
+                    "type" String "R"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Status Code",
+                    "property" String "status_cd",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Label",
+                    "property" String "label",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Short Description",
+                    "property" String "shortDesc",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+	// I|INVENTORY_ATP|<SKUId>|<SKUCode>|<Location_Code>|<AvailableQuantity>
+        "INVENTORY_ATP" DNA {
+            "businessObjectType" String "INVENTORY_ATP",
+            "fields" DNAArray [
+				{
+                    "name" String "SKU Id",
+                    "property" String "skuId",
+                    "type" String "K"
+                },
+                {
+                    "name" String "SKU Code",
+                    "property" String "skuCode",
+                    "type" String "K"
+                },
+                {
+                    "name" String "Location Code",
+                    "property" String "locationCode",
+                    "type" String "K"
+                },
+				{
+                    "name" String "AvailableQuantity",
+                    "property" String "availableQuantity",
+                    "type" String "R"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.DefaultRecordProcessor"
+        },
+        "FULFILLMENT_CENTER" DNA {
+	        "businessObjectType" String "FULFILLMENT_CENTER",
+	        "exporterClass" String "com.bluemartini.export.FulfillmentCenterRecordExporter",
+	        "fields" DNAArray [               
+	            {
+	                "name" String "Fulfillment Center Address Line 1",
+	                "property" String "address1",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center Address Line 2",
+	                "property" String "address2",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center Address Line 3",
+	                "property" String "address3",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center City",
+	                "property" String "city",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center State Code",
+	                "property" String "state_cd",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center Zip Code",
+	                "property" String "postal",
+	                "type" String "O"
+	            },
+				{
+	                "name" String "Fulfillment Center Country",
+	                "property" String "country_cd",
+	                "type" String "O"
+	            },                            
+	            {
+	                "name" String "Business Entity Label",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Organization Label Path",
+                    "type" String "O"
+	            },
+				{
+	                "name" String "Fulfillment Center Location ID",
+	                "property" String "flc_location_id",
+	                "type" String "O"
+	            },
+	            {
+	                "name" String "Fulfillment Center Latitude",
+	                "property" String "flc_latitude",
+	                "type" String "O"
+	            },
+				      {
+	                "name" String "Fulfillment Center Longitude",
+	                "property" String "flc_longitude",
+	                "type" String "O"
+	            },		    	
+				      {
+	                "name" String "Fulfillment Center Type",
+	                "property" String "flc_type_cd",
+	                "type" String "R"
+	            },
+	            {
+                    "default" String "A",
+                    "name" String "Fulfillment Center Status Code",
+                    "property" String "flc_status_cd",
+                    "type" String "R"
+                },
+				{
+                    "name" String "Fulfillment Center Label",
+                    "property" String "flc_label",
+                    "type" String "O"
+                },	
+				{
+                    "name" String "Fulfillment Center Description",
+                    "property" String "flc_shortDesc",
+                    "type" String "O"
+                },
+				{
+                    "name" String "Address reference",
+                    "type" String "R"
+                }
+	        ],
+	        "processorClass" String "com.bluemartini.loader.FulfillmentCenterRecordProcessor"
+	    },
+        "INDIVIDUAL" DNA {
+            "businessObjectType" String "INDIVIDUAL",
+            "exporterClass" String "com.bluemartini.export.IndividualRecordExporter",
+            "fields" DNAArray [ 
+                {
+                    "name" String "Individual label",
+                    "property" String "label",
+                    "type" String "R"
+                },
+                {
+                    "name" String "Individual's parent's external Id",
+                    "property" String "ind_ext_cus_id",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Individual's parent's name",
+                    "property" String "ind_cus_nm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Individual's address name",
+                    "property" String "ind_address_nm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "First Name",
+                    "property" String "firstName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Middle Name",
+                    "property" String "middleName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Last Name",
+                    "property" String "lastName",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Relationship type",
+                    "property" String "ind_rel_type_cd",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Linked user's external id",
+                    "property" String "ind_ext_linked_customer",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Linked user's name",
+                    "property" String "ind_linked_cus_nm",
+                    "type" String "O"
+                },
+                {
+                    "name" String "Individual notes",
+                    "property" String "longDesc",
+                    "type" String "O"
+                },
+                {
+                    "default" String "false",
+                    "name" String "House hold member indicator",
+                    "property" String "ind_house_member_ind",
+                    "type" String "O"
+                },
+                {
+                    "default" String "false",
+                    "name" String "Include in marketing indicator",
+                    "property" String "ind_marketing_ind",
+                    "type" String "O"
+                },
+                {
+                    "default" String "A",
+                    "name" String "Individual status code",
+                    "property" String "status_cd",
+                    "type" String "O"
+                }
+            ],
+            "processorClass" String "com.bluemartini.loader.IndividualRecordProcessor"
+        }
+    },
+    "recordTypeSortOrder" StringArray [
+        "TASK",
+        "INVOICE_HEADER",
+        "PRICE_LIST_FOLDER",
+        "PRICE_LIST",
+        "CURRENCY_CONVERSION",
+        "ATTRIBUTE",
+        "ATTRIBUTE_DOMAIN_VALUE",
+        "MULTILINGUAL_ATTRIBUTE_DOMAIN_VALUE",
+        "ASSORTMENT_FOLDER",
+        "ASSORTMENT",
+        "BUSINESS_ENTITY",
+        "CONTRACT_FOLDER",
+        "CONTRACT",
+        "SUB_ASSORTMENT",
+        "MERCHANT_FOLDER",
+        "MERCHANT",
+        "PRODUCT_FAMILY",
+        "PRODUCT",
+        "SKU",
+        "CONTENT_FOLDER",
+        "CONTENT",
+        "ASSORTMENT_CONTENTS",
+        "USER_FOLDER",
+        "USER_ACCOUNT",
+        "USER_GROUP_FOLDER",
+        "USER_GROUP",
+        "ADDRESS",
+        "WORK_TEMPLATE_FOLDER",
+        "PAYMENT_INVOICE",
+        "PAYMENT_ROUTING",
+        "ACCOUNT",
+        "PROMOTION_FOLDER",
+        "PROMOTION",
+        "PROMOTION_DATE",
+        "PROMOTION_CONDITION",
+        "PROMOTION_DISCOUNT",
+        "OBJECT_PRICE",
+        "ORDER_HEADER",
+        "ORDER_LINE",
+        "SHIP_CARRIER_FOLDER",
+        "SHIPMENT_CARRIER",
+        "SHIPMENT_METHOD",
+        "PLAN_SHIPMENT",
+        "PLAN_SHIPMENT_LINE",
+        "ORGANIZATION",
+        "ORG_CONTRACT",
+        "REQUEST_FOR_QUOTE",
+        "QUOTE_FOLDER",
+        "QUOTE",
+        "QUOTE_ITEM",
+        "ROLE_FOLDER",
+        "ROLE",
+        "ROLE_PRIVILEGE",
+        "RULE_FOLDER",
+        "RULE",
+        "RULE_BASE",
+        "SHIPMENT_HEADER",
+        "SHIPMENT_LINE",
+        "SHIP_PRICE_LIST",
+        "SHIP_PRICE",
+        "CREDIT_CARD",
+        "USER_GROUP_ROLE",
+        "USER_USR_GRP",
+        "USER_ORG",
+        "USER_ORG_ROLE",
+        "USER_ROLE",
+        "USER_ORG_ADDRESS",
+        "ORG_ADDRESS",
+        "LEAD",
+        "WEB_AUTH_FOLDER",
+        "WEB_AUTH_TEMPLATE",
+        "WEB_AUTH_FIELD",
+        "WAT_USER_GROUP",
+        "SET_DEFINITION_FOLDER",
+        "MULTILINGUAL_OBJECT_ATTRIBUTE",
+        "OBJECT_PERMISSION",
+        "OBJECT_ADDRESS",
+        "OBJECT_ATTRIBUTE",
+        "OBJECT_LOCALE"
+    ]
+}

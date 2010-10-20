@@ -1,0 +1,10 @@
+DNA {
+    "FORMATMESSAGES" DNA {
+    },
+    "LABELS" DNA {
+        "add_to_cart" String "Add to Cart",
+        "add_to_registry" String "Add to Registry",
+        "go_button" String "Go",
+        "update_button" String "Update"
+    }
+}

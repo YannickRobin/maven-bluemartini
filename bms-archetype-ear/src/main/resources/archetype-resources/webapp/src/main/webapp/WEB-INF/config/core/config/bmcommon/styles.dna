@@ -1,0 +1,932 @@
+DNA {
+    "desktop.background" IntegerArray [
+        "51",
+        "102",
+        "153"
+    ],
+    "errorfield.color" IntegerArray [
+        "255",
+        "255",
+        "170"
+    ],
+    "general.codefont" DNA {
+        "bold" Boolean "false",
+        "italic" Boolean "false",
+        "size" Integer "11",
+        "type" String "monospaced"
+    },
+    "general.focusborder" IntegerArray [
+        "0",
+        "0",
+        "102"
+    ],
+    "general.labeldisplay" IntegerArray [
+        "51",
+        "51",
+        "204"
+    ],
+    "general.medfont" DNA {
+        "bold" Boolean "false",
+        "italic" Boolean "false",
+        "size" Integer "11",
+        "type" String "Dialog"
+    },
+    "general.medfont.ital.bold" DNA {
+        "bold" Boolean "true",
+        "italic" Boolean "true",
+        "size" Integer "11",
+        "type" String "Dialog"
+    },
+    "general.menufont" DNA {
+        "bold" Boolean "false",
+        "italic" Boolean "false",
+        "size" Integer "11",
+        "type" String "Dialog"
+    },
+    "general.smallfont" DNA {
+        "bold" Boolean "false",
+        "italic" Boolean "false",
+        "size" Integer "10",
+        "type" String "Dialog"
+    },
+    "general.smallfont.bold" DNA {
+        "bold" Boolean "true",
+        "italic" Boolean "false",
+        "size" Integer "10",
+        "type" String "Dialog"
+    },
+    "general.smallfont.ital" DNA {
+        "bold" Boolean "false",
+        "italic" Boolean "true",
+        "size" Integer "10",
+        "type" String "Dialog"
+    },
+    "general.titlefont" DNA {
+        "bold" Boolean "true",
+        "italic" Boolean "false",
+        "size" Integer "12",
+        "type" String "Dialog"
+    },
+    // This contains charaters which are treated special by HTML and need to be escaped.
+    // This list is incomplete and needs to be extended.
+    "html.specialChars" DNA {
+        " " String "&nbsp;",
+        "\"" String "&quot;",
+        "&" String "&amp;",
+        "<" String "&lt;",
+        ">" String "&gt;"
+    },
+    "html.tags" DNA {
+        "align" String "ALIGN",
+        "area.close" String "</AREA>",
+        "area.open" String "<AREA",
+        "background" String "BACKGROUND",
+        "bgcolor" String "BGCOLOR",
+        "big.bold.black.font.begin" String "<b><font face=\"arial\" size=+2>",
+        "big.bold.black.font.end" String "</font></b>",
+        "body.close" String "</BODY>",
+        "body.generic.open" String "<BODY",
+        "body.open" String "<BODY>",
+        "bold.close" String "</B>",
+        "bold.open" String "<B>",
+        "border" String "BORDER",
+        "bordercolor" String "BORDERCOLOR",
+        // Format specifiers
+        "break" String "<BR>",
+        "center.close" String "</CENTER>",
+        "center.open" String "<CENTER>",
+        "class" String "CLASS",
+        "color" String "COLOR",
+        "cols" String "COLS",
+        "colspan" String "COLSPAN",
+        "coords" String "COORDS",
+        "face" String "FACE",
+        "file.suffix" String "file:///",
+        "font.close" String "</FONT>",
+        "font.open" String "<FONT",
+        // other tags used while printing transformation
+        "font.warning.begin" String "<b><font color=\"#FF0000\">",
+        "font.warning.end" String "</font></b>",
+        "frame.open" String "<FRAME",
+        "frameborder" String "FRAMEBORDER",
+        "frameset.close" String "</FRAMESET>",
+        "frameset.open" String "<FRAMESET",
+        "framespacing" String "FRAMESPACING",
+        "generic.mid" String ">",
+        "h1.close" String "</H1>",
+        "h1.open" String "<H1>",
+        "h2.close" String "</H2>",
+        "h2.open" String "<H2>",
+        "h3.close" String "</H3>",
+        "h3.open" String "<H3>",
+        "h4.close" String "</H4>",
+        "h4.open" String "<H4>",
+        "head.close" String "</HEAD>",
+        "head.open" String "<HEAD>",
+        "height" String "HEIGHT",
+        "hr.close" String "</HR>",
+        // Other tags used in reporting mining results
+        "hr.html" String "<TR><TD colspan=\"2\"><HR></HR></TD></TR>",
+        "hr.open" String "<HR>",
+        "href" String "HREF",
+        "href.close" String "</A>",
+        "href.mid" String "\">",
+        "href.open" String "<A HREF= \"",
+        "hspace" String "HSPACE",
+        "html.close" String "</HTML>",
+        "html.ext.string" String ".html",
+        // BASIC
+        "html.open" String "<HTML>",
+        "image.close" String "\" NOSAVE align=ABSCENTER>",
+        "image.noalign.close" String "\" NOSAVE>",
+        "image.noalign.open" String "<IMG SRC=\"",
+        "image.open" String "<BR><IMG SRC=\"",
+        "jpeg.ext" String "jpg",
+        "jpeg.ext.string" String ".jpg",
+        "label.close" String "</TD></TR>",
+        "label.mid" String "</B></TD><TD>",
+        "label.mid.1" String "</B></TD colspan=\"2\"><TD>",
+        "label.mid.2" String "</TD><TD>",
+        "label.open" String "<TR><TD valign=\"top\"><B>",
+        "label.open.col" String "<TR><TD colspan=\"3\">",
+        "leftmargin" String "LEFTMARGIN",
+        "li.close" String "</LI>",
+        "li.open" String "<LI>",
+        "link.open" String "<LINK",
+        "map.close" String "</MAP>",
+        "map.open" String "<MAP",
+        "marginheight" String "MARGINHEIGHT",
+        "marginwidth" String "MARGINWIDTH",
+        "mime.html.type" String "<meta http-equiv=\"Content-Type\" content=\"text/html;\">",
+        "mime.html.type.utf8" String "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">",
+        "name" String "NAME",
+        "noframes.close" String "</NOFRAMES>",
+        "noframes.open" String "<NOFRAMES>",
+        "nowrap" String "NOWRAP",
+        "ol.close" String "</OL>",
+        "ol.open" String "<OL>",
+        "paragraph" String "<P>",
+        "png.ext" String "png",
+        "png.ext.string" String ".png",
+        "pre.close" String "</PRE>",
+        "pre.open" String "<PRE>",
+        "rel" String "REL",
+        "rightmargin" String "RIGHTMARGIN",
+        "rowspan" String "ROWSPAN",
+        "shape" String "SHAPE",
+        "size" String "SIZE",
+        "space" String "&nbsp;",
+        "src" String "SRC",
+        "tab" String "\\t",
+        "table.border" String "BORDER",
+        "table.border1.open" String "<TABLE border=\"1\">",
+        "table.cellpadding" String "CELLPADDING",
+        "table.cellspacing" String "CELLSPACING",
+        "table.close" String "</TABLE>",
+        "table.data.close" String "</TD>",
+        "table.data.generic.open" String "<TD",
+        "table.data.open" String "<TD>",
+        "table.header.close" String "</TH>",
+        "table.header.open" String "<TH>",
+        "table.open" String "<TABLE>",
+        "table.open.blue" String "<TABLE CELLSPACING=0 CELLPADDING=4  WIDTH=\"100%\" BGCOLOR=\"#BFBAC9\">",
+        "table.open.generic" String "<TABLE",
+        "table.row.close" String "</TR>",
+        "table.row.generic.open" String "<TR",
+        "table.row.left.top.open" String "<TR align=\"left\" valign=\"top\">",
+        "table.row.open" String "<TR>",
+        "table.withoutborder.open" String "<TABLE CELLSPACING=5>",
+        "target" String "TARGET",
+        "target.close" String "\"></A>",
+        "target.open" String "<A NAME=\"",
+        "text" String "TEXT",
+        "title.close" String "</TITLE>",
+        "title.open" String "<TITLE>",
+        "topmargin" String "TOPMARGIN",
+        "transformation.separator" String "<hr>",
+        "type" String "TYPE",
+        "ul.close" String "</UL>",
+        "ul.open" String "<UL>",
+        "usemap" String "USEMAP",
+        "valign" String "VALIGN",
+        "vspace" String "VSPACE",
+        "width" String "WIDTH"
+    },
+    "panel.background" IntegerArray [
+        "221",
+        "215",
+        "181"
+    ],
+    "slider.thumb.disabled.icon" String "slider_button_16_off.gif",
+    "slider.thumb.icon" String "slider_button_16_on.gif",
+    "table.background" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "table.editable.background" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "table.editable.foreground" IntegerArray [
+        "51",
+        "51",
+        "204"
+    ],
+    "table.focusselection.background" IntegerArray [
+        "153",
+        "204",
+        "255"
+    ],
+    "table.focusselection.bordercolor" IntegerArray [
+        "0",
+        "102",
+        "204"
+    ],
+    "table.focusselection.editable.background" IntegerArray [
+        "153",
+        "204",
+        "255"
+    ],
+    "table.focusselection.editable.foreground" IntegerArray [
+        "0",
+        "0",
+        "204"
+    ],
+    "table.focusselection.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "table.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "table.header.background" IntegerArray [
+        "0",
+        "102",
+        "205"
+    ],
+    "table.header.foreground" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "table.header.highlight" IntegerArray [
+        "153",
+        "204",
+        "255"
+    ],
+    "table.header.shadow" IntegerArray [
+        "0",
+        "51",
+        "102"
+    ],
+    "table.highlight" IntegerArray [
+        "204",
+        "204",
+        "204"
+    ],
+    "table.nofocusselection.background" IntegerArray [
+        "229",
+        "229",
+        "229"
+    ],
+    "table.nofocusselection.bordercolor" IntegerArray [
+        "0",
+        "0",
+        "102"
+    ],
+    "table.nofocusselection.editable.background" IntegerArray [
+        "229",
+        "229",
+        "229"
+    ],
+    "table.nofocusselection.editable.foreground" IntegerArray [
+        "51",
+        "51",
+        "204"
+    ],
+    "table.nofocusselection.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "table.shadow" IntegerArray [
+        "102",
+        "102",
+        "102"
+    ],
+    "tabmanager.inner.activebackground" IntegerArray [
+        "148",
+        "171",
+        "215"
+    ],
+    "tabmanager.inner.activeforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tabmanager.inner.activehighlight" IntegerArray [
+        "204",
+        "204",
+        "255"
+    ],
+    "tabmanager.inner.activeshadow" IntegerArray [
+        "51",
+        "102",
+        "153"
+    ],
+    "tabmanager.inner.dialog.activebackground" IntegerArray [
+        "247",
+        "243",
+        "206"
+    ],
+    "tabmanager.inner.dialog.activeforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tabmanager.inner.dialog.activehighlight" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "tabmanager.inner.dialog.activeshadow" IntegerArray [
+        "102",
+        "102",
+        "51"
+    ],
+    "tabmanager.inner.dialog.inactivebackground" IntegerArray [
+        "221",
+        "215",
+        "181"
+    ],
+    "tabmanager.inner.dialog.inactiveforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tabmanager.inner.dialog.inactivehighlight" IntegerArray [
+        "255",
+        "255",
+        "170"
+    ],
+    "tabmanager.inner.dialog.inactiveshadow" IntegerArray [
+        "102",
+        "102",
+        "102"
+    ],
+    "tabmanager.inner.inactivebackground" IntegerArray [
+        "0",
+        "0",
+        "153"
+    ],
+    "tabmanager.inner.inactiveforeground" IntegerArray [
+        "220",
+        "220",
+        "220"
+    ],
+    "tabmanager.inner.inactivehighlight" IntegerArray [
+        "153",
+        "153",
+        "204"
+    ],
+    "tabmanager.inner.inactiveshadow" IntegerArray [
+        "51",
+        "51",
+        "102"
+    ],
+    "tabmanager.main.activebackground" IntegerArray [
+        "237",
+        "247",
+        "254"
+    ],
+    "tabmanager.main.activeforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tabmanager.main.activehighlight" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "tabmanager.main.activeshadow" IntegerArray [
+        "102",
+        "102",
+        "51"
+    ],
+    "tabmanager.main.inactivebackground" IntegerArray [
+        "221",
+        "215",
+        "181"
+    ],
+    "tabmanager.main.inactiveforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tabmanager.main.inactivehighlight" IntegerArray [
+        "255",
+        "255",
+        "170"
+    ],
+    "tabmanager.main.inactiveshadow" IntegerArray [
+        "102",
+        "102",
+        "102"
+    ],
+    "tabmanager.titlefont" DNA {
+        "bold" Boolean "true",
+        "italic" Boolean "false",
+        "size" Integer "11",
+        "type" String "Dialog"
+    },
+    "tabmanager.titleforeground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "PUB_JOB_STATUS_ACTIVATING" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "150",
+                "image" String "activating_data_01.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_02.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_04.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_05.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_06.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_07.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_08.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_09.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_10.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_11.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_12.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_13.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_14.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_15.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "activating_data_16.gif"
+            }
+        ],
+        "height" Integer "50",
+        "suspended_image" String "activating_data_01.gif",
+        "width" Integer "200"
+    },
+    "PUB_JOB_STATUS_PACKAGING" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_01.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_02.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_04.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_05.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_06.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_07.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_08.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_09.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_10.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_11.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_12.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_13.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_14.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "packaging_data_15.gif"
+            }
+        ],
+        "height" Integer "50",
+        "suspended_image" String "packaging_data_01.gif",
+        "width" Integer "200"
+    },
+    "PUB_JOB_STATUS_TRANSPORTING" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "150",
+                "image" String "sending_data_01.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_02.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_04.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_05.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_06.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_07.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_08.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_09.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_10.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_11.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_12.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_13.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "sending_data_14.gif"
+            }
+        ],
+        "height" Integer "50",
+        "suspended_image" String "sending_data_01.gif",
+        "width" Integer "200"
+    },
+    "PUB_JOB_STATUS_PENDING" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_01.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_02.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_04.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_05.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_06.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_07.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_08.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_09.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_10.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_11.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_12.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_13.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_14.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_15.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "pending_completion_16.gif"
+            }
+        ],
+        "height" Integer "50",
+        "suspended_image" String "pending_completion_01.gif",
+        "width" Integer "200"
+    },
+    "PUB_JOB_STATUS_RESOLVING" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "150",
+                "image" String "process_set_01.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_02.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_03.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_04.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_05.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_06.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_07.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_08.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_09.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_10.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_11.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_12.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_13.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_14.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_15.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_16.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_17.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_18.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_19.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_20.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_21.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_22.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_23.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_24.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_25.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_26.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_27.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_28.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_29.gif"
+            },
+            {
+                "duration" Long "150",
+                "image" String "process_set_30.gif"
+            }
+        ],
+        "height" Integer "50",
+        "suspended_image" String "process_set_01.gif",
+        "width" Integer "200"
+    },
+    "throbber_animation" DNA {
+        "frames" DNAArray [
+            {
+                "duration" Long "125",
+                "image" String "status_animation_01.gif"
+            },
+            {
+                "duration" Long "125",
+                "image" String "status_animation_02.gif"
+            },
+            {
+                "duration" Long "125",
+                "image" String "status_animation_03.gif"
+            },
+            {
+                "duration" Long "125",
+                "image" String "status_animation_04.gif"
+            },
+            {
+                "duration" Long "125",
+                "image" String "status_animation_05.gif"
+            },
+            {
+                "duration" Long "125",
+                "image" String "status_animation_06.gif"
+            }
+        ],
+        "height" Integer "16",
+        "suspended_image" String "martini_large_up.gif",
+        "width" Integer "59"
+    },
+    "tree.background" IntegerArray [
+        "255",
+        "255",
+        "255"
+    ],
+    "tree.focusselection.background" IntegerArray [
+        "153",
+        "204",
+        "255"
+    ],
+    "tree.focusselection.bordercolor" IntegerArray [
+        "0",
+        "102",
+        "204"
+    ],
+    "tree.focusselection.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tree.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "tree.nofocusselection.background" IntegerArray [
+        "229",
+        "229",
+        "229"
+    ],
+    "tree.nofocusselection.bordercolor" IntegerArray [
+        "0",
+        "0",
+        "102"
+    ],
+    "tree.nofocusselection.foreground" IntegerArray [
+        "0",
+        "0",
+        "0"
+    ],
+    "treesplitpanel.background" IntegerArray [
+        "148",
+        "171",
+        "215"
+    ]
+}

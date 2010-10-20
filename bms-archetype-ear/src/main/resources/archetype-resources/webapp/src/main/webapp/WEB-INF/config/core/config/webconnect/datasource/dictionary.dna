@@ -1,0 +1,23 @@
+DNA {
+    "productHierarchyDomain" DNA {
+        "description" String "Product hierarchy",
+        "dnaType" String "string",
+        "domain" String "productHierarchyDomain",
+        "format" String "domain",
+        "label" String "productHierarchyDomain"
+    },
+    "attributeHierarchyDomain" DNA {
+        "description" String "Attribute hierarchy",
+        "dnaType" String "string",
+        "domain" String "attributeHierarchyDomain",
+        "format" String "domain",
+        "label" String "attributeHierarchyDomain"
+    },
+    "contentHierarchyDomain" DNA {
+        "description" String "Content hierarchy",
+        "dnaType" String "string",
+        "domain" String "contentHierarchyDomain",
+        "format" String "domain",
+        "label" String "contentHierarchyDomain"
+    }
+}

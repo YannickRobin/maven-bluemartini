@@ -1,0 +1,5 @@
+NDVersion: 1.0
+
+resource: NdAdvisorClassProviderBean
+class: com.bluemartini.thirdparty.rules.blaze.RulesBusinessObjectProvider
+arguments.length: 0

@@ -1,0 +1,10 @@
+DNA {
+    "rule.contents" DNA {
+        "label" String "rule_contents",
+        "panelClass" String "com.bluemartini.app.BlazeRulePanel"
+    },
+    "rule_base.declarations" DNA {
+        "label" String "rule_base_declarations",
+        "panelClass" String "com.bluemartini.app.RuleBaseDeclarationsPanel"
+    }
+}

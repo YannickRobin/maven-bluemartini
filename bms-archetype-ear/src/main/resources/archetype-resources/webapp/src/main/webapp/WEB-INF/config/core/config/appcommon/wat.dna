@@ -1,0 +1,89 @@
+DNA {
+    // name:  label for messages_XX file lookup for
+    //        display name of base template in UI
+    // value: actual name of base template file found in base
+    //        template root directory
+    "base_templates" DNAArray [
+        {
+            "name" String "simple_base_template",
+            "value" String "simple_base_template.jsp"
+        },
+        {
+            "name" String "content_base_template",
+            "value" String "content_base_template.jsp"
+        },
+        {
+            "name" String "product_base_template",
+            "value" String "product_base_template.jsp"
+        }
+    ],
+    "base_template_root_directory" String "wat/base_templates",
+    "businessObjectProperties" DNA {
+        "ASSORTMENT" DNAArray [
+            {
+                "name" String "name",
+                "optional" Boolean "false"
+            },
+            {
+                "name" String "label",
+                "optional" Boolean "false"
+            },
+            {
+                "name" String "status_cd",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "shortDesc",
+                "optional" Boolean "true"
+            }
+        ],
+        "CONTENT" DNAArray [
+            {
+                "name" String "name",
+                "optional" Boolean "false"
+            },
+            {
+                "name" String "status_cd",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "shortDesc",
+                "optional" Boolean "true"
+            }
+        ],
+        "OBJECT" DNAArray [
+            {
+                "name" String "name",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "label",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "status_cd",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "shortDesc",
+                "optional" Boolean "true"
+            }
+        ],
+        "PRODUCT" DNAArray [
+            {
+                "name" String "productCode",
+                "optional" Boolean "false"
+            },
+            {
+                "name" String "status_cd",
+                "optional" Boolean "true"
+            },
+            {
+                "name" String "shortDesc",
+                "optional" Boolean "true"
+            }
+        ]
+    },
+    // Template to use for preview from ED client
+    "preview_template" String "wat/wat_preview.jsp"
+}

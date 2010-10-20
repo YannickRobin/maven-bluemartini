@@ -1,0 +1,15 @@
+DNA {
+    "resources" DNAArray [
+        {
+            "class" String "com.blazesoft.engines.rules.java.NdFileJavaClassProviderResource",
+            "resource" String "$BMS_HOME/$BMS_CONFIG_DIR/thirdparty/blaze/bluemartini.jcp"
+        },
+        {
+            "class" String "com.blazesoft.engines.rules.NdFileClassProviderContainerResource",
+            "resource" String "$BMS_HOME/$BMS_CONFIG_DIR/thirdparty/blaze/bluemartini.cpc"
+        }
+    ],
+    "gcCount" Integer "0",
+    "engineClass" String "com.bluemartini.thirdparty.rules.blaze.BlazeRuleEngine",
+    "enabled" Boolean "true"
+}

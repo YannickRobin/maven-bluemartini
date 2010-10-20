@@ -1,0 +1,3 @@
+DNA {
+	"managerClass" String "com.bluemartini.thirdparty.rules.drools.DroolsRulesManager"
+}

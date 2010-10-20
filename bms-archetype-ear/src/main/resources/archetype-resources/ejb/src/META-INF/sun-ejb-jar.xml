@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sun-ejb-jar>
+  <enterprise-beans>
+    <ejb>
+      <ejb-name>DBUtilTopicMDB</ejb-name>
+      <jndi-name>com.bluemartini.DBUtilTopic</jndi-name>
+      <mdb-connection-factory>
+          <jndi-name>bluemartini.jms.BMTopicConnectionFactory</jndi-name>
+      </mdb-connection-factory>
+    </ejb>
+    <ejb>
+      <ejb-name>PublishVersionTopicMDB</ejb-name>
+      <jndi-name>com.bluemartini.PublishVersionTopic</jndi-name>
+      <mdb-connection-factory>
+          <jndi-name>bluemartini.jms.BMTopicConnectionFactory</jndi-name>
+      </mdb-connection-factory>
+    </ejb>
+  </enterprise-beans>
+</sun-ejb-jar>

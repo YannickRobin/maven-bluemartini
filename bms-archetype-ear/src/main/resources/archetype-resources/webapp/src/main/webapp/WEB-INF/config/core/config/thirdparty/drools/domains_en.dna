@@ -1,0 +1,164 @@
+DNA {
+     "ruleConstraintAttribute" DNA {
+        "dnaType" String "string",
+        "dynamicTable" Boolean "true",
+          "notselected" DNA {
+            "decode" String "Select an Attribute..."
+        }    
+     },
+    "ruleConstraintBoolean" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Boolean constraint values",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "true",
+                "decode" String "true"
+            },
+            {
+                "code" String "false",
+                "decode" String "false"
+            }
+        ]    
+     },
+    "ruleConstraintBooleanOperator" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Boolean constraint Operator",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "==",
+                "decode" String "Is"
+            }
+        ]    
+     },
+    "ruleConstraintComparableOperator" DNA {
+          // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Comparable constraint Operators",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "==",
+                "decode" String "Equal to"
+            },
+            {
+                "code" String "!=",
+                "decode" String "Not Equal to"
+            },
+                {
+                "code" String "<",
+                "decode" String "Less Than"
+            },
+                {
+                "code" String ">",
+                "decode" String "Greater Than"
+            },
+                {
+                "code" String "<=",
+                "decode" String "Less Than or Equal to"
+            },
+                {
+                "code" String ">=",
+                "decode" String "Greater Than or Equal to" 
+            }
+        ]
+    },
+    "ruleConstraintDateOperator" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Date constraint Operators",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "==",
+                "decode" String "Equal to"
+            },
+            {
+                "code" String "!=",
+                "decode" String "Not Equal to"
+            },
+                {
+                "code" String "<",
+                "decode" String "Before"
+            },
+                {
+                "code" String ">",
+                "decode" String "After"
+            }
+        ]
+    },
+    "ruleConstraintLogicalConnective" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Logical binary Operators",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "&&",
+                "decode" String "and"
+            },
+            {
+                "code" String "||",
+                "decode" String "or"
+            }
+        ]    
+     },
+    "ruleConstraintStandardOperator" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Basic constraint Operators",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "==",
+                "decode" String "Equal to"
+            },
+            {
+                "code" String "!=",
+                "decode" String "Not Equal to"
+            }
+        ]    
+     },
+    "ruleConstraintStringOperator" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "String constraint Operators",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "==",
+                "decode" String "Equal to"
+            },
+            {
+                "code" String "!=",
+                "decode" String "Not Equal to"
+            },
+                {
+                "code" String "matches",
+                "decode" String "Matches"
+            },
+                {
+                "code" String "soundslike",
+                "decode" String "Sounds like"
+            }
+        ]
+    },
+    "ruleExistentialQuantifier" DNA {
+        // decodes can be customized, but codes are Drools-specific and should not be added or changed
+        "description" String "Rule existential keywords",
+        "dnaType" String "string",
+        "values" DNAArray [
+            {
+                "code" String "exists",
+                "decode" String "At least one"
+            },
+            {
+                "code" String "not",
+                "decode" String "None"
+            }
+        ]    
+    },
+    "ruleFactType_dm" DNA {
+        "dnaType" String "string",
+        "dynamicTable" Boolean "true",
+          "notselected" DNA {
+            "decode" String "Choose fact type..."
+        }
+    }
+}

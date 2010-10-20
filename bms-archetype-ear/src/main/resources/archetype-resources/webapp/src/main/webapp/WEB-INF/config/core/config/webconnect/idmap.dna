@@ -1,0 +1,24 @@
+DNA {
+	"properties" DNAArray [
+		{
+			"object" String "PRODUCT",
+			"property" String "prd_id"
+		},
+		{
+			"object" String "SKU",
+			"property" String "sku_id"
+		},
+		{
+			"object" String "CONTENT",
+			"property" String "cnt_id"
+		},
+		{
+			"object" String "FOLDER",
+			"property" String "folder_id"
+		},
+		{
+			"object" String "ASSORTMENT",
+			"property" String "ast_id"
+		}
+	]
+}

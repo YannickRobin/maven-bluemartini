@@ -1,0 +1,45 @@
+DNA {
+    "database" DNA {
+        "relmkt" DNA {
+            "aliases" StringArray [
+                "main",
+                "attribute",
+                "object",
+                "locale"
+            ],
+            "default" Boolean "true",
+            // * Connection pool *
+            "pool" DNA {
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+         },
+         "store" DNA {
+            "aliases" StringArray [                
+            ],
+            "default" Boolean "false",
+            // * Connection pool *
+            "pool" DNA {
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "10",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+         }
+    }
+}
+
+
+

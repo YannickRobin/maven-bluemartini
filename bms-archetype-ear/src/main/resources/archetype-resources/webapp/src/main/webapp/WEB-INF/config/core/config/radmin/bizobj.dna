@@ -1,0 +1,66 @@
+DNA {
+    "REMOTE_ADMIN" DNA {
+        "properties" DNA {
+            "action" DNA {
+                "dataElement" String "string"
+            },
+            "addAttribute" DNA {
+                "dataElement" String "string"
+            },
+            "ascendID" DNA {
+                "dataElement" String "longID"
+            },
+            "dir" DNA {
+                "dataElement" String "string"
+            },
+            "dsamIndex" DNA {
+                "dataElement" String "integer"
+            },
+            "file" DNA {
+                "dataElement" String "string"
+            },
+            "folderID" DNA {
+                "dataElement" String "longID"
+            },
+            "index" DNA {
+                "dataElement" String "objectID"
+            },
+            "last_exception" DNA {
+                "dataElement" String "objectID"
+            },
+            "locale" DNA {
+                "dataElement" String "string"
+            },
+            "logBackup" DNA {
+                "dataElement" String "objectID"
+            },
+            "logOffset" DNA {
+                "dataElement" String "string"
+            },
+            "message" DNA {
+                "dataElement" String "string"
+            },
+            "objectID" DNA {
+                "dataElement" String "longID"
+            },
+            "objectPath" DNA {
+                "dataElement" String "string"
+            },
+            "objectType" DNA {
+                "dataElement" String "string"
+            },
+            "password" DNA {
+                "dataElement" String "string"
+            },
+            "root" DNA {
+                "dataElement" String "string"
+            },
+            "serverID" DNA {
+                "dataElement" String "objectID"
+            },
+            "userid" DNA {
+                "dataElement" String "string"
+            }
+        }
+    }
+}

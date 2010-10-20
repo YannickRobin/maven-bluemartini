@@ -1,0 +1,1471 @@
+DNA {
+    "CheckRunningJobs" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CheckRunningJobs",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "envID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ]
+    },
+    "CreatePublishingJobAndSubJob" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CreatePublishingJobandSubJob",
+        "description" String "Add a new publishing job",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "PUBLISHING_JOB",
+                "path" StringArray [
+                    "PUBLISHING_JOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Publishing"
+    },
+    "CreatePublishingSubJob" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CreatePublishingSubJob",
+        "description" String "Add a new publishing sub job",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "lastTargetID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            },
+            {
+                "businessObjectType" String "PUBLISHING_JOB",
+                "path" StringArray [
+                    "PUBLISHING_JOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "PUBLISHING_SUBJOB",
+                "path" StringArray [
+                    "PUBLISHING_SUBJOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Publishing"
+    },
+    "DeletePublishingJobs" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.DeletePublishingJobs",
+        "description" String "Deletes a publishing job",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "PUBLISHING_JOB",
+                "path" StringArray [
+                    "PUBLISHING_JOB_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Publishing"
+    },
+    "EACChangeUserPwd" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.ChangeUserPwd",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "userid"
+                ],
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "oldPassword"
+                ],
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "newPassword"
+                ],
+                "type" String "String"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACCloneObject" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CloneObject",
+        "section" String "General"
+    },
+    "EACCreateEnvironment" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CreateEnvironment",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "createVersion"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACCreateObject" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.CreateObject",
+        "section" String "General"
+    },
+    "EACCreateRole" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.CreateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACCreateRolePrivilege" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.CreateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ROLE_PRIVILEGE",
+                "path" StringArray [
+                    "ROLE_PRIVILEGE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ROLE_PRIVILEGE",
+                "path" StringArray [
+                    "ROLE_PRIVILEGE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACCreateUserAccount" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.CreateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACCreateUserAddress" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.CreateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "ADDRESS"
+                ],
+                "required" Boolean "true",
+                "requiredAttributes" StringArray [
+                    "uad_usa_id"
+                ],
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "ADDRESS"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACCreateUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.CreateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACDeleteEnvironment" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.DeleteEnvironment",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "deleteVersion"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT"
+                ],
+                "required" Boolean "true",
+                "requiredAttributes" StringArray [
+                    "env_id"
+                ],
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACDeleteObject" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.DeleteObject",
+        "section" String "General"
+    },
+    "EACDeleteRolePrivilege" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.DeleteObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ROLE_PRIVILEGE",
+                "path" StringArray [
+                    "ROLE_PRIVILEGE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACExtractEACData" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.ExtractEACData"
+    },
+    "EACGetEnvironmentConnection" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetEnvironmentConnection",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "targetID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENV_CONNECTION",
+                "path" StringArray [
+                    "ENV_CONNECTION"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetEnvironmentConnections" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetEnvironmentConnection",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENV_CONNECTION_ARRAY",
+                "path" StringArray [
+                    "ENV_CONNECTION"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetEnvironmentConnectionsForSource" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetEnvironmentConnectionsForSource",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENV_CONNECTION",
+                "path" StringArray [
+                    "ENV_CONNECTIONS"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetEnvironmentPath" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetEnvironmentPath",
+        "section" String "Environments"
+    },
+    "EACGetEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetEnvironments",
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetLocalesForEnv" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.EACGetLocalesForEnv",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "envID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "versionID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            },
+            {
+                "businessObjectType" String "LOCALE",
+                "path" StringArray [
+                    "LOCALE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetObjectChildren" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjectChildren",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "objectType"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "childTypes"
+                ],
+                "required" Boolean "false",
+                "type" String "IntegerArray"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "OBJECT",
+                "path" StringArray [
+                    "OBJECT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "General"
+    },
+    "EACGetObjectDetail" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjectDetail",
+        "description" String "Generic get object bizact.  Used internally by architecture components.  No parameter validation, so use with caution.",
+        "section" String "General"
+    },
+    "EACGetObjectID" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjectID",
+        "description" String "Generic get object bizact.  Used internally by architecture components.  No parameter validation, so use with caution.",
+        "section" String "General"
+    },
+    "EACGetObjects" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjects",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "type"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "where"
+                ],
+                "required" Boolean "false",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "first"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "max"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            }
+        ],
+        "section" String "General"
+    },
+    "EACGetPrivileges" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjects",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "type"
+                ],
+                "type" String "String",
+                "value" String "PRIVILEGE"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetPrivilegesForRole" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetPrivilegesForRole",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "rol_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "PRIVILEGE_ADMIN",
+                "path" StringArray [
+                    "PRIVILEGE_ADMIN_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetPrivilegesForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetPrivilegesForUser",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "PRIVILEGE_USER",
+                "path" StringArray [
+                    "PRIVILEGE_USER_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetRolesForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetRolesForUser",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "env_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetRolesForUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetRolesForUserGroup",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "env_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "usg_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACGetSetDefinition" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetSetDefinition",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "sde_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Long"
+            },
+            {
+                "path" StringArray [
+                    "sde_path"
+                ],
+                "required" Boolean "false",
+                "type" String "String"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "SET_DEFINITION",
+                "path" StringArray [
+                    "SET_DEFINITION"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Set Definitions"
+    },
+    "EACGetSourceEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetSourceEnvironments",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "formatEnvironments"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetSourceEnvironmentsForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetSourceEnvironments",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "formatEnvironments"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetTargetEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetTargetEnvironments",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "formatEnvironments"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environment Connections"
+    },
+    "EACGetTargetEnvironmentsForConfiguration" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetTargetEnvironmentsForConfiguration",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "formatEnvironments"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACGetTargetEnvironmentsForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetTargetEnvironments",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            },
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "formatEnvironments"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "sourceID"
+                ],
+                "required" Boolean "true",
+                "type" String "Integer"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Environment Connections"
+    },
+    "EACGetUserAccountDetail" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.GetUserAccountDetail",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserAccountDetailByUID" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.GetUserAccountDetail",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_uid"
+                ],
+                "required" Boolean "true",
+                "type" String "String"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserAddresses" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.GetAddresses",
+        "description" String "Get addresses for a user_account.  Options allow you to get default address single out or just the entire array of addresses.",
+        "input" DNAArray [
+            {
+                "description" String "Gets default address only",
+                "path" StringArray [
+                    "defaultOnly"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "description" String "Returns addresses in ADDRESS_ARRAY, not separating out",
+                "path" StringArray [
+                    "arrayOnly"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "orderBy"
+                ],
+                "required" Boolean "false",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "BILL_TO_ADDRESS"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "SHIP_TO_ADDRESS"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            },
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "ADDRESS_ARRAY"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserGroupFolders" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjects",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "type"
+                ],
+                "type" String "String",
+                "value" String "USER_GROUP_FOLDER"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserGroups" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjects",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "type"
+                ],
+                "type" String "String",
+                "value" String "USER_GROUP"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserGroupsForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetUserGroupsForUser",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetUserObjectPermissionsData" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.GetUserObjectPermissionsData"
+    },
+    "EACGetUsersForUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.GetUsersForUserGroup",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usg_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACGetWorkflowObjectsData" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetWorkflowObjectsData"
+    },
+    "EACLinkEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.LinkEnvironments",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "setType"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "businessObjectType" String "ENV_CONNECTION",
+                "path" StringArray [
+                    "ENV_CONNECTION"
+                ],
+                "required" Boolean "true",
+                "requiredAttributes" StringArray [
+                    "source_id",
+                    "target_id"
+                ],
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ]
+    },
+    "EACLogin" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.Login",
+		"secureInput" Boolean "true",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "LOGIN"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "LOGIN"
+                ],
+                "required" Boolean "false",
+                "type" String "BusinessObject"
+            },
+            {
+                "path" StringArray [
+                    "validLogin"
+                ],
+                "required" Boolean "false",
+                "type" String "Boolean"
+            },
+            {
+                "path" StringArray [
+                    "failureReason"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            }
+        ]
+    },
+    "EACRefreshEnvironmentList" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.RefreshEnvironmentList",
+        "section" String "Environments"
+    },
+    "EACReplicateEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.ReplicateEnvironments"
+    },
+    "EACSetRolesForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.SetRolesForUser",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "env_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            },
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACSetRolesForUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.SetRolesForUserGroup",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "env_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "usg_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            },
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACSetUserGroupsForUser" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.SetUserGroupsForUser",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            },
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACSetUsersForUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.useradmin.SetUsersForUserGroup",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usg_id"
+                ],
+                "required" Boolean "true",
+                "type" String "Long"
+            },
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACTrashObject" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.TrashObject",
+        "section" String "General"
+    },
+    "EACUnlinkEnvironments" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.UnlinkEnvironments",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ENV_CONNECTION",
+                "path" StringArray [
+                    "ENV_CONNECTION"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ]
+    },
+    "EACUpdateEnvironment" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.UpdateEnvironment",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "formatUsers"
+                ],
+                "type" String "Boolean"
+            },
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ENVIRONMENT",
+                "path" StringArray [
+                    "ENVIRONMENT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Environments"
+    },
+    "EACUpdateObject" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.UpdateObject",
+        "section" String "General"
+    },
+    "EACUpdateRole" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.UpdateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ROLE",
+                "path" StringArray [
+                    "ROLE"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "EACUpdateUserAccount" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.UpdateUserAccount",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+         ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACDeleteUserAccount" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.DeleteUserAccount",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_ACCOUNT",
+                "path" StringArray [
+                    "USER_ACCOUNT"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+         ],
+        
+        "section" String "Users"
+    },
+    "EACUpdateUserAddress" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.UpdateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "ADDRESS"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "ADDRESS",
+                "path" StringArray [
+                    "ADDRESS"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "EACUpdateUserGroup" DNA {
+        "database" String "eac", "class" String "com.bluemartini.bizact.UpdateObject",
+        "input" DNAArray [
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "businessObjectType" String "USER_GROUP",
+                "path" StringArray [
+                    "USER_GROUP"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "section" String "Users"
+    },
+    "GetFormattedUserNames" DNA {
+        "autoTransaction" Boolean "false",
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetFormattedUserNames",
+        "database" String "eac",
+        "description" String "Fetch formatted names based on numeric user ID.",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "usa_id"
+                ],
+                "required" Boolean "false",
+                "type" String "Long"
+            },
+            {
+                "path" StringArray [
+                    "usa_id_ARRAY"
+                ],
+                "required" Boolean "false",
+                "type" String "LongArray"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "userName"
+                ],
+                "required" Boolean "false",
+                "type" String "String"
+            },
+            {
+                "path" StringArray [
+                    "userName_ARRAY"
+                ],
+                "required" Boolean "false",
+                "type" String "StringArray"
+            }
+        ],
+        "section" String "EAC"
+    },
+    "GetObjectPermissions" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetObjectPermissions",
+        "output" DNAArray [
+            {
+                "businessObjectType" String "OBJECT_PERMISSION",
+                "path" StringArray [
+                    "OBJECT_PERMISSION_ARRAY"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObjectArray"
+            }
+        ],
+        "section" String "Roles"
+    },
+    "GetPublishingJobs" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.GetPublishingJobs",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "targetEnvID"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            },
+            {
+                "path" StringArray [
+                    "sourceEnvID"
+                ],
+                "required" Boolean "false",
+                "type" String "Integer"
+            }
+        ]
+    },
+    "RetrieveEncryptionKey" DNA {
+		"secureOutput" Boolean "true",
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.RetrieveEncryptionKey"
+    },
+    "ModifyEncryptionKey" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.ModifyEncryptionKey"
+    },
+    "UpdatePublishingJob" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.UpdatePublishingJob",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "PUBLISHING_SUBJOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "PUBLISHING_SUBJOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ]
+    },
+    "UpdatePublishingSubJob" DNA {
+        "database" String "eac", "class" String "com.bluemartini.environment.bizact.UpdatePublishingSubJob",
+        "input" DNAArray [
+            {
+                "path" StringArray [
+                    "PUBLISHING_SUBJOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ],
+        "output" DNAArray [
+            {
+                "path" StringArray [
+                    "PUBLISHING_SUBJOB"
+                ],
+                "required" Boolean "true",
+                "type" String "BusinessObject"
+            }
+        ]
+    }
+}

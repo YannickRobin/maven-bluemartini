@@ -1,0 +1,15 @@
+DNA {
+    // Version Listeners. The format of this section is a series of named
+    // strings. Each string value is the name of the class for a version
+    // listener. The names are unimportant save for over-riding or removing
+    // values during DNA merging. The class should implement:
+    //
+    // com.bluemartini.util.HTMLVersionUtil.VersionListener
+
+    "listeners" DNA {
+        "PromotionEngine" String "com.bluemartini.promotion.PromotionEngineLoader",
+        "CachePreload" String "com.bluemartini.cache.CacheLoader\$Loader",
+        "VersionedCacheCleanUp" String "com.bluemartini.cache.VersionedCacheCleanUp"
+    }
+}
+
