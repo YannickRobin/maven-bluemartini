@@ -1,0 +1,42 @@
+package com.bluemartini.thirdparty.websphere;
+
+import com.bluemartini.server.BMServerException;
+import com.bluemartini.dna.BMException;
+
+/**
+ * Fix dependency with ND
+ * @author Yannick Robin
+*/
+
+public aspect WebSphereAppServerAspect {	
+
+	/*
+	  Replace constructor 
+	*/
+	void around() throws BMServerException
+	: execution(public WebSphereAppServer.new())
+	{      
+        System.out.println("[WebSphereAppServer] This version do not connect to ND (yrobin@escalate.com)...");    
+    }
+
+	void around() throws BMException
+	: execution(public void WebSphereAppServer.checkVersion())
+	{
+		return;
+	}
+    
+   	int around()
+	: execution(public int WebSphereAppServer.getDefaultListenPort())
+	{
+		//super call doesn't work this way
+		return super.getDefaultListenPort();
+	}
+	
+	int around()
+	: execution(public int WebSphereAppServer.getDefaultSSLListenPort())
+	{
+		//super call doesn't work this way
+		return super.getDefaultSSLListenPort();
+	}
+	
+}
