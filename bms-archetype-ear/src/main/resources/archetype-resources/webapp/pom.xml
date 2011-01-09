@@ -12,6 +12,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
+  <repositories>
+	<repository>
+	    <id>maven-bluemartini</id>
+	    <url>http://maven-bluemartini.googlecode.com/svn/repository/</url>
+	    <name>Maven Blue Martini Repository</name>
+	</repository>
+  </repositories>  
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -27,8 +35,8 @@
     </dependency>
 	  <dependency>
 	  	<groupId>com.bluemartini.core</groupId>
-	  	<artifactId>martini-wtp</artifactId>
-	  	<version>10.1.1.0</version>
+	  	<artifactId>martini-patch</artifactId>
+	  	<version>1.0.0</version>
 	  	<type>jar</type>
 	  </dependency>	
 	  <dependency>
@@ -201,7 +209,12 @@
 	  	<groupId>com.bluemartini.thirdparty</groupId>
 	  	<artifactId>antlr-runtime-3.0</artifactId>
 	  	<version>10.1.1.0</version>
-	  </dependency>	
+	  </dependency>
+	  <dependency>
+	  	<groupId>org.aspectj</groupId>
+	  	<artifactId>aspectjrt</artifactId>
+	  	<version>1.6.7</version>
+	  </dependency>	  
   </dependencies>
   <build>
     <plugins>
