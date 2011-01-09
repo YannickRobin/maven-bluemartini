@@ -271,27 +271,22 @@
         <configuration>
           <includes>
             <include>com/bluemartini/server/BMStartup*.class</include>
-            <include>com/bluemartini/html/HTMLObjectFactory*.class</include>
             <include>com/bluemartini/security/CommonLib*.class</include>
             <include>com/bluemartini/environment/SecurityDNAUtil*.class</include>
             <include>com/bluemartini/app/VersionUtil*.class</include>
             <include>com/bluemartini/remotedesktop/util/UserGroupUtil*.class</include>
-            <include>com/bluemartini/thirdparty/weblogic/WebLogicDataSourceFactory*.class</include>          
+            <include>com/bluemartini/thirdparty/weblogic/WebLogicDataSourceFactory*.class</include>
+            <include>com/bluemartini/thirdparty/websphere/WebSphereAppServer*.class</include>
+            <include>com/bluemartini/thirdparty/websphere/WebSphereDataSourceFactory*.class</include>
+            <include>com/bluemartini/thirdparty/websphere/WebSphereWebApplication*.class</include>                                              
             <include>com/bluemartini/environment/EnvironmentUtil*.class</include>  
             <include>com/bluemartini/jms/JMSManager*.class</include>
+            <include>com/bluemartini/thirdparty/glassfish/*.class</include>            
+            <include>com/bluemartini/thirdparty/jboss/*.class</include>
+            <include>com/bluemartini/wtp/*.class</include>
           </includes>
         </configuration>
-      </plugin>           
-      <plugin>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.1</version>
-        <configuration>
-          <!--
-          During release:perform, enable the "release" profile
-          -->
-          <goals>deploy assembly:assembly</goals>
-        </configuration>
-      </plugin>
+      </plugin>     
     </plugins>    
   </build>
   
