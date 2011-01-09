@@ -76,7 +76,7 @@ DNA {
             "fulcrumCollationSequence" String "ENGLISH_UK"
         },
         "en" DNA {
-            //"fulcrumCharVariantFile" String "'english.ftl'",
+            // "fulcrumCharVariantFile" String "'english.ftl'",
             "fulcrumCollationSequence" String "DEFAULT"
         },
         "es" DNA {
@@ -144,7 +144,7 @@ DNA {
         "/Products" String "PRODUCT_FAMILY",
         "/Promotions" String "PROMOTION_FOLDER",
         "/Shipments" String "SHIP_CARRIER_FOLDER",
-        "/Layouts"   String "TILES_DEFINITION_FOLDER"
+        "/Layouts" String "TILES_DEFINITION_FOLDER"
     },
     "indexedTypes" StringArray [
         "PRODUCT_FAMILY",
@@ -166,18 +166,18 @@ DNA {
         "MERCHANT",
         "SHIP_CARRIER_FOLDER",
         "TILES_DEFINITION",
-		"TILES_DEFINITION_FOLDER"
+        "TILES_DEFINITION_FOLDER"
     ],
     "maxErrorRatio" Integer "0",
     "maxErrorRatioSQL" String "SET MAX_ERROR_RATIO {maxErrorRatio}",
     "createOrderByZones" Boolean "false",
     "createApproxZones" Boolean "false",
-    //"boostColumnName" String "ATR_Rank",
+    // "boostColumnName" String "ATR_Rank",
     "boostFactor" Integer "10",
     "boostString" String "b",
     "maxBoostNumber" Integer "10",
     "filterDuplicates" Boolean "true",
-    //"workdir" String "/usr/tmp",
+    // "workdir" String "/usr/tmp",
     "thresholds" DNA {
         // 0 forces a full rebuild everytime
         "rebuild" Double "100.0",
@@ -262,5 +262,6 @@ DNA {
         "SPELL" String "suggest",
         "RESUBMITFLAGS" String "7984"
     },
-    "fastGetQueryTransformations" Boolean "false"
+    "fastGetQueryTransformations" Boolean "false",
+    "specialCharacters" String "\\_%"
 }
