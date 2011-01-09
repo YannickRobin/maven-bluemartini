@@ -3,7 +3,7 @@
 
   <groupId>com.bluemartini.core</groupId>
   <artifactId>martini-patch</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>martini-patch</name>
@@ -14,9 +14,9 @@
   	<url>http://code.google.com/p/maven-bluemartini/issues/list</url>
   </issueManagement>
   <scm>
-	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/tags/martini-patch-1.0.0</connection>
-	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/tags/martini-patch-1.0.0</developerConnection>
-  	<url>http://code.google.com/p/maven-bluemartini/source/browse/tags/martini-patch-1.0.0</url>
+	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/martini-patch</connection>
+	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/martini-patch</developerConnection>
+  	<url>http://code.google.com/p/maven-bluemartini/source/browse/</url>
   </scm>
     
   <dependencies>
