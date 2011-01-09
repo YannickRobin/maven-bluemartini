@@ -294,7 +294,7 @@
 	<repository>
 		<id>Local Maven Repository</id>
 		<name>My local Maven Repository</name>
-		<url>file:///C:/localMavenRepository</url>
+		<url>file:////home/yannick/workspace/maven-bluemartini-repository</url>
 	</repository>
   </distributionManagement>
   
