@@ -10,7 +10,7 @@
       </pool>
       <destination-jndi-name>com.bluemartini.DBUtilTopic</destination-jndi-name>
       <!-- the provider will be replaced by bms transplant command -->
-      <provider-url>t3://localhost:7000</provider-url>
+      <provider-url>t3://localhost:7005</provider-url>
       <connection-factory-jndi-name>bluemartini.jms.BMTopicConnectionFactory</connection-factory-jndi-name>
     </message-driven-descriptor>
   </weblogic-enterprise-bean>
@@ -23,7 +23,7 @@
       </pool>
       <destination-jndi-name>com.bluemartini.PublishVersionTopic</destination-jndi-name>
       <!-- the provider will be replaced by bms transplant command -->
-      <provider-url>t3://localhost:7000</provider-url>
+      <provider-url>t3://localhost:7005</provider-url>
       <connection-factory-jndi-name>bluemartini.jms.BMTopicConnectionFactory</connection-factory-jndi-name>
     </message-driven-descriptor>
   </weblogic-enterprise-bean>

@@ -35,17 +35,17 @@ DNA {
 	
 	// JMS
 	"BMS_JMS_ENABLED" Boolean "true",
-	"BMS_JMS_SERVER_URL" String "t3://localhost:7000",
+	"BMS_JMS_SERVER_URL" String "t3://localhost:7005",
 	"BMS_JMS_SERVER_NAME" String "AdminServer",
 	"BMS_JMS_TOPIC_FACTORY_JNDI_NAME" String "bluemartini.jms.BMTopicConnectionFactory",	
 	"BMS_JMS_QUEUE_FACTORY_JNDI_NAME" String "bluemartini.jms.BMQueueConnectionFactory",	
 
 	// Website
 	"BMS_${artifactId}_SERVER" String "localhost",
-	"BMS_${artifactId}_PORT" String "7000",
+	"BMS_${artifactId}_PORT" String "7005",
 	"BMS_${artifactId}_EVR_NAME" String "BPADev",
-	"BMS_${artifactId}_HTTP_PORT" String "7000",
-	"BMS_${artifactId}_HTTPS_PORT" String "8000",
+	"BMS_${artifactId}_HTTP_PORT" String "7005",
+	"BMS_${artifactId}_HTTPS_PORT" String "8005",
 	"BMS_${artifactId}_BIZACT_CHECK_SECONDS" Integer "1",
 	"BMS_${artifactId}_CONFIG_CHECK_SECONDS" Integer "1"
 }
