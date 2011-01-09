@@ -1,2 +1,0 @@
-% \ufeff  S
-: TE GHT
