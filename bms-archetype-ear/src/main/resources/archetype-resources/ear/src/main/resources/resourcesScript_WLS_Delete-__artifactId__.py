@@ -1,5 +1,5 @@
 from os import environ
-wls_domain="C:/bea921/user_projects/domains/BlueMartini95Dev"
+wls_domain="/home/yannick/apps/bea/user_projects/domains/BlueMartiniDev"
 serverName="AdminServer"
 readDomain(wls_domain)
 

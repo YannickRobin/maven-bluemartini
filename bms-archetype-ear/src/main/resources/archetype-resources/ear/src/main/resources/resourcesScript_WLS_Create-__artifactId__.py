@@ -1,5 +1,5 @@
 from os import environ
-wls_domain="C:/bea921/user_projects/domains/BlueMartini95Dev"
+wls_domain="/home/yannick/apps/bea/user_projects/domains/BlueMartiniDev"
 serverName="AdminServer"
 readDomain(wls_domain)
 
@@ -14,7 +14,7 @@ cd("JDBCSystemResource/com.bluemartini.dbpool.${artifactId}.eac/JdbcResource/com
 create('myJdbcDriverParams','JDBCDriverParams')
 cd('JDBCDriverParams/NO_NAME_0')
 set('DriverName', 'oracle.jdbc.driver.OracleDriver')
-set('URL','jdbc:oracle:oci:@(description=(address=(host=POSEIDON)(protocol=tcp)(port=1521))(connect_data=(sid=BM1)))')
+set('URL','jdbc:oracle:thin:@triton:1521:BM')
 set('PasswordEncrypted', 'martini')
 create('myProps','Properties')
 
@@ -26,7 +26,7 @@ except  Exception,udt:
    print "The property \"user\" already exist. Trying to re-configure it.\n"
 
 cd('Property/user')
-cmo.setValue('BM950_eac')
+cmo.setValue('martini_eac')
 
 cd('../..')
 
@@ -81,7 +81,7 @@ cd("JDBCSystemResource/com.bluemartini.dbpool.${artifactId}.store/JdbcResource/c
 create('myJdbcDriverParams','JDBCDriverParams')
 cd('JDBCDriverParams/NO_NAME_0')
 set('DriverName', 'oracle.jdbc.driver.OracleDriver')
-set('URL','jdbc:oracle:oci:@(description=(address=(host=POSEIDON)(protocol=tcp)(port=1521))(connect_data=(sid=BM1)))')
+set('URL','jdbc:oracle:thin:@triton:1521:BM')
 set('PasswordEncrypted', 'martini')
 create('myProps','Properties')
 
@@ -93,7 +93,7 @@ except  Exception,udt:
    print "The property \"user\" already exist. Trying to re-configure it.\n"
 
 cd('Property/user')
-cmo.setValue('BM950_STORE')
+cmo.setValue('martini_STORE')
 
 cd('../..')
 
@@ -148,7 +148,7 @@ cd("JDBCSystemResource/com.bluemartini.dbpool.${artifactId}.main/JdbcResource/co
 create('myJdbcDriverParams','JDBCDriverParams')
 cd('JDBCDriverParams/NO_NAME_0')
 set('DriverName', 'oracle.jdbc.driver.OracleDriver')
-set('URL','jdbc:oracle:oci:@(description=(address=(host=POSEIDON)(protocol=tcp)(port=1521))(connect_data=(sid=BM1)))')
+set('URL','jdbc:oracle:thin:@triton:1521:BM')
 set('PasswordEncrypted', 'martini')
 create('myProps','Properties')
 
@@ -160,7 +160,7 @@ except  Exception,udt:
    print "The property \"user\" already exist. Trying to re-configure it.\n"
 
 cd('Property/user')
-cmo.setValue('BM950_MAIN')
+cmo.setValue('martini_MAIN')
 
 cd('../..')
 
@@ -215,7 +215,7 @@ cd("JDBCSystemResource/com.bluemartini.dbpool.${artifactId}.clickstream/JdbcReso
 create('myJdbcDriverParams','JDBCDriverParams')
 cd('JDBCDriverParams/NO_NAME_0')
 set('DriverName', 'oracle.jdbc.driver.OracleDriver')
-set('URL','jdbc:oracle:oci:@(description=(address=(host=POSEIDON)(protocol=tcp)(port=1521))(connect_data=(sid=BM1)))')
+set('URL','jdbc:oracle:thin:@triton:1521:BM')
 set('PasswordEncrypted', 'martini')
 create('myProps','Properties')
 
@@ -227,7 +227,7 @@ except  Exception,udt:
    print "The property \"user\" already exist. Trying to re-configure it.\n"
 
 cd('Property/user')
-cmo.setValue('BM950_CLICKSTREAM')
+cmo.setValue('martini_CLICKSTREAM')
 
 cd('../..')
 
