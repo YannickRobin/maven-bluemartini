@@ -30,6 +30,12 @@
         <include>**/*.*</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory>ear/src/main/application</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>
+    </fileSet>    
 	<fileSet filtered="true" packaged="false">
 		<directory>ejb</directory>
 		<includes>

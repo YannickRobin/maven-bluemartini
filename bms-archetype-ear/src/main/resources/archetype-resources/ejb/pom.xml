@@ -226,8 +226,7 @@
           <ejbVersion>2.1</ejbVersion>
         </configuration>
       </plugin>      
-    </plugins>
-    <finalName>${artifactId}-ejb</finalName>    
+    </plugins>  
   </build>
   
 </project>
