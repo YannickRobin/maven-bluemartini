@@ -49,7 +49,7 @@
 		</includes>
 	</fileSet>  
     <fileSet filtered="true" packaged="false">
-      <directory>ejb/src/META-INF</directory>
+      <directory>ejb/src/main/resources/META-INF</directory>
       <includes>
         <include>**/*.*</include>
       </includes>
