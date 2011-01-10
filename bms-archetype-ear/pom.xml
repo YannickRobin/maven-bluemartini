@@ -14,8 +14,8 @@
   	<url>http://code.google.com/p/maven-bluemartini/issues/list</url>
   </issueManagement>
   <scm>
-	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/maven-bluemartini</connection>
-	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/maven-bluemartini</developerConnection>
+	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear</connection>
+	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear</developerConnection>
   	<url>http://code.google.com/p/maven-bluemartini/source/browse/</url>
   </scm>
 
