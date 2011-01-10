@@ -214,6 +214,13 @@
 	  	<groupId>org.aspectj</groupId>
 	  	<artifactId>aspectjrt</artifactId>
 	  	<version>1.6.7</version>
+	  </dependency>
+	  <dependency>
+	  	<groupId>geronimo-spec</groupId>
+	  	<artifactId>geronimo-spec-j2ee</artifactId>
+	  	<version>1.4-rc4</version>
+	  	<type>jar</type>
+	  	<scope>compile</scope>
 	  </dependency>	  	
   </dependencies>
   
