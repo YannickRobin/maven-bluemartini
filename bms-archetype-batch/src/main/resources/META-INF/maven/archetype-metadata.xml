@@ -3,6 +3,13 @@
   <requiredProperties>
   </requiredProperties>
   <fileSets>
+  	<fileSet filtered="true" packaged="false">
+  		<directory></directory>
+		<includes>
+			<include>deploy.xml</include>
+			<include>build_local.properties</include>
+		</includes>
+	</fileSet>  
   	<fileSet filtered="true" packaged="true">
       <directory>src/main/java</directory>
       <includes>
@@ -10,17 +17,16 @@
       </includes>
     </fileSet>
   	<fileSet filtered="true" packaged="false">
-		<directory>src/main</directory>
+		<directory>src/main/bms</directory>
 		<includes>
 			<include>**/*.*</include>
 		</includes>
 	</fileSet>
   	<fileSet filtered="true" packaged="false">
-  		<directory></directory>
+		<directory>src/main/assembly</directory>
 		<includes>
-			<include>deploy.xml</include>
-			<include>build_local.properties</include>
+			<include>**/*.*</include>
 		</includes>
-	</fileSet> 	 
+	</fileSet>
   </fileSets>
 </archetype-descriptor>
