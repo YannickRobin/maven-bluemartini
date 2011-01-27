@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.bluemartini.archetypes</groupId>
+  <artifactId>bms-archetype-batch</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  
+  <name>Archetype - bms-archetype-batch</name>
+  <url>http://code.google.com/p/maven-bluemartini/</url>
+
+  <issueManagement>
+  	<system>Google Code</system>
+  	<url>http://code.google.com/p/maven-bluemartini/issues/list</url>
+  </issueManagement>
+  <scm>
+	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-batch</connection>
+	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-batch</developerConnection>
+  	<url>http://code.google.com/p/maven-bluemartini/source/browse/</url>
+  </scm>
+
+  <distributionManagement>
+	<repository>
+		<id>Local Maven Repository</id>
+		<name>My local Maven Repository</name>
+		<url>file:////home/yannick/workspace/maven-bluemartini-repository</url>
+	</repository>
+  </distributionManagement>
+      
+</project>
