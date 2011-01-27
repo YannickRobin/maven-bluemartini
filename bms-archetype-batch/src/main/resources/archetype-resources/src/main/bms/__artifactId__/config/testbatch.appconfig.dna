@@ -18,7 +18,7 @@ DNA {
             "$BMS_CONFIG_HOME/core/config/archive"
         ],
         "custom" StringArray [
-            "$BMS_CONFIG_HOME/myBatchJobs/config/tools"
+            "$BMS_CONFIG_HOME/${artifactId}/config/tools"
         ]            
     },
     "log" DNA {

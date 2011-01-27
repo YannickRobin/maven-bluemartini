@@ -16,7 +16,7 @@ Rename build_local.properties to build.properties and update bms home.
 	</target>
 	
     <target name="deploy" depends="assembly">
-        <unzip src="./target/${project.artifactId}-${project.version}-bin.zip" dest="${project.bms_home}"/>
+        <unzip src="./target/${project.artifactId}-batch-${project.version}-bin.zip" dest="${project.bms_home}"/>
     </target>
 
 </project>
