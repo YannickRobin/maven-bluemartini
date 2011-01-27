@@ -228,29 +228,7 @@
           -->
           <goals>deploy assembly:assembly</goals>
         </configuration>
-      </plugin>
-
-      <!-- To deploy using mvn antrun:run -->
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.6</version>
-        <executions>
-          <execution>
-            <phase>install</phase>
-            <configuration>
-           	  <target>
-           	  	<property name="project.bms_home" value="/home/yannick/apps/bm101/"/>
-           	    <echo message="Unzip ./target/${project.artifactId}-${project.version}-bin.zip into ${project.bms_home}"/>
-           	    <unzip src="./target/${project.artifactId}-${project.version}-bin.zip" dest="${project.bms_home}"/>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-     
+      </plugin> 
     </plugins>    
   </build>
   
