@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
+
+<!-- 
+This ANT script is used by developers to deploy batch job files to bms home.
+Rename build_local.properties to build.properties and update bms home.
+-->
+
 <project default="deploy">
 
 	<property file="build.properties"/>
