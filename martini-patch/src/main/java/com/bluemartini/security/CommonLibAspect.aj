@@ -19,7 +19,9 @@ privileged aspect CommonLibAspect {
 	void around(CommonLib myCommonLib) : initFilePaths(myCommonLib)
 	{    	
     	String bmsSecurityDir = BMSystem.getProperty("BMS_SECURITY_DIR");
-    	System.out.println("******************************* BMS_SECURITY_DIR = " + bmsSecurityDir);
+    	if (bmsSecurityDir==null || bmsSecurityDir.equals(""))
+    		System.out.println("BMS_SECURITY_DIR variable is missing");
+    		
         if (bmsSecurityDir != null){
             //passFile_ = bmsSecurityDir + "/" + passFile_;
             //storeFile_ = bmsSecurityDir + "/" + storeFile_;

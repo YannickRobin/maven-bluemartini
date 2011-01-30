@@ -270,6 +270,7 @@
         <version>2.3.1</version>
         <configuration>
           <includes>
+            <include>com/bluemartini/dna/BMContext*.class</include>          
             <include>com/bluemartini/server/BMStartup*.class</include>
             <include>com/bluemartini/security/CommonLib*.class</include>
             <include>com/bluemartini/environment/SecurityDNAUtil*.class</include>
