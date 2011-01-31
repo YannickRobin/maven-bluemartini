@@ -17,6 +17,12 @@
       </includes>
     </fileSet>
   	<fileSet filtered="true" packaged="false">
+		<directory>src/main/resources</directory>
+		<includes>
+			<include>**/*.*</include>
+		</includes>
+	</fileSet>    
+  	<fileSet filtered="true" packaged="false">
 		<directory>src/main/bms</directory>
 		<includes>
 			<include>**/*.*</include>
