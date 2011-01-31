@@ -1,11 +1,14 @@
 package ${package}.tools.testbatch;
 
 import com.bluemartini.core.BMUtil;
+import com.bluemartini.dna.BMContext;
 import com.bluemartini.dna.BMException;
 import com.bluemartini.util.MainApp;
 
 /**
- *
+ * Created by maven-bluemartini archetype
+ * For test only
+ * @author Yannick Robin
  */
 
 public class TestBatch extends MainApp {
@@ -30,8 +33,8 @@ public class TestBatch extends MainApp {
 	}
 
 	public void run() throws BMException {		
-		TestBatchConfig testBatchConfig = TestBatchConfig.getInstance();
-		System.out.println(testBatchConfig.getMessage());		
+		String message = BMContext.getConfig("testbatch.dna").getString("message", "Message is missing");				
+		System.out.println(message);	
 	}
 
 }

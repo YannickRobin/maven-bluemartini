@@ -10,7 +10,9 @@ import com.bluemartini.util.HTMLVersionUtil;
 import com.bluemartini.util.MainApp;
 
 /**
- *
+ * Created by maven-bluemartini archetype
+ * For test only
+ * @author Yannick Robin
  */
 
 public class TestBatchDB extends MainApp {
@@ -43,8 +45,8 @@ public class TestBatchDB extends MainApp {
 			BMLog.log(BMLog.COMPONENT_SYSTEM, 0, "Current pub version is " + BMThreadManager.getCurrentPubVersionID());
 		}
 		
-		TestBatchConfig testBatchConfig = TestBatchConfig.getInstance();
-		System.out.println(testBatchConfig.getMessage());
+		String message = BMContext.getConfig("testbatch.dna").getString("message", "Message is missing");				
+		System.out.println(message);
 		
 	}
 

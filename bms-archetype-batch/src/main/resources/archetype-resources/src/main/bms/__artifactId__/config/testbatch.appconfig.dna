@@ -3,23 +3,22 @@ DNA {
     "localeCheckSeconds" Integer "10",
     "modules" StringArray [
             "core",
-            "custom"
+            "${artifactId}"
         ],
-    "module_paths" DNA {
         "core" StringArray [
-            "$BMS_CONFIG_HOME/core/config/bmcommon",
-            "$BMS_CONFIG_HOME/core/config/appcommon",
-            "$BMS_CONFIG_HOME/core/config/webconnect",
-            "$BMS_CONFIG_HOME/core/config/thirdparty",
-            "$BMS_CONFIG_HOME/core/config/b2b",
-            "$BMS_CONFIG_HOME/core/config/radmin",
-            "$BMS_CONFIG_HOME/core/config/i18n",
-            "$BMS_CONFIG_HOME/core/config/symbol",
-            "$BMS_CONFIG_HOME/core/config/archive"
+            "!META-INF/bluemartini/core/bmcommon",
+            "!META-INF/bluemartini/core/appcommon",
+            "!META-INF/bluemartini/core/webconnect",
+            "!META-INF/bluemartini/core/thirdparty",
+            "!META-INF/bluemartini/core/b2b",
+            "!META-INF/bluemartini/core/radmin",
+            "!META-INF/bluemartini/core/i18n",
+            "!META-INF/bluemartini/core/symbol",
+            "!META-INF/bluemartini/core/archive"
         ],
-        "custom" StringArray [
-            "$BMS_CONFIG_HOME/${artifactId}/config/tools"
-        ]            
+        "${artifactId}" StringArray [
+            "!META-INF/bluemartini/${artifactId}/tools"
+        ]
     },
     "log" DNA {
         "enabled" Boolean "true",
@@ -35,7 +34,7 @@ DNA {
             "dbconn" Integer "0",
             "CISUtil" Integer "0",
             "objectcache" Integer "0",
-            "myBatchJobs" Integer "2" 
+            "${artifactId}" Integer "2" 
         }
     }    
 }

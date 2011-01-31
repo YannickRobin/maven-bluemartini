@@ -1,2 +1,0 @@
-${CLASSPATH}
-${BMS_HOME}/${artifactId}/classes/${artifactId}-batch-${project.version}.jar

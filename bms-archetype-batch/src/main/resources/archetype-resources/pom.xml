@@ -40,11 +40,23 @@
 	  	<type>jar</type>
 	  </dependency>
 	  <dependency>
+	  	<groupId>com.bluemartini.core</groupId>
+	  	<artifactId>martini-config</artifactId>
+	  	<version>10.1.1.0</version>
+	  	<type>jar</type>
+	  </dependency>	  
+	  <dependency>
 	  	<groupId>com.bluemartini.eac</groupId>
 	  	<artifactId>eac</artifactId>
 	  	<version>10.1.1.0</version>
 	  	<type>jar</type>
 	  </dependency>
+	  <dependency>
+	  	<groupId>com.bluemartini.eac</groupId>
+	  	<artifactId>eac-config</artifactId>
+	  	<version>10.1.1.0</version>
+	  	<type>jar</type>
+	  </dependency>	  
 	  <dependency>
 	  	<groupId>com.bluemartini.isell</groupId>
 	  	<artifactId>isell</artifactId>
