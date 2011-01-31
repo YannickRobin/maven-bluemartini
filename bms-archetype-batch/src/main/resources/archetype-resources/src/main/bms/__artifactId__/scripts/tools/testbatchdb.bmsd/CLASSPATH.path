@@ -1,0 +1,6 @@
+${BMS_HOME}/${artifactId}/classes/${artifactId}-batch-${project.version}.jar
+${MAVEN_HOME}/repository/com/bluemartini/core/martini-patch/1.0.1/martini-patch-1.0.1.jar
+${CLASSPATH}
+${MAVEN_HOME}/repository/com/bluemartini/core/martini-config/10.1.1.0/martini-config-10.1.1.0.jar
+${MAVEN_HOME}/repository/com/bluemartini/eac/eac-config/10.1.1.0/eac-config-10.1.1.0.jar
+${MAVEN_HOME}/repository/org/aspectj/aspectjrt/1.6.7/aspectjrt-1.6.7.jar
