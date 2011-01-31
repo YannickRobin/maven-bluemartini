@@ -1,6 +1,0 @@
-DNA {
-    "rule.contents" DNA {
-        "label" String "rule_contents",
-        "panelClass" String "com.bluemartini.app.DroolsRulePanel"
-    }
-}

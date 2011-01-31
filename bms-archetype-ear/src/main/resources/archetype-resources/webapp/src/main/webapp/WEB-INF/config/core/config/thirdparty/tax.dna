@@ -1,5 +1,0 @@
-DNA {
-    "tax_rate" Double "0.08",
-    "product_tax_code" String "99999", 
-    "ship_tax_code" String "99999"  
-}

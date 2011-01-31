@@ -1,1 +1,0 @@
-${JAVA} -Xms128m -Xmx128m ${package}.tools.testbatch.TestBatch "$[@]"
