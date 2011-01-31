@@ -1,6 +1,0 @@
-DNA {
-    "precompile" DNA {
-        "secure" Boolean "false",
-        "process" String "JSPPrecompile"
-    }
-}
