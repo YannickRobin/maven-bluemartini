@@ -30,7 +30,7 @@
 	  <dependency>
 	  	<groupId>com.bluemartini.core</groupId>
 	  	<artifactId>martini-patch</artifactId>
-	  	<version>1.0.0</version>
+	  	<version>1.0.1</version>
 	  	<type>jar</type>
 	  </dependency>	  
 	  <dependency>

@@ -5,6 +5,7 @@ DNA {
             "core",
             "${artifactId}"
         ],
+    "module_paths" DNA {        
         "core" StringArray [
             "!META-INF/bluemartini/core/bmcommon",
             "!META-INF/bluemartini/core/appcommon",
