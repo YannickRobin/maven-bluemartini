@@ -3,7 +3,7 @@
   
   <groupId>com.bluemartini.archetypes</groupId>
   <artifactId>bms-archetype-batch</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   
   <name>Archetype - bms-archetype-batch</name>
   <url>http://code.google.com/p/maven-bluemartini/</url>
@@ -13,9 +13,9 @@
   	<url>http://code.google.com/p/maven-bluemartini/issues/list</url>
   </issueManagement>
   <scm>
-	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/tags/bms-archetype-batch-1.0.0</connection>
-	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/tags/bms-archetype-batch-1.0.0</developerConnection>
-  	<url>http://code.google.com/p/maven-bluemartini/source/browse/tags/bms-archetype-batch-1.0.0</url>
+	<connection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-batch</connection>
+	<developerConnection>scm:svn:https://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-batch</developerConnection>
+  	<url>http://code.google.com/p/maven-bluemartini/source/browse/</url>
   </scm>
 
   <distributionManagement>
