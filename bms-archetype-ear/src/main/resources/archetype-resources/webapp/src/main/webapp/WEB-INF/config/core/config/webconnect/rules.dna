@@ -1,6 +1,0 @@
-DNA {
-    "enabled" Boolean "true",
-    "ruleBases" DNAArray [
-    ],
-    "verbose" Boolean "true"
-}

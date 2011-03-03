@@ -1,6 +1,0 @@
-DNA {
-    "key" String "92b64bf8ec9400c8",
-    "instanceAlgorithm" String "AES",
-    "currentKey" String "ek1",
-    "ek1:AES" String "f79cbe1475b16bf445bfc9db23c247e2f04519abb37d9b4df9dc90def021499d390484c1f42f86fd16d1364d015cf092e1dfc93241473db9d00af96e4a278d77568517315ad6a199a2df0b7a41fc00ca"
-}

@@ -37,17 +37,16 @@ DNA {
     ],
     "module_paths" DNA {
         "core" StringArray [
-            "$BMS_CONFIG_HOME/core/config/eac",
-            "$BMS_CONFIG_HOME/core/config/bmcommon",
-            "$BMS_CONFIG_HOME/core/config/appcommon",
-            "$BMS_CONFIG_HOME/core/config/webconnect",
-            "$BMS_CONFIG_HOME/core/config/thirdparty",
-            "$BMS_CONFIG_HOME/core/config/b2b",
-            "$BMS_CONFIG_HOME/core/config/radmin",
-            "$BMS_CONFIG_HOME/core/config/i18n",
-            "$BMS_CONFIG_HOME/core/config/symbol",
-            "$BMS_CONFIG_HOME/core/config/archive",
-            "$BMS_CONFIG_HOME/core/config/custom"
+            "!META-INF/bluemartini/core/eac",
+            "!META-INF/bluemartini/core/bmcommon",
+            "!META-INF/bluemartini/core/appcommon",
+            "!META-INF/bluemartini/core/webconnect",
+            "!META-INF/bluemartini/core/thirdparty",
+            "!META-INF/bluemartini/core/b2b",
+            "!META-INF/bluemartini/core/radmin",
+            "!META-INF/bluemartini/core/i18n",
+            "!META-INF/bluemartini/core/symbol",
+            "!META-INF/bluemartini/core/archive"
         ],
         "${artifactId}" StringArray [
             "$BMS_CONFIG_HOME/${artifactId}/config/${artifactId}"

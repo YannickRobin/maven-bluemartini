@@ -48,19 +48,25 @@
 	  </dependency>
 	  <dependency>
 	  	<groupId>com.bluemartini.core</groupId>
-	  	<artifactId>martini-patch</artifactId>
-	  	<version>1.0.0</version>
-	  	<type>jar</type>
-	  </dependency>	  
-	  <dependency>
-	  	<groupId>com.bluemartini.core</groupId>
 	  	<artifactId>martini</artifactId>
 	  	<version>10.1.1.0</version>
 	  	<type>jar</type>
 	  </dependency>
 	  <dependency>
+	  	<groupId>com.bluemartini.core</groupId>
+	  	<artifactId>martini-config</artifactId>
+	  	<version>10.1.1.0</version>
+	  	<type>jar</type>
+	  </dependency>	  
+	  <dependency>
 	  	<groupId>com.bluemartini.eac</groupId>
 	  	<artifactId>eac</artifactId>
+	  	<version>10.1.1.0</version>
+	  	<type>jar</type>
+	  </dependency>
+	  <dependency>
+	  	<groupId>com.bluemartini.eac</groupId>
+	  	<artifactId>eac-config</artifactId>
 	  	<version>10.1.1.0</version>
 	  	<type>jar</type>
 	  </dependency>
@@ -262,10 +268,20 @@
 				<bundleDir>/</bundleDir>
 			  </javaModule>
 			  <javaModule>
+				<groupId>com.bluemartini.core</groupId>
+				<artifactId>martini-config</artifactId>
+				<bundleDir>/</bundleDir>
+			  </javaModule>			  
+			  <javaModule>
 				<groupId>com.bluemartini.eac</groupId>
 				<artifactId>eac</artifactId>
 				<bundleDir>/</bundleDir>
 			  </javaModule>
+			  <javaModule>
+				<groupId>com.bluemartini.eac</groupId>
+				<artifactId>eac-config</artifactId>
+				<bundleDir>/</bundleDir>
+			  </javaModule>			  
 			  <javaModule>
 				<groupId>com.bluemartini.isell</groupId>
 				<artifactId>isell</artifactId>
