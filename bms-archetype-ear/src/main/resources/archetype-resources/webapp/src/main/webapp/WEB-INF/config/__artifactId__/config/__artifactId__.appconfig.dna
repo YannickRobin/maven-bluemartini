@@ -49,7 +49,7 @@ DNA {
             "!META-INF/bluemartini/core/archive"
         ],
         "${artifactId}" StringArray [
-            "$BMS_CONFIG_HOME/${artifactId}/config/${artifactId}"
+            "!META-INF/bluemartini/${artifactId}"
         ]
     },
 
