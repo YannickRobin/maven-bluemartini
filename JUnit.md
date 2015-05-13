@@ -1,0 +1,523 @@
+## Example of code we want to test ##
+
+  * Create /myproject-batch/src/main/bms/myproject/config/junit.appconfig.dna
+
+```
+DNA {
+    "title" String "BM JUnit",
+    "localeCheckSeconds" Integer "10",
+    "usePubVersions" Boolean "false",
+    "supportsPubVersions" Boolean "false",
+    "modules" StringArray [
+            "core",
+            "eac",
+            "myproject"
+        ],
+    "module_paths" DNA {
+        "core" StringArray [
+            "!META-INF/bluemartini/core/bmcommon",
+            "!META-INF/bluemartini/core/appcommon",
+            "!META-INF/bluemartini/core/thirdparty",
+            "!META-INF/bluemartini/core/radmin",
+            "!META-INF/bluemartini/core/i18n",
+            "!META-INF/bluemartini/core/symbol",
+            "!META-INF/bluemartini/core/archive"
+        ],
+        "eac" StringArray [
+        	"!META-INF/bluemartini/eac/eac"
+        ],
+        "myproject" StringArray [
+            "!META-INF/bluemartini/myproject/eac",
+            "!META-INF/bluemartini/myproject/tools"
+        ]           
+    },    
+    "using_ems_database" Boolean "true",
+    "cancel_query_on_abort" Boolean "true",
+    "bizact" DNA {
+        "strict" Boolean "false"
+    },
+    "app" DNA {
+    },
+    
+    /** Inventory **/
+    "inventory" DNA {
+        "enabled" Boolean "true",
+        "class" String "com.bluemartini.inventory.InventoryTestImpl",
+        "sku_reserve_quantity" Integer "3",
+        "updateInventory" Boolean "false"
+    },
+		
+    /** Business action configuration parameters **/
+    "bizact" DNA {
+        "strict" Boolean "false",
+        "client" DNA {
+            "eac" DNA {
+                "protocol" String "rmi",
+                "host" String "$BMS_EAC_SERVER",
+                "port" Integer "$BMS_EAC_PORT",
+                "checkAtStartup" Boolean "true"
+            }
+        }
+    },
+
+    /** Business action proxy list **/
+    "server_list" DNA {
+        "eac" DNA {
+            "url" String "eac",
+            "bizacts" StringArray [
+                "EACGetEnvironments",
+                "EACGetPrivilegesForUser",
+                "EACLogin",
+                "GetFormattedUserNames",
+                "EACGetObjectDetail",
+                "EACGetUserAccountDetail",
+                "RetrieveEncryptionKey",
+                "EACRefreshEnvironmentList"                  
+            ]
+        }
+    },
+
+    /** Callbacks made by the system at specific execution points **/    
+    "callback" DNA {
+        "startup" StringArray [            
+            "com.bluemartini.dbinit.SetupSchema",
+            "com.bluemartini.util.AttributeCompilerUtil",
+            "com.bluemartini.util.AttributeUtil",
+            "com.bluemartini.server.StatusCodesStartup",
+            "com.bluemartini.html.HTMLObjectFactory",
+            "com.bluemartini.i18n.CurrencyUtil",
+            "com.bluemartini.util.PaymentUtil",
+            "com.bluemartini.server.ContentStartup",
+            "com.bluemartini.security.BMAccessControl"                     
+        ],
+        "set_current_version" StringArray [
+            "com.bluemartini.app.SetCurrentVersion"
+        ]
+    },
+    
+    /** Database **/ 
+    "database" DNA {
+        "main" DNA {
+            "aliases" StringArray [
+                "object",
+                "attribute",
+                "locale"
+            ],
+            "default" Boolean "true",
+            // * Connection pool *
+            "pool" DNA {
+                "enabled" Boolean "true",
+                "default" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "5",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        },
+        "store" DNA {
+            "aliases" StringArray [
+            ],
+            "default" Boolean "false",
+            // * Connection pool *
+            "pool" DNA {
+                "enabled" Boolean "true",
+                "driver" String "$POOL_DB_DRIVER",
+                "initialCapacity" String "5",
+                "maxCapacity" String "20",
+                "capacityIncrement" String "5",
+                "allowShrinking" String "true",
+                "shrinkPeriodMins" String "15",
+                "testTableName" String "TWIST",
+                "refreshPeriod" String "5"
+            }
+        }        
+    },
+    
+    /** Logs **/    
+    "log" DNA {
+        "enabled" Boolean "true",
+        "name" String "junit",
+        "components" DNA {
+            "system" Integer "0",
+            "exceptions" Integer "4",
+            "jms" Integer "0",
+            "heap" Integer "0",
+            "bizact" Integer "0",
+            "dbsql" Integer "0",
+            "dbperf" Integer "0",
+            "dbconn" Integer "0",
+            "CISUtil" Integer "0",
+            "objectcache" Integer "0",
+            "myproject" Integer "2"   
+        }
+    }    
+}
+```
+
+  * Create `/myproject-batch/src/main/java/com/bluemartini/inventory/InventoryTestImpl`
+```
+package com.bluemartini.inventory;
+
+import com.bluemartini.database.BMDatabaseManager;
+import com.bluemartini.database.BindArray;
+import com.bluemartini.database.DBUtil;
+import com.bluemartini.dna.BMContext;
+import com.bluemartini.dna.BMException;
+import com.bluemartini.dna.BusinessObject;
+import com.bluemartini.dna.DNAList;
+
+public class InventoryTestImpl extends InventoryHandler {
+
+	/* variable to store default location code */
+	private static String defaultLocationCode_ = null;
+
+	/**
+	* Default constructor.
+	*/
+	public InventoryTestImpl() {
+		DNAList inventoryConfig = BMContext.getAppConfig().getList("inventory");
+	    defaultLocationCode_  = inventoryConfig.getString("defaultLocationCode", "any");
+	    return;
+	}
+	    
+	@Override
+	public Integer getAvailableQuantity(String skuCode) throws BMException {
+		return getAvailableQuantity(skuCode, null);
+	}
+	
+	@Override
+	public Integer getAvailableQuantity(String skuCode, DNAList dnaParams)
+			throws BMException {
+        
+        String store = defaultLocationCode_;
+        
+        BusinessObject fulfillmentCenterBO = null;
+        if (dnaParams != null) {
+        	fulfillmentCenterBO = dnaParams.getBusinessObject("FULFILLMENT_CENTER");
+            if (fulfillmentCenterBO != null)
+            	store = fulfillmentCenterBO.getString("flc_location_id", defaultLocationCode_);
+        }
+        
+		return getQuantityOnHandFromDB(skuCode, store);
+	}
+	
+	@Override
+	public void reduceAvailableQuantity(String skuCode, int quantity)
+			throws BMException {
+		throw new BMException("Method not implemented");
+	}
+	
+	@Override
+	public void reduceAvailableQuantity(String skuCode, int quantity, DNAList params)
+			throws BMException {
+		throw new BMException("Method not implemented");	
+	}
+
+    /*
+     * This method retrieves inventory data from the INVENTORY table for sku code 
+     * and location code combination.
+     * @param skuCode
+     * @param locationCode
+     * @return Integer inventory quantity
+     */
+    private Integer getQuantityOnHandFromDB(String skuCode, String locationCode) throws BMException{
+    	
+    	BMDatabaseManager.pushCurrentDatabase("store");
+    	try {	
+            BindArray bindValues = new BindArray();
+            bindValues.addString(skuCode);
+            bindValues.addString(locationCode);
+    		
+    		return DBUtil.selectInt("SELECT AVAILABLE_QUANTITY FROM INVENTORY " +
+    				"WHERE SKU_CODE =? AND LOCATION_CODE =?", bindValues);
+    	} finally { 
+            BMDatabaseManager.popCurrentDatabase("store");
+    	}
+    }
+}
+```
+
+## Test case ##
+
+  * Create `/myproject-batch/src/test/java/com/mycompany/myproject/tools/junit/InventoryTest.java`
+```
+package com.mycompany.myproject.tools.junit;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+
+import java.util.Calendar;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.bluemartini.database.BMDatabaseManager;
+import com.bluemartini.database.DBUtil;
+import com.bluemartini.dna.BMContext;
+import com.bluemartini.dna.BMException;
+import com.bluemartini.dna.BusinessObject;
+import com.bluemartini.htmlapp.Sku;
+import com.bluemartini.inventory.InventoryUtil;
+import com.bluemartini.util.SkuUtil;
+
+public class InventoryTest {
+    
+	@Before
+ 	public void setUp() throws Exception {
+    	BMDatabaseManager.pushCurrentDatabase("main");
+	}
+ 
+	@After
+	public void tearDown() throws Exception {
+   	    BMDatabaseManager.popCurrentDatabase("main");
+	}
+    
+	@Test
+	public void testCheckInventory() throws BMException
+	{
+   	    BMDatabaseManager.beginDBTransaction();
+   	    try {   
+   	    	checkInventory();
+   	    } finally {
+   	    	BMDatabaseManager.rollbackDBTransaction();     
+   	    }
+	}
+
+	private void checkInventory() throws BMException
+	{
+   	    long sku_id = getSkuMock().getLongID();
+   	    Sku sku = new Sku(SkuUtil.getSkuDetail(sku_id));
+		
+   	    BMDatabaseManager.pushCurrentDatabase("store");
+   	    BMDatabaseManager.beginDBTransaction();
+   	    try {   
+   			updateAvailableQuantity(sku.getLongID(), sku.getSkuCode(), "any", 4);	
+   			boolean available = InventoryUtil.hasInventory(sku);
+   			assertTrue("Sku is available", available);
+   	    } finally {
+   	    	BMDatabaseManager.rollbackDBTransaction();
+   	    	BMDatabaseManager.popCurrentDatabase("store");
+   	    }
+
+   	    BMDatabaseManager.pushCurrentDatabase("store");
+   	    BMDatabaseManager.beginDBTransaction();
+   	    try {   
+   			updateAvailableQuantity(sku.getLongID(), sku.getSkuCode(), "any", 3);
+   			boolean available = InventoryUtil.hasInventory(sku);
+   			assertFalse("Sku is not available", available);
+   	    } finally {
+   	    	BMDatabaseManager.rollbackDBTransaction();
+   	    	BMDatabaseManager.popCurrentDatabase("store");
+   	    }
+
+	}   
+   	    
+	private BusinessObject getSkuMock() throws BMException
+	{		
+		BusinessObject boSku = BMContext.createBusinessObject("SKU");
+		boSku.setString("status_cd", "A");
+		boSku.setString("skuCode", "MockSku");
+		boSku.setLong("sku_parent_id", getProductMock().getLongID());
+   	   	DBUtil.insertBusinessObject(boSku);
+		return boSku;
+	}
+	
+	private BusinessObject getProductMock() throws BMException
+	{
+		BusinessObject boProduct = BMContext.createBusinessObject("PRODUCT");
+		boProduct.setString("status_cd", "A");
+		boProduct.setString("productCode", "MockProduct");
+		DBUtil.insertBusinessObject(boProduct);
+		return boProduct;
+	}
+	
+	private void updateAvailableQuantity(long skuId, String skuCode, String locationCode, Integer availableQuantity) throws BMException
+	{
+		BusinessObject boInventory = BMContext.createBusinessObject("INVENTORY_ATP");
+ 		boInventory.setLong("skuId", skuId);
+		boInventory.setString("skuCode", skuCode);		
+		boInventory.setString("locationCode", locationCode);
+		boInventory.setInteger("availableQuantity", availableQuantity);
+		Calendar modifiedDate = Calendar.getInstance();
+ 		boInventory.setDate("modifiedDate", modifiedDate);
+   	    	    
+		if (DBUtil.updateBusinessObject(boInventory) == 0) {
+			DBUtil.insertBusinessObject(boInventory);
+		}
+	}
+}
+```
+
+## Setup ##
+
+  * Install Maven libraries
+```
+call mvn install:install-file -Dfile=C:\apps\bea\weblogic92\server\lib\weblogic.jar -DgroupId=weblogic -DartifactId=weblogic -Dversion=9.2.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=C:\apps\oracle\product\11.2.0\dbhome_1\jdbc\lib\ojdbc5.jar -DgroupId=oracle -DartifactId=ojdbc5 -Dversion=11.2.0 -Dpackaging=jar
+```
+
+  * Add Maven libraries to pom.xml
+```
+	  <dependency>
+	  	<groupId>junit</groupId>
+	  	<artifactId>junit</artifactId>
+	  	<version>4.8.2</version>
+	  	<type>jar</type>
+	  	<scope>test</scope>
+	  </dependency>
+	  <dependency>
+	  	<groupId>weblogic</groupId>
+	  	<artifactId>weblogic</artifactId>
+	  	<version>9.2.0</version>
+	  	<type>jar</type>
+	  	<scope>test</scope>
+	  </dependency>
+	  <dependency>
+	  	<groupId>oracle</groupId>
+	  	<artifactId>ojdbc5</artifactId>
+	  	<version>11.2.0</version>
+	  	<type>jar</type>
+	  	<scope>test</scope>
+	  </dependency>
+```
+
+  * Create /myproject-batch/src/main/java/com/bluemartini/junit/BMSetupTest.java
+```
+package com.bluemartini.junit;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.bluemartini.core.BMSystem;
+import com.bluemartini.dna.BMContext;
+import com.bluemartini.dna.BMLog;
+import com.bluemartini.dna.BMThreadManager;
+import com.bluemartini.dna.BusinessObject;
+import com.bluemartini.util.HTMLVersionUtil;
+import com.bluemartini.util.MainApp;
+
+public class BMSetupTest extends MainApp {
+	
+	public BMSetupTest() {
+		super("BMJunitApp", null);
+		setEnvironmentOption(true, true);
+	}
+
+	public boolean isLoginRequired() {
+		return true;
+	}
+    
+	protected void setupOptions() {
+		setEnvironmentOption(true, true);
+		super.setupOptions();
+	}
+	
+ 	/**
+	 * Returns whether main thread will not call System.exit after calling run().
+	* By default, this returns false, which means that System.exit WILL be called.
+	*/
+	protected boolean isDaemon() {
+		return true;
+	}
+    
+	@Override
+	protected void run() throws Throwable {
+	}
+	
+	@BeforeClass
+	public static void setup() throws Exception
+	{
+		String user = BMSystem.getProperty("BMS_USER");
+		String password = BMSystem.getProperty("BMS_PASSWORD");
+		String environment = BMSystem.getProperty("BMS_ENVIRONMENT");
+		String appconfig = BMSystem.getProperty("BMS_APPCONFIG");
+		
+		String[] args = {
+				"-c", appconfig,
+				"-u", user,
+				"-p", password,
+				"-env", environment
+				};
+		
+		new BMSetupTest().mainImpl(args);
+	}
+
+	@Test
+	public void setupTest() {
+		assertTrue(true);
+	}
+}
+```
+
+  * Create /myproject-batch/src/test/java/com/mycompany/myproject/tools/junit/BMTests.java
+```
+package com.mycompany.myproject.tools.junit;
+
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+import com.bluemartini.core.BMSystem;
+import com.bluemartini.junit.BMSetupTest;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({BMSetupTest.class, InventoryTest.class})
+public class BMTests {
+
+    @BeforeClass
+    public static void init() {
+    	if (BMSystem.getProperty("BMS_APPCONFIG").equals(""))
+        {
+                String curDir = BMSystem.getProperty("user.dir");
+                System.out.println("curDir = " + curDir);
+                BMSystem.setProperty("BMS_APPCONFIG", curDir + "/src/main/bms/myproject/config/junit.appconfig.dna");
+        }
+    }
+
+}
+```
+
+## Run test suite ##
+
+  * Run with Maven
+    * Set environment variables
+```
+set BMS_HOME=C:\apps\bm\bm101
+set BMS_CONFIG_HOME=C:\apps\bm\bm101
+set BMS_ENV=C:\apps\bm\bm101\core\config\env.dna
+set BMS_SECURITY_DIR=C:\apps\bm\bm101\core\config\appcommon
+set BMS_EAC_SERVER=localhost
+set BMS_EAC_PORT=7011
+set BMS_USER=blue
+set BMS_PASSWORD=martini
+set BMS_ENVIRONMENT=BPADev
+set BMS_APPSERVER=com.bluemartini.thirdparty.weblogic.WebLogicAppServer
+set BMS_CONFIG_DIR=core/config
+```
+    * mvn test
+
+  * Run with Eclipse
+    * `Run > Run Configurations... > New JUnit`
+      * Run a single test: `com.mycompany.myproject.tools.testbatch.BMTests`
+      * Test runner: `JUnit 4`
+      * Add variables:
+```
+<mapEntry key="BMS_HOME" value="C:\apps\bm\bm101"/>
+<mapEntry key="BMS_CONFIG_HOME" value="C:\apps\bm\bm101"/>
+<mapEntry key="BMS_ENV" value="C:\apps\bm\bm101\core\config\env.dna"/>
+<mapEntry key="BMS_SECURITY_DIR" value="C:\apps\bm\bm101\core\config\appcommon"/>
+<mapEntry key="BMS_EAC_SERVER" value="localhost"/>
+<mapEntry key="BMS_EAC_PORT" value="7011"/>
+<mapEntry key="BMS_USER" value="blue"/>
+<mapEntry key="BMS_PASSWORD" value="martini"/>
+<mapEntry key="BMS_ENVIRONMENT" value="BPADev"/>
+<mapEntry key="BMS_APPSERVER" value="com.bluemartini.thirdparty.weblogic.WebLogicAppServer"/>
+<mapEntry key="BMS_CONFIG_DIR" value="core/config"/>
+```

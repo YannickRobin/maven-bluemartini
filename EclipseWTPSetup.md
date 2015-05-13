@@ -1,0 +1,130 @@
+This document describes the Eclipse WTP installation and configuration for Blue Martini project using [maven-bluemartini](http://code.google.com/p/maven-bluemartini).
+
+It has been documented using WebLogic 9.2, for other application servers, see pdf documents:
+  * [JBoss 3.5](http://maven-bluemartini.googlecode.com/files/BM10-JBoss5.0-Eclipse3.5-WTP%20Installation%20Guide.pdf)
+  * [GlassFish 2.1](http://maven-bluemartini.googlecode.com/files/BM95-GlassFish2.1-Eclipse3.4-WTP%20Installation%20Guide.pdf)
+
+## Steps ##
+
+
+
+## Install WebLogic ##
+
+### Install WebLogic 9.2 ###
+
+### Update WebLogic License ###
+  * Copy `<BMS_HOME>\thirdparty\classes\isv.jar` to `<BEA_HOME>`
+  * Open a command line in `<BEA_HOME>`
+  * Run the following commands:
+```
+    > UpdateLicense.cmd 
+    > set BEA_HOME=<BEA_HOME>
+    > java -cp "./isv.jar" -Xms256m -Xmx256m "-Dbea.home=%BEA_HOME%" -Dbea.jar=%BEA_HOME%/weblogic92/server/lib/weblogic.jar" Install
+    > UpdateLicense.cmd license_isv.bea
+```
+
+### Add SearchServer library ###
+
+Copy `<BMS_HOME>\thirdparty\classes\ssjdbc50.jar` and `<BMS_HOME>\thirdparty\classes\sjdbc.properties` to `<WLS_HOME>\user_projects\domains\<your_domain>\lib`
+
+### Change JCE Policy libraries ###
+
+  * Download the unlimited jurisdiction policy licenses:[http://java.sun.com/j2se/1.4.2/download.html](http://java.sun.com/j2se/1.4.2/download.html)
+  * From jce\_policy-1\_5\_0.zip, unzip `local_policy.jar` and `US_export_policy.jar` into `<JDK_HOME>\jre\lib\security`.
+
+## Create WebLogic domain ##
+
+### Run `WebLogic Configuration Wizard` ###
+
+Follow the steps below:
+
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation01.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation01.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation02.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation02.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation03.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation03.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation04.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation04.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation05.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation05.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation06.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation06.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation07.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation07.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation08.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation08.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation09.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation09.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation10.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wls_domain_creation10.png)<br />
+
+### Add `env.dna` environment property ###
+
+Edit `<BEA_HOME>/user_projects/domains/<BM_DOMAIN>/bin/setDomainEnv.sh`:
+```
+JAVA_VM="${JAVA_VM} ${JAVA_DEBUG} ${JAVA_PROFILE} -DBMS_ENV_PATH=core/config/env_wls_dev.dna"
+```
+
+## Set up Eclipse project ##
+
+  * Install Eclipse Java EE
+  * Install [M2Eclipse](http://m2eclipse.sonatype.org) (Eclipse update site URL: http://m2eclipse.sonatype.org/sites/m2e)
+  * Install M2Eclipse extras (Eclipse update site URL: http://m2eclipse.sonatype.org/sites/m2e-extras)
+  * From `myProject-website` folder, execute the following command to create the Eclipse project: `mvn eclipse:eclipse`
+  * Import the project into Eclipse: `File > Import... > General > Existing projects into Workspace`
+
+### Set up Eclipse WTP ###
+
+  * Copy `ear/target/application.xml` to `ear/src/main/application/META-INF`
+  * Generate Eclipse configuration files: Right click on each projects ` > Maven > Enable Dependency management`
+  * Edit `ejb.settings/org.eclipse.wst.common.project.facet.core.xml`:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<faceted-project>
+  <fixed facet="jst.ejb"/>
+  <installed facet="java" version="1.5"/>
+  <installed facet="jst.ejb" version="2.1"/>
+</faceted-project>
+```
+  * Copy your db\_env and security files to the Eclipse project:
+    * Copy `<BMS_HOME/core/config/db_env.dna` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/db_env_dev.dna`
+    * Copy `<BMS_HOME/core/config/appcommon/common.lib` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/appcommon`
+    * Copy `<BMS_HOME/core/config/appcommon/network.lib` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/appcommon`
+    * Copy `<BMS_HOME/core/config/appcommon/security.jks` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/appcommon`
+    * Copy `<BMS_HOME/core/config/appcommon/security.jks.back` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/appcommon`
+    * Copy `<BMS_HOME/core/config/appcommon/security.dna` to `/xxx-webapp/src/main/webapp/WEB-INF/config/core/config/appcommon`
+
+### Create JDBC data sources ###
+
+  * Edit `<ECLIPSE_WORKSPACE>/<yourWebSite>/ear/src/main/resources/resourcesScript_WLS_Create_<yourWebSite>.py` and change the domain path and database settings
+  * Open a new command line and execute the following commands:
+```
+    > cd <ECLIPSE_WORKSPACE>/<yourWebSite>/ear/src/main/resources
+    > <WLS_HOME>\server\bin\setWLSEnv.cmd
+    > java weblogic.WLST resourcesScript_Create_WLS_<yourWebSite>.py
+```
+
+### Create JMS resources ###
+  * Edit `<ECLIPSE_WORKSPACE>/<yourWebSite>/ear/src/main/resources/resourcesScript_WLS_JMS.py` and change the domain path
+  * Open a new command line and execute the following commands:
+```
+    > cd <ECLIPSE_WORKSPACE>/<yourWebSite>/ear/src/main/resources
+    > <WLS_HOME>\server\bin\setWLSEnv.cmd
+    > java weblogic.WLST resourcesScript_Create_WLS_JMS.py
+```
+
+### Create WTP server ###
+
+  * Start Eclipse
+  * Select `File > New > Others` and follow the steps below:
+
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp01.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp01.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp02.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp02.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp03.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp03.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp04.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp04.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp05.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp05.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp06.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp06.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp07.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp07.png)<br />
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp08.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp08.png)<br />
+
+
+### Publish EAR to WTP server ###
+
+  * In Eclipse, select `BEA WebLogic Server v9.2 at localhost` server
+  * Right-click and select `Add  and Remove...`
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp09.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp09.png)
+  * Select the EAR, click `Add` and click `Finish`
+![http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp10.png](http://maven-bluemartini.googlecode.com/svn/trunk/bms-archetype-ear/wiki/images/wtp10.png)
+  * Select `BEA WebLogic Server v9.2 at localhost` server and click `Start the server`.
+Note if you want to put breakpoints and to use Hot Code Replacement, click `Restart the server in debug mode`.
