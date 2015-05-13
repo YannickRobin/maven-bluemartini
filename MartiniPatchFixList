@@ -1,0 +1,30 @@
+#summary martini-patch.jar fix list
+
+  * Use local EAC
+    * com.bluemartini.app.!VersionUtil
+    * com.bluemartini.remotedesktop.util.!UserGroupUtil
+  * Read DNA configuration files from JAR's
+    * com.bluemartini.dna.BMContext
+  * Add maxAbortAttempt (default is 5) for JMS connection
+    * com.bluemartini.jms.JMSManager
+  * Load security files in deployed mode
+    * com.bluemartini.security.!CommonLib
+  * Fix restart error when the application is redeployed
+    * com.bluemartini.server.BMStartup
+  * !GlassFish support
+    * com.bluemartini.thirdparty.glassfish.!GlassFishAppServer
+    * com.bluemartini.thirdparty.glassfish.!GlassFishDataSourceFactory
+    * com.bluemartini.thirdparty.glassfish.!GlassFishJMSProvider
+    * com.bluemartini.thirdparty.glassfish.!GlassFishWebApplication
+  * JBoss support
+    * com.bluemartini.thirdparty.jboss.JBossAppServer
+    * com.bluemartini.thirdparty.jboss.JBossDataSourceFactory
+    * com.bluemartini.thirdparty.jboss.JBossDataSourceFactory
+    * com.bluemartini.thirdparty.jboss.JBossJNDIUtil
+    * com.bluemartini.thirdparty.jboss.JBossWebApplication
+  * Configure JNDI in appconfig.dna
+    * com.bluemartini.thirdparty.weblogic.!WebLogicDataSourceFactory
+    * com.bluemartini.thirdparty.websphere.!WebSphereDataSourceFactory
+  * Remove !WebSphere ND dependency
+    * com.bluemartini.thirdparty.websphere.!WebSphereAppServer: 
+    * com.bluemartini.thirdparty.websphere.!WebSphereWebApplication
